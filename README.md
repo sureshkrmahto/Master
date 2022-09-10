@@ -1,2 +1,4 @@
 # Master
-Main branch
+src - Source code
+Readme.md - Details design pattern
+pom - Dependencies
