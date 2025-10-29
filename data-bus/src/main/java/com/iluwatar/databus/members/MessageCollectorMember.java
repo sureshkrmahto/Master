@@ -12,6 +12,9 @@ import java.util.logging.Logger;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class MessageCollectorMember implements Member {
 
   private static final Logger LOGGER = Logger.getLogger(MessageCollectorMember.class.getName());

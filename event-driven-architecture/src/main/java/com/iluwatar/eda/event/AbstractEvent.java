@@ -11,6 +11,12 @@ import com.iluwatar.eda.framework.EventDispatcher;
  *   <li>{@link UserUpdatedEvent} - used when a user is updated</li>
  * </ul>
  * Events can be distinguished using the {@link #getType() getType} method.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class AbstractEvent implements Event {
 

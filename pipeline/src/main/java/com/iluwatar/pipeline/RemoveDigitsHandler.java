@@ -7,6 +7,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Stage handler that returns a new instance of String without the digit characters of the input
  * string.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class RemoveDigitsHandler implements Handler<String, String> {
 

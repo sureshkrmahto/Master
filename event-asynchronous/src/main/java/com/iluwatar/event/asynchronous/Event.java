@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Each Event runs as a separate/individual thread.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Event implements IEvent, Runnable {
 

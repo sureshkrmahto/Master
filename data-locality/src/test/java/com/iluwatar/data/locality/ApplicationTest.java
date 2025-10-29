@@ -7,6 +7,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 /**
  * Test Game Application
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class ApplicationTest {
 

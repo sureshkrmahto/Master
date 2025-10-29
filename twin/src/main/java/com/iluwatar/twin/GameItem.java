@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GameItem is a common class which provides some common methods for game object.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class GameItem {
 

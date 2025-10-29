@@ -11,8 +11,13 @@ import java.util.List;
  * (arraylist of workers), expectedNumResults (number of divisions of input data, same as expected
  * number of results), allResultData (hashtable of results obtained from workers, mapped by their
  * ids) and finalResult (aggregated from allResultData).
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class Master {
   private final int numOfWorkers;
   private final List<Worker> workers;

@@ -15,6 +15,12 @@ import java.util.function.Predicate;
  * operations eagerly. This implementation would be costly to be utilized in real applications.
  *
  * @param <E> the type of the objects the iteration is about
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleFluentIterable<E> implements FluentIterable<E> {
 

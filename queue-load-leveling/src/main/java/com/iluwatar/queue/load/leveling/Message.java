@@ -2,6 +2,12 @@ package com.iluwatar.queue.load.leveling;
 
 /**
  * Message class with only one parameter.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Message {
   private final String msg;

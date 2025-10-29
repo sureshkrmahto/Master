@@ -15,6 +15,12 @@ import org.slf4j.LoggerFactory;
  * {@link OrcBlacksmith}, {@link ElfBlacksmith}) then override the method to produce objects of
  * their liking.
  * 
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

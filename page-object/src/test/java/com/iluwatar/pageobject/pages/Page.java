@@ -4,6 +4,12 @@ import com.gargoylesoftware.htmlunit.WebClient;
 
 /**
  * Encapsulation for a generic 'Page'
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class Page {
 

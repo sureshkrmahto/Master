@@ -20,6 +20,12 @@ package com.iluwatar.strangler;
  * After whole migration, the new system ({@link NewArithmetic}) only depends on new source
  * ({@link NewSource}).</p>
  *
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   /**

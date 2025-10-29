@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 /**
  * ConfigureForUnixVisitor class implements zoom's visit method for Unix manufacturer, unlike
  * traditional visitor pattern, this class may selectively implement visit for other modems.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConfigureForUnixVisitor implements ZoomVisitor {
 

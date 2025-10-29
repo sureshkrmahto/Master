@@ -11,6 +11,12 @@ import java.io.FileNotFoundException;
  *
  * <p>The below example demonstrates a use case for testing two different modules: File Logger and
  * Console Logger
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

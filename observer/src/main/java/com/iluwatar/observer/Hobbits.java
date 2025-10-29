@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Hobbits.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Hobbits implements WeatherObserver {
 

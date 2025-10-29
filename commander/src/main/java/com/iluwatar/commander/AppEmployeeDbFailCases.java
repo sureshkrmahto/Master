@@ -15,6 +15,12 @@ import com.iluwatar.commander.shippingservice.ShippingService;
 /**
  * AppEmployeeDbFailCases class looks at possible cases when Employee handle service is
  * available/unavailable.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AppEmployeeDbFailCases {
   private final int numOfRetries = 3;

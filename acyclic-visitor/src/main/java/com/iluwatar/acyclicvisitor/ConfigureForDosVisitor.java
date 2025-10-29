@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 /**
  * ConfigureForDosVisitor class implements both zoom's and  hayes' visit method for Dos
  * manufacturer.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConfigureForDosVisitor implements AllModemVisitor {
 

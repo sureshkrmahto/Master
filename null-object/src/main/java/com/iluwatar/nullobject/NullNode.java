@@ -4,6 +4,12 @@ package com.iluwatar.nullobject;
  * Null Object implementation for binary tree node.
  *
  * <p>Implemented as Singleton, since all the NullNodes are the same.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class NullNode implements Node {
 

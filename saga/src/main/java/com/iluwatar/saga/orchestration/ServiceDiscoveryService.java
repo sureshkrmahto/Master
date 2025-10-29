@@ -6,6 +6,12 @@ import java.util.Optional;
 
 /**
  * The class representing a service discovery pattern.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ServiceDiscoveryService {
   private final Map<String, OrchestrationChapter<?>> services;

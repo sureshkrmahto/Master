@@ -18,10 +18,19 @@ import org.slf4j.LoggerFactory;
  * @param <M> Type of StealingMethod
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class StealingMethodTest<M extends StealingMethod> {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender();
@@ -121,6 +130,9 @@ public abstract class StealingMethodTest<M extends StealingMethod> {
     assertEquals(3, appender.getLogSize());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

@@ -15,6 +15,12 @@ package com.iluwatar.command;
  * <p>In other words, in this example the wizard casts spells on the goblin. The wizard keeps track
  * of the previous spells cast, so it is easy to undo them. In addition, the wizard keeps track of
  * the spells undone, so they can be redone.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

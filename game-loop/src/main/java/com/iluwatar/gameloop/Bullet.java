@@ -2,6 +2,12 @@ package com.iluwatar.gameloop;
 
 /**
  * Bullet object class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Bullet {
 

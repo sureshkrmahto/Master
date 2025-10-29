@@ -2,6 +2,12 @@ package com.iluwatar.aggregator.microservices;
 
 /**
  * Encapsulates all the data for a Product that clients will request.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Product {
 

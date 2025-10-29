@@ -9,6 +9,12 @@ package com.iluwatar.model.view.presenter;
  *
  * <p>Since we can not test the GUI directly, the MVP pattern provides this functionality through
  * the View's dummy implementation, the Stub.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FileSelectorStub implements FileSelectorView {
 

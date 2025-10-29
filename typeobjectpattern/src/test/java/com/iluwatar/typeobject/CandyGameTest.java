@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 
 /**
  * The CandyGameTest class tests the methods in the {@link CandyGame} class.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 class CandyGameTest {
 
   @Test

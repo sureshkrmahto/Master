@@ -2,6 +2,12 @@ package com.iluwatar.hexagonal.domain;
 
 /**
  * Immutable value object representing lottery ticket.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryTicket {
 

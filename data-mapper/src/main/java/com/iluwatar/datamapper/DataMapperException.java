@@ -6,6 +6,9 @@ package com.iluwatar.datamapper;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public final class DataMapperException extends RuntimeException {
 
   private static final long serialVersionUID = 1L;

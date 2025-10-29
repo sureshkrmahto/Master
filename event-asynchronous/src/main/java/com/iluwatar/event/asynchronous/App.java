@@ -31,6 +31,12 @@ import org.slf4j.LoggerFactory;
  *
  * @see EventManager
  * @see Event
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

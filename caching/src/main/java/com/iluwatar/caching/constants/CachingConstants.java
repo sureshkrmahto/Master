@@ -2,6 +2,12 @@ package com.iluwatar.caching.constants;
 
 /**
  * Constant class for defining constants.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CachingConstants {
 

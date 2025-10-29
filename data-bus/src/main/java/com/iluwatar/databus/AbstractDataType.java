@@ -5,6 +5,9 @@ package com.iluwatar.databus;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class AbstractDataType implements DataType {
 
   private DataBus dataBus;

@@ -2,6 +2,12 @@ package com.iluwatar.interpreter;
 
 /**
  * MultiplyExpression.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MultiplyExpression extends Expression {
 

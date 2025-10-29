@@ -9,6 +9,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Unit test for HeroStat.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class HeroStatTest {
 

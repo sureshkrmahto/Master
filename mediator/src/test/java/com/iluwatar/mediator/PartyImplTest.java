@@ -11,6 +11,9 @@ import static org.mockito.Mockito.verifyZeroInteractions;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class PartyImplTest {
 
   /**

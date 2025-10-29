@@ -20,12 +20,18 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  * In order for it to work we have to mock endpoints we want to read/write to. To mock those we need
  * to substitute original endpoint names to mocks.
  * </p>
+ 
+ * @author Suresh Mahto
+
  */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = AggregatorRouteTest.class)
 @ActiveProfiles("test")
 @EnableAutoConfiguration
 @ComponentScan
+/**
+ * @author Suresh Mahto
+ */
 public class AggregatorRouteTest {
 
   @EndpointInject(uri = "{{entry}}")

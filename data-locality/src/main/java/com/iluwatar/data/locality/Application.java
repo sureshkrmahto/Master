@@ -11,6 +11,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>Example:  Game loop that processes a bunch of game entities. Those entities are decomposed
  * into different domains  — AI, physics, and rendering — using the Component pattern.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Application {
 

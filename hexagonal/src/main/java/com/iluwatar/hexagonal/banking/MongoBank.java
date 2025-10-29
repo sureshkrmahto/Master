@@ -9,6 +9,12 @@ import org.bson.Document;
 
 /**
  * Mongo based banking adapter.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MongoBank implements WireTransfers {
 

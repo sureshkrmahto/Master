@@ -10,6 +10,14 @@ import org.apache.isis.applib.fixturescripts.FixtureScript;
 
 /**
  * Create a bunch of simple Objects.
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class RecreateSimpleObjects extends FixtureScript {
 

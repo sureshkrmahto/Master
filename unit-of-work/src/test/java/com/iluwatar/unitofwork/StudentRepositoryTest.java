@@ -18,8 +18,14 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 /**
  * tests {@link StudentRepository}
+ 
+ * @author Suresh Mahto
+
  */
 @RunWith(MockitoJUnitRunner.class)
+/**
+ * @author Suresh Mahto
+ */
 public class StudentRepositoryTest {
   private final Student student1 = new Student(1, "Ram", "street 9, cupertino");
   private final Student student2 = new Student(1, "Sham", "Z bridge, pune");

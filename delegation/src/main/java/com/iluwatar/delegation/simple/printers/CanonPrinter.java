@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
  * printed is appended to "Canon Printer : ".
  *
  * @see Printer
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CanonPrinter implements Printer {
 

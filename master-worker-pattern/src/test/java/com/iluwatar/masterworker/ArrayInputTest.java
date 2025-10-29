@@ -8,8 +8,13 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Testing divideData method in {@link ArrayInput} class.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 class ArrayInputTest {
 
   @Test

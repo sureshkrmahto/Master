@@ -14,6 +14,12 @@ import org.slf4j.LoggerFactory;
  * you want to mark program elements other than classes and interfaces, to allow for the possibility
  * of adding more information to the marker in the future, or to fit the marker into a framework
  * that already makes heavy use of annotation types, then a marker annotation is the correct choice
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

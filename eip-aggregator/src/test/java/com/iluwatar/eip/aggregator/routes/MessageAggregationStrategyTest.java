@@ -8,6 +8,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests MessageAggregationStrategy
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MessageAggregationStrategyTest {
 

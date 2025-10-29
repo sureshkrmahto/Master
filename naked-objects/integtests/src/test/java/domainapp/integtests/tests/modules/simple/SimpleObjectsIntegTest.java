@@ -18,6 +18,12 @@ import org.junit.Test;
 
 /**
  * Fixture Pattern Integration Test
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectsIntegTest extends SimpleAppIntegTest {
 

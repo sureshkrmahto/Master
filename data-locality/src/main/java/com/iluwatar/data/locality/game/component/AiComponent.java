@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Implementation of AI component for Game.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AiComponent implements Component {
 

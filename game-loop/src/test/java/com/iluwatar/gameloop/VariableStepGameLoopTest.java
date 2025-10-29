@@ -8,6 +8,12 @@ import org.junit.Test;
 
 /**
  * VariableStepGameLoop unit test class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class VariableStepGameLoopTest {
 

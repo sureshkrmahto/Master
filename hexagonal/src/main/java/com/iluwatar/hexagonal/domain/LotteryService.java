@@ -11,6 +11,12 @@ import java.util.Optional;
 
 /**
  * Implementation for lottery service.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryService {
 

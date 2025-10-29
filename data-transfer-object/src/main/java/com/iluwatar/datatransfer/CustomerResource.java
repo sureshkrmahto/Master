@@ -5,6 +5,12 @@ import java.util.List;
 /**
  * The resource class which serves customer information. This class act as server in the demo. Which
  * has all customer details.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CustomerResource {
   private final List<CustomerDto> customers;

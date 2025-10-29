@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Implementation of Render Component of Game.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class RenderComponent implements Component {
 

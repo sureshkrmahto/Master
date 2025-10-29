@@ -11,6 +11,12 @@ import org.mockito.MockitoAnnotations;
 
 /**
  * Test Aggregation of domain objects
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AggregatorTest {
 

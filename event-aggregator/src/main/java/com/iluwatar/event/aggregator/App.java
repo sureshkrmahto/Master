@@ -15,6 +15,12 @@ import java.util.function.Consumer;
  * <p>In the example {@link LordBaelish}, {@link LordVarys} and {@link Scout} deliver events to
  * {@link KingsHand}. {@link KingsHand}, the event aggregator, then delivers the events to {@link
  * KingJoffrey}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

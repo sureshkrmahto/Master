@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 /**
  * MessageQueue class. In this class we will create a Blocking Queue and submit/retrieve all the
  * messages from it.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MessageQueue {
 

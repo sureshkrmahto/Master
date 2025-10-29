@@ -12,6 +12,12 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory;
 
 /**
  * ConfigureForUnixVisitor test class
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConfigureForUnixVisitorTest {
   

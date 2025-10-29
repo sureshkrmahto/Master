@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Tests that Collection Pipeline methods work as expected.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AppTest {
   private static final Logger LOGGER = LoggerFactory.getLogger(AppTest.class);

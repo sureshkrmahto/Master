@@ -5,6 +5,12 @@ package com.iluwatar.delegation.simple;
  * the actual implementation of the Printer class changes the delegation will still be operational -
  * the actual benefit is observed when there are more than one implementors and they share a
  * delegation control
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PrinterController implements Printer {
 

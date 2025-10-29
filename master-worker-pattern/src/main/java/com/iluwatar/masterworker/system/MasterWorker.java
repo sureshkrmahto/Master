@@ -6,8 +6,13 @@ import com.iluwatar.masterworker.system.systemmaster.Master;
 
 /**
  * The abstract MasterWorker class which contains reference to master.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class MasterWorker {
   private final Master master;
 

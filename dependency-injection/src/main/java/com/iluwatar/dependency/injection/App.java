@@ -22,6 +22,12 @@ import com.google.inject.Guice;
  * <p>The fourth example takes the pattern a step further. It uses Guice framework for Dependency
  * Injection. {@link TobaccoModule} binds a concrete implementation to abstraction. Injector is then
  * used to create {@link GuiceWizard} object with correct dependencies.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

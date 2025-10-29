@@ -12,6 +12,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Test Generation of Royalty Types using the object-mother
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class RoyaltyObjectMotherTest {
 

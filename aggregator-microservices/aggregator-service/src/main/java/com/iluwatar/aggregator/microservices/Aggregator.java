@@ -10,8 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * The aggregator aggregates calls on various micro-services, collects data and further publishes
  * them under a REST endpoint.
+ 
+ * @author Suresh Mahto
+
  */
 @RestController
+/**
+ * @author Suresh Mahto
+ */
 public class Aggregator {
 
 

@@ -23,6 +23,12 @@ import java.io.IOException;
  * replacement to represent the specific html elements and to drive the browser. The purpose of this
  * example is just to provide a simple version that showcase the intentions of this pattern and how
  * this pattern is used in order to understand it.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class App {
 

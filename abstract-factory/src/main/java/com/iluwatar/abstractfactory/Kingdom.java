@@ -1,5 +1,14 @@
 package com.iluwatar.abstractfactory;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class Kingdom {
 
   private King king;
@@ -32,7 +41,13 @@ public class Kingdom {
 
   /**
    * The factory of kingdom factories.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   public static class FactoryMaker {
 
     /**

@@ -2,6 +2,12 @@ package com.iluwatar.privateclassdata;
 
 /**
  * Stew ingredients.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class StewData {
 

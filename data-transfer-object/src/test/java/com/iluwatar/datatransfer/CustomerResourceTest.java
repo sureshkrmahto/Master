@@ -9,6 +9,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * tests {@link CustomerResource}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CustomerResourceTest {
   @Test

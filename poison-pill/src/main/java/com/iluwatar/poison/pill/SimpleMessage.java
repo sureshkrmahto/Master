@@ -6,6 +6,12 @@ import java.util.Map;
 
 /**
  * {@link Message} basic implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleMessage implements Message {
 

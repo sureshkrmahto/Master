@@ -12,8 +12,13 @@ import org.json.simple.parser.ParseException;
  * The CellPool class allows the reuse of crushed cells instead of creation of new cells each time.
  * The reused cell is given a new candy to hold using the randomCode field which holds all the
  * candies available.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class CellPool {
   private static final Random RANDOM = new Random();
   public static final String FRUIT = "fruit";

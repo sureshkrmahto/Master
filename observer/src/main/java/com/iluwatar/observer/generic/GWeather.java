@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GWeather.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GWeather extends Observable<GWeather, Race, WeatherType> {
 

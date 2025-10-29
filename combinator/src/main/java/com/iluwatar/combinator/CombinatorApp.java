@@ -17,6 +17,14 @@ import org.slf4j.LoggerFactory;
  * {@link Finder#not(Finder)},
  * {@link Finder#and(Finder)}
  * Using them the became possible to get more complex functions {@link Finders}
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CombinatorApp {
 

@@ -16,6 +16,12 @@ import com.iluwatar.eda.model.User;
  * <p>The example below uses an {@link EventDispatcher} to link/register {@link Event} objects to
  * their respective handlers once an {@link Event} is dispatched, it's respective handler is invoked
  * and the {@link Event} is handled accordingly.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

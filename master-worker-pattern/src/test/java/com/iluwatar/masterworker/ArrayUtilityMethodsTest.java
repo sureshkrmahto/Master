@@ -6,8 +6,13 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Testing utility methods in {@link ArrayUtilityMethods} class.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 class ArrayUtilityMethodsTest {
 
   @Test

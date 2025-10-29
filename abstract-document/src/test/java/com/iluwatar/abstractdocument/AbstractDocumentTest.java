@@ -11,12 +11,27 @@ import org.junit.jupiter.api.Test;
 
 /**
  * AbstractDocument test class
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AbstractDocumentTest {
 
   private static final String KEY = "key";
   private static final String VALUE = "value";
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
+ */
   private static class DocumentImplementation extends AbstractDocument {
 
     DocumentImplementation(Map<String, Object> properties) {

@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Stage handler that converts an input String to its char[] array counterpart.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class ConvertToCharArrayHandler implements Handler<String, char[]> {
 

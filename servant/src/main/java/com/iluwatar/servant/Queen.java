@@ -2,6 +2,12 @@ package com.iluwatar.servant;
 
 /**
  * Queen.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Queen implements Royalty {
 

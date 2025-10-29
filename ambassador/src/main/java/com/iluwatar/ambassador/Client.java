@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * A simple Client.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Client {
 

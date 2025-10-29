@@ -17,10 +17,19 @@ import org.slf4j.LoggerFactory;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class GiantViewTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender(GiantView.class);
@@ -49,6 +58,9 @@ public class GiantViewTest {
   /**
    * Logging Appender Implementation
    */
+/**
+ * @author Suresh Mahto
+ */
   public static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

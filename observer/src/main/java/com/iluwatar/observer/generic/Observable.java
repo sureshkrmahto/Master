@@ -9,6 +9,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * @param <S> Subject
  * @param <O> Observer
  * @param <A> Argument type
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class Observable<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
 

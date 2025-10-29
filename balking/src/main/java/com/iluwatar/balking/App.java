@@ -16,8 +16,13 @@ import org.slf4j.LoggerFactory;
  * other thread can't invoke this action on this and then do the job. On the other hand if it have
  * been already washing and any other thread execute wash() it can't do that once again and returns
  * doing nothing.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

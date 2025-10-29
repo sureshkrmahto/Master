@@ -2,6 +2,12 @@ package com.iluwatar.memento;
 
 /**
  * Star uses "mementos" to store and restore state.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Star {
 
@@ -68,7 +74,13 @@ public class Star {
 
   /**
    * StarMemento implementation.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   private static class StarMementoInternal implements StarMemento {
 
     private StarType type;

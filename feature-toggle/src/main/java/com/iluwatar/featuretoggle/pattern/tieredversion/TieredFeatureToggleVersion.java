@@ -16,6 +16,12 @@ import com.iluwatar.featuretoggle.user.UserGroup;
  * @see User
  * @see com.iluwatar.featuretoggle.pattern.propertiesversion.PropertiesFeatureToggleVersion
  * @see UserGroup
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class TieredFeatureToggleVersion implements Service {
 

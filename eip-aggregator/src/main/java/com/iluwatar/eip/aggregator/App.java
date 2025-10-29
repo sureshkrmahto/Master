@@ -13,8 +13,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * <p>Aggregator allows you to merge messages based on defined criteria and parameters. It gathers
  * original messages, applies aggregation strategy and upon fulfilling given criteria, releasing
  * merged messages.
+ 
+ * @author Suresh Mahto
+
  */
 @SpringBootApplication
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   /**

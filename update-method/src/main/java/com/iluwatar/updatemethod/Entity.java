@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Abstract class for all the entity types.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class Entity {
 

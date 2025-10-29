@@ -9,6 +9,12 @@ import domainapp.integtests.bootstrap.SimpleAppSystemInitializer;
 
 /**
  * SimpleApp Integration Tests will implement this Abstract Class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class SimpleAppIntegTest extends IntegrationTestAbstract {
 

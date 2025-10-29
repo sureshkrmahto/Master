@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * A remote legacy application represented by a Singleton implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class RemoteService implements RemoteServiceInterface {
   private static final int THRESHOLD = 200;

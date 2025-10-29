@@ -7,6 +7,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests for hammer
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class HammerTest extends WeaponTest {
 

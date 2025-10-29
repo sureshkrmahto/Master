@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SoulEatingEnchantment.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SoulEatingEnchantment implements Enchantment {
 

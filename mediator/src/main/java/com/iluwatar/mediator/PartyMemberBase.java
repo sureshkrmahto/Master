@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Abstract base class for party members.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class PartyMemberBase implements PartyMember {
 

@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Decorator that adds a club for the troll.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ClubbedTroll implements Troll {
 

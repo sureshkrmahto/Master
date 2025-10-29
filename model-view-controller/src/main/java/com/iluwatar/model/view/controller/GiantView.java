@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GiantView displays the giant.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GiantView {
 

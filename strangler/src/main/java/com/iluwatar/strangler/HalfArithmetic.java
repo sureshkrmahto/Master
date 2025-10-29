@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 /**
  * System under migration. Depends on old version source ({@link OldSource}) and
  * developing one ({@link HalfSource}).
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class HalfArithmetic {
   private static final Logger LOGGER = LoggerFactory.getLogger(HalfArithmetic.class);

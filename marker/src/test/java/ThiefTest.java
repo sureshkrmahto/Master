@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Thief test
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ThiefTest {
   @Test

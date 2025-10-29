@@ -2,6 +2,12 @@ package com.iluwatar.intercepting.filter;
 
 /**
  * Base class for order processing filters. Handles chain management.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class AbstractFilter implements Filter {
 

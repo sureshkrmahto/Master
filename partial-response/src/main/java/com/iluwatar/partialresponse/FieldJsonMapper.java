@@ -4,6 +4,12 @@ import java.lang.reflect.Field;
 
 /**
  * Map a video to json.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FieldJsonMapper {
 

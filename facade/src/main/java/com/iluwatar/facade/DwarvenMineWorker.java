@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * DwarvenMineWorker is one of the goldmine subsystems.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class DwarvenMineWorker {
 

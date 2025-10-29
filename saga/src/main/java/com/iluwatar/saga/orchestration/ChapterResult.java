@@ -4,6 +4,12 @@ package com.iluwatar.saga.orchestration;
  * Executing result for chapter.
  *
  * @param <K> incoming value
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ChapterResult<K> {
   private final K value;

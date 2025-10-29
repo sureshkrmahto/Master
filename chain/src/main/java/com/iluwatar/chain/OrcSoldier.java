@@ -2,6 +2,12 @@ package com.iluwatar.chain;
 
 /**
  * OrcSoldier.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcSoldier extends RequestHandler {
 

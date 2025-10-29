@@ -16,6 +16,12 @@ import org.junit.jupiter.api.Test;
  * The weapon {@link Weapon} manufactured by the blacksmith depends on the kind of factory
  * implementation it is referring to.
  * </p>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FactoryMethodTest {
 

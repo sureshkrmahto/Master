@@ -16,6 +16,12 @@ import org.junit.Test;
 
 /**
  * Test Fixtures with Simple Objects
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectIntegTest extends SimpleAppIntegTest {
 

@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test methods in HalfArithmetic
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class HalfArithmeticTest {
   private static final HalfArithmetic arithmetic = new HalfArithmetic(new HalfSource(), new OldSource());

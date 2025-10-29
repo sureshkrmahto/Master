@@ -2,6 +2,12 @@ package com.iluwatar.collectionpipeline;
 
 /**
  * A Car class that has the properties of make, model, year and category.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Car {
   private final String make;

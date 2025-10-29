@@ -17,6 +17,12 @@ import com.iluwatar.delegation.simple.printers.HpPrinter;
  * implements {@link Printer}. However neither provide the functionality of {@link Printer} by
  * printing to the screen, they actually call upon the instance of {@link Printer} that they were
  * instantiated with. Therefore delegating the behaviour to another class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

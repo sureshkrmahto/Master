@@ -11,6 +11,12 @@ import java.util.concurrent.ConcurrentHashMap;
  * Currently supported event operations are: start, stop, and getStatus. Once an event is complete,
  * it then notifies EventManager through a listener. The EventManager then takes the event out of
  * the pool.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class EventManager implements ThreadCompleteListener {
 

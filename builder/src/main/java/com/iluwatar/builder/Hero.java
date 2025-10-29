@@ -2,6 +2,12 @@ package com.iluwatar.builder;
 
 /**
  * Hero, the class with many parameters.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class Hero {
 
@@ -45,6 +51,12 @@ public final class Hero {
     return weapon;
   }
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @Override
   public String toString() {
 
@@ -76,6 +88,9 @@ public final class Hero {
   /**
    * The builder class.
    */
+/**
+ * @author Suresh Mahto
+ */
   public static class Builder {
 
     private final Profession profession;

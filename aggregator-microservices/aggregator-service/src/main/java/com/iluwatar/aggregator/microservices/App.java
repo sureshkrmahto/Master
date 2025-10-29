@@ -5,8 +5,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Spring Boot EntryPoint Class.
+ 
+ * @author Suresh Mahto
+
  */
 @SpringBootApplication
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   /**

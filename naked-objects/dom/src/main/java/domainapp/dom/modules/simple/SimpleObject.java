@@ -20,6 +20,9 @@ import org.apache.isis.applib.util.ObjectContracts;
 
 /**
  * Definition of a Simple Object.
+ 
+ * @author Suresh Mahto
+
  */
 @javax.jdo.annotations.PersistenceCapable(identityType = IdentityType.DATASTORE, schema = "simple",
     table = "SimpleObject")
@@ -65,6 +68,9 @@ public class SimpleObject implements Comparable<SimpleObject> {
   /**
    * Event used to update the Name in the Domain.
    */
+/**
+ * @author Suresh Mahto
+ */
   public static class UpdateNameDomainEvent extends ActionDomainEvent<SimpleObject> {
     public UpdateNameDomainEvent(final SimpleObject source, final Identifier identifier,
                                  final Object... arguments) {

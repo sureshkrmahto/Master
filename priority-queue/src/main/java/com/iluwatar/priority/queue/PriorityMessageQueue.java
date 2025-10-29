@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
  * Keep high Priority message on top using maxHeap.
  *
  * @param <T> :  DataType to push in Queue
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PriorityMessageQueue<T extends Comparable> {
 

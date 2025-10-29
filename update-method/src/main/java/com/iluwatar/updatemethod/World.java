@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * The game world class. Maintain all the objects existed in the game frames.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class World {
 

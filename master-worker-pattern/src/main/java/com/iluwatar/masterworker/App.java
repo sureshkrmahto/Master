@@ -30,8 +30,13 @@ import org.slf4j.LoggerFactory;
  * data and result data respectively. The Input class also has an abstract method divideData which
  * defines how the data is to be divided into segments. These classes are extended by {@link
  * ArrayInput} and {@link ArrayResult}.</p>
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

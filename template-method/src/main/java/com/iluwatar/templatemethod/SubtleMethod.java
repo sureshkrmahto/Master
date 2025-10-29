@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SubtleMethod implementation of {@link StealingMethod}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SubtleMethod extends StealingMethod {
 

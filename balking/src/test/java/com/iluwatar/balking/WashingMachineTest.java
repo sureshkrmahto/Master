@@ -7,11 +7,23 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests for {@link WashingMachine}
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class WashingMachineTest {
 
   private final FakeDelayProvider fakeDelayProvider = new FakeDelayProvider();
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @Test
   void wash() {
     var washingMachine = new WashingMachine(fakeDelayProvider);
@@ -37,6 +49,9 @@ class WashingMachineTest {
     assertEquals(WashingMachineState.ENABLED, washingMachine.getWashingMachineState());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private static class FakeDelayProvider implements DelayProvider {
     private Runnable task;
 

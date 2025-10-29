@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Abstract class for GameLoop implementation class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class GameLoop {
 

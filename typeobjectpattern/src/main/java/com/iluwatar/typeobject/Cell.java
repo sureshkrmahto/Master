@@ -5,6 +5,12 @@ import com.iluwatar.typeobject.Candy.Type;
 /**
  * The Cell object is what the game matrix is made of and contains the candy which is to be crushed
  * or collected as reward.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Cell {
   Candy candy;

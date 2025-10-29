@@ -15,6 +15,12 @@ import org.slf4j.LoggerFactory;
  * <p>Update the physics components for them.
  *
  * <p>Render them using their render components.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GameEntity {
   private static final Logger LOGGER = LoggerFactory.getLogger(GameEntity.class);

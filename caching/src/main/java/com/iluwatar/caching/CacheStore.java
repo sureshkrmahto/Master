@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * The caching strategies are implemented in this class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CacheStore {
 

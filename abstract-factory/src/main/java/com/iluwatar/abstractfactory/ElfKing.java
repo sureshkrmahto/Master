@@ -2,6 +2,12 @@ package com.iluwatar.abstractfactory;
 
 /**
  * ElfKing.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ElfKing implements King {
 

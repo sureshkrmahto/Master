@@ -9,6 +9,9 @@ import java.time.LocalDateTime;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class StoppingData extends AbstractDataType {
 
   private final LocalDateTime when;

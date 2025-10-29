@@ -23,6 +23,9 @@ import javax.swing.WindowConstants;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class Client extends JFrame { // NOSONAR
 
   private static final long serialVersionUID = 1L;

@@ -10,6 +10,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Page Object encapsulating the Album List page (album-list.html)
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AlbumListPage extends Page {
 

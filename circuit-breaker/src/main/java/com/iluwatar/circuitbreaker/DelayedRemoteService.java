@@ -3,6 +3,12 @@ package com.iluwatar.circuitbreaker;
 /**
  * This simulates the remote service It responds only after a certain timeout period (default set to
  * 20 seconds).
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DelayedRemoteService implements RemoteService {
 

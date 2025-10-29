@@ -13,6 +13,9 @@ import org.junit.jupiter.api.Test;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class MessageCollectorMemberTest {
 
   @Test

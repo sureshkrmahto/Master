@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * KingJoffrey observes events from {@link KingsHand}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class KingJoffrey implements EventObserver {
 

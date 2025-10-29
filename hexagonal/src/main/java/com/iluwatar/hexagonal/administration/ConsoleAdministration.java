@@ -12,6 +12,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Console interface for lottery administration.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConsoleAdministration {
 

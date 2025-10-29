@@ -6,6 +6,9 @@ package com.iluwatar.intercepting.filter;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class NameFilter extends AbstractFilter {
 
   @Override

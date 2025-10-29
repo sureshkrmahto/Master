@@ -2,6 +2,12 @@ package com.iluwatar.factory.method;
 
 /**
  * OrcWeapon.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcWeapon implements Weapon {
 

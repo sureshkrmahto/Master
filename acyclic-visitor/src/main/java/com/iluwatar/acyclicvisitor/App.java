@@ -10,6 +10,12 @@ package com.iluwatar.acyclicvisitor;
  * its own visitor interface {@link HayesVisitor} and {@link ZoomVisitor} respectively. {@link
  * ConfigureForUnixVisitor} and {@link ConfigureForDosVisitor} implement each derivative's visit
  * method only if it is required
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

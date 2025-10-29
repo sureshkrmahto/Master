@@ -6,6 +6,12 @@ import java.util.List;
 /**
  * Saga representation. Saga consists of chapters. Every ChoreographyChapter is executed by a
  * certain service.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Saga {
 
@@ -45,7 +51,13 @@ public class Saga {
 
   /**
    * class represents chapter name.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   public static class Chapter {
     String name;
 

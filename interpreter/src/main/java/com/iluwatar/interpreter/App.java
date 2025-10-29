@@ -12,6 +12,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>In this example we use the Interpreter pattern to break sentences into expressions ({@link
  * Expression}) that can be evaluated and as a whole form the result.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

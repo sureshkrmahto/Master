@@ -17,10 +17,19 @@ import org.slf4j.LoggerFactory;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class KingJoffreyTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender(KingJoffrey.class);
@@ -49,6 +58,9 @@ public class KingJoffreyTest {
 
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

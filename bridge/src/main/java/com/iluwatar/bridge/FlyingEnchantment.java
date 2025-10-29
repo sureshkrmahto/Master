@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * FlyingEnchantment.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FlyingEnchantment implements Enchantment {
 

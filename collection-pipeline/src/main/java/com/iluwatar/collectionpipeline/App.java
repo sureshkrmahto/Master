@@ -11,6 +11,12 @@ import org.slf4j.LoggerFactory;
  * pipeline. Together, the Function Composition and Collection Pipeline patterns enable you to
  * create sophisticated programs where data flow from upstream to downstream and is passed through a
  * series of transformations.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

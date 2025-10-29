@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Test for {@link Pipeline}
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PipelineTest {
 

@@ -10,6 +10,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests for {@link ClubbedTroll}
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ClubbedTrollTest {
 

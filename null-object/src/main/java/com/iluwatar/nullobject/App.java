@@ -6,6 +6,12 @@ package com.iluwatar.nullobject;
  *
  * <p>In this example we build a binary tree where the nodes are either normal or Null Objects. No
  * null values are used in the tree making the traversal easy.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   /**

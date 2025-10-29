@@ -33,6 +33,9 @@ import java.time.LocalDateTime;
  *     <p>The {@link StatusMember} demonstrates using the DataBus to publish a message
  *     to the Data-Bus when it receives a message.</p>
  */
+/**
+ * @author Suresh Mahto
+ */
 class App {
 
   public static void main(String[] args) {

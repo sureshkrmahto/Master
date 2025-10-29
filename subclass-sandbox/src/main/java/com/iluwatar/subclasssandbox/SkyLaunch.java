@@ -4,6 +4,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SkyLaunch superpower.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SkyLaunch extends Superpower {
 

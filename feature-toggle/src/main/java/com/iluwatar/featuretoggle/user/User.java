@@ -3,6 +3,12 @@ package com.iluwatar.featuretoggle.user;
 /**
  * Used to demonstrate the purpose of the feature toggle. This class actually has nothing to do with
  * the pattern.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class User {
 

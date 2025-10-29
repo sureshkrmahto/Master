@@ -5,6 +5,12 @@ import org.apache.isis.applib.services.jdosupport.IsisJdoSupport;
 
 /**
  * TearDown/Cleanup for SimpleObjects.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectsTearDown extends FixtureScript {
 

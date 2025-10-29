@@ -13,6 +13,12 @@ import java.util.concurrent.TimeUnit;
  * that we cannot get from empty queue so when thread attempt to break the condition we invoke
  * Object's wait method on him and when other thread put an element to the queue he notify the
  * waiting one that now he can get from queue.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   /**

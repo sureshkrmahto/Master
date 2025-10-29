@@ -9,8 +9,14 @@ import org.apache.isis.applib.annotation.ViewModel;
  * Model linked to the HomePage The underlying layout is specified by json.
  *
  * @see HomePageService - Service Linked to the HomePage
+ 
+ * @author Suresh Mahto
+
  */
 @ViewModel
+/**
+ * @author Suresh Mahto
+ */
 public class HomePageViewModel {
 
   // endregion

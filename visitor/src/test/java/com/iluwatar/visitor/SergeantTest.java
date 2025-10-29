@@ -7,6 +7,9 @@ import static org.mockito.Mockito.verify;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class SergeantTest extends UnitTest<Sergeant> {
 
   /**

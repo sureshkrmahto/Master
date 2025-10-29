@@ -31,6 +31,12 @@ import com.iluwatar.hexagonal.sampledata.SampleData;
  * com.iluwatar.hexagonal.eventlog.LotteryEventLog} that delivers eventlog as lottery events occur
  * and {@link com.iluwatar.hexagonal.database.LotteryTicketRepository} that is the storage for the
  * lottery tickets.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

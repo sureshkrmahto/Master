@@ -8,6 +8,14 @@ import org.slf4j.LoggerFactory;
 /**
  * Common abstraction class representing services. implementing a general contract @see {@link
  * ChoreographyChapter}
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class Service implements ChoreographyChapter {
   protected static final Logger LOGGER = LoggerFactory.getLogger(Service.class);

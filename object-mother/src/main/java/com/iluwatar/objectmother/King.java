@@ -2,6 +2,12 @@ package com.iluwatar.objectmother;
 
 /**
  * Defines all attributes and behaviour related to the King.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class King implements Royalty {
   boolean isDrunk = false;

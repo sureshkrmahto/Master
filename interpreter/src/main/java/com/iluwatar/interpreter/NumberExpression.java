@@ -2,6 +2,12 @@ package com.iluwatar.interpreter;
 
 /**
  * NumberExpression.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class NumberExpression extends Expression {
 

@@ -11,6 +11,12 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory;
 
 /**
  * ConfigureForDosVisitor test class
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConfigureForDosVisitorTest {
 

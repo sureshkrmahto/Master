@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 /**
  * Tests that the Acyclic Visitor example runs without errors.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class AppTest {
 

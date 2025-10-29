@@ -17,6 +17,12 @@ import org.junit.Test;
 
 /**
  * Test for SimpleObjects
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectsTest {
 

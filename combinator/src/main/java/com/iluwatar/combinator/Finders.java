@@ -6,6 +6,12 @@ import java.util.stream.Stream;
 
 /**
  * Complex finders consisting of simple finder.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Finders {
   private Finders() {

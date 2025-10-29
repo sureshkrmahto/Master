@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test methods in NewArithmetic
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class NewArithmeticTest {
   private static final NewArithmetic arithmetic = new NewArithmetic(new NewSource());

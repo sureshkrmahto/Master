@@ -7,6 +7,12 @@ import org.junit.Test;
 
 /**
  * FixedStepGameLoop unit test class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FixedStepGameLoopTest {
 

@@ -3,6 +3,12 @@ package com.iluwatar.separatedinterface.invoice;
 /**
  * InvoiceGenerator class generates an invoice, accepting the product cost and calculating the total
  * price payable inclusive tax (calculated by {@link TaxCalculator}).
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class InvoiceGenerator {
 

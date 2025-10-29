@@ -14,6 +14,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>CustomerResource ({@link CustomerResource}) act as server to serve customer information. And
  * The CustomerDto ({@link CustomerDto} is data transfer object to share customer information.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

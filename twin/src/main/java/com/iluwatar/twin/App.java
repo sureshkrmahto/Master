@@ -7,8 +7,13 @@ package com.iluwatar.twin;
  * <p>In this example, the essence of the Twin pattern is the {@link BallItem} class and {@link
  * BallThread} class represent the twin objects to coordinate with each other (via the twin
  * reference) like a single class inheriting from {@link GameItem} and {@link Thread}.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   /**

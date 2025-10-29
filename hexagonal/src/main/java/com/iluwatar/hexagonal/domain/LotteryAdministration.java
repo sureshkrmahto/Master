@@ -11,6 +11,12 @@ import java.util.Map;
 
 /**
  * Lottery administration implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryAdministration {
 

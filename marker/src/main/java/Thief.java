@@ -3,6 +3,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Class defining Thief.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Thief {
   private static final Logger LOGGER = LoggerFactory.getLogger(Thief.class);

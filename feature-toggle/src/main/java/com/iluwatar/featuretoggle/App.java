@@ -21,6 +21,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>Note that this pattern can easily introduce code complexity, and if not kept in check can
  * result in redundant unmaintained code within the codebase.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

@@ -10,6 +10,12 @@ package com.iluwatar.poison.pill;
  *
  * <p>In simple cases the Poison Pill can be just a null-reference, but holding a unique separate
  * shared object-marker (with name "Poison" or "Poison Pill") is more clear and self describing.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

@@ -16,6 +16,12 @@ import java.util.Properties;
  * @see Service
  * @see com.iluwatar.featuretoggle.pattern.tieredversion.TieredFeatureToggleVersion
  * @see User
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PropertiesFeatureToggleVersion implements Service {
 

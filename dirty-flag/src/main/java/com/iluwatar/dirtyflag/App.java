@@ -27,6 +27,12 @@ import org.slf4j.LoggerFactory;
  * <p>In this example, the {@link DataFetcher} holds the <i>dirty flag</i>. It fetches and
  * re-fetches from <i>world.txt</i> when needed. {@link World} mainly serves the data to the
  * front-end.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

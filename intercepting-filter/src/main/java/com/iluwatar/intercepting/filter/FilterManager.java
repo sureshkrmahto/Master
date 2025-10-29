@@ -5,6 +5,9 @@ package com.iluwatar.intercepting.filter;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class FilterManager {
 
   private final FilterChain filterChain;

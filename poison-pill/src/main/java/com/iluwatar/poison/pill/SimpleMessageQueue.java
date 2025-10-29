@@ -5,6 +5,12 @@ import java.util.concurrent.BlockingQueue;
 
 /**
  * Bounded blocking queue wrapper.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleMessageQueue implements MessageQueue {
 

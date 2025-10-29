@@ -9,6 +9,12 @@ import java.io.IOException;
 
 /**
  * Page Object encapsulating the Login Page (login.html)
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LoginPage extends Page {
 

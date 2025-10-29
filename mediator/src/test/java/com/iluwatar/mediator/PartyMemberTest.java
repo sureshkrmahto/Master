@@ -22,6 +22,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class PartyMemberTest {
 
   static Stream<Arguments> dataProvider() {
@@ -35,6 +38,12 @@ public class PartyMemberTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender(PartyMemberBase.class);
@@ -96,6 +105,9 @@ public class PartyMemberTest {
     assertEquals(memberClass.getSimpleName(), member.toString());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

@@ -6,8 +6,13 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Class ArrayUtilityMethods has some utility methods for matrices and arrays.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class ArrayUtilityMethods {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ArrayUtilityMethods.class);

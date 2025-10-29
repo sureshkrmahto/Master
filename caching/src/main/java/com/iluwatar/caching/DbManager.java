@@ -17,6 +17,12 @@ import org.bson.Document;
  * <p>Developer/Tester is able to choose whether the application should use MongoDB as its
  * underlying data storage (connect()) or a simple Java data structure to (temporarily) store the
  * data/objects during runtime (createVirtualDB()).</p>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class DbManager {
 

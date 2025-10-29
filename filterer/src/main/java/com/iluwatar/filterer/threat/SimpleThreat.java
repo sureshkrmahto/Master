@@ -4,6 +4,12 @@ import java.util.Objects;
 
 /**
  * Represents a simple threat.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleThreat implements Threat {
 

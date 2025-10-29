@@ -7,6 +7,12 @@ import java.util.Iterator;
  * support consecutive hasNext() calls.
  *
  * @param <E> Iterable Collection of Elements of Type E
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class DecoratingIterator<E> implements Iterator<E> {
 
