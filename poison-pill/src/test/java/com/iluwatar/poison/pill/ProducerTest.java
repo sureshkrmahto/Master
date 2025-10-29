@@ -36,7 +36,6 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 
 /**
- * Date: 12/27/15 - 10:32 PM
  *
  * @author Suresh Mahto
  */

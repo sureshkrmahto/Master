@@ -31,7 +31,6 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.verifyZeroInteractions;
 
 /**
- * Date: 12/19/15 - 10:00 PM
  *
  * @author Suresh Mahto
  */

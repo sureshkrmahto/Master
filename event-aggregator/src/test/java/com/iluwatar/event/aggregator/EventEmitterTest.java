@@ -36,7 +36,6 @@ import java.util.function.Supplier;
 import org.junit.jupiter.api.Test;
 
 /**
- * Date: 12/12/15 - 10:58 PM Tests for Event Emitter
  *
  * @param <E> Type of Event Emitter
  * @author Suresh Mahto

@@ -24,7 +24,6 @@
 package com.iluwatar.templatemethod;
 
 /**
- * Date: 12/30/15 - 18:19 PM
  *
  * @author Suresh Mahto
  */
