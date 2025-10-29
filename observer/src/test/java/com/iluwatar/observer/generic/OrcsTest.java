@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * Date: 12/27/15 - 12:07 PM
  *
- * @author Jeroen Meulemeester
+ * @author Suresh Mahto
  */
 public class OrcsTest extends ObserverTest<GOrcs> {
 

@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +44,7 @@ import javax.swing.WindowConstants;
  * <p>This is where {@link Filter}s come to play as the client pre-processes the request before
  * being displayed in the {@link Target}.
  *
- * @author joshzambales
+ * @author Suresh Mahto
  */
 public class Client extends JFrame { // NOSONAR
 

@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ import org.junit.jupiter.api.Test;
 /**
  * Date: 12/28/15 - 9:52 PM
  *
- * @author Jeroen Meulemeester
+ * @author Suresh Mahto
  */
 public class QueenTest {
 

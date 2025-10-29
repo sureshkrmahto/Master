@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -40,7 +40,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Date: 12/27/15 - 11:44 AM
  * Test for Observers
  * @param <O> Type of Observer
- * @author Jeroen Meulemeester
+ * @author Suresh Mahto
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public abstract class ObserverTest<O extends Observer<?, ?, WeatherType>> {

@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ import static org.mockito.Mockito.when;
 /**
  * Date: 12/12/15 - 11:15 PM
  *
- * @author Jeroen Meulemeester
+ * @author Suresh Mahto
  */
 public class AsynchronousServiceTest {
   private AsynchronousService service;

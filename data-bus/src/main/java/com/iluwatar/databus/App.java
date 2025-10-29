@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ import java.time.LocalDateTime;
 /**
  * The Data Bus pattern.
  *
- * @author Paul Campbell (pcampbell@kemitix.net)
+ * @author Suresh Mahto
  * @see <a href="http://wiki.c2.com/?DataBusPattern">http://wiki.c2.com/?DataBusPattern</a>
  *     <p>The Data-Bus pattern provides a method where different parts of an application may
  *     pass messages between each other without needing to be aware of the other's existence.</p>

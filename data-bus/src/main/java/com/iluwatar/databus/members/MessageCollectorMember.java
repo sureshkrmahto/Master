@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 /**
  * Receiver of Data-Bus events that collects the messages from each {@link MessageData}.
  *
- * @author Paul Campbell (pcampbell@kemitix.net)
+ * @author Suresh Mahto
  */
 public class MessageCollectorMember implements Member {
 
