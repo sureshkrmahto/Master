@@ -8,24 +8,23 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class RenderComponent implements Component {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(RenderComponent.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(RenderComponent.class);
 
-  @Override
-  public void update() {
+@Override
+public void update() {
     // do nothing
   }
 
   /**
    * render.
+ *  @author Suresh Mahto
    */
   @Override
-  public void render() {
-    LOGGER.info("Render Component");
+public void render() {
+LOGGER.info("Render Component");
   }
 }

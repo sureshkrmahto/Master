@@ -7,39 +7,38 @@ package com.iluwatar.gameloop;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FixedStepGameLoop extends GameLoop {
 
   /**
    * 20 ms per frame = 50 FPS.
+ *  @author Suresh Mahto
    */
-  private static final long MS_PER_FRAME = 20;
+private static final long MS_PER_FRAME = 20;
 
-  @Override
-  protected void processGameLoop() {
-    var previousTime = System.currentTimeMillis();
-    var lag = 0L;
-    while (isGameRunning()) {
-      var currentTime = System.currentTimeMillis();
-      var elapsedTime = currentTime - previousTime;
-      previousTime = currentTime;
-      lag += elapsedTime;
+@Override
+protected void processGameLoop() {
+var previousTime = System.currentTimeMillis();
+var lag = 0L;
+while (isGameRunning()) {
+var currentTime = System.currentTimeMillis();
+var elapsedTime = currentTime - previousTime;
+previousTime = currentTime;
+lag += elapsedTime;
 
-      processInput();
+processInput();
 
-      while (lag >= MS_PER_FRAME) {
-        update();
-        lag -= MS_PER_FRAME;
+while (lag >= MS_PER_FRAME) {
+update();
+lag -= MS_PER_FRAME;
       }
 
-      render();
+render();
     }
   }
 
-  protected void update() {
-    controller.moveBullet(0.5f * MS_PER_FRAME / 1000);
+protected void update() {
+controller.moveBullet(0.5f * MS_PER_FRAME / 1000);
   }
 }

@@ -5,10 +5,8 @@ package com.iluwatar.acyclicvisitor;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Modem {
-  public abstract void accept(ModemVisitor modemVisitor);
+public abstract void accept(ModemVisitor modemVisitor);
 }

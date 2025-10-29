@@ -8,24 +8,23 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class GameItem {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(GameItem.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(GameItem.class);
 
   /**
    * Template method, do some common logic before draw.
+ *  @author Suresh Mahto
    */
-  public void draw() {
-    LOGGER.info("draw");
-    doDraw();
+public void draw() {
+LOGGER.info("draw");
+doDraw();
   }
 
-  public abstract void doDraw();
+public abstract void doDraw();
 
 
-  public abstract void click();
+public abstract void click();
 }

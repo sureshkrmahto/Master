@@ -6,14 +6,12 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Guard implements Permission {
-  private static final Logger LOGGER = LoggerFactory.getLogger(Guard.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(Guard.class);
 
-  protected void enter() {
-    LOGGER.info("You can enter");
+protected void enter() {
+LOGGER.info("You can enter");
   }
 }

@@ -6,21 +6,22 @@ import java.util.List;
 
 /**
  * Represents system that is aware of it's threats with given probability of their occurrence.
+ *  @author Suresh Mahto
  */
 public interface ProbabilisticThreatAwareSystem extends ThreatAwareSystem {
 
   /**
    * {@inheritDoc}
    * @return
-   */
+*/
   @Override
-  List<? extends ProbableThreat> threats();
+List<? extends ProbableThreat> threats();
 
   /**
    * {@inheritDoc}
    * @return
-   */
+*/
   @Override
-  Filterer<? extends ProbabilisticThreatAwareSystem, ? extends ProbableThreat> filtered();
+Filterer<? extends ProbabilisticThreatAwareSystem, ? extends ProbableThreat> filtered();
 }
 

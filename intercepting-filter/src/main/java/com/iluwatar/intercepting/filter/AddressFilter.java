@@ -5,19 +5,17 @@ package com.iluwatar.intercepting.filter;
  * the address field.
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AddressFilter extends AbstractFilter {
 
-  @Override
-  public String execute(Order order) {
-    var result = super.execute(order);
-    if (order.getAddress() == null || order.getAddress().isEmpty()) {
-      return result + "Invalid address! ";
+@Override
+public String execute(Order order) {
+var result = super.execute(order);
+if (order.getAddress() == null || order.getAddress().isEmpty()) {
+return result + "Invalid address! ";
     } else {
-      return result;
+return result;
     }
   }
 }

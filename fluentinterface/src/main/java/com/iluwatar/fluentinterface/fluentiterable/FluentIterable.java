@@ -12,6 +12,7 @@ import java.util.function.Predicate;
  * be complete. It was inspired by Guava's com.google.common.collect.FluentIterable.
  *
  * @param <E> is the class of objects the iterable contains
+ *  @author Suresh Mahto
  */
 public interface FluentIterable<E> extends Iterable<E> {
 
@@ -22,37 +23,37 @@ public interface FluentIterable<E> extends Iterable<E> {
    * @param predicate the condition to test with for the filtering. If the test is negative, the
    *                  tested object is removed by the iterator.
    * @return a filtered FluentIterable
-   */
-  FluentIterable<E> filter(Predicate<? super E> predicate);
+*/
+FluentIterable<E> filter(Predicate<? super E> predicate);
 
   /**
    * Returns an Optional containing the first element of this iterable if present, else returns
    * Optional.empty().
    *
    * @return the first element after the iteration is evaluated
-   */
-  Optional<E> first();
+*/
+Optional<E> first();
 
   /**
    * Evaluates the iteration and leaves only the count first elements.
    *
    * @return the first count elements as an Iterable
-   */
-  FluentIterable<E> first(int count);
+*/
+FluentIterable<E> first(int count);
 
   /**
    * Evaluates the iteration and returns the last element. This is a terminating operation.
    *
    * @return the last element after the iteration is evaluated
-   */
-  Optional<E> last();
+*/
+Optional<E> last();
 
   /**
    * Evaluates the iteration and leaves only the count last elements.
    *
    * @return the last counts elements as an Iterable
-   */
-  FluentIterable<E> last(int count);
+*/
+FluentIterable<E> last(int count);
 
   /**
    * Transforms this FluentIterable into a new one containing objects of the type T.
@@ -67,8 +68,8 @@ public interface FluentIterable<E> extends Iterable<E> {
    * Returns the contents of this Iterable as a List.
    *
    * @return a List representation of this Iterable
-   */
-  List<E> asList();
+*/
+List<E> asList();
 
   /**
    * Utility method that iterates over iterable and adds the contents to a list.
@@ -76,10 +77,10 @@ public interface FluentIterable<E> extends Iterable<E> {
    * @param iterable the iterable to collect
    * @param <E>      the type of the objects to iterate
    * @return a list with all objects of the given iterator
-   */
-  static <E> List<E> copyToList(Iterable<E> iterable) {
-    var copy = new ArrayList<E>();
-    iterable.forEach(copy::add);
-    return copy;
+*/
+static <E> List<E> copyToList(Iterable<E> iterable) {
+var copy = new ArrayList<E>();
+iterable.forEach(copy::add);
+return copy;
   }
 }

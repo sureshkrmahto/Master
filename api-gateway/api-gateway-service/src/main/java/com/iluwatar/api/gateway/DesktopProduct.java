@@ -5,34 +5,34 @@ package com.iluwatar.api.gateway;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DesktopProduct {
   /**
    * The price of the product.
+ *  @author Suresh Mahto
    */
-  private String price;
+private String price;
 
   /**
    * The path to the image of the product.
+ *  @author Suresh Mahto
    */
-  private String imagePath;
+private String imagePath;
 
-  public String getPrice() {
-    return price;
+public String getPrice() {
+return price;
   }
 
-  public void setPrice(String price) {
-    this.price = price;
+public void setPrice(String price) {
+this.price = price;
   }
 
-  public String getImagePath() {
-    return imagePath;
+public String getImagePath() {
+return imagePath;
   }
 
-  public void setImagePath(String imagePath) {
-    this.imagePath = imagePath;
+public void setImagePath(String imagePath) {
+this.imagePath = imagePath;
   }
 }

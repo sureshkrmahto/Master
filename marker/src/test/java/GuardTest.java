@@ -8,15 +8,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class GuardTest {
 
-  @Test
-  public void testGuard() {
-    var guard = new Guard();
-    assertThat(guard, instanceOf(Permission.class));
+@Test
+public void testGuard() {
+var guard = new Guard();
+assertThat(guard, instanceOf(Permission.class));
   }
 }

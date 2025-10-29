@@ -19,47 +19,46 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Main app method.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var wizard = new Wizard();
-    wizard.setHealth(45);
-    wizard.setAgility(7);
-    wizard.setWisdom(11);
+var wizard = new Wizard();
+wizard.setHealth(45);
+wizard.setAgility(7);
+wizard.setWisdom(11);
 
-    var vm = new VirtualMachine();
-    vm.getWizards()[0] = wizard;
+var vm = new VirtualMachine();
+vm.getWizards()[0] = wizard;
 
-    String literal = "LITERAL 0";
+String literal = "LITERAL 0";
 
-    interpretInstruction(literal, vm);
-    interpretInstruction(literal, vm);
-    interpretInstruction("GET_HEALTH", vm);
-    interpretInstruction(literal, vm);
-    interpretInstruction("GET_AGILITY", vm);
-    interpretInstruction(literal, vm);
-    interpretInstruction("GET_WISDOM ", vm);
-    interpretInstruction("ADD", vm);
-    interpretInstruction("LITERAL 2", vm);
-    interpretInstruction("DIVIDE", vm);
-    interpretInstruction("ADD", vm);
-    interpretInstruction("SET_HEALTH", vm);
+interpretInstruction(literal, vm);
+interpretInstruction(literal, vm);
+interpretInstruction("GET_HEALTH", vm);
+interpretInstruction(literal, vm);
+interpretInstruction("GET_AGILITY", vm);
+interpretInstruction(literal, vm);
+interpretInstruction("GET_WISDOM ", vm);
+interpretInstruction("ADD", vm);
+interpretInstruction("LITERAL 2", vm);
+interpretInstruction("DIVIDE", vm);
+interpretInstruction("ADD", vm);
+interpretInstruction("SET_HEALTH", vm);
   }
 
-  private static void interpretInstruction(String instruction, VirtualMachine vm) {
-    vm.execute(InstructionConverterUtil.convertToByteCode(instruction));
-    var stack = vm.getStack();
-    LOGGER.info(instruction + String.format("%" + (12 - instruction.length()) + "s", "") + stack);
+private static void interpretInstruction(String instruction, VirtualMachine vm) {
+vm.execute(InstructionConverterUtil.convertToByteCode(instruction));
+var stack = vm.getStack();
+LOGGER.info(instruction + String.format("%" + (12 - instruction.length()) + "s", "") + stack);
   }
 }

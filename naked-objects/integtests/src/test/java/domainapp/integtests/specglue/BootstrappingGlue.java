@@ -12,22 +12,20 @@ import domainapp.integtests.bootstrap.SimpleAppSystemInitializer;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class BootstrappingGlue extends CukeGlueAbstract {
 
-  @Before(value = {"@integration"}, order = 100)
-  public void beforeScenarioIntegrationScope() {
-    SimpleAppSystemInitializer.initIsft();
+@Before(value = {"@integration"}, order = 100)
+public void beforeScenarioIntegrationScope() {
+SimpleAppSystemInitializer.initIsft();
 
-    before(ScenarioExecutionScope.INTEGRATION);
+before(ScenarioExecutionScope.INTEGRATION);
   }
 
-  @After
-  public void afterScenario(cucumber.api.Scenario sc) {
-    assertMocksSatisfied();
-    after(sc);
+@After
+public void afterScenario(cucumber.api.Scenario sc) {
+assertMocksSatisfied();
+after(sc);
   }
 }

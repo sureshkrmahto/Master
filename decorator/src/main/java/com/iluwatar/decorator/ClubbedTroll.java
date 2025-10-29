@@ -8,33 +8,31 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ClubbedTroll implements Troll {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ClubbedTroll.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ClubbedTroll.class);
 
-  private final Troll decorated;
+private final Troll decorated;
 
-  public ClubbedTroll(Troll decorated) {
-    this.decorated = decorated;
+public ClubbedTroll(Troll decorated) {
+this.decorated = decorated;
   }
 
-  @Override
-  public void attack() {
-    decorated.attack();
-    LOGGER.info("The troll swings at you with a club!");
+@Override
+public void attack() {
+decorated.attack();
+LOGGER.info("The troll swings at you with a club!");
   }
 
-  @Override
-  public int getAttackPower() {
-    return decorated.getAttackPower() + 10;
+@Override
+public int getAttackPower() {
+return decorated.getAttackPower() + 10;
   }
 
-  @Override
-  public void fleeBattle() {
-    decorated.fleeBattle();
+@Override
+public void fleeBattle() {
+decorated.fleeBattle();
   }
 }

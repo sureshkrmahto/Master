@@ -5,16 +5,14 @@ package com.iluwatar.abstractfactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class OrcCastle implements Castle {
 
-  static final String DESCRIPTION = "This is the Orc castle!";
+static final String DESCRIPTION = "This is the Orc castle!";
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
+@Override
+public String getDescription() {
+return DESCRIPTION;
   }
 }

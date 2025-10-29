@@ -5,13 +5,11 @@ package com.iluwatar.datamapper;
  * decoupling.
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class DataMapperException extends RuntimeException {
 
-  private static final long serialVersionUID = 1L;
+private static final long serialVersionUID = 1L;
 
   /**
    * Constructs a new runtime exception with the specified detail message. The cause is not
@@ -19,8 +17,9 @@ public final class DataMapperException extends RuntimeException {
    *
    * @param message the detail message. The detail message is saved for later retrieval by the
    *                {@link #getMessage()} method.
+ *  @author Suresh Mahto
    */
-  public DataMapperException(final String message) {
-    super(message);
+public DataMapperException(final String message) {
+super(message);
   }
 }

@@ -23,47 +23,46 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = AggregatorRouteTest.class)
 @ActiveProfiles("test")
 @EnableAutoConfiguration
 @ComponentScan
-/**
- * @author Suresh Mahto
- */
 public class AggregatorRouteTest {
 
-  @EndpointInject(uri = "{{entry}}")
-  private ProducerTemplate entry;
+@EndpointInject(uri = "{{entry}}")
+private ProducerTemplate entry;
 
-  @EndpointInject(uri = "{{endpoint}}")
-  private MockEndpoint endpoint;
+@EndpointInject(uri = "{{endpoint}}")
+private MockEndpoint endpoint;
 
   /**
    * Test if endpoint receives three separate messages.
    *
    * @throws Exception in case of en exception during the test
+ *  @author Suresh Mahto
    */
   @Test
   @DirtiesContext
-  public void testSplitter() throws Exception {
+public void testSplitter() throws Exception {
 
     // Three items in one entry message
-    entry.sendBody("TEST1");
-    entry.sendBody("TEST2");
-    entry.sendBody("TEST3");
-    entry.sendBody("TEST4");
-    entry.sendBody("TEST5");
+entry.sendBody("TEST1");
+entry.sendBody("TEST2");
+entry.sendBody("TEST3");
+entry.sendBody("TEST4");
+entry.sendBody("TEST5");
 
     // Endpoint should have three different messages in the end order of the messages is not important
-    endpoint.expectedMessageCount(2);
-    endpoint.assertIsSatisfied();
+endpoint.expectedMessageCount(2);
+endpoint.assertIsSatisfied();
 
-    var body = (String) endpoint.getReceivedExchanges().get(0).getIn().getBody();
-    assertEquals(3, body.split(";").length);
+var body = (String) endpoint.getReceivedExchanges().get(0).getIn().getBody();
+assertEquals(3, body.split(";").length);
 
-    var body2 = (String) endpoint.getReceivedExchanges().get(1).getIn().getBody();
-    assertEquals(2, body2.split(";").length);
+var body2 = (String) endpoint.getReceivedExchanges().get(1).getIn().getBody();
+assertEquals(2, body2.split(";").length);
   }
 }

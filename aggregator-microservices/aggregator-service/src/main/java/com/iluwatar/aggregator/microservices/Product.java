@@ -5,37 +5,37 @@ package com.iluwatar.aggregator.microservices;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Product {
 
   /**
    * The title of the product.
+ *  @author Suresh Mahto
    */
-  private String title;
+private String title;
 
 
   /**
    * The inventories of the product.
+ *  @author Suresh Mahto
    */
-  private int productInventories;
+private int productInventories;
 
-  public String getTitle() {
-    return title;
+public String getTitle() {
+return title;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
+public void setTitle(String title) {
+this.title = title;
   }
 
-  public int getProductInventories() {
-    return productInventories;
+public int getProductInventories() {
+return productInventories;
   }
 
-  public void setProductInventories(int productInventories) {
-    this.productInventories = productInventories;
+public void setProductInventories(int productInventories) {
+this.productInventories = productInventories;
   }
 
 }

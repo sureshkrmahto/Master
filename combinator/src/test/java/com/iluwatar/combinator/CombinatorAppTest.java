@@ -5,14 +5,6 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
- */
 public class CombinatorAppTest {
 
   /**
@@ -22,8 +14,8 @@ public class CombinatorAppTest {
    * throws an exception.
    */
 
-  @Test
-  public void shouldExecuteApplicationWithoutException() {
-    assertDoesNotThrow(() -> CombinatorApp.main(new String[]{}));
+@Test
+public void shouldExecuteApplicationWithoutException() {
+assertDoesNotThrow(() -> CombinatorApp.main(new String[]{}));
   }
 }

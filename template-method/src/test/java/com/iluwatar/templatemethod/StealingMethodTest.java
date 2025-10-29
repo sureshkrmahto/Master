@@ -17,54 +17,52 @@ import org.slf4j.LoggerFactory;
  *
  * @param <M> Type of StealingMethod
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class StealingMethodTest<M extends StealingMethod> {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender();
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender();
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
   /**
    * The tested stealing method
+ *  @author Suresh Mahto
    */
-  private final M method;
+private final M method;
 
   /**
    * The expected target
+ *  @author Suresh Mahto
    */
-  private final String expectedTarget;
+private final String expectedTarget;
 
   /**
    * The expected target picking result
+ *  @author Suresh Mahto
    */
-  private final String expectedTargetResult;
+private final String expectedTargetResult;
 
   /**
    * The expected confusion method
+ *  @author Suresh Mahto
    */
-  private final String expectedConfuseMethod;
+private final String expectedConfuseMethod;
 
   /**
    * The expected stealing method
+ *  @author Suresh Mahto
    */
-  private final String expectedStealMethod;
+private final String expectedStealMethod;
 
   /**
    * Create a new test for the given stealing method, together with the expected results
@@ -74,88 +72,90 @@ public abstract class StealingMethodTest<M extends StealingMethod> {
    * @param expectedTargetResult  The expected target picking result
    * @param expectedConfuseMethod The expected confusion method
    * @param expectedStealMethod   The expected stealing method
+ *  @author Suresh Mahto
    */
-  public StealingMethodTest(final M method, String expectedTarget, final String expectedTargetResult,
-                            final String expectedConfuseMethod, final String expectedStealMethod) {
+public StealingMethodTest(final M method, String expectedTarget, final String expectedTargetResult,
+final String expectedConfuseMethod, final String expectedStealMethod) {
 
-    this.method = method;
-    this.expectedTarget = expectedTarget;
-    this.expectedTargetResult = expectedTargetResult;
-    this.expectedConfuseMethod = expectedConfuseMethod;
-    this.expectedStealMethod = expectedStealMethod;
+this.method = method;
+this.expectedTarget = expectedTarget;
+this.expectedTargetResult = expectedTargetResult;
+this.expectedConfuseMethod = expectedConfuseMethod;
+this.expectedStealMethod = expectedStealMethod;
   }
 
   /**
    * Verify if the thief picks the correct target
+ *  @author Suresh Mahto
    */
   @Test
-  public void testPickTarget() {
-    assertEquals(expectedTarget, this.method.pickTarget());
+public void testPickTarget() {
+assertEquals(expectedTarget, this.method.pickTarget());
   }
 
   /**
    * Verify if the target confusing step goes as planned
+ *  @author Suresh Mahto
    */
   @Test
-  public void testConfuseTarget() {
-    assertEquals(0, appender.getLogSize());
+public void testConfuseTarget() {
+assertEquals(0, appender.getLogSize());
 
-    this.method.confuseTarget(this.expectedTarget);
-    assertEquals(this.expectedConfuseMethod, appender.getLastMessage());
-    assertEquals(1, appender.getLogSize());
+this.method.confuseTarget(this.expectedTarget);
+assertEquals(this.expectedConfuseMethod, appender.getLastMessage());
+assertEquals(1, appender.getLogSize());
   }
 
   /**
    * Verify if the stealing step goes as planned
+ *  @author Suresh Mahto
    */
   @Test
-  public void testStealTheItem() {
-    assertEquals(0, appender.getLogSize());
+public void testStealTheItem() {
+assertEquals(0, appender.getLogSize());
 
-    this.method.stealTheItem(this.expectedTarget);
-    assertEquals(this.expectedStealMethod, appender.getLastMessage());
-    assertEquals(1, appender.getLogSize());
+this.method.stealTheItem(this.expectedTarget);
+assertEquals(this.expectedStealMethod, appender.getLastMessage());
+assertEquals(1, appender.getLogSize());
   }
 
   /**
    * Verify if the complete steal process goes as planned
+ *  @author Suresh Mahto
    */
   @Test
-  public void testSteal() {
-    this.method.steal();
+public void testSteal() {
+this.method.steal();
 
-    assertTrue(appender.logContains(this.expectedTargetResult));
-    assertTrue(appender.logContains(this.expectedConfuseMethod));
-    assertTrue(appender.logContains(this.expectedStealMethod));
-    assertEquals(3, appender.getLogSize());
+assertTrue(appender.logContains(this.expectedTargetResult));
+assertTrue(appender.logContains(this.expectedConfuseMethod));
+assertTrue(appender.logContains(this.expectedStealMethod));
+assertEquals(3, appender.getLogSize());
   }
 
-/**
- * @author Suresh Mahto
- */
-  private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender() {
+public InMemoryAppender() {
       ((Logger) LoggerFactory.getLogger("root")).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public int getLogSize() {
-      return log.size();
+public int getLogSize() {
+return log.size();
     }
 
-    public String getLastMessage() {
-      return log.get(log.size() - 1).getFormattedMessage();
+public String getLastMessage() {
+return log.get(log.size() - 1).getFormattedMessage();
     }
 
-    public boolean logContains(String message) {
-      return log.stream().anyMatch(event -> event.getFormattedMessage().equals(message));
+public boolean logContains(String message) {
+return log.stream().anyMatch(event -> event.getFormattedMessage().equals(message));
     }
   }
 }

@@ -24,30 +24,29 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SagaApplication {
-  private static final Logger LOGGER = LoggerFactory.getLogger(SagaApplication.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(SagaApplication.class);
 
   /**
    * method to show common saga logic.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var sagaOrchestrator = new SagaOrchestrator(newSaga(), serviceDiscovery());
+public static void main(String[] args) {
+var sagaOrchestrator = new SagaOrchestrator(newSaga(), serviceDiscovery());
 
-    Saga.Result goodOrder = sagaOrchestrator.execute("good_order");
-    Saga.Result badOrder = sagaOrchestrator.execute("bad_order");
-    Saga.Result crashedOrder = sagaOrchestrator.execute("crashed_order");
+Saga.Result goodOrder = sagaOrchestrator.execute("good_order");
+Saga.Result badOrder = sagaOrchestrator.execute("bad_order");
+Saga.Result crashedOrder = sagaOrchestrator.execute("crashed_order");
 
-    LOGGER.info("orders: goodOrder is {}, badOrder is {},crashedOrder is {}",
-        goodOrder, badOrder, crashedOrder);
+LOGGER.info("orders: goodOrder is {}, badOrder is {},crashedOrder is {}",
+goodOrder, badOrder, crashedOrder);
   }
 
 
-  private static Saga newSaga() {
-    return Saga
+private static Saga newSaga() {
+return Saga
         .create()
         .chapter("init an order")
         .chapter("booking a Fly")
@@ -55,8 +54,8 @@ public class SagaApplication {
         .chapter("withdrawing Money");
   }
 
-  private static ServiceDiscoveryService serviceDiscovery() {
-    return new ServiceDiscoveryService()
+private static ServiceDiscoveryService serviceDiscovery() {
+return new ServiceDiscoveryService()
         .discover(new OrderService())
         .discover(new FlyBookingService())
         .discover(new HotelBookingService())

@@ -7,9 +7,7 @@ import com.iluwatar.bytecode.Instruction;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class InstructionConverterUtil {
   /**
@@ -17,43 +15,44 @@ public class InstructionConverterUtil {
    *
    * @param instructions to convert
    * @return array of int representing bytecode
+ *  @author Suresh Mahto
    */
-  public static int[] convertToByteCode(String instructions) {
-    if (instructions == null || instructions.trim().length() == 0) {
-      return new int[0];
+public static int[] convertToByteCode(String instructions) {
+if (instructions == null || instructions.trim().length() == 0) {
+return new int[0];
     }
 
-    var splitedInstructions = instructions.trim().split(" ");
-    var bytecode = new int[splitedInstructions.length];
-    for (var i = 0; i < splitedInstructions.length; i++) {
-      if (isValidInstruction(splitedInstructions[i])) {
-        bytecode[i] = Instruction.valueOf(splitedInstructions[i]).getIntValue();
+var splitedInstructions = instructions.trim().split(" ");
+var bytecode = new int[splitedInstructions.length];
+for (var i = 0; i < splitedInstructions.length; i++) {
+if (isValidInstruction(splitedInstructions[i])) {
+bytecode[i] = Instruction.valueOf(splitedInstructions[i]).getIntValue();
       } else if (isValidInt(splitedInstructions[i])) {
-        bytecode[i] = Integer.parseInt(splitedInstructions[i]);
+bytecode[i] = Integer.parseInt(splitedInstructions[i]);
       } else {
-        var errorMessage = "Invalid instruction or number: " + splitedInstructions[i];
-        throw new IllegalArgumentException(errorMessage);
+var errorMessage = "Invalid instruction or number: " + splitedInstructions[i];
+throw new IllegalArgumentException(errorMessage);
       }
     }
 
-    return bytecode;
+return bytecode;
   }
 
-  private static boolean isValidInstruction(String instruction) {
-    try {
-      Instruction.valueOf(instruction);
-      return true;
+private static boolean isValidInstruction(String instruction) {
+try {
+Instruction.valueOf(instruction);
+return true;
     } catch (IllegalArgumentException e) {
-      return false;
+return false;
     }
   }
 
-  private static boolean isValidInt(String value) {
-    try {
-      Integer.parseInt(value);
-      return true;
+private static boolean isValidInt(String value) {
+try {
+Integer.parseInt(value);
+return true;
     } catch (NumberFormatException e) {
-      return false;
+return false;
     }
   }
 

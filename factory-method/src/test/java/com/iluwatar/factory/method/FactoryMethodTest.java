@@ -19,54 +19,56 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FactoryMethodTest {
 
   /**
    * Testing {@link OrcBlacksmith} to produce a SPEAR asserting that the Weapon is an instance of
    * {@link OrcWeapon}.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testOrcBlacksmithWithSpear() {
-    var blacksmith = new OrcBlacksmith();
-    var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
-    verifyWeapon(weapon, WeaponType.SPEAR, OrcWeapon.class);
+public void testOrcBlacksmithWithSpear() {
+var blacksmith = new OrcBlacksmith();
+var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
+verifyWeapon(weapon, WeaponType.SPEAR, OrcWeapon.class);
   }
 
   /**
    * Testing {@link OrcBlacksmith} to produce an AXE asserting that the Weapon is an instance of
    * {@link OrcWeapon}.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testOrcBlacksmithWithAxe() {
-    var blacksmith = new OrcBlacksmith();
-    var weapon = blacksmith.manufactureWeapon(WeaponType.AXE);
-    verifyWeapon(weapon, WeaponType.AXE, OrcWeapon.class);
+public void testOrcBlacksmithWithAxe() {
+var blacksmith = new OrcBlacksmith();
+var weapon = blacksmith.manufactureWeapon(WeaponType.AXE);
+verifyWeapon(weapon, WeaponType.AXE, OrcWeapon.class);
   }
 
   /**
    * Testing {@link ElfBlacksmith} to produce a SHORT_SWORD asserting that the Weapon is an instance
    * of {@link ElfWeapon}.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testElfBlacksmithWithShortSword() {
-    var blacksmith = new ElfBlacksmith();
-    var weapon = blacksmith.manufactureWeapon(WeaponType.SHORT_SWORD);
-    verifyWeapon(weapon, WeaponType.SHORT_SWORD, ElfWeapon.class);
+public void testElfBlacksmithWithShortSword() {
+var blacksmith = new ElfBlacksmith();
+var weapon = blacksmith.manufactureWeapon(WeaponType.SHORT_SWORD);
+verifyWeapon(weapon, WeaponType.SHORT_SWORD, ElfWeapon.class);
   }
 
   /**
    * Testing {@link ElfBlacksmith} to produce a SPEAR asserting that the Weapon is an instance of
    * {@link ElfWeapon}.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testElfBlacksmithWithSpear() {
-    var blacksmith = new ElfBlacksmith();
-    var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
-    verifyWeapon(weapon, WeaponType.SPEAR, ElfWeapon.class);
+public void testElfBlacksmithWithSpear() {
+var blacksmith = new ElfBlacksmith();
+var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
+verifyWeapon(weapon, WeaponType.SPEAR, ElfWeapon.class);
   }
 
   /**
@@ -76,10 +78,11 @@ public class FactoryMethodTest {
    * @param weapon             weapon object which is to be verified
    * @param expectedWeaponType expected WeaponType of the weapon
    * @param clazz              expected class of the weapon
+ *  @author Suresh Mahto
    */
-  private void verifyWeapon(Weapon weapon, WeaponType expectedWeaponType, Class<?> clazz) {
-    assertTrue(clazz.isInstance(weapon), "Weapon must be an object of: " + clazz.getName());
-    assertEquals(expectedWeaponType, weapon
+private void verifyWeapon(Weapon weapon, WeaponType expectedWeaponType, Class<?> clazz) {
+assertTrue(clazz.isInstance(weapon), "Weapon must be an object of: " + clazz.getName());
+assertEquals(expectedWeaponType, weapon
         .getWeaponType(), "Weapon must be of weaponType: " + expectedWeaponType);
   }
 }

@@ -18,21 +18,20 @@ import java.util.function.Predicate;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleFluentIterable<E> implements FluentIterable<E> {
 
-  private final Iterable<E> iterable;
+private final Iterable<E> iterable;
 
   /**
    * This constructor creates a copy of a given iterable's contents.
    *
    * @param iterable the iterable this interface copies to work on.
+ *  @author Suresh Mahto
    */
-  protected SimpleFluentIterable(Iterable<E> iterable) {
-    this.iterable = iterable;
+protected SimpleFluentIterable(Iterable<E> iterable) {
+this.iterable = iterable;
   }
 
   /**
@@ -42,28 +41,30 @@ public class SimpleFluentIterable<E> implements FluentIterable<E> {
    * @param predicate the condition to test with for the filtering. If the test is negative, the
    *                  tested object is removed by the iterator.
    * @return the same FluentIterable with a filtered collection
+ *  @author Suresh Mahto
    */
   @Override
-  public final FluentIterable<E> filter(Predicate<? super E> predicate) {
-    var iterator = iterator();
-    while (iterator.hasNext()) {
-      var nextElement = iterator.next();
-      if (!predicate.test(nextElement)) {
-        iterator.remove();
+public final FluentIterable<E> filter(Predicate<? super E> predicate) {
+var iterator = iterator();
+while (iterator.hasNext()) {
+var nextElement = iterator.next();
+if (!predicate.test(nextElement)) {
+iterator.remove();
       }
     }
-    return this;
+return this;
   }
 
   /**
    * Can be used to collect objects from the Iterable. Is a terminating operation.
    *
    * @return an option of the first object of the Iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public final Optional<E> first() {
-    var resultIterator = first(1).iterator();
-    return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
+public final Optional<E> first() {
+var resultIterator = first(1).iterator();
+return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
   }
 
   /**
@@ -72,33 +73,35 @@ public class SimpleFluentIterable<E> implements FluentIterable<E> {
    * @param count defines the number of objects to return
    * @return the same FluentIterable with a collection decimated to a maximum of 'count' first
    *     objects.
+ *  @author Suresh Mahto
    */
   @Override
-  public final FluentIterable<E> first(int count) {
-    var iterator = iterator();
-    var currentCount = 0;
-    while (iterator.hasNext()) {
-      iterator.next();
-      if (currentCount >= count) {
-        iterator.remove();
+public final FluentIterable<E> first(int count) {
+var iterator = iterator();
+var currentCount = 0;
+while (iterator.hasNext()) {
+iterator.next();
+if (currentCount >= count) {
+iterator.remove();
       }
-      currentCount++;
+currentCount++;
     }
-    return this;
+return this;
   }
 
   /**
    * Can be used to collect objects from the Iterable. Is a terminating operation.
    *
    * @return an option of the last object of the Iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public final Optional<E> last() {
-    var list = last(1).asList();
-    if (list.isEmpty()) {
-      return Optional.empty();
+public final Optional<E> last() {
+var list = last(1).asList();
+if (list.isEmpty()) {
+return Optional.empty();
     }
-    return Optional.of(list.get(0));
+return Optional.of(list.get(0));
   }
 
   /**
@@ -107,21 +110,22 @@ public class SimpleFluentIterable<E> implements FluentIterable<E> {
    * @param count defines the number of objects to return
    * @return the same FluentIterable with a collection decimated to a maximum of 'count' last
    *     objects
+ *  @author Suresh Mahto
    */
   @Override
-  public final FluentIterable<E> last(int count) {
-    var remainingElementsCount = getRemainingElementsCount();
-    var iterator = iterator();
-    var currentIndex = 0;
-    while (iterator.hasNext()) {
-      iterator.next();
-      if (currentIndex < remainingElementsCount - count) {
-        iterator.remove();
+public final FluentIterable<E> last(int count) {
+var remainingElementsCount = getRemainingElementsCount();
+var iterator = iterator();
+var currentIndex = 0;
+while (iterator.hasNext()) {
+iterator.next();
+if (currentIndex < remainingElementsCount - count) {
+iterator.remove();
       }
-      currentIndex++;
+currentIndex++;
     }
 
-    return this;
+return this;
   }
 
   /**
@@ -130,75 +134,80 @@ public class SimpleFluentIterable<E> implements FluentIterable<E> {
    * @param function a function that transforms an instance of E into an instance of T
    * @param <T>      the target type of the transformation
    * @return a new FluentIterable of the new type
+ *  @author Suresh Mahto
    */
   @Override
-  public final <T> FluentIterable<T> map(Function<? super E, T> function) {
-    var temporaryList = new ArrayList<T>();
-    this.forEach(e -> temporaryList.add(function.apply(e)));
-    return from(temporaryList);
+public final <T> FluentIterable<T> map(Function<? super E, T> function) {
+var temporaryList = new ArrayList<T>();
+this.forEach(e -> temporaryList.add(function.apply(e)));
+return from(temporaryList);
   }
 
   /**
    * Collects all remaining objects of this Iterable into a list.
    *
    * @return a list with all remaining objects of this Iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public List<E> asList() {
-    return toList(iterable.iterator());
+public List<E> asList() {
+return toList(iterable.iterator());
   }
 
   /**
    * Constructs FluentIterable from iterable.
    *
    * @return a FluentIterable from a given iterable. Calls the SimpleFluentIterable constructor.
+ *  @author Suresh Mahto
    */
-  public static <E> FluentIterable<E> from(Iterable<E> iterable) {
-    return new SimpleFluentIterable<>(iterable);
+public static <E> FluentIterable<E> from(Iterable<E> iterable) {
+return new SimpleFluentIterable<>(iterable);
   }
 
-  public static <E> FluentIterable<E> fromCopyOf(Iterable<E> iterable) {
-    var copy = FluentIterable.copyToList(iterable);
-    return new SimpleFluentIterable<>(copy);
+public static <E> FluentIterable<E> fromCopyOf(Iterable<E> iterable) {
+var copy = FluentIterable.copyToList(iterable);
+return new SimpleFluentIterable<>(copy);
   }
 
-  @Override
-  public Iterator<E> iterator() {
-    return iterable.iterator();
+@Override
+public Iterator<E> iterator() {
+return iterable.iterator();
   }
 
-  @Override
-  public void forEach(Consumer<? super E> action) {
-    iterable.forEach(action);
+@Override
+public void forEach(Consumer<? super E> action) {
+iterable.forEach(action);
   }
 
 
-  @Override
-  public Spliterator<E> spliterator() {
-    return iterable.spliterator();
+@Override
+public Spliterator<E> spliterator() {
+return iterable.spliterator();
   }
 
   /**
    * Find the count of remaining objects of current iterable.
    *
    * @return the count of remaining objects of the current Iterable
+ *  @author Suresh Mahto
    */
-  public final int getRemainingElementsCount() {
-    var counter = 0;
-    for (var ignored : this) {
-      counter++;
+public final int getRemainingElementsCount() {
+var counter = 0;
+for (var ignored : this) {
+counter++;
     }
-    return counter;
+return counter;
   }
 
   /**
    * Collects the remaining objects of the given iterator into a List.
    *
    * @return a new List with the remaining objects.
+ *  @author Suresh Mahto
    */
-  public static <E> List<E> toList(Iterator<E> iterator) {
-    var copy = new ArrayList<E>();
-    iterator.forEachRemaining(copy::add);
-    return copy;
+public static <E> List<E> toList(Iterator<E> iterator) {
+var copy = new ArrayList<E>();
+iterator.forEachRemaining(copy::add);
+return copy;
   }
 }

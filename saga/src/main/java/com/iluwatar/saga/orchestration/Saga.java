@@ -9,44 +9,43 @@ import java.util.List;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Saga {
 
-  private final List<Chapter> chapters;
+private final List<Chapter> chapters;
 
 
-  private Saga() {
-    this.chapters = new ArrayList<>();
+private Saga() {
+this.chapters = new ArrayList<>();
   }
 
 
-  public Saga chapter(String name) {
-    this.chapters.add(new Chapter(name));
-    return this;
+public Saga chapter(String name) {
+this.chapters.add(new Chapter(name));
+return this;
   }
 
 
-  public Chapter get(int idx) {
-    return chapters.get(idx);
+public Chapter get(int idx) {
+return chapters.get(idx);
   }
 
-  public boolean isPresent(int idx) {
-    return idx >= 0 && idx < chapters.size();
+public boolean isPresent(int idx) {
+return idx >= 0 && idx < chapters.size();
   }
 
 
-  public static Saga create() {
-    return new Saga();
+public static Saga create() {
+return new Saga();
   }
 
   /**
    * result for saga.
+ *  @author Suresh Mahto
    */
-  public enum Result {
-    FINISHED, ROLLBACK, CRASHED
+public enum Result {
+FINISHED, ROLLBACK, CRASHED
   }
 
   /**
@@ -54,19 +53,17 @@ public class Saga {
    
    * @author Suresh Mahto
 
+ *  @author Suresh Mahto
    */
-/**
- * @author Suresh Mahto
- */
-  public static class Chapter {
-    String name;
+public static class Chapter {
+String name;
 
-    public Chapter(String name) {
-      this.name = name;
+public Chapter(String name) {
+this.name = name;
     }
 
-    public String getName() {
-      return name;
+public String getName() {
+return name;
     }
   }
 }

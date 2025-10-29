@@ -6,13 +6,14 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Generic observer representing orcs reacting to weather updates.
+ *  @author Suresh Mahto
  */
 public class GOrcs implements Race {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(GOrcs.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(GOrcs.class);
 
-  @Override
-  public void update(GWeather weather, WeatherType weatherType) {
-    LOGGER.info("The orcs are facing " + weatherType.getDescription() + " weather now");
+@Override
+public void update(GWeather weather, WeatherType weatherType) {
+LOGGER.info("The orcs are facing " + weatherType.getDescription() + " weather now");
   }
 }

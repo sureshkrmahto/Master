@@ -17,29 +17,28 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
-  public static final double PRODUCT_COST = 50.0;
+public static final double PRODUCT_COST = 50.0;
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
     //Create the invoice generator with product cost as 50 and foreign product tax
-    var internationalProductInvoice = new InvoiceGenerator(PRODUCT_COST,
-        new ForeignTaxCalculator());
-    LOGGER.info("Foreign Tax applied: {}", "" + internationalProductInvoice.getAmountWithTax());
+var internationalProductInvoice = new InvoiceGenerator(PRODUCT_COST,
+new ForeignTaxCalculator());
+LOGGER.info("Foreign Tax applied: {}", "" + internationalProductInvoice.getAmountWithTax());
 
     //Create the invoice generator with product cost as 50 and domestic product tax
-    var domesticProductInvoice = new InvoiceGenerator(PRODUCT_COST, new DomesticTaxCalculator());
-    LOGGER.info("Domestic Tax applied: {}", "" + domesticProductInvoice.getAmountWithTax());
+var domesticProductInvoice = new InvoiceGenerator(PRODUCT_COST, new DomesticTaxCalculator());
+LOGGER.info("Domestic Tax applied: {}", "" + domesticProductInvoice.getAmountWithTax());
   }
 }

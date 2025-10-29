@@ -39,21 +39,20 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var service = new AsynchronousService(new LinkedBlockingQueue<>());
+public static void main(String[] args) {
+var service = new AsynchronousService(new LinkedBlockingQueue<>());
     /*
      * A new task to calculate sum is received but as this is main thread, it should not block. So
      * it passes it to the asynchronous task layer to compute and proceeds with handling other
@@ -61,17 +60,17 @@ public class App {
      * receive new incoming requests and does not wait for particular request to be completed before
      * responding to new request.
      */
-    service.execute(new ArithmeticSumTask(1000));
+service.execute(new ArithmeticSumTask(1000));
 
     /*
      * New task received, lets pass that to async layer for computation. So both requests will be
      * executed in parallel.
      */
-    service.execute(new ArithmeticSumTask(500));
-    service.execute(new ArithmeticSumTask(2000));
-    service.execute(new ArithmeticSumTask(1));
+service.execute(new ArithmeticSumTask(500));
+service.execute(new ArithmeticSumTask(2000));
+service.execute(new ArithmeticSumTask(1));
 
-    service.close();
+service.close();
   }
 
   /**
@@ -79,24 +78,22 @@ public class App {
    
    * @author Suresh Mahto
 
+ *  @author Suresh Mahto
    */
-/**
- * @author Suresh Mahto
- */
-  static class ArithmeticSumTask implements AsyncTask<Long> {
-    private final long numberOfElements;
+static class ArithmeticSumTask implements AsyncTask<Long> {
+private final long numberOfElements;
 
-    public ArithmeticSumTask(long numberOfElements) {
-      this.numberOfElements = numberOfElements;
+public ArithmeticSumTask(long numberOfElements) {
+this.numberOfElements = numberOfElements;
     }
 
     /*
      * This is the long running task that is performed in background. In our example the long
      * running task is calculating arithmetic sum with artificial delay.
      */
-    @Override
-    public Long call() throws Exception {
-      return ap(numberOfElements);
+@Override
+public Long call() throws Exception {
+return ap(numberOfElements);
     }
 
     /*
@@ -105,31 +102,31 @@ public class App {
      * be performed in main thread. If we did validated the input in background thread then we pay
      * the cost of context switching which is much more than validating it in main thread.
      */
-    @Override
-    public void onPreCall() {
-      if (numberOfElements < 0) {
-        throw new IllegalArgumentException("n is less than 0");
+@Override
+public void onPreCall() {
+if (numberOfElements < 0) {
+throw new IllegalArgumentException("n is less than 0");
       }
     }
 
-    @Override
-    public void onPostCall(Long result) {
+@Override
+public void onPostCall(Long result) {
       // Handle the result of computation
-      LOGGER.info(result.toString());
+LOGGER.info(result.toString());
     }
 
-    @Override
-    public void onError(Throwable throwable) {
-      throw new IllegalStateException("Should not occur");
+@Override
+public void onError(Throwable throwable) {
+throw new IllegalStateException("Should not occur");
     }
   }
 
-  private static long ap(long i) {
-    try {
-      Thread.sleep(i);
+private static long ap(long i) {
+try {
+Thread.sleep(i);
     } catch (InterruptedException e) {
-      LOGGER.error("Exception caught.", e);
+LOGGER.error("Exception caught.", e);
     }
-    return i * (i + 1) / 2;
+return i * (i + 1) / 2;
   }
 }

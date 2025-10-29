@@ -35,22 +35,21 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var warrior = CharacterStepBuilder
+var warrior = CharacterStepBuilder
         .newBuilder()
         .name("Amberjill")
         .fighterClass("Paladin")
@@ -58,9 +57,9 @@ public class App {
         .noAbilities()
         .build();
 
-    LOGGER.info(warrior.toString());
+LOGGER.info(warrior.toString());
 
-    var mage = CharacterStepBuilder
+var mage = CharacterStepBuilder
         .newBuilder()
         .name("Riobard")
         .wizardClass("Sorcerer")
@@ -70,15 +69,15 @@ public class App {
         .noMoreAbilities()
         .build();
 
-    LOGGER.info(mage.toString());
+LOGGER.info(mage.toString());
 
-    var thief = CharacterStepBuilder
+var thief = CharacterStepBuilder
         .newBuilder()
         .name("Desmond")
         .fighterClass("Rogue")
         .noWeapon()
         .build();
 
-    LOGGER.info(thief.toString());
+LOGGER.info(thief.toString());
   }
 }

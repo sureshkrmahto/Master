@@ -5,13 +5,11 @@ package com.iluwatar.factorykit;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Spear implements Weapon {
-  @Override
-  public String toString() {
-    return "Spear";
+@Override
+public String toString() {
+return "Spear";
   }
 }

@@ -12,17 +12,15 @@ import domainapp.integtests.bootstrap.SimpleAppSystemInitializer;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class SimpleAppIntegTest extends IntegrationTestAbstract {
 
-  @BeforeClass
-  public static void initClass() {
-    SimpleAppSystemInitializer.initIsft();
+@BeforeClass
+public static void initClass() {
+SimpleAppSystemInitializer.initIsft();
 
     // instantiating will install onto ThreadLocal
-    new ScenarioExecutionForIntegration();
+new ScenarioExecutionForIntegration();
   }
 }

@@ -5,16 +5,14 @@ package com.iluwatar.abstractfactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ElfArmy implements Army {
 
-  static final String DESCRIPTION = "This is the Elven Army!";
+static final String DESCRIPTION = "This is the Elven Army!";
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
+@Override
+public String getDescription() {
+return DESCRIPTION;
   }
 }

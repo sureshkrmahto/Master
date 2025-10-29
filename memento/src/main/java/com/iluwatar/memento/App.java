@@ -23,37 +23,36 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var states = new Stack<StarMemento>();
+public static void main(String[] args) {
+var states = new Stack<StarMemento>();
 
-    var star = new Star(StarType.SUN, 10000000, 500000);
-    LOGGER.info(star.toString());
-    states.add(star.getMemento());
-    star.timePasses();
-    LOGGER.info(star.toString());
-    states.add(star.getMemento());
-    star.timePasses();
-    LOGGER.info(star.toString());
-    states.add(star.getMemento());
-    star.timePasses();
-    LOGGER.info(star.toString());
-    states.add(star.getMemento());
-    star.timePasses();
-    LOGGER.info(star.toString());
-    while (states.size() > 0) {
-      star.setMemento(states.pop());
-      LOGGER.info(star.toString());
+var star = new Star(StarType.SUN, 10000000, 500000);
+LOGGER.info(star.toString());
+states.add(star.getMemento());
+star.timePasses();
+LOGGER.info(star.toString());
+states.add(star.getMemento());
+star.timePasses();
+LOGGER.info(star.toString());
+states.add(star.getMemento());
+star.timePasses();
+LOGGER.info(star.toString());
+states.add(star.getMemento());
+star.timePasses();
+LOGGER.info(star.toString());
+while (states.size() > 0) {
+star.setMemento(states.pop());
+LOGGER.info(star.toString());
     }
   }
 }

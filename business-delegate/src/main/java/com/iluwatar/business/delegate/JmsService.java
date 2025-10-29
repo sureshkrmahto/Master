@@ -8,16 +8,14 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class JmsService implements BusinessService {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(JmsService.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(JmsService.class);
 
-  @Override
-  public void doProcessing() {
-    LOGGER.info("JmsService is now processing");
+@Override
+public void doProcessing() {
+LOGGER.info("JmsService is now processing");
   }
 }

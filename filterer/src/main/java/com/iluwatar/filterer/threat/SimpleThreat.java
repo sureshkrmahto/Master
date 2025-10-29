@@ -7,15 +7,13 @@ import java.util.Objects;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleThreat implements Threat {
 
-  private final ThreatType threatType;
-  private final int id;
-  private final String name;
+private final ThreatType threatType;
+private final int id;
+private final String name;
 
   /**
    * Constructor.
@@ -23,59 +21,63 @@ public class SimpleThreat implements Threat {
    * @param threatType {@link ThreatType}.
    * @param id         threat id.
    * @param name       threat name.
+ *  @author Suresh Mahto
    */
-  public SimpleThreat(final ThreatType threatType, final int id, String name) {
-    this.threatType = threatType;
-    this.id = id;
-    this.name = name;
+public SimpleThreat(final ThreatType threatType, final int id, String name) {
+this.threatType = threatType;
+this.id = id;
+this.name = name;
   }
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public String name() {
-    return name;
+public String name() {
+return name;
   }
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public int id() {
-    return id;
+public int id() {
+return id;
   }
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public ThreatType type() {
-    return threatType;
+public ThreatType type() {
+return threatType;
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+@Override
+public boolean equals(Object o) {
+if (this == o) {
+return true;
     }
-    if (o == null || getClass() != o.getClass()) {
-      return false;
+if (o == null || getClass() != o.getClass()) {
+return false;
     }
-    var that = (SimpleThreat) o;
-    return id == that.id
+var that = (SimpleThreat) o;
+return id == that.id
             && threatType == that.threatType
             && Objects.equals(name, that.name);
   }
 
-  @Override
-  public int hashCode() {
-    return Objects.hash(threatType, id, name);
+@Override
+public int hashCode() {
+return Objects.hash(threatType, id, name);
   }
 
-  @Override
-  public String toString() {
-    return "SimpleThreat{"
+@Override
+public String toString() {
+return "SimpleThreat{"
             + "threatType=" + threatType
             + ", id=" + id
             + ", name='" + name + '\''

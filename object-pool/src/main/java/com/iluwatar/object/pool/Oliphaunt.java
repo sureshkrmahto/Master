@@ -7,34 +7,33 @@ import java.util.concurrent.atomic.AtomicInteger;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Oliphaunt {
 
-  private static final AtomicInteger counter = new AtomicInteger(0);
+private static final AtomicInteger counter = new AtomicInteger(0);
 
-  private final int id;
+private final int id;
 
   /**
    * Constructor.
+ *  @author Suresh Mahto
    */
-  public Oliphaunt() {
-    id = counter.incrementAndGet();
-    try {
-      Thread.sleep(1000);
+public Oliphaunt() {
+id = counter.incrementAndGet();
+try {
+Thread.sleep(1000);
     } catch (InterruptedException e) {
-      e.printStackTrace();
+e.printStackTrace();
     }
   }
 
-  public int getId() {
-    return id;
+public int getId() {
+return id;
   }
 
-  @Override
-  public String toString() {
-    return String.format("Oliphaunt id=%d", id);
+@Override
+public String toString() {
+return String.format("Oliphaunt id=%d", id);
   }
 }

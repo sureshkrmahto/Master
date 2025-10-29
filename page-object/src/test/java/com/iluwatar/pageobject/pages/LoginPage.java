@@ -12,46 +12,47 @@ import java.io.IOException;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class LoginPage extends Page {
 
-  private static final String LOGIN_PAGE_HTML_FILE = "login.html";
-  private static final String PAGE_URL = "file:" + AUT_PATH + LOGIN_PAGE_HTML_FILE;
+private static final String LOGIN_PAGE_HTML_FILE = "login.html";
+private static final String PAGE_URL = "file:" + AUT_PATH + LOGIN_PAGE_HTML_FILE;
 
-  private HtmlPage page;
+private HtmlPage page;
 
   /**
    * Constructor
    *
    * @param webClient {@link WebClient}
+ *  @author Suresh Mahto
    */
-  public LoginPage(WebClient webClient) {
-    super(webClient);
+public LoginPage(WebClient webClient) {
+super(webClient);
   }
 
   /**
    * Navigates to the Login page
    *
    * @return {@link LoginPage}
+ *  @author Suresh Mahto
    */
-  public LoginPage navigateToPage() {
-    try {
-      page = this.webClient.getPage(PAGE_URL);
+public LoginPage navigateToPage() {
+try {
+page = this.webClient.getPage(PAGE_URL);
     } catch (IOException e) {
-      e.printStackTrace();
+e.printStackTrace();
     }
-    return this;
+return this;
   }
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public boolean isAt() {
-    return "Login".equals(page.getTitleText());
+public boolean isAt() {
+return "Login".equals(page.getTitleText());
   }
 
 
@@ -60,11 +61,12 @@ public class LoginPage extends Page {
    *
    * @param username the username to enter
    * @return {@link LoginPage}
+ *  @author Suresh Mahto
    */
-  public LoginPage enterUsername(String username) {
-    var usernameInputTextField = (HtmlTextInput) page.getElementById("username");
-    usernameInputTextField.setText(username);
-    return this;
+public LoginPage enterUsername(String username) {
+var usernameInputTextField = (HtmlTextInput) page.getElementById("username");
+usernameInputTextField.setText(username);
+return this;
   }
 
 
@@ -73,11 +75,12 @@ public class LoginPage extends Page {
    *
    * @param password the password to enter
    * @return {@link LoginPage}
+ *  @author Suresh Mahto
    */
-  public LoginPage enterPassword(String password) {
-    var passwordInputPasswordField = (HtmlPasswordInput) page.getElementById("password");
-    passwordInputPasswordField.setText(password);
-    return this;
+public LoginPage enterPassword(String password) {
+var passwordInputPasswordField = (HtmlPasswordInput) page.getElementById("password");
+passwordInputPasswordField.setText(password);
+return this;
   }
 
 
@@ -86,15 +89,16 @@ public class LoginPage extends Page {
    *
    * @return {@link AlbumListPage} - this is the page that user gets navigated to once successfully
    *     logged in
+ *  @author Suresh Mahto
    */
-  public AlbumListPage login() {
-    var loginButton = (HtmlSubmitInput) page.getElementById("loginButton");
-    try {
-      loginButton.click();
+public AlbumListPage login() {
+var loginButton = (HtmlSubmitInput) page.getElementById("loginButton");
+try {
+loginButton.click();
     } catch (IOException e) {
-      e.printStackTrace();
+e.printStackTrace();
     }
-    return new AlbumListPage(webClient);
+return new AlbumListPage(webClient);
   }
 
 }

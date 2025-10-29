@@ -5,16 +5,14 @@ package com.iluwatar.abstractfactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class OrcArmy implements Army {
 
-  static final String DESCRIPTION = "This is the Orc Army!";
+static final String DESCRIPTION = "This is the Orc Army!";
 
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
+@Override
+public String getDescription() {
+return DESCRIPTION;
   }
 }

@@ -8,10 +8,10 @@ import org.slf4j.LoggerFactory;
  */
 public class MeleeStrategy implements DragonSlayingStrategy {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(MeleeStrategy.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(MeleeStrategy.class);
 
-  @Override
-  public void execute() {
-    LOGGER.info("With your Excalibur you sever the dragon's head!");
+@Override
+public void execute() {
+LOGGER.info("With your Excalibur you sever the dragon's head!");
   }
 }

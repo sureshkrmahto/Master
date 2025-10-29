@@ -8,27 +8,25 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class StealingMethod {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(StealingMethod.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(StealingMethod.class);
 
-  protected abstract String pickTarget();
+protected abstract String pickTarget();
 
-  protected abstract void confuseTarget(String target);
+protected abstract void confuseTarget(String target);
 
-  protected abstract void stealTheItem(String target);
+protected abstract void stealTheItem(String target);
 
   /**
    * Steal.
    */
-  public void steal() {
-    var target = pickTarget();
-    LOGGER.info("The target has been chosen as {}.", target);
-    confuseTarget(target);
-    stealTheItem(target);
+public void steal() {
+var target = pickTarget();
+LOGGER.info("The target has been chosen as {}.", target);
+confuseTarget(target);
+stealTheItem(target);
   }
 }

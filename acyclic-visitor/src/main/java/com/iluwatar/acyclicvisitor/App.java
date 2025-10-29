@@ -13,25 +13,24 @@ package com.iluwatar.acyclicvisitor;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
   /**
    * Program's entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var conUnix = new ConfigureForUnixVisitor();
-    var conDos = new ConfigureForDosVisitor();
+public static void main(String[] args) {
+var conUnix = new ConfigureForUnixVisitor();
+var conDos = new ConfigureForDosVisitor();
 
-    var zoom = new Zoom();
-    var hayes = new Hayes();
+var zoom = new Zoom();
+var hayes = new Hayes();
 
-    hayes.accept(conDos); // Hayes modem with Dos configurator
-    zoom.accept(conDos); // Zoom modem with Dos configurator
-    hayes.accept(conUnix); // Hayes modem with Unix configurator
-    zoom.accept(conUnix); // Zoom modem with Unix configurator   
+hayes.accept(conDos); // Hayes modem with Dos configurator
+zoom.accept(conDos); // Zoom modem with Dos configurator
+hayes.accept(conUnix); // Hayes modem with Unix configurator
+zoom.accept(conUnix); // Zoom modem with Unix configurator   
   }
 }

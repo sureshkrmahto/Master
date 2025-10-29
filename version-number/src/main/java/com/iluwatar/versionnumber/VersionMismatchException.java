@@ -5,12 +5,10 @@ package com.iluwatar.versionnumber;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class VersionMismatchException extends Exception {
-  public VersionMismatchException(String message) {
-    super(message);
+public VersionMismatchException(String message) {
+super(message);
   }
 }

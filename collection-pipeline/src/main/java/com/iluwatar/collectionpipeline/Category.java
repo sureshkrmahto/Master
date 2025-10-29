@@ -2,7 +2,8 @@ package com.iluwatar.collectionpipeline;
 
 /**
  * Enum for the category of car.
+ *  @author Suresh Mahto
  */
 public enum Category {
-  JEEP, SEDAN, CONVERTIBLE
+JEEP, SEDAN, CONVERTIBLE
 }

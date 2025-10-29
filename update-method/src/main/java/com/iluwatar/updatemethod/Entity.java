@@ -8,30 +8,28 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Entity {
 
-  protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  protected int id;
+protected int id;
 
-  protected int position;
+protected int position;
 
-  public Entity(int id) {
-    this.id = id;
-    this.position = 0;
+public Entity(int id) {
+this.id = id;
+this.position = 0;
   }
 
-  public abstract void update();
+public abstract void update();
 
-  public int getPosition() {
-    return position;
+public int getPosition() {
+return position;
   }
 
-  public void setPosition(int position) {
-    this.position = position;
+public void setPosition(int position) {
+this.position = position;
   }
 }

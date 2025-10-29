@@ -23,11 +23,11 @@ import org.apache.isis.applib.util.ObjectContracts;
  
  * @author Suresh Mahto
 
- */
+*/
 @javax.jdo.annotations.PersistenceCapable(identityType = IdentityType.DATASTORE, schema = "simple",
-    table = "SimpleObject")
+table = "SimpleObject")
 @javax.jdo.annotations.DatastoreIdentity(
-    strategy = javax.jdo.annotations.IdGeneratorStrategy.IDENTITY, column = "id")
+strategy = javax.jdo.annotations.IdGeneratorStrategy.IDENTITY, column = "id")
 @javax.jdo.annotations.Version(strategy = VersionStrategy.VERSION_NUMBER, column = "version")
 @javax.jdo.annotations.Queries({
     @javax.jdo.annotations.Query(name = "find", value = "SELECT "
@@ -43,22 +43,22 @@ public class SimpleObject implements Comparable<SimpleObject> {
 
   // region > name (property)
 
-  private String name;
+private String name;
 
   // region > identificatiom
-  public TranslatableString title() {
-    return TranslatableString.tr("Object: {name}", "name", getName());
+public TranslatableString title() {
+return TranslatableString.tr("Object: {name}", "name", getName());
   }
 
-  @javax.jdo.annotations.Column(allowsNull = "false", length = 40)
+@javax.jdo.annotations.Column(allowsNull = "false", length = 40)
   @Title(sequence = "1")
   @Property(editing = Editing.DISABLED)
-  public String getName() {
-    return name;
+public String getName() {
+return name;
   }
 
-  public void setName(final String name) {
-    this.name = name;
+public void setName(final String name) {
+this.name = name;
   }
 
   // endregion
@@ -67,55 +67,53 @@ public class SimpleObject implements Comparable<SimpleObject> {
 
   /**
    * Event used to update the Name in the Domain.
-   */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
-  public static class UpdateNameDomainEvent extends ActionDomainEvent<SimpleObject> {
-    public UpdateNameDomainEvent(final SimpleObject source, final Identifier identifier,
-                                 final Object... arguments) {
-      super(source, identifier, arguments);
+public static class UpdateNameDomainEvent extends ActionDomainEvent<SimpleObject> {
+public UpdateNameDomainEvent(final SimpleObject source, final Identifier identifier,
+final Object... arguments) {
+super(source, identifier, arguments);
     }
   }
 
-  @Action(domainEvent = UpdateNameDomainEvent.class)
-  public SimpleObject updateName(
-      @Parameter(maxLength = 40) @ParameterLayout(named = "New name") final String name) {
-    setName(name);
-    return this;
+@Action(domainEvent = UpdateNameDomainEvent.class)
+public SimpleObject updateName(
+@Parameter(maxLength = 40) @ParameterLayout(named = "New name") final String name) {
+setName(name);
+return this;
   }
 
-  public String default0UpdateName() {
-    return getName();
+public String default0UpdateName() {
+return getName();
   }
 
-  public TranslatableString validateUpdateName(final String name) {
-    return name.contains("!") ? TranslatableString.tr("Exclamation mark is not allowed") : null;
+public TranslatableString validateUpdateName(final String name) {
+return name.contains("!") ? TranslatableString.tr("Exclamation mark is not allowed") : null;
   }
 
   // endregion
 
   // region > version (derived property)
-  public Long getVersionSequence() {
-    return (Long) JDOHelper.getVersion(this);
+public Long getVersionSequence() {
+return (Long) JDOHelper.getVersion(this);
   }
 
   // endregion
 
   // region > compareTo
 
-  @Override
-  public int compareTo(final SimpleObject other) {
-    return ObjectContracts.compare(this, other, "name");
+@Override
+public int compareTo(final SimpleObject other) {
+return ObjectContracts.compare(this, other, "name");
   }
 
   // endregion
 
   // region > injected services
 
-  @javax.inject.Inject
+@javax.inject.Inject
   @SuppressWarnings("unused")
-  private DomainObjectContainer container;
+private DomainObjectContainer container;
 
   // endregion
 

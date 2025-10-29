@@ -9,49 +9,50 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HalfArithmetic {
-  private static final Logger LOGGER = LoggerFactory.getLogger(HalfArithmetic.class);
-  private static final String VERSION = "1.5";
+private static final Logger LOGGER = LoggerFactory.getLogger(HalfArithmetic.class);
+private static final String VERSION = "1.5";
 
-  private final HalfSource newSource;
-  private final OldSource oldSource;
+private final HalfSource newSource;
+private final OldSource oldSource;
 
-  public HalfArithmetic(HalfSource newSource, OldSource oldSource) {
-    this.newSource = newSource;
-    this.oldSource = oldSource;
+public HalfArithmetic(HalfSource newSource, OldSource oldSource) {
+this.newSource = newSource;
+this.oldSource = oldSource;
   }
 
   /**
    * Accumulate sum.
    * @param nums numbers need to add together
    * @return accumulate sum
+ *  @author Suresh Mahto
    */
-  public int sum(int... nums) {
-    LOGGER.info("Arithmetic sum {}", VERSION);
-    return newSource.accumulateSum(nums);
+public int sum(int... nums) {
+LOGGER.info("Arithmetic sum {}", VERSION);
+return newSource.accumulateSum(nums);
   }
 
   /**
    * Accumulate multiplication.
    * @param nums numbers need to multiply together
    * @return accumulate multiplication
+ *  @author Suresh Mahto
    */
-  public int mul(int... nums) {
-    LOGGER.info("Arithmetic mul {}", VERSION);
-    return oldSource.accumulateMul(nums);
+public int mul(int... nums) {
+LOGGER.info("Arithmetic mul {}", VERSION);
+return oldSource.accumulateMul(nums);
   }
 
   /**
    * Chech if has any zero.
    * @param nums numbers need to check
    * @return  if has any zero, return true, else, return false
+ *  @author Suresh Mahto
    */
-  public boolean ifHasZero(int... nums) {
-    LOGGER.info("Arithmetic check zero {}", VERSION);
-    return !newSource.ifNonZero(nums);
+public boolean ifHasZero(int... nums) {
+LOGGER.info("Arithmetic check zero {}", VERSION);
+return !newSource.ifNonZero(nums);
   }
 }

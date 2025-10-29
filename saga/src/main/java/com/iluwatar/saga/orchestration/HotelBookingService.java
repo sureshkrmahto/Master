@@ -5,31 +5,29 @@ package com.iluwatar.saga.orchestration;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HotelBookingService extends Service<String> {
-  @Override
-  public String getName() {
-    return "booking a Hotel";
+@Override
+public String getName() {
+return "booking a Hotel";
   }
 
 
-  @Override
-  public ChapterResult<String> rollback(String value) {
-    if (value.equals("crashed_order")) {
-      LOGGER.info("The Rollback for a chapter '{}' has been started. "
+@Override
+public ChapterResult<String> rollback(String value) {
+if (value.equals("crashed_order")) {
+LOGGER.info("The Rollback for a chapter '{}' has been started. "
               + "The data {} has been failed.The saga has been crashed.",
-          getName(), value);
+getName(), value);
 
-      return ChapterResult.failure(value);
+return ChapterResult.failure(value);
     }
 
-    LOGGER.info("The Rollback for a chapter '{}' has been started. "
+LOGGER.info("The Rollback for a chapter '{}' has been started. "
             + "The data {} has been rollbacked successfully",
-        getName(), value);
+getName(), value);
 
-    return super.rollback(value);
+return super.rollback(value);
   }
 }

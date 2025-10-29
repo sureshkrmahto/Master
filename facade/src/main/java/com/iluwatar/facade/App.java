@@ -13,9 +13,7 @@ package com.iluwatar.facade;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -23,11 +21,12 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var facade = new DwarvenGoldmineFacade();
-    facade.startNewDay();
-    facade.digOutGold();
-    facade.endDay();
+public static void main(String[] args) {
+var facade = new DwarvenGoldmineFacade();
+facade.startNewDay();
+facade.digOutGold();
+facade.endDay();
   }
 }

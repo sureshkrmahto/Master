@@ -9,18 +9,16 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class MessageTest {
 
-  @Test
-  public void messageTest() {
+@Test
+public void messageTest() {
 
     // Parameterized constructor test.
-    var testMsg = "Message Test";
-    var msg = new Message(testMsg);
-    assertEquals(testMsg, msg.getMsg());
+var testMsg = "Message Test";
+var msg = new Message(testMsg);
+assertEquals(testMsg, msg.getMsg());
   }
 }

@@ -20,82 +20,73 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DelegateTest {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender();
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender();
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
-  private static final String MESSAGE = "Test Message Printed";
+private static final String MESSAGE = "Test Message Printed";
 
-  @Test
-  public void testCanonPrinter() throws Exception {
-    var printerController = new PrinterController(new CanonPrinter());
-    printerController.print(MESSAGE);
+@Test
+public void testCanonPrinter() throws Exception {
+var printerController = new PrinterController(new CanonPrinter());
+printerController.print(MESSAGE);
 
-    assertEquals("Canon Printer : Test Message Printed", appender.getLastMessage());
+assertEquals("Canon Printer : Test Message Printed", appender.getLastMessage());
   }
 
-  @Test
-  public void testHpPrinter() throws Exception {
-    var printerController = new PrinterController(new HpPrinter());
-    printerController.print(MESSAGE);
+@Test
+public void testHpPrinter() throws Exception {
+var printerController = new PrinterController(new HpPrinter());
+printerController.print(MESSAGE);
 
-    assertEquals("HP Printer : Test Message Printed", appender.getLastMessage());
+assertEquals("HP Printer : Test Message Printed", appender.getLastMessage());
   }
 
-  @Test
-  public void testEpsonPrinter() throws Exception {
-    var printerController = new PrinterController(new EpsonPrinter());
-    printerController.print(MESSAGE);
+@Test
+public void testEpsonPrinter() throws Exception {
+var printerController = new PrinterController(new EpsonPrinter());
+printerController.print(MESSAGE);
 
-    assertEquals("Epson Printer : Test Message Printed", appender.getLastMessage());
+assertEquals("Epson Printer : Test Message Printed", appender.getLastMessage());
   }
 
   /**
    * Logging Appender
+ *  @author Suresh Mahto
    */
-/**
- * @author Suresh Mahto
- */
-  private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender() {
+public InMemoryAppender() {
       ((Logger) LoggerFactory.getLogger("root")).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public String getLastMessage() {
-      return log.get(log.size() - 1).getFormattedMessage();
+public String getLastMessage() {
+return log.get(log.size() - 1).getFormattedMessage();
     }
 
-    public int getLogSize() {
-      return log.size();
+public int getLogSize() {
+return log.size();
     }
   }
 

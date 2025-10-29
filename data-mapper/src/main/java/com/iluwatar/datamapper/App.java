@@ -15,52 +15,51 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class App {
 
-  private static final Logger log = LoggerFactory.getLogger(App.class);
-  private static final String STUDENT_STRING = "App.main(), student : ";
+private static final Logger log = LoggerFactory.getLogger(App.class);
+private static final String STUDENT_STRING = "App.main(), student : ";
 
 
   /**
    * Program entry point.
    *
    * @param args command line args.
+ *  @author Suresh Mahto
    */
-  public static void main(final String... args) {
+public static void main(final String... args) {
 
     /* Create new data mapper for type 'first' */
-    final var mapper = new StudentDataMapperImpl();
+final var mapper = new StudentDataMapperImpl();
 
     /* Create new student */
-    var student = new Student(1, "Adam", 'A');
+var student = new Student(1, "Adam", 'A');
 
     /* Add student in respectibe store */
-    mapper.insert(student);
+mapper.insert(student);
 
-    log.debug(STUDENT_STRING + student + ", is inserted");
+log.debug(STUDENT_STRING + student + ", is inserted");
 
     /* Find this student */
-    final var studentToBeFound = mapper.find(student.getStudentId());
+final var studentToBeFound = mapper.find(student.getStudentId());
 
-    log.debug(STUDENT_STRING + studentToBeFound + ", is searched");
+log.debug(STUDENT_STRING + studentToBeFound + ", is searched");
 
     /* Update existing student object */
-    student = new Student(student.getStudentId(), "AdamUpdated", 'A');
+student = new Student(student.getStudentId(), "AdamUpdated", 'A');
 
     /* Update student in respectibe db */
-    mapper.update(student);
+mapper.update(student);
 
-    log.debug(STUDENT_STRING + student + ", is updated");
-    log.debug(STUDENT_STRING + student + ", is going to be deleted");
+log.debug(STUDENT_STRING + student + ", is updated");
+log.debug(STUDENT_STRING + student + ", is going to be deleted");
 
     /* Delete student in db */
-    mapper.delete(student);
+mapper.delete(student);
   }
 
-  private App() {
+private App() {
   }
 }

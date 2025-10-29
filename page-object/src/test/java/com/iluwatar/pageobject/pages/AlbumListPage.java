@@ -11,23 +11,22 @@ import java.util.List;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AlbumListPage extends Page {
 
-  private static final String ALBUM_LIST_HTML_FILE = "album-list.html";
-  private static final String PAGE_URL = "file:" + AUT_PATH + ALBUM_LIST_HTML_FILE;
+private static final String ALBUM_LIST_HTML_FILE = "album-list.html";
+private static final String PAGE_URL = "file:" + AUT_PATH + ALBUM_LIST_HTML_FILE;
 
-  private HtmlPage page;
+private HtmlPage page;
 
 
   /**
    * Constructor
+ *  @author Suresh Mahto
    */
-  public AlbumListPage(WebClient webClient) {
-    super(webClient);
+public AlbumListPage(WebClient webClient) {
+super(webClient);
   }
 
 
@@ -35,22 +34,24 @@ public class AlbumListPage extends Page {
    * Navigates to the Album List Page
    *
    * @return {@link AlbumListPage}
+ *  @author Suresh Mahto
    */
-  public AlbumListPage navigateToPage() {
-    try {
-      page = this.webClient.getPage(PAGE_URL);
+public AlbumListPage navigateToPage() {
+try {
+page = this.webClient.getPage(PAGE_URL);
     } catch (IOException e) {
-      e.printStackTrace();
+e.printStackTrace();
     }
-    return this;
+return this;
   }
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public boolean isAt() {
-    return "Album List".equals(page.getTitleText());
+public boolean isAt() {
+return "Album List".equals(page.getTitleText());
   }
 
   /**
@@ -58,21 +59,22 @@ public class AlbumListPage extends Page {
    *
    * @param albumTitle the title of the album to click
    * @return the album page
+ *  @author Suresh Mahto
    */
-  public AlbumPage selectAlbum(String albumTitle) {
+public AlbumPage selectAlbum(String albumTitle) {
     // uses XPath to find list of html anchor tags with the class album in it
-    var albumLinks = (List<HtmlAnchor>) page.getByXPath("//tr[@class='album']//a");
-    for (var anchor : albumLinks) {
-      if (anchor.getTextContent().equals(albumTitle)) {
-        try {
-          anchor.click();
-          return new AlbumPage(webClient);
+var albumLinks = (List<HtmlAnchor>) page.getByXPath("//tr[@class='album']//a");
+for (var anchor : albumLinks) {
+if (anchor.getTextContent().equals(albumTitle)) {
+try {
+anchor.click();
+return new AlbumPage(webClient);
         } catch (IOException e) {
-          e.printStackTrace();
+e.printStackTrace();
         }
       }
     }
-    throw new IllegalArgumentException("No links with the album title: " + albumTitle);
+throw new IllegalArgumentException("No links with the album title: " + albumTitle);
   }
 
 

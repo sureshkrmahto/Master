@@ -2,7 +2,8 @@ package com.iluwatar.queue.load.leveling;
 
 /**
  * Task Interface.
+ *  @author Suresh Mahto
  */
 public interface Task {
-  void submit(Message msg);
+void submit(Message msg);
 }

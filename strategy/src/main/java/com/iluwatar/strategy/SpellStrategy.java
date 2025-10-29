@@ -8,11 +8,11 @@ import org.slf4j.LoggerFactory;
  */
 public class SpellStrategy implements DragonSlayingStrategy {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SpellStrategy.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(SpellStrategy.class);
 
-  @Override
-  public void execute() {
-    LOGGER.info("You cast the spell of disintegration and the dragon vaporizes in a pile of dust!");
+@Override
+public void execute() {
+LOGGER.info("You cast the spell of disintegration and the dragon vaporizes in a pile of dust!");
   }
 
 }

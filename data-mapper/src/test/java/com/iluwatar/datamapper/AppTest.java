@@ -10,9 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 final class AppTest {
 
@@ -23,9 +21,9 @@ final class AppTest {
    * throws an exception.
    */
 
-  @Test
-  void shouldExecuteApplicationWithoutException() {
+@Test
+void shouldExecuteApplicationWithoutException() {
 
-    assertDoesNotThrow((Executable) App::main);
+assertDoesNotThrow((Executable) App::main);
   }
 }

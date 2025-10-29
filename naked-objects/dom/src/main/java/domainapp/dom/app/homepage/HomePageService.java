@@ -14,28 +14,26 @@ import org.apache.isis.applib.annotation.SemanticsOf;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @DomainService(nature = NatureOfService.VIEW_CONTRIBUTIONS_ONLY)
-/**
- * @author Suresh Mahto
- */
 public class HomePageService {
 
   // endregion
 
   // region > injected services
 
-  @javax.inject.Inject
-  DomainObjectContainer container;
+@javax.inject.Inject
+DomainObjectContainer container;
 
   // endregion
 
   // region > homePage (action)
 
-  @Action(semantics = SemanticsOf.SAFE)
+@Action(semantics = SemanticsOf.SAFE)
   @HomePage
-  public HomePageViewModel homePage() {
-    return container.injectServicesInto(new HomePageViewModel());
+public HomePageViewModel homePage() {
+return container.injectServicesInto(new HomePageViewModel());
   }
 
 }

@@ -10,32 +10,31 @@ package com.iluwatar.priority.queue;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Application {
   /**
    * main entry.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
 
-    var queueManager = new QueueManager(10);
+var queueManager = new QueueManager(10);
 
     // push some message to queue
     // Low Priority message
-    for (var i = 0; i < 10; i++) {
-      queueManager.publishMessage(new Message("Low Message Priority", 0));
+for (var i = 0; i < 10; i++) {
+queueManager.publishMessage(new Message("Low Message Priority", 0));
     }
 
     // High Priority message
-    for (var i = 0; i < 10; i++) {
-      queueManager.publishMessage(new Message("High Message Priority", 1));
+for (var i = 0; i < 10; i++) {
+queueManager.publishMessage(new Message("High Message Priority", 1));
     }
 
     // run worker
-    var worker = new Worker(queueManager);
-    worker.run();
+var worker = new Worker(queueManager);
+worker.run();
 
 
   }

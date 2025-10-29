@@ -10,28 +10,26 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FixedStepGameLoopTest {
 
-  private FixedStepGameLoop gameLoop;
+private FixedStepGameLoop gameLoop;
 
-  @Before
-  public void setup() {
-    gameLoop = new FixedStepGameLoop();
+@Before
+public void setup() {
+gameLoop = new FixedStepGameLoop();
   }
 
-  @After
-  public void tearDown() {
-    gameLoop = null;
+@After
+public void tearDown() {
+gameLoop = null;
   }
 
-  @Test
-  public void testUpdate() {
-    gameLoop.update();
-    Assert.assertEquals(0.01f, gameLoop.controller.getBulletPosition(), 0);
+@Test
+public void testUpdate() {
+gameLoop.update();
+Assert.assertEquals(0.01f, gameLoop.controller.getBulletPosition(), 0);
   }
 
 }

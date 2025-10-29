@@ -14,9 +14,7 @@ import com.iluwatar.eda.framework.EventDispatcher;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class AbstractEvent implements Event {
 
@@ -25,8 +23,9 @@ public abstract class AbstractEvent implements Event {
    * {@link EventDispatcher} to dispatch events depending on their type.
    *
    * @return the AbstractEvent type as a {@link Class}.
+ *  @author Suresh Mahto
    */
-  public Class<? extends Event> getType() {
-    return getClass();
+public Class<? extends Event> getType() {
+return getClass();
   }
 }

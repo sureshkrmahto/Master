@@ -20,71 +20,69 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleObjectsTest {
 
-  @Rule
-  public JUnitRuleMockery2 context = JUnitRuleMockery2.createFor(Mode.INTERFACES_AND_CLASSES);
+@Rule
+public JUnitRuleMockery2 context = JUnitRuleMockery2.createFor(Mode.INTERFACES_AND_CLASSES);
 
-  @Mock
-  DomainObjectContainer mockContainer;
+@Mock
+DomainObjectContainer mockContainer;
 
-  SimpleObjects simpleObjects;
+SimpleObjects simpleObjects;
 
-  @Before
-  public void setUp() {
-    simpleObjects = new SimpleObjects();
-    simpleObjects.container = mockContainer;
+@Before
+public void setUp() {
+simpleObjects = new SimpleObjects();
+simpleObjects.container = mockContainer;
   }
   
-  @Test
-  public void testCreate() {
+@Test
+public void testCreate() {
 
     // given
-    final SimpleObject simpleObject = new SimpleObject();
+final SimpleObject simpleObject = new SimpleObject();
 
-    final Sequence seq = context.sequence("create");
-    context.checking(new Expectations() {
+final Sequence seq = context.sequence("create");
+context.checking(new Expectations() {
       {
-        oneOf(mockContainer).newTransientInstance(SimpleObject.class);
-        inSequence(seq);
-        will(returnValue(simpleObject));
+oneOf(mockContainer).newTransientInstance(SimpleObject.class);
+inSequence(seq);
+will(returnValue(simpleObject));
 
-        oneOf(mockContainer).persistIfNotAlready(simpleObject);
-        inSequence(seq);
+oneOf(mockContainer).persistIfNotAlready(simpleObject);
+inSequence(seq);
       }
     });
 
     // when
-    String objectName = "Foobar";
-    final SimpleObject obj = simpleObjects.create(objectName);
+String objectName = "Foobar";
+final SimpleObject obj = simpleObjects.create(objectName);
 
     // then
-    assertEquals(simpleObject, obj);
-    assertEquals(objectName, obj.getName());
+assertEquals(simpleObject, obj);
+assertEquals(objectName, obj.getName());
   }
   
-  @Test
-  public void testListAll() {
+@Test
+public void testListAll() {
 
     // given
-    final List<SimpleObject> all = Lists.newArrayList();
+final List<SimpleObject> all = Lists.newArrayList();
 
-    context.checking(new Expectations() {
+context.checking(new Expectations() {
       {
-        oneOf(mockContainer).allInstances(SimpleObject.class);
-        will(returnValue(all));
+oneOf(mockContainer).allInstances(SimpleObject.class);
+will(returnValue(all));
       }
     });
 
     // when
-    final List<SimpleObject> list = simpleObjects.listAll();
+final List<SimpleObject> list = simpleObjects.listAll();
 
     // then
-    assertEquals(all, list);
+assertEquals(all, list);
   }
 
 }

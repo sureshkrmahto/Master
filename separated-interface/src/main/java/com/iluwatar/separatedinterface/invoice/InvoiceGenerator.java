@@ -6,29 +6,29 @@ package com.iluwatar.separatedinterface.invoice;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class InvoiceGenerator {
 
   /**
    * The TaxCalculator interface to calculate the payable tax.
+ *  @author Suresh Mahto
    */
-  private final TaxCalculator taxCalculator;
+private final TaxCalculator taxCalculator;
 
   /**
    * The base product amount without tax.
+ *  @author Suresh Mahto
    */
-  private final double amount;
+private final double amount;
 
-  public InvoiceGenerator(double amount, TaxCalculator taxCalculator) {
-    this.amount = amount;
-    this.taxCalculator = taxCalculator;
+public InvoiceGenerator(double amount, TaxCalculator taxCalculator) {
+this.amount = amount;
+this.taxCalculator = taxCalculator;
   }
 
-  public double getAmountWithTax() {
-    return amount + taxCalculator.calculate(amount);
+public double getAmountWithTax() {
+return amount + taxCalculator.calculate(amount);
   }
 
 }

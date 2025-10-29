@@ -16,9 +16,7 @@ package com.iluwatar.business.delegate;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -26,21 +24,22 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var businessDelegate = new BusinessDelegate();
-    var businessLookup = new BusinessLookup();
-    businessLookup.setEjbService(new EjbService());
-    businessLookup.setJmsService(new JmsService());
+var businessDelegate = new BusinessDelegate();
+var businessLookup = new BusinessLookup();
+businessLookup.setEjbService(new EjbService());
+businessLookup.setJmsService(new JmsService());
 
-    businessDelegate.setLookupService(businessLookup);
-    businessDelegate.setServiceType(ServiceType.EJB);
+businessDelegate.setLookupService(businessLookup);
+businessDelegate.setServiceType(ServiceType.EJB);
 
-    var client = new Client(businessDelegate);
-    client.doTask();
+var client = new Client(businessDelegate);
+client.doTask();
 
-    businessDelegate.setServiceType(ServiceType.JMS);
-    client.doTask();
+businessDelegate.setServiceType(ServiceType.JMS);
+client.doTask();
   }
 }

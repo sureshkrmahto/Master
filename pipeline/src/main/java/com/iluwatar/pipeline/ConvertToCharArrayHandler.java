@@ -9,23 +9,21 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 class ConvertToCharArrayHandler implements Handler<String, char[]> {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ConvertToCharArrayHandler.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ConvertToCharArrayHandler.class);
 
-  @Override
-  public char[] process(String input) {
-    var characters = input.toCharArray();
-    var string = Arrays.toString(characters);
-    LOGGER.info(
-        String.format("Current handler: %s, input is %s of type %s, output is %s, of type %s",
-            ConvertToCharArrayHandler.class, input, String.class, string, Character[].class)
+@Override
+public char[] process(String input) {
+var characters = input.toCharArray();
+var string = Arrays.toString(characters);
+LOGGER.info(
+String.format("Current handler: %s, input is %s of type %s, output is %s, of type %s",
+ConvertToCharArrayHandler.class, input, String.class, string, Character[].class)
     );
 
-    return characters;
+return characters;
   }
 }

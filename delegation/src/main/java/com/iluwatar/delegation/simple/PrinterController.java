@@ -8,16 +8,14 @@ package com.iluwatar.delegation.simple;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class PrinterController implements Printer {
 
-  private final Printer printer;
+private final Printer printer;
 
-  public PrinterController(Printer printer) {
-    this.printer = printer;
+public PrinterController(Printer printer) {
+this.printer = printer;
   }
 
   /**
@@ -27,9 +25,10 @@ public class PrinterController implements Printer {
    * owning controller.
    *
    * @param message to be printed to the screen
+ *  @author Suresh Mahto
    */
   @Override
-  public void print(String message) {
-    printer.print(message);
+public void print(String message) {
+printer.print(message);
   }
 }

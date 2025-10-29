@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 
 /**
  * Functional interface to find lines in text.
+ *  @author Suresh Mahto
  */
 public interface Finder {
 
@@ -13,16 +14,17 @@ public interface Finder {
    * The function to find lines in text.
    * @param text full tet
    * @return result of searching
-   */
-  List<String> find(String text);
+*/
+List<String> find(String text);
 
   /**
    * Simple implementation of function {@link #find(String)}.
    * @param word for searching
    * @return this
+ *  @author Suresh Mahto
    */
-  static Finder contains(String word) {
-    return txt -> Stream.of(txt.split("\n"))
+static Finder contains(String word) {
+return txt -> Stream.of(txt.split("\n"))
         .filter(line -> line.toLowerCase().contains(word.toLowerCase()))
         .collect(Collectors.toList());
   }
@@ -31,12 +33,12 @@ public interface Finder {
    * combinator not.
    * @param notFinder finder to combine
    * @return new finder including previous finders
-   */
-  default Finder not(Finder notFinder) {
-    return txt -> {
-      List<String> res = this.find(txt);
-      res.removeAll(notFinder.find(txt));
-      return res;
+*/
+default Finder not(Finder notFinder) {
+return txt -> {
+List<String> res = this.find(txt);
+res.removeAll(notFinder.find(txt));
+return res;
     };
   }
 
@@ -44,12 +46,12 @@ public interface Finder {
    * combinator or.
    * @param orFinder finder to combine
    * @return new finder including previous finders
-   */
-  default Finder or(Finder orFinder) {
-    return txt -> {
-      List<String> res = this.find(txt);
-      res.addAll(orFinder.find(txt));
-      return res;
+*/
+default Finder or(Finder orFinder) {
+return txt -> {
+List<String> res = this.find(txt);
+res.addAll(orFinder.find(txt));
+return res;
     };
   }
 
@@ -57,10 +59,10 @@ public interface Finder {
    * combinator or.
    * @param andFinder finder to combine
    * @return new finder including previous finders
-   */
-  default Finder and(Finder andFinder) {
-    return
-        txt -> this
+*/
+default Finder and(Finder andFinder) {
+return
+txt -> this
             .find(txt)
             .stream()
             .flatMap(line -> andFinder.find(line).stream())

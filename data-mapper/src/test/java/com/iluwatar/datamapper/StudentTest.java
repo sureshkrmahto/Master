@@ -10,9 +10,7 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class StudentTest {
 
@@ -21,22 +19,23 @@ public final class StudentTest {
    * logic defined in equals method
    *
    * @throws Exception if any execution error during test
+ *  @author Suresh Mahto
    */
   @Test
-  public void testEquality() throws Exception {
+public void testEquality() throws Exception {
 
     /* Create some students */
-    final var firstStudent = new Student(1, "Adam", 'A');
-    final var secondStudent = new Student(2, "Donald", 'B');
-    final var secondSameStudent = new Student(2, "Donald", 'B');
+final var firstStudent = new Student(1, "Adam", 'A');
+final var secondStudent = new Student(2, "Donald", 'B');
+final var secondSameStudent = new Student(2, "Donald", 'B');
 
     /* Check equals functionality: should return 'true' */
-    assertEquals(firstStudent, firstStudent);
+assertEquals(firstStudent, firstStudent);
 
     /* Check equals functionality: should return 'false' */
-    assertNotEquals(firstStudent, secondStudent);
+assertNotEquals(firstStudent, secondStudent);
 
     /* Check equals functionality: should return 'true' */
-    assertEquals(secondStudent, secondSameStudent);
+assertEquals(secondStudent, secondSameStudent);
   }
 }

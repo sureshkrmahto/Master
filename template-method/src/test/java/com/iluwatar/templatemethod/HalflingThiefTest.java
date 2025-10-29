@@ -9,44 +9,44 @@ import org.junit.jupiter.api.Test;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HalflingThiefTest {
 
   /**
    * Verify if the thief uses the provided stealing method
+ *  @author Suresh Mahto
    */
   @Test
-  public void testSteal() {
-    final var method = mock(StealingMethod.class);
-    final var thief = new HalflingThief(method);
+public void testSteal() {
+final var method = mock(StealingMethod.class);
+final var thief = new HalflingThief(method);
 
-    thief.steal();
-    verify(method).steal();
+thief.steal();
+verify(method).steal();
 
-    verifyNoMoreInteractions(method);
+verifyNoMoreInteractions(method);
   }
 
   /**
    * Verify if the thief uses the provided stealing method, and the new method after changing it
+ *  @author Suresh Mahto
    */
   @Test
-  public void testChangeMethod() {
-    final var initialMethod = mock(StealingMethod.class);
-    final var thief = new HalflingThief(initialMethod);
+public void testChangeMethod() {
+final var initialMethod = mock(StealingMethod.class);
+final var thief = new HalflingThief(initialMethod);
 
-    thief.steal();
-    verify(initialMethod).steal();
+thief.steal();
+verify(initialMethod).steal();
 
-    final var newMethod = mock(StealingMethod.class);
-    thief.changeMethod(newMethod);
+final var newMethod = mock(StealingMethod.class);
+thief.changeMethod(newMethod);
 
-    thief.steal();
-    verify(newMethod).steal();
+thief.steal();
+verify(newMethod).steal();
 
-    verifyNoMoreInteractions(initialMethod, newMethod);
+verifyNoMoreInteractions(initialMethod, newMethod);
 
   }
 }

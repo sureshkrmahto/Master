@@ -8,58 +8,56 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Target {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Target.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(Target.class);
 
-  private Size size;
+private Size size;
 
-  private Visibility visibility;
+private Visibility visibility;
 
-  public Size getSize() {
-    return size;
+public Size getSize() {
+return size;
   }
 
-  public void setSize(Size size) {
-    this.size = size;
+public void setSize(Size size) {
+this.size = size;
   }
 
-  public Visibility getVisibility() {
-    return visibility;
+public Visibility getVisibility() {
+return visibility;
   }
 
-  public void setVisibility(Visibility visibility) {
-    this.visibility = visibility;
+public void setVisibility(Visibility visibility) {
+this.visibility = visibility;
   }
 
-  @Override
-  public abstract String toString();
+@Override
+public abstract String toString();
 
   /**
    * Print status.
    */
-  public void printStatus() {
-    LOGGER.info("{}, [size={}] [visibility={}]", this, getSize(), getVisibility());
+public void printStatus() {
+LOGGER.info("{}, [size={}] [visibility={}]", this, getSize(), getVisibility());
   }
 
   /**
    * Changes the size of the target.
    */
-  public void changeSize() {
-    var oldSize = getSize() == Size.NORMAL ? Size.SMALL : Size.NORMAL;
-    setSize(oldSize);
+public void changeSize() {
+var oldSize = getSize() == Size.NORMAL ? Size.SMALL : Size.NORMAL;
+setSize(oldSize);
   }
 
   /**
    * Changes the visibility of the target.
    */
-  public void changeVisibility() {
-    var visible = getVisibility() == Visibility.INVISIBLE
+public void changeVisibility() {
+var visible = getVisibility() == Visibility.INVISIBLE
             ? Visibility.VISIBLE : Visibility.INVISIBLE;
-    setVisibility(visible);
+setVisibility(visible);
   }
 }

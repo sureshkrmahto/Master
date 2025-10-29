@@ -8,14 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @SpringBootApplication
-/**
- * @author Suresh Mahto
- */
 public class InformationApplication {
 
-  public static void main(String[] args) {
-    SpringApplication.run(InformationApplication.class, args);
+public static void main(String[] args) {
+SpringApplication.run(InformationApplication.class, args);
   }
 }

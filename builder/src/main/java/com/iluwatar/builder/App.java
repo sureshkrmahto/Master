@@ -27,38 +27,37 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var mage = new Hero.Builder(Profession.MAGE, "Riobard")
+var mage = new Hero.Builder(Profession.MAGE, "Riobard")
         .withHairColor(HairColor.BLACK)
         .withWeapon(Weapon.DAGGER)
         .build();
-    LOGGER.info(mage.toString());
+LOGGER.info(mage.toString());
 
-    var warrior = new Hero.Builder(Profession.WARRIOR, "Amberjill")
+var warrior = new Hero.Builder(Profession.WARRIOR, "Amberjill")
         .withHairColor(HairColor.BLOND)
         .withHairType(HairType.LONG_CURLY).withArmor(Armor.CHAIN_MAIL).withWeapon(Weapon.SWORD)
         .build();
-    LOGGER.info(warrior.toString());
+LOGGER.info(warrior.toString());
 
-    var thief = new Hero.Builder(Profession.THIEF, "Desmond")
+var thief = new Hero.Builder(Profession.THIEF, "Desmond")
         .withHairType(HairType.BALD)
         .withWeapon(Weapon.BOW)
         .build();
-    LOGGER.info(thief.toString());
+LOGGER.info(thief.toString());
 
   }
 }

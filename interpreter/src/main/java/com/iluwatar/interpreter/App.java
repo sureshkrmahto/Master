@@ -15,13 +15,11 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
@@ -30,50 +28,52 @@ public class App {
    * postfix, where operator comes after the operands.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var tokenString = "4 3 2 - 1 + *";
-    var stack = new Stack<Expression>();
+public static void main(String[] args) {
+var tokenString = "4 3 2 - 1 + *";
+var stack = new Stack<Expression>();
 
-    var tokenList = tokenString.split(" ");
-    for (var s : tokenList) {
-      if (isOperator(s)) {
-        var rightExpression = stack.pop();
-        var leftExpression = stack.pop();
-        LOGGER.info("popped from stack left: {} right: {}",
-            leftExpression.interpret(), rightExpression.interpret());
-        var operator = getOperatorInstance(s, leftExpression, rightExpression);
-        LOGGER.info("operator: {}", operator);
-        var result = operator.interpret();
-        var resultExpression = new NumberExpression(result);
-        stack.push(resultExpression);
-        LOGGER.info("push result to stack: {}", resultExpression.interpret());
+var tokenList = tokenString.split(" ");
+for (var s : tokenList) {
+if (isOperator(s)) {
+var rightExpression = stack.pop();
+var leftExpression = stack.pop();
+LOGGER.info("popped from stack left: {} right: {}",
+leftExpression.interpret(), rightExpression.interpret());
+var operator = getOperatorInstance(s, leftExpression, rightExpression);
+LOGGER.info("operator: {}", operator);
+var result = operator.interpret();
+var resultExpression = new NumberExpression(result);
+stack.push(resultExpression);
+LOGGER.info("push result to stack: {}", resultExpression.interpret());
       } else {
-        var i = new NumberExpression(s);
-        stack.push(i);
-        LOGGER.info("push to stack: {}", i.interpret());
+var i = new NumberExpression(s);
+stack.push(i);
+LOGGER.info("push to stack: {}", i.interpret());
       }
     }
-    LOGGER.info("result: {}", stack.pop().interpret());
+LOGGER.info("result: {}", stack.pop().interpret());
   }
 
-  public static boolean isOperator(String s) {
-    return s.equals("+") || s.equals("-") || s.equals("*");
+public static boolean isOperator(String s) {
+return s.equals("+") || s.equals("-") || s.equals("*");
   }
 
   /**
    * Get expression for string.
+ *  @author Suresh Mahto
    */
-  public static Expression getOperatorInstance(String s, Expression left, Expression right) {
-    switch (s) {
-      case "+":
-        return new PlusExpression(left, right);
-      case "-":
-        return new MinusExpression(left, right);
-      case "*":
-        return new MultiplyExpression(left, right);
-      default:
-        return new MultiplyExpression(left, right);
+public static Expression getOperatorInstance(String s, Expression left, Expression right) {
+switch (s) {
+case "+":
+return new PlusExpression(left, right);
+case "-":
+return new MinusExpression(left, right);
+case "*":
+return new MultiplyExpression(left, right);
+default:
+return new MultiplyExpression(left, right);
     }
   }
 }

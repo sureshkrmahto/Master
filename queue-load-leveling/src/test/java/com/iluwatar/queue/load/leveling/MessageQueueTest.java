@@ -9,22 +9,20 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class MessageQueueTest {
 
-  @Test
-  public void messageQueueTest() {
+@Test
+public void messageQueueTest() {
 
-    var msgQueue = new MessageQueue();
+var msgQueue = new MessageQueue();
 
     // submit message
-    msgQueue.submitMsg(new Message("MessageQueue Test"));
+msgQueue.submitMsg(new Message("MessageQueue Test"));
 
     // retrieve message
-    assertEquals("MessageQueue Test", msgQueue.retrieveMsg().getMsg());
+assertEquals("MessageQueue Test", msgQueue.retrieveMsg().getMsg());
   }
 
 }

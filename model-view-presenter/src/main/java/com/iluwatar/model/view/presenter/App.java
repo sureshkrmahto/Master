@@ -15,9 +15,7 @@ package com.iluwatar.model.view.presenter;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -25,12 +23,13 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var loader = new FileLoader();
-    var frame = new FileSelectorJFrame();
-    var presenter = new FileSelectorPresenter(frame);
-    presenter.setLoader(loader);
-    presenter.start();
+public static void main(String[] args) {
+var loader = new FileLoader();
+var frame = new FileSelectorJFrame();
+var presenter = new FileSelectorPresenter(frame);
+presenter.setLoader(loader);
+presenter.start();
   }
 }

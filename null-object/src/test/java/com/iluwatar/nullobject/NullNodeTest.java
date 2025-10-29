@@ -10,29 +10,27 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 class NullNodeTest {
 
   /**
    * Verify if {@link NullNode#getInstance()} actually returns the same object instance
-   */
+*/
   @Test
-  void testGetInstance() {
-    final var instance = NullNode.getInstance();
-    assertNotNull(instance);
-    assertSame(instance, NullNode.getInstance());
+void testGetInstance() {
+final var instance = NullNode.getInstance();
+assertNotNull(instance);
+assertSame(instance, NullNode.getInstance());
   }
 
-  @Test
-  void testFields() {
-    final var node = NullNode.getInstance();
-    assertEquals(0, node.getTreeSize());
-    assertNull(node.getName());
-    assertNull(node.getLeft());
-    assertNull(node.getRight());
+@Test
+void testFields() {
+final var node = NullNode.getInstance();
+assertEquals(0, node.getTreeSize());
+assertNull(node.getName());
+assertNull(node.getLeft());
+assertNull(node.getRight());
   }
 
   /**

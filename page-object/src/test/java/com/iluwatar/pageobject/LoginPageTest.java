@@ -13,27 +13,25 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class LoginPageTest {
 
-  private final LoginPage loginPage = new LoginPage(new WebClient());
+private final LoginPage loginPage = new LoginPage(new WebClient());
 
-  @BeforeEach
-  public void setUp() {
-    loginPage.navigateToPage();
+@BeforeEach
+public void setUp() {
+loginPage.navigateToPage();
   }
 
-  @Test
-  public void testLogin() {
-    var albumListPage = loginPage
+@Test
+public void testLogin() {
+var albumListPage = loginPage
         .enterUsername("admin")
         .enterPassword("password")
         .login();
-    albumListPage.navigateToPage();
-    assertTrue(albumListPage.isAt());
+albumListPage.navigateToPage();
+assertTrue(albumListPage.isAt());
   }
 
 }

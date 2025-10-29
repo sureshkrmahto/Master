@@ -20,6 +20,7 @@ import org.apache.isis.applib.services.i18n.TranslatableString;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @DomainService(repositoryFor = SimpleObject.class)
 @DomainServiceLayout(menuOrder = "10")
@@ -28,34 +29,34 @@ public class SimpleObjects {
 
   // region > injected services
 
-  @javax.inject.Inject
-  DomainObjectContainer container;
+@javax.inject.Inject
+DomainObjectContainer container;
 
   // endregion
 
   // region > title
-  public TranslatableString title() {
-    return TranslatableString.tr("Simple Objects");
+public TranslatableString title() {
+return TranslatableString.tr("Simple Objects");
   }
 
   // endregion
 
   // region > listAll (action)
-  @Action(semantics = SemanticsOf.SAFE)
+@Action(semantics = SemanticsOf.SAFE)
   @ActionLayout(bookmarking = BookmarkPolicy.AS_ROOT)
   @MemberOrder(sequence = "1")
-  public List<SimpleObject> listAll() {
-    return container.allInstances(SimpleObject.class);
+public List<SimpleObject> listAll() {
+return container.allInstances(SimpleObject.class);
   }
 
   // endregion
 
   // region > findByName (action)
-  @Action(semantics = SemanticsOf.SAFE)
+@Action(semantics = SemanticsOf.SAFE)
   @ActionLayout(bookmarking = BookmarkPolicy.AS_ROOT)
   @MemberOrder(sequence = "2")
-  public List<SimpleObject> findByName(@ParameterLayout(named = "Name") final String name) {
-    return container.allMatches(new QueryDefault<>(SimpleObject.class, "findByName", "name", name));
+public List<SimpleObject> findByName(@ParameterLayout(named = "Name") final String name) {
+return container.allMatches(new QueryDefault<>(SimpleObject.class, "findByName", "name", name));
   }
 
   // endregion
@@ -64,9 +65,6 @@ public class SimpleObjects {
    * Create Domain Event on SimpleObjects.
    */
   // region > create (action)
-/**
- * @author Suresh Mahto
- */
   public static class CreateDomainEvent extends ActionDomainEvent<SimpleObjects> {
     public CreateDomainEvent(final SimpleObjects source, final Identifier identifier,
                              final Object... arguments) {
@@ -76,14 +74,15 @@ public class SimpleObjects {
 
   /**
    * Create simple object.
+ *  @author Suresh Mahto
    */
   @Action(domainEvent = CreateDomainEvent.class)
   @MemberOrder(sequence = "3")
-  public SimpleObject create(@ParameterLayout(named = "Name") final String name) {
-    final SimpleObject obj = container.newTransientInstance(SimpleObject.class);
-    obj.setName(name);
-    container.persistIfNotAlready(obj);
-    return obj;
+public SimpleObject create(@ParameterLayout(named = "Name") final String name) {
+final SimpleObject obj = container.newTransientInstance(SimpleObject.class);
+obj.setName(name);
+container.persistIfNotAlready(obj);
+return obj;
   }
 
 }

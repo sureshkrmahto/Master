@@ -7,15 +7,13 @@ package com.iluwatar.masterworker;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Result<T> {
 
-  public final T data;
+public final T data;
 
-  public Result(T data) {
-    this.data = data;
+public Result(T data) {
+this.data = data;
   }
 }

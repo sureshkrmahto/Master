@@ -34,44 +34,43 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
     // construct a new executor that will run async tasks
-    var executor = new ThreadAsyncExecutor();
+var executor = new ThreadAsyncExecutor();
 
     // start few async tasks with varying processing times, two last with callback handlers
-    final var asyncResult1 = executor.startProcess(lazyval(10, 500));
-    final var asyncResult2 = executor.startProcess(lazyval("test", 300));
-    final var asyncResult3 = executor.startProcess(lazyval(50L, 700));
-    final var asyncResult4 = executor.startProcess(lazyval(20, 400), callback("Callback result 4"));
-    final var asyncResult5 =
-        executor.startProcess(lazyval("callback", 600), callback("Callback result 5"));
+final var asyncResult1 = executor.startProcess(lazyval(10, 500));
+final var asyncResult2 = executor.startProcess(lazyval("test", 300));
+final var asyncResult3 = executor.startProcess(lazyval(50L, 700));
+final var asyncResult4 = executor.startProcess(lazyval(20, 400), callback("Callback result 4"));
+final var asyncResult5 =
+executor.startProcess(lazyval("callback", 600), callback("Callback result 5"));
 
     // emulate processing in the current thread while async tasks are running in their own threads
-    Thread.sleep(350); // Oh boy I'm working hard here
-    log("Some hard work done");
+Thread.sleep(350); // Oh boy I'm working hard here
+log("Some hard work done");
 
     // wait for completion of the tasks
-    final var result1 = executor.endProcess(asyncResult1);
-    final var result2 = executor.endProcess(asyncResult2);
-    final var result3 = executor.endProcess(asyncResult3);
-    asyncResult4.await();
-    asyncResult5.await();
+final var result1 = executor.endProcess(asyncResult1);
+final var result2 = executor.endProcess(asyncResult2);
+final var result3 = executor.endProcess(asyncResult3);
+asyncResult4.await();
+asyncResult5.await();
 
     // log the results of the tasks, callbacks log immediately when complete
-    log("Result 1: " + result1);
-    log("Result 2: " + result2);
-    log("Result 3: " + result3);
+log("Result 1: " + result1);
+log("Result 2: " + result2);
+log("Result 3: " + result3);
   }
 
   /**
@@ -80,12 +79,13 @@ public class App {
    * @param value       value to evaluate
    * @param delayMillis artificial delay in milliseconds
    * @return new callable for lazy evaluation
+ *  @author Suresh Mahto
    */
-  private static <T> Callable<T> lazyval(T value, long delayMillis) {
-    return () -> {
-      Thread.sleep(delayMillis);
-      log("Task completed with: " + value);
-      return value;
+private static <T> Callable<T> lazyval(T value, long delayMillis) {
+return () -> {
+Thread.sleep(delayMillis);
+log("Task completed with: " + value);
+return value;
     };
   }
 
@@ -94,18 +94,19 @@ public class App {
    *
    * @param name callback name
    * @return new async callback
+ *  @author Suresh Mahto
    */
-  private static <T> AsyncCallback<T> callback(String name) {
-    return (value, ex) -> {
-      if (ex.isPresent()) {
-        log(name + " failed: " + ex.map(Exception::getMessage).orElse(""));
+private static <T> AsyncCallback<T> callback(String name) {
+return (value, ex) -> {
+if (ex.isPresent()) {
+log(name + " failed: " + ex.map(Exception::getMessage).orElse(""));
       } else {
-        log(name + ": " + value);
+log(name + ": " + value);
       }
     };
   }
 
-  private static void log(String msg) {
-    LOGGER.info(msg);
+private static void log(String msg) {
+LOGGER.info(msg);
   }
 }

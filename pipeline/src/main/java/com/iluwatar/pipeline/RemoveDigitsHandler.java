@@ -10,31 +10,29 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 class RemoveDigitsHandler implements Handler<String, String> {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(RemoveDigitsHandler.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(RemoveDigitsHandler.class);
 
-  @Override
-  public String process(String input) {
-    var inputWithoutDigits = new StringBuilder();
-    var isDigit = (IntPredicate) Character::isDigit;
-    input.chars()
+@Override
+public String process(String input) {
+var inputWithoutDigits = new StringBuilder();
+var isDigit = (IntPredicate) Character::isDigit;
+input.chars()
         .filter(isDigit.negate())
         .mapToObj(x -> (char) x)
         .forEachOrdered(inputWithoutDigits::append);
 
-    var inputWithoutDigitsStr = inputWithoutDigits.toString();
-    LOGGER.info(
-        String.format(
+var inputWithoutDigitsStr = inputWithoutDigits.toString();
+LOGGER.info(
+String.format(
             "Current handler: %s, input is %s of type %s, output is %s, of type %s",
-            RemoveDigitsHandler.class, input, String.class, inputWithoutDigitsStr, String.class
+RemoveDigitsHandler.class, input, String.class, inputWithoutDigitsStr, String.class
         )
     );
 
-    return inputWithoutDigitsStr;
+return inputWithoutDigitsStr;
   }
 }

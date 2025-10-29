@@ -19,9 +19,7 @@ import com.iluwatar.featuretoggle.user.UserGroup;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class TieredFeatureToggleVersion implements Service {
 
@@ -36,14 +34,15 @@ public class TieredFeatureToggleVersion implements Service {
    * @return Resulting welcome message.
    * @see User
    * @see UserGroup
+ *  @author Suresh Mahto
    */
   @Override
-  public String getWelcomeMessage(User user) {
-    if (UserGroup.isPaid(user)) {
-      return "You're amazing " + user + ". Thanks for paying for this awesome software.";
+public String getWelcomeMessage(User user) {
+if (UserGroup.isPaid(user)) {
+return "You're amazing " + user + ". Thanks for paying for this awesome software.";
     }
 
-    return "I suppose you can use this software.";
+return "I suppose you can use this software.";
   }
 
   /**
@@ -52,10 +51,11 @@ public class TieredFeatureToggleVersion implements Service {
    * can be used to show that there is an enhanced version available.
    *
    * @return Boolean value {@code true} if enhanced.
+ *  @author Suresh Mahto
    */
   @Override
-  public boolean isEnhanced() {
-    return true;
+public boolean isEnhanced() {
+return true;
   }
 
 }

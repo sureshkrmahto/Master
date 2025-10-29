@@ -11,58 +11,59 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Producer {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(Producer.class);
 
-  private final MqPublishPoint queue;
-  private final String name;
-  private boolean isStopped;
+private final MqPublishPoint queue;
+private final String name;
+private boolean isStopped;
 
   /**
    * Constructor.
+ *  @author Suresh Mahto
    */
-  public Producer(String name, MqPublishPoint queue) {
-    this.name = name;
-    this.queue = queue;
-    this.isStopped = false;
+public Producer(String name, MqPublishPoint queue) {
+this.name = name;
+this.queue = queue;
+this.isStopped = false;
   }
 
   /**
    * Send message to queue.
+ *  @author Suresh Mahto
    */
-  public void send(String body) {
-    if (isStopped) {
-      throw new IllegalStateException(String.format(
+public void send(String body) {
+if (isStopped) {
+throw new IllegalStateException(String.format(
           "Producer %s was stopped and fail to deliver requested message [%s].", body, name));
     }
-    var msg = new SimpleMessage();
-    msg.addHeader(Headers.DATE, new Date().toString());
-    msg.addHeader(Headers.SENDER, name);
-    msg.setBody(body);
+var msg = new SimpleMessage();
+msg.addHeader(Headers.DATE, new Date().toString());
+msg.addHeader(Headers.SENDER, name);
+msg.setBody(body);
 
-    try {
-      queue.put(msg);
+try {
+queue.put(msg);
     } catch (InterruptedException e) {
       // allow thread to exit
-      LOGGER.error("Exception caught.", e);
+LOGGER.error("Exception caught.", e);
     }
   }
 
   /**
    * Stop system by sending poison pill.
+ *  @author Suresh Mahto
    */
-  public void stop() {
-    isStopped = true;
-    try {
-      queue.put(Message.POISON_PILL);
+public void stop() {
+isStopped = true;
+try {
+queue.put(Message.POISON_PILL);
     } catch (InterruptedException e) {
       // allow thread to exit
-      LOGGER.error("Exception caught.", e);
+LOGGER.error("Exception caught.", e);
     }
   }
 }

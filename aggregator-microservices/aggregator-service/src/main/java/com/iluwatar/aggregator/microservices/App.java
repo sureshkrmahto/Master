@@ -8,19 +8,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @SpringBootApplication
-/**
- * @author Suresh Mahto
- */
 public class App {
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    SpringApplication.run(App.class, args);
+public static void main(String[] args) {
+SpringApplication.run(App.class, args);
   }
 }

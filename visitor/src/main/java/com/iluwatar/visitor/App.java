@@ -10,9 +10,7 @@ package com.iluwatar.visitor;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -20,16 +18,17 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var commander = new Commander(
-        new Sergeant(new Soldier(), new Soldier(), new Soldier()),
-        new Sergeant(new Soldier(), new Soldier(), new Soldier())
+var commander = new Commander(
+new Sergeant(new Soldier(), new Soldier(), new Soldier()),
+new Sergeant(new Soldier(), new Soldier(), new Soldier())
     );
-    commander.accept(new SoldierVisitor());
-    commander.accept(new SergeantVisitor());
-    commander.accept(new CommanderVisitor());
+commander.accept(new SoldierVisitor());
+commander.accept(new SergeantVisitor());
+commander.accept(new CommanderVisitor());
 
   }
 }

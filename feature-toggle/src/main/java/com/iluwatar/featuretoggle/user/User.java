@@ -6,21 +6,20 @@ package com.iluwatar.featuretoggle.user;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class User {
 
-  private final String name;
+private final String name;
 
   /**
    * Default Constructor setting the username.
    *
    * @param name {@link String} to represent the name of the user.
+ *  @author Suresh Mahto
    */
-  public User(String name) {
-    this.name = name;
+public User(String name) {
+this.name = name;
   }
 
   /**
@@ -28,9 +27,10 @@ public class User {
    *
    * @return The {@link String} representation of the User, in this case just return the name of the
    *     user.
+ *  @author Suresh Mahto
    */
   @Override
-  public String toString() {
-    return name;
+public String toString() {
+return name;
   }
 }

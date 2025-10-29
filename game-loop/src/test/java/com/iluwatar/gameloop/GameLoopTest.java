@@ -10,45 +10,44 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class GameLoopTest {
 
-  private GameLoop gameLoop;
+private GameLoop gameLoop;
 
   /**
    * Create mock implementation of GameLoop.
+ *  @author Suresh Mahto
    */
   @Before
-  public void setup() {
-    gameLoop = new GameLoop() {
-      @Override
-      protected void processGameLoop() {}
+public void setup() {
+gameLoop = new GameLoop() {
+@Override
+protected void processGameLoop() {}
     };
   }
 
-  @After
-  public void tearDown() {
-    gameLoop = null;
+@After
+public void tearDown() {
+gameLoop = null;
   }
 
-  @Test
-  public void testRun() {
-    gameLoop.run();
-    Assert.assertEquals(GameStatus.RUNNING, gameLoop.status);
+@Test
+public void testRun() {
+gameLoop.run();
+Assert.assertEquals(GameStatus.RUNNING, gameLoop.status);
   }
 
-  @Test
-  public void testStop() {
-    gameLoop.stop();
-    Assert.assertEquals(GameStatus.STOPPED, gameLoop.status);
+@Test
+public void testStop() {
+gameLoop.stop();
+Assert.assertEquals(GameStatus.STOPPED, gameLoop.status);
   }
 
-  @Test
-  public void testIsGameRunning() {
-    Assert.assertFalse(gameLoop.isGameRunning());
+@Test
+public void testIsGameRunning() {
+Assert.assertFalse(gameLoop.isGameRunning());
   }
 
 }

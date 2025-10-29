@@ -30,27 +30,26 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program execution point.
+ *  @author Suresh Mahto
    */
-  public void run() {
-    final var executorService = Executors.newSingleThreadScheduledExecutor();
-    executorService.scheduleAtFixedRate(new Runnable() {
-      final World world = new World();
+public void run() {
+final var executorService = Executors.newSingleThreadScheduledExecutor();
+executorService.scheduleAtFixedRate(new Runnable() {
+final World world = new World();
 
-      @Override
-      public void run() {
-        var countries = world.fetch();
-        LOGGER.info("Our world currently has the following countries:-");
-        countries.stream().map(country -> "\t" + country).forEach(LOGGER::info);
+@Override
+public void run() {
+var countries = world.fetch();
+LOGGER.info("Our world currently has the following countries:-");
+countries.stream().map(country -> "\t" + country).forEach(LOGGER::info);
       }
     }, 0, 15, TimeUnit.SECONDS); // Run at every 15 seconds.
   }
@@ -59,10 +58,11 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var app = new App();
-    app.run();
+public static void main(String[] args) {
+var app = new App();
+app.run();
   }
 
 }

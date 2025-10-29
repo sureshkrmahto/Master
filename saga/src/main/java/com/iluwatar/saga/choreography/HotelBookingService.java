@@ -8,18 +8,16 @@ package com.iluwatar.saga.choreography;
  * @author Suresh Mahto
 
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HotelBookingService extends Service {
-  public HotelBookingService(ServiceDiscoveryService service) {
-    super(service);
+public HotelBookingService(ServiceDiscoveryService service) {
+super(service);
   }
 
-  @Override
-  public String getName() {
-    return "booking a Hotel";
+@Override
+public String getName() {
+return "booking a Hotel";
   }
 
 

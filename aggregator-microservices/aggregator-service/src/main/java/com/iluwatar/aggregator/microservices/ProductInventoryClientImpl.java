@@ -14,36 +14,34 @@ import org.springframework.stereotype.Component;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @Component
-/**
- * @author Suresh Mahto
- */
 public class ProductInventoryClientImpl implements ProductInventoryClient {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ProductInventoryClientImpl.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ProductInventoryClientImpl.class);
 
-  @Override
-  public Integer getProductInventories() {
-    var response = "";
+@Override
+public Integer getProductInventories() {
+var response = "";
 
-    var request = HttpRequest.newBuilder()
+var request = HttpRequest.newBuilder()
         .GET()
         .uri(URI.create("http://localhost:51516/inventories"))
         .build();
-    var client = HttpClient.newHttpClient();
-    try {
-      var httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
-      response = httpResponse.body();
+var client = HttpClient.newHttpClient();
+try {
+var httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
+response = httpResponse.body();
     } catch (IOException ioe) {
-      LOGGER.error("IOException Occurred", ioe);
+LOGGER.error("IOException Occurred", ioe);
     } catch (InterruptedException ie) {
-      LOGGER.error("InterruptedException Occurred", ie);
+LOGGER.error("InterruptedException Occurred", ie);
     }
-    if ("".equalsIgnoreCase(response)) {
-      return null;
+if ("".equalsIgnoreCase(response)) {
+return null;
     } else {
-      return Integer.parseInt(response);
+return Integer.parseInt(response);
     }
   }
 }

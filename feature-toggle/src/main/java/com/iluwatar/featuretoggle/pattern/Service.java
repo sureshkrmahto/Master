@@ -12,6 +12,7 @@ import com.iluwatar.featuretoggle.user.User;
  * @see com.iluwatar.featuretoggle.pattern.propertiesversion.PropertiesFeatureToggleVersion
  * @see com.iluwatar.featuretoggle.pattern.tieredversion.TieredFeatureToggleVersion
  * @see User
+ *  @author Suresh Mahto
  */
 public interface Service {
 
@@ -20,14 +21,14 @@ public interface Service {
    *
    * @param user the {@link User} to be used if the message is to be personalised.
    * @return Generated {@link String} welcome message
-   */
-  String getWelcomeMessage(User user);
+*/
+String getWelcomeMessage(User user);
 
   /**
    * Returns if the welcome message to be displayed will be the enhanced version.
    *
    * @return Boolean {@code true} if enhanced.
-   */
-  boolean isEnhanced();
+*/
+boolean isEnhanced();
 
 }

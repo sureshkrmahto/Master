@@ -15,33 +15,32 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
     // simple troll
-    LOGGER.info("A simple looking troll approaches.");
-    var troll = new SimpleTroll();
-    troll.attack();
-    troll.fleeBattle();
-    LOGGER.info("Simple troll power {}.\n", troll.getAttackPower());
+LOGGER.info("A simple looking troll approaches.");
+var troll = new SimpleTroll();
+troll.attack();
+troll.fleeBattle();
+LOGGER.info("Simple troll power {}.\n", troll.getAttackPower());
 
     // change the behavior of the simple troll by adding a decorator
-    LOGGER.info("A troll with huge club surprises you.");
-    var clubbedTroll = new ClubbedTroll(troll);
-    clubbedTroll.attack();
-    clubbedTroll.fleeBattle();
-    LOGGER.info("Clubbed troll power {}.\n", clubbedTroll.getAttackPower());
+LOGGER.info("A troll with huge club surprises you.");
+var clubbedTroll = new ClubbedTroll(troll);
+clubbedTroll.attack();
+clubbedTroll.fleeBattle();
+LOGGER.info("Clubbed troll power {}.\n", clubbedTroll.getAttackPower());
   }
 }

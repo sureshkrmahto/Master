@@ -15,27 +15,25 @@ import uk.org.lidalia.slf4jtest.TestLoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ConfigureForUnixVisitorTest {
   
-  private static final TestLogger LOGGER = TestLoggerFactory.getTestLogger(ConfigureForUnixVisitor.class);
+private static final TestLogger LOGGER = TestLoggerFactory.getTestLogger(ConfigureForUnixVisitor.class);
   
-  @AfterEach
-  public void clearLoggers() {
-    TestLoggerFactory.clear();
+@AfterEach
+public void clearLoggers() {
+TestLoggerFactory.clear();
   }
   
-  @Test
-  public void testVisitForZoom() {
-    var conUnix = new ConfigureForUnixVisitor();
-    var zoom = new Zoom();
+@Test
+public void testVisitForZoom() {
+var conUnix = new ConfigureForUnixVisitor();
+var zoom = new Zoom();
     
-    conUnix.visit(zoom);
+conUnix.visit(zoom);
     
-    assertThat(LOGGER.getLoggingEvents())
+assertThat(LOGGER.getLoggingEvents())
         .extracting("level", "message")
         .contains(tuple(INFO, zoom + " used with Unix configurator."));
   }

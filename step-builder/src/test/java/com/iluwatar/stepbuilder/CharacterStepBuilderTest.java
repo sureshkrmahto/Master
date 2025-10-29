@@ -10,18 +10,17 @@ import org.junit.jupiter.api.Test;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class CharacterStepBuilderTest {
 
   /**
    * Build a new wizard {@link Character} and verify if it has the expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildWizard() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildWizard() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Merlin")
         .wizardClass("alchemist")
         .withSpell("poison")
@@ -30,66 +29,69 @@ public class CharacterStepBuilderTest {
         .noMoreAbilities()
         .build();
 
-    assertEquals("Merlin", character.getName());
-    assertEquals("alchemist", character.getWizardClass());
-    assertEquals("poison", character.getSpell());
-    assertNotNull(character.toString());
+assertEquals("Merlin", character.getName());
+assertEquals("alchemist", character.getWizardClass());
+assertEquals("poison", character.getSpell());
+assertNotNull(character.toString());
 
-    final var abilities = character.getAbilities();
-    assertNotNull(abilities);
-    assertEquals(2, abilities.size());
-    assertTrue(abilities.contains("invisibility"));
-    assertTrue(abilities.contains("wisdom"));
+final var abilities = character.getAbilities();
+assertNotNull(abilities);
+assertEquals(2, abilities.size());
+assertTrue(abilities.contains("invisibility"));
+assertTrue(abilities.contains("wisdom"));
 
   }
 
   /**
    * Build a new wizard {@link Character} without spell or abilities and verify if it has the
    * expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildPoorWizard() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildPoorWizard() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Merlin")
         .wizardClass("alchemist")
         .noSpell()
         .build();
 
-    assertEquals("Merlin", character.getName());
-    assertEquals("alchemist", character.getWizardClass());
-    assertNull(character.getSpell());
-    assertNull(character.getAbilities());
-    assertNotNull(character.toString());
+assertEquals("Merlin", character.getName());
+assertEquals("alchemist", character.getWizardClass());
+assertNull(character.getSpell());
+assertNull(character.getAbilities());
+assertNotNull(character.toString());
 
   }
 
   /**
    * Build a new wizard {@link Character} and verify if it has the expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildWeakWizard() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildWeakWizard() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Merlin")
         .wizardClass("alchemist")
         .withSpell("poison")
         .noAbilities()
         .build();
 
-    assertEquals("Merlin", character.getName());
-    assertEquals("alchemist", character.getWizardClass());
-    assertEquals("poison", character.getSpell());
-    assertNull(character.getAbilities());
-    assertNotNull(character.toString());
+assertEquals("Merlin", character.getName());
+assertEquals("alchemist", character.getWizardClass());
+assertEquals("poison", character.getSpell());
+assertNull(character.getAbilities());
+assertNotNull(character.toString());
 
   }
 
 
   /**
    * Build a new warrior {@link Character} and verify if it has the expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildWarrior() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildWarrior() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Cuauhtemoc")
         .fighterClass("aztec")
         .withWeapon("spear")
@@ -98,57 +100,59 @@ public class CharacterStepBuilderTest {
         .noMoreAbilities()
         .build();
 
-    assertEquals("Cuauhtemoc", character.getName());
-    assertEquals("aztec", character.getFighterClass());
-    assertEquals("spear", character.getWeapon());
-    assertNotNull(character.toString());
+assertEquals("Cuauhtemoc", character.getName());
+assertEquals("aztec", character.getFighterClass());
+assertEquals("spear", character.getWeapon());
+assertNotNull(character.toString());
 
-    final var abilities = character.getAbilities();
-    assertNotNull(abilities);
-    assertEquals(2, abilities.size());
-    assertTrue(abilities.contains("speed"));
-    assertTrue(abilities.contains("strength"));
+final var abilities = character.getAbilities();
+assertNotNull(abilities);
+assertEquals(2, abilities.size());
+assertTrue(abilities.contains("speed"));
+assertTrue(abilities.contains("strength"));
 
   }
 
   /**
    * Build a new wizard {@link Character} without weapon and abilities and verify if it has the
    * expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildPoorWarrior() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildPoorWarrior() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Poor warrior")
         .fighterClass("none")
         .noWeapon()
         .build();
 
-    assertEquals("Poor warrior", character.getName());
-    assertEquals("none", character.getFighterClass());
-    assertNull(character.getWeapon());
-    assertNull(character.getAbilities());
-    assertNotNull(character.toString());
+assertEquals("Poor warrior", character.getName());
+assertEquals("none", character.getFighterClass());
+assertNull(character.getWeapon());
+assertNull(character.getAbilities());
+assertNotNull(character.toString());
 
   }
 
   /**
    * Build a new warrior {@link Character} without any abilities, but with a weapon and verify if it
    * has the expected attributes
+ *  @author Suresh Mahto
    */
   @Test
-  public void testBuildWeakWarrior() {
-    final var character = CharacterStepBuilder.newBuilder()
+public void testBuildWeakWarrior() {
+final var character = CharacterStepBuilder.newBuilder()
         .name("Weak warrior")
         .fighterClass("none")
         .withWeapon("Slingshot")
         .noAbilities()
         .build();
 
-    assertEquals("Weak warrior", character.getName());
-    assertEquals("none", character.getFighterClass());
-    assertEquals("Slingshot", character.getWeapon());
-    assertNull(character.getAbilities());
-    assertNotNull(character.toString());
+assertEquals("Weak warrior", character.getName());
+assertEquals("none", character.getFighterClass());
+assertEquals("Slingshot", character.getWeapon());
+assertNull(character.getAbilities());
+assertNotNull(character.toString());
 
   }
 

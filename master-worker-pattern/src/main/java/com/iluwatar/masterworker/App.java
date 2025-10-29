@@ -33,13 +33,11 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
@@ -47,18 +45,18 @@ public class App {
    * @param args command line args
    */
 
-  public static void main(String[] args) {
-    var mw = new ArrayTransposeMasterWorker();
-    var rows = 10;
-    var columns = 20;
-    var inputMatrix = ArrayUtilityMethods.createRandomIntMatrix(rows, columns);
-    var input = new ArrayInput(inputMatrix);
-    var result = (ArrayResult) mw.getResult(input);
-    if (result != null) {
-      ArrayUtilityMethods.printMatrix(inputMatrix);
-      ArrayUtilityMethods.printMatrix(result.data);
+public static void main(String[] args) {
+var mw = new ArrayTransposeMasterWorker();
+var rows = 10;
+var columns = 20;
+var inputMatrix = ArrayUtilityMethods.createRandomIntMatrix(rows, columns);
+var input = new ArrayInput(inputMatrix);
+var result = (ArrayResult) mw.getResult(input);
+if (result != null) {
+ArrayUtilityMethods.printMatrix(inputMatrix);
+ArrayUtilityMethods.printMatrix(result.data);
     } else {
-      LOGGER.info("Please enter non-zero input");
+LOGGER.info("Please enter non-zero input");
     }
   }
 

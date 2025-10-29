@@ -11,12 +11,13 @@ import org.slf4j.LoggerFactory;
  * <p>The concrete creators {@link OrcBlacksmith} and {@link ElfBlacksmith}
  * manufacture different {@link Weapon} variants through the same factory
  * method.</p>
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
-  private final Blacksmith blacksmith;
+private final Blacksmith blacksmith;
   
   /**
    * Creates an instance of <code>App</code> which will use <code>blacksmith</code> to manufacture 
@@ -25,30 +26,32 @@ public class App {
    * The decision of which blacksmith implementation to use may depend on configuration, or
    * the type of rival in war.
    * @param blacksmith a non-null implementation of blacksmith
+ *  @author Suresh Mahto
    */
-  public App(Blacksmith blacksmith) {
-    this.blacksmith = blacksmith;
+public App(Blacksmith blacksmith) {
+this.blacksmith = blacksmith;
   }
   
   /**
    * Program entry point.
    * 
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
     // Lets go to war with Orc weapons
-    var app = new App(new OrcBlacksmith());
-    app.manufactureWeapons();
+var app = new App(new OrcBlacksmith());
+app.manufactureWeapons();
     
     // Lets go to war with Elf weapons
-    app = new App(new ElfBlacksmith());
-    app.manufactureWeapons();
+app = new App(new ElfBlacksmith());
+app.manufactureWeapons();
   }
   
-  private void manufactureWeapons() {
-    var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
-    LOGGER.info(weapon.toString());
-    weapon = blacksmith.manufactureWeapon(WeaponType.AXE);
-    LOGGER.info(weapon.toString());
+private void manufactureWeapons() {
+var weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR);
+LOGGER.info(weapon.toString());
+weapon = blacksmith.manufactureWeapon(WeaponType.AXE);
+LOGGER.info(weapon.toString());
   }
 }

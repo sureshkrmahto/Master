@@ -8,26 +8,24 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SergeantVisitor implements UnitVisitor {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SergeantVisitor.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(SergeantVisitor.class);
 
-  @Override
-  public void visitSoldier(Soldier soldier) {
+@Override
+public void visitSoldier(Soldier soldier) {
     // Do nothing
   }
 
-  @Override
-  public void visitSergeant(Sergeant sergeant) {
-    LOGGER.info("Hello {}", sergeant);
+@Override
+public void visitSergeant(Sergeant sergeant) {
+LOGGER.info("Hello {}", sergeant);
   }
 
-  @Override
-  public void visitCommander(Commander commander) {
+@Override
+public void visitCommander(Commander commander) {
     // Do nothing
   }
 }

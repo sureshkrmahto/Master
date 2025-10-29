@@ -9,9 +9,7 @@ package com.iluwatar.templatemethod;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -19,11 +17,12 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var thief = new HalflingThief(new HitAndRunMethod());
-    thief.steal();
-    thief.changeMethod(new SubtleMethod());
-    thief.steal();
+public static void main(String[] args) {
+var thief = new HalflingThief(new HitAndRunMethod());
+thief.steal();
+thief.changeMethod(new SubtleMethod());
+thief.steal();
   }
 }

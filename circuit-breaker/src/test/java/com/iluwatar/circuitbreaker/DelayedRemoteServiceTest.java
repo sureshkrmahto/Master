@@ -10,9 +10,7 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DelayedRemoteServiceTest {
 
@@ -20,12 +18,13 @@ public class DelayedRemoteServiceTest {
    * Testing immediate response of the delayed service.
    *
    * @throws RemoteServiceException
+ *  @author Suresh Mahto
    */
   @Test
-  public void testDefaultConstructor() throws RemoteServiceException {
-    Assertions.assertThrows(RemoteServiceException.class, () -> {
-      var obj = new DelayedRemoteService();
-      obj.call();
+public void testDefaultConstructor() throws RemoteServiceException {
+Assertions.assertThrows(RemoteServiceException.class, () -> {
+var obj = new DelayedRemoteService();
+obj.call();
     });
   }
 
@@ -33,10 +32,11 @@ public class DelayedRemoteServiceTest {
    * Testing server started in past (2 seconds ago) and with a simulated delay of 1 second.
    *
    * @throws RemoteServiceException
+ *  @author Suresh Mahto
    */
   @Test
-  public void testParameterizedConstructor() throws RemoteServiceException {
-      var obj = new DelayedRemoteService(System.nanoTime()-2000*1000*1000,1);
-      assertEquals("Delayed service is working",obj.call());
+public void testParameterizedConstructor() throws RemoteServiceException {
+var obj = new DelayedRemoteService(System.nanoTime()-2000*1000*1000,1);
+assertEquals("Delayed service is working",obj.call());
   }
 }

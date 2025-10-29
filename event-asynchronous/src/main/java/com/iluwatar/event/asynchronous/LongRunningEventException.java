@@ -5,15 +5,13 @@ package com.iluwatar.event.asynchronous;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class LongRunningEventException extends Exception {
 
-  private static final long serialVersionUID = -483423544320148809L;
+private static final long serialVersionUID = -483423544320148809L;
 
-  public LongRunningEventException(String message) {
-    super(message);
+public LongRunningEventException(String message) {
+super(message);
   }
 }

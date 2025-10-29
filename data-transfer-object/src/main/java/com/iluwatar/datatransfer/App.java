@@ -17,47 +17,46 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Method as act client and request to server for details.
    *
    * @param args program argument.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var customerOne = new CustomerDto("1", "Kelly", "Brown");
-    var customerTwo = new CustomerDto("2", "Alfonso", "Bass");
-    var customers = new ArrayList<>(List.of(customerOne, customerTwo));
+public static void main(String[] args) {
+var customerOne = new CustomerDto("1", "Kelly", "Brown");
+var customerTwo = new CustomerDto("2", "Alfonso", "Bass");
+var customers = new ArrayList<>(List.of(customerOne, customerTwo));
 
-    var customerResource = new CustomerResource(customers);
+var customerResource = new CustomerResource(customers);
 
-    LOGGER.info("All customers:-");
-    var allCustomers = customerResource.getAllCustomers();
-    printCustomerDetails(allCustomers);
+LOGGER.info("All customers:-");
+var allCustomers = customerResource.getAllCustomers();
+printCustomerDetails(allCustomers);
 
-    LOGGER.info("----------------------------------------------------------");
+LOGGER.info("----------------------------------------------------------");
 
-    LOGGER.info("Deleting customer with id {1}");
-    customerResource.delete(customerOne.getId());
-    allCustomers = customerResource.getAllCustomers();
-    printCustomerDetails(allCustomers);
+LOGGER.info("Deleting customer with id {1}");
+customerResource.delete(customerOne.getId());
+allCustomers = customerResource.getAllCustomers();
+printCustomerDetails(allCustomers);
 
-    LOGGER.info("----------------------------------------------------------");
+LOGGER.info("----------------------------------------------------------");
 
-    LOGGER.info("Adding customer three}");
-    var customerThree = new CustomerDto("3", "Lynda", "Blair");
-    customerResource.save(customerThree);
-    allCustomers = customerResource.getAllCustomers();
-    printCustomerDetails(allCustomers);
+LOGGER.info("Adding customer three}");
+var customerThree = new CustomerDto("3", "Lynda", "Blair");
+customerResource.save(customerThree);
+allCustomers = customerResource.getAllCustomers();
+printCustomerDetails(allCustomers);
   }
 
-  private static void printCustomerDetails(List<CustomerDto> allCustomers) {
-    allCustomers.forEach(customer -> LOGGER.info(customer.getFirstName()));
+private static void printCustomerDetails(List<CustomerDto> allCustomers) {
+allCustomers.forEach(customer -> LOGGER.info(customer.getFirstName()));
   }
 }

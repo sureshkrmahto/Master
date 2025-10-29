@@ -6,6 +6,7 @@ import java.util.stream.Stream;
 
 /**
  * Document interface.
+ *  @author Suresh Mahto
  */
 public interface Document {
 
@@ -15,16 +16,16 @@ public interface Document {
    * @param key   element key
    * @param value element value
    * @return Void
-   */
-  Void put(String key, Object value);
+*/
+Void put(String key, Object value);
 
   /**
    * Gets the value for the key.
    *
    * @param key element key
    * @return value or null
-   */
-  Object get(String key);
+*/
+Object get(String key);
 
   /**
    * Gets the stream of child documents.

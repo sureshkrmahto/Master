@@ -6,7 +6,8 @@ package com.iluwatar.pipeline;
  *
  * @param <I> the input type of the handler
  * @param <O> the processed output type of the handler
+ *  @author Suresh Mahto
  */
 interface Handler<I, O> {
-  O process(I input);
+O process(I input);
 }

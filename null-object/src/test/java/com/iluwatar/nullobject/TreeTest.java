@@ -18,28 +18,21 @@ import org.slf4j.LoggerFactory;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class TreeTest {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender();
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender();
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
   /**
@@ -55,97 +48,97 @@ public class TreeTest {
    * │   └── level2_b
    * └── level1_b
    * </pre>
+ *  @author Suresh Mahto
    */
-  private static final Node TREE_ROOT;
+private static final Node TREE_ROOT;
 
-  static {
-    final var level1B = new NodeImpl("level1_b", NullNode.getInstance(), NullNode.getInstance());
-    final var level2B = new NodeImpl("level2_b", NullNode.getInstance(), NullNode.getInstance());
-    final var level3A = new NodeImpl("level3_a", NullNode.getInstance(), NullNode.getInstance());
-    final var level3B = new NodeImpl("level3_b", NullNode.getInstance(), NullNode.getInstance());
-    final var level2A = new NodeImpl("level2_a", level3A, level3B);
-    final var level1A = new NodeImpl("level1_a", level2A, level2B);
-    TREE_ROOT = new NodeImpl("root", level1A, level1B);
+static {
+final var level1B = new NodeImpl("level1_b", NullNode.getInstance(), NullNode.getInstance());
+final var level2B = new NodeImpl("level2_b", NullNode.getInstance(), NullNode.getInstance());
+final var level3A = new NodeImpl("level3_a", NullNode.getInstance(), NullNode.getInstance());
+final var level3B = new NodeImpl("level3_b", NullNode.getInstance(), NullNode.getInstance());
+final var level2A = new NodeImpl("level2_a", level3A, level3B);
+final var level1A = new NodeImpl("level1_a", level2A, level2B);
+TREE_ROOT = new NodeImpl("root", level1A, level1B);
   }
 
   /**
    * Verify the number of items in the tree. The root has 6 children so we expect a {@link
    * Node#getTreeSize()} of 7 {@link Node}s in total.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testTreeSize() {
-    assertEquals(7, TREE_ROOT.getTreeSize());
+public void testTreeSize() {
+assertEquals(7, TREE_ROOT.getTreeSize());
   }
 
   /**
    * Walk through the tree and verify if every item is handled
+ *  @author Suresh Mahto
    */
   @Test
-  public void testWalk() {
-    TREE_ROOT.walk();
+public void testWalk() {
+TREE_ROOT.walk();
 
-    assertTrue(appender.logContains("root"));
-    assertTrue(appender.logContains("level1_a"));
-    assertTrue(appender.logContains("level2_a"));
-    assertTrue(appender.logContains("level3_a"));
-    assertTrue(appender.logContains("level3_b"));
-    assertTrue(appender.logContains("level2_b"));
-    assertTrue(appender.logContains("level1_b"));
-    assertEquals(7, appender.getLogSize());
+assertTrue(appender.logContains("root"));
+assertTrue(appender.logContains("level1_a"));
+assertTrue(appender.logContains("level2_a"));
+assertTrue(appender.logContains("level3_a"));
+assertTrue(appender.logContains("level3_b"));
+assertTrue(appender.logContains("level2_b"));
+assertTrue(appender.logContains("level1_b"));
+assertEquals(7, appender.getLogSize());
   }
 
-  @Test
-  public void testGetLeft() {
-    final var level1 = TREE_ROOT.getLeft();
-    assertNotNull(level1);
-    assertEquals("level1_a", level1.getName());
-    assertEquals(5, level1.getTreeSize());
+@Test
+public void testGetLeft() {
+final var level1 = TREE_ROOT.getLeft();
+assertNotNull(level1);
+assertEquals("level1_a", level1.getName());
+assertEquals(5, level1.getTreeSize());
 
-    final var level2 = level1.getLeft();
-    assertNotNull(level2);
-    assertEquals("level2_a", level2.getName());
-    assertEquals(3, level2.getTreeSize());
+final var level2 = level1.getLeft();
+assertNotNull(level2);
+assertEquals("level2_a", level2.getName());
+assertEquals(3, level2.getTreeSize());
 
-    final var level3 = level2.getLeft();
-    assertNotNull(level3);
-    assertEquals("level3_a", level3.getName());
-    assertEquals(1, level3.getTreeSize());
-    assertSame(NullNode.getInstance(), level3.getRight());
-    assertSame(NullNode.getInstance(), level3.getLeft());
+final var level3 = level2.getLeft();
+assertNotNull(level3);
+assertEquals("level3_a", level3.getName());
+assertEquals(1, level3.getTreeSize());
+assertSame(NullNode.getInstance(), level3.getRight());
+assertSame(NullNode.getInstance(), level3.getLeft());
   }
 
-  @Test
-  public void testGetRight() {
-    final var level1 = TREE_ROOT.getRight();
-    assertNotNull(level1);
-    assertEquals("level1_b", level1.getName());
-    assertEquals(1, level1.getTreeSize());
-    assertSame(NullNode.getInstance(), level1.getRight());
-    assertSame(NullNode.getInstance(), level1.getLeft());
+@Test
+public void testGetRight() {
+final var level1 = TREE_ROOT.getRight();
+assertNotNull(level1);
+assertEquals("level1_b", level1.getName());
+assertEquals(1, level1.getTreeSize());
+assertSame(NullNode.getInstance(), level1.getRight());
+assertSame(NullNode.getInstance(), level1.getLeft());
   }
 
-/**
- * @author Suresh Mahto
- */
-  private static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender() {
+public InMemoryAppender() {
       ((Logger) LoggerFactory.getLogger("root")).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public boolean logContains(String message) {
-      return log.stream().map(ILoggingEvent::getMessage).anyMatch(message::equals);
+public boolean logContains(String message) {
+return log.stream().map(ILoggingEvent::getMessage).anyMatch(message::equals);
     }
 
-    public int getLogSize() {
-      return log.size();
+public int getLogSize() {
+return log.size();
     }
   }
 

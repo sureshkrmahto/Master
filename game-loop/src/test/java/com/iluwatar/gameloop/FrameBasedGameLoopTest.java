@@ -10,27 +10,25 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FrameBasedGameLoopTest {
 
-  private FrameBasedGameLoop gameLoop;
+private FrameBasedGameLoop gameLoop;
 
-  @Before
-  public void setup() {
-    gameLoop = new FrameBasedGameLoop();
+@Before
+public void setup() {
+gameLoop = new FrameBasedGameLoop();
   }
 
-  @After
-  public void tearDown() {
-    gameLoop = null;
+@After
+public void tearDown() {
+gameLoop = null;
   }
 
-  @Test
-  public void testUpdate() {
-    gameLoop.update();
-    Assert.assertEquals(0.5f, gameLoop.controller.getBulletPosition(), 0);
+@Test
+public void testUpdate() {
+gameLoop.update();
+Assert.assertEquals(0.5f, gameLoop.controller.getBulletPosition(), 0);
   }
 }

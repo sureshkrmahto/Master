@@ -24,29 +24,28 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) throws Exception {
-    var context = new DefaultCamelContext();
-    context.addRoutes(new RouteBuilder() {
-      @Override
-      public void configure() throws Exception {
-        from("direct:origin").multicast().to("mock:foo", "mock:bar", "stream:out");
+public static void main(String[] args) throws Exception {
+var context = new DefaultCamelContext();
+context.addRoutes(new RouteBuilder() {
+@Override
+public void configure() throws Exception {
+from("direct:origin").multicast().to("mock:foo", "mock:bar", "stream:out");
       }
     });
-    var template = context.createProducerTemplate();
-    context.start();
-    context.getRoutes().forEach(r -> LOGGER.info(r.toString()));
-    template.sendBody("direct:origin", "Hello from origin");
-    context.stop();
+var template = context.createProducerTemplate();
+context.start();
+context.getRoutes().forEach(r -> LOGGER.info(r.toString()));
+template.sendBody("direct:origin", "Hello from origin");
+context.stop();
   }
 }

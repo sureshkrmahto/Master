@@ -14,16 +14,14 @@ import java.io.FileNotFoundException;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final String ERROR = "Error";
-  private static final String MESSAGE = "Message";
-  public static FileLoggerModule fileLoggerModule;
-  public static ConsoleLoggerModule consoleLoggerModule;
+private static final String ERROR = "Error";
+private static final String MESSAGE = "Message";
+public static FileLoggerModule fileLoggerModule;
+public static ConsoleLoggerModule consoleLoggerModule;
 
   /**
    * Following method performs the initialization.
@@ -31,35 +29,35 @@ public class App {
    * @throws FileNotFoundException if program is not able to find log files (output.txt and
    *                               error.txt)
    */
-  public static void prepare() throws FileNotFoundException {
+public static void prepare() throws FileNotFoundException {
 
     /* Create new singleton objects and prepare their modules */
-    fileLoggerModule = FileLoggerModule.getSingleton().prepare();
-    consoleLoggerModule = ConsoleLoggerModule.getSingleton().prepare();
+fileLoggerModule = FileLoggerModule.getSingleton().prepare();
+consoleLoggerModule = ConsoleLoggerModule.getSingleton().prepare();
   }
 
   /**
    * Following method performs the finalization.
    */
-  public static void unprepare() {
+public static void unprepare() {
 
     /* Close all resources */
-    fileLoggerModule.unprepare();
-    consoleLoggerModule.unprepare();
+fileLoggerModule.unprepare();
+consoleLoggerModule.unprepare();
   }
 
   /**
    * Following method is main executor.
    */
-  public static void execute() {
+public static void execute() {
 
     /* Send logs on file system */
-    fileLoggerModule.printString(MESSAGE);
-    fileLoggerModule.printErrorString(ERROR);
+fileLoggerModule.printString(MESSAGE);
+fileLoggerModule.printErrorString(ERROR);
 
     /* Send logs on console */
-    consoleLoggerModule.printString(MESSAGE);
-    consoleLoggerModule.printErrorString(ERROR);
+consoleLoggerModule.printString(MESSAGE);
+consoleLoggerModule.printErrorString(ERROR);
   }
 
   /**
@@ -69,9 +67,9 @@ public class App {
    * @throws FileNotFoundException if program is not able to find log files (output.txt and
    *                               error.txt)
    */
-  public static void main(final String... args) throws FileNotFoundException {
-    prepare();
-    execute();
-    unprepare();
+public static void main(final String... args) throws FileNotFoundException {
+prepare();
+execute();
+unprepare();
   }
 }

@@ -14,45 +14,45 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class GuardedQueue {
-  private static final Logger LOGGER = LoggerFactory.getLogger(GuardedQueue.class);
-  private final Queue<Integer> sourceList;
+private static final Logger LOGGER = LoggerFactory.getLogger(GuardedQueue.class);
+private final Queue<Integer> sourceList;
 
-  public GuardedQueue() {
-    this.sourceList = new LinkedList<>();
+public GuardedQueue() {
+this.sourceList = new LinkedList<>();
   }
 
   /**
    * Get the last element of the queue is exists.
    *
    * @return last element of a queue if queue is not empty
+ *  @author Suresh Mahto
    */
-  public synchronized Integer get() {
-    while (sourceList.isEmpty()) {
-      try {
-        LOGGER.info("waiting");
-        wait();
+public synchronized Integer get() {
+while (sourceList.isEmpty()) {
+try {
+LOGGER.info("waiting");
+wait();
       } catch (InterruptedException e) {
-        e.printStackTrace();
+e.printStackTrace();
       }
     }
-    LOGGER.info("getting");
-    return sourceList.peek();
+LOGGER.info("getting");
+return sourceList.peek();
   }
 
   /**
    * Put a value in the queue.
    *
    * @param e number which we want to put to our queue
+ *  @author Suresh Mahto
    */
-  public synchronized void put(Integer e) {
-    LOGGER.info("putting");
-    sourceList.add(e);
-    LOGGER.info("notifying");
-    notify();
+public synchronized void put(Integer e) {
+LOGGER.info("putting");
+sourceList.add(e);
+LOGGER.info("notifying");
+notify();
   }
 }

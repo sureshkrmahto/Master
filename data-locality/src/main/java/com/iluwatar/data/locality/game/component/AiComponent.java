@@ -8,24 +8,23 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AiComponent implements Component {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(AiComponent.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(AiComponent.class);
 
   /**
    * Update ai component.
+ *  @author Suresh Mahto
    */
   @Override
-  public void update() {
-    LOGGER.info("update AI component");
+public void update() {
+LOGGER.info("update AI component");
   }
 
-  @Override
-  public void render() {
+@Override
+public void render() {
     // Do Nothing.
   }
 }

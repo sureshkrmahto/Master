@@ -34,28 +34,27 @@ import com.iluwatar.hexagonal.sampledata.SampleData;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var injector = Guice.createInjector(new LotteryTestingModule());
+var injector = Guice.createInjector(new LotteryTestingModule());
 
     // start new lottery round
-    var administration = injector.getInstance(LotteryAdministration.class);
-    administration.resetLottery();
+var administration = injector.getInstance(LotteryAdministration.class);
+administration.resetLottery();
 
     // submit some lottery tickets
-    var service = injector.getInstance(LotteryService.class);
-    SampleData.submitTickets(service, 20);
+var service = injector.getInstance(LotteryService.class);
+SampleData.submitTickets(service, 20);
 
     // perform lottery
-    administration.performLottery();
+administration.performLottery();
   }
 }

@@ -5,14 +5,12 @@ package com.iluwatar.circuitbreaker;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class QuickRemoteService implements RemoteService {
 
-  @Override
-  public String call() throws RemoteServiceException {
-    return "Quick Service is working";
+@Override
+public String call() throws RemoteServiceException {
+return "Quick Service is working";
   }
 }

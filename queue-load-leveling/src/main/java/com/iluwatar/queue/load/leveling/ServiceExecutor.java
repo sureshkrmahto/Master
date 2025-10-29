@@ -9,38 +9,37 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ServiceExecutor implements Runnable {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
-  private final MessageQueue msgQueue;
+private final MessageQueue msgQueue;
 
-  public ServiceExecutor(MessageQueue msgQueue) {
-    this.msgQueue = msgQueue;
+public ServiceExecutor(MessageQueue msgQueue) {
+this.msgQueue = msgQueue;
   }
 
   /**
    * The ServiceExecutor thread will retrieve each message and process it.
+ *  @author Suresh Mahto
    */
-  public void run() {
-    try {
-      while (!Thread.currentThread().isInterrupted()) {
-        var msg = msgQueue.retrieveMsg();
+public void run() {
+try {
+while (!Thread.currentThread().isInterrupted()) {
+var msg = msgQueue.retrieveMsg();
 
-        if (null != msg) {
-          LOGGER.info(msg.toString() + " is served.");
+if (null != msg) {
+LOGGER.info(msg.toString() + " is served.");
         } else {
-          LOGGER.info("Service Executor: Waiting for Messages to serve .. ");
+LOGGER.info("Service Executor: Waiting for Messages to serve .. ");
         }
 
-        Thread.sleep(1000);
+Thread.sleep(1000);
       }
     } catch (Exception e) {
-      LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
     }
   }
 }

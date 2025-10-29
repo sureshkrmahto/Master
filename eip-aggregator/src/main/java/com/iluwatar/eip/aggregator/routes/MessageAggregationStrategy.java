@@ -10,24 +10,22 @@ import org.springframework.stereotype.Component;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @Component
-/**
- * @author Suresh Mahto
- */
 public class MessageAggregationStrategy implements AggregationStrategy {
 
-  @Override
-  public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
-    if (oldExchange == null) {
-      return newExchange;
+@Override
+public Exchange aggregate(Exchange oldExchange, Exchange newExchange) {
+if (oldExchange == null) {
+return newExchange;
     }
 
-    var in1 = (String) oldExchange.getIn().getBody();
-    var in2 = (String) newExchange.getIn().getBody();
+var in1 = (String) oldExchange.getIn().getBody();
+var in2 = (String) newExchange.getIn().getBody();
 
-    oldExchange.getIn().setBody(in1 + ";" + in2);
+oldExchange.getIn().setBody(in1 + ";" + in2);
 
-    return oldExchange;
+return oldExchange;
   }
 }

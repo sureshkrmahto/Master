@@ -10,81 +10,88 @@ import java.io.Serializable;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FileSelectorPresenter implements Serializable {
 
   /**
    * Generated serial version UID.
+ *  @author Suresh Mahto
    */
-  private static final long serialVersionUID = 1210314339075855074L;
+private static final long serialVersionUID = 1210314339075855074L;
 
   /**
    * The View component that the presenter interacts with.
+ *  @author Suresh Mahto
    */
-  private final FileSelectorView view;
+private final FileSelectorView view;
 
   /**
    * The Model component that the presenter interacts with.
+ *  @author Suresh Mahto
    */
-  private FileLoader loader;
+private FileLoader loader;
 
   /**
    * Constructor.
    *
    * @param view The view component that the presenter will interact with.
+ *  @author Suresh Mahto
    */
-  public FileSelectorPresenter(FileSelectorView view) {
-    this.view = view;
+public FileSelectorPresenter(FileSelectorView view) {
+this.view = view;
   }
 
   /**
    * Sets the {@link FileLoader} object, to the value given as parameter.
    *
    * @param loader The new {@link FileLoader} object(the Model component).
+ *  @author Suresh Mahto
    */
-  public void setLoader(FileLoader loader) {
-    this.loader = loader;
+public void setLoader(FileLoader loader) {
+this.loader = loader;
   }
 
   /**
    * Starts the presenter.
+ *  @author Suresh Mahto
    */
-  public void start() {
-    view.setPresenter(this);
-    view.open();
+public void start() {
+view.setPresenter(this);
+view.open();
   }
 
   /**
    * An "event" that fires when the name of the file to be loaded changes.
+ *  @author Suresh Mahto
    */
-  public void fileNameChanged() {
-    loader.setFileName(view.getFileName());
+public void fileNameChanged() {
+loader.setFileName(view.getFileName());
   }
 
   /**
    * Ok button handler.
+ *  @author Suresh Mahto
    */
-  public void confirmed() {
-    if (loader.getFileName() == null || loader.getFileName().equals("")) {
-      view.showMessage("Please give the name of the file first!");
-      return;
+public void confirmed() {
+if (loader.getFileName() == null || loader.getFileName().equals("")) {
+view.showMessage("Please give the name of the file first!");
+return;
     }
 
-    if (loader.fileExists()) {
-      var data = loader.loadData();
-      view.displayData(data);
+if (loader.fileExists()) {
+var data = loader.loadData();
+view.displayData(data);
     } else {
-      view.showMessage("The file specified does not exist.");
+view.showMessage("The file specified does not exist.");
     }
   }
 
   /**
    * Cancels the file loading process.
+ *  @author Suresh Mahto
    */
-  public void cancelled() {
-    view.close();
+public void cancelled() {
+view.close();
   }
 }

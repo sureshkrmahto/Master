@@ -19,30 +19,29 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Entry Point.
    *
    * @param args the command line arguments - not used
+ *  @author Suresh Mahto
    */
-  public static void main(String... args) {
-    final var washingMachine = new WashingMachine();
-    var executorService = Executors.newFixedThreadPool(3);
-    for (int i = 0; i < 3; i++) {
-      executorService.execute(washingMachine::wash);
+public static void main(String... args) {
+final var washingMachine = new WashingMachine();
+var executorService = Executors.newFixedThreadPool(3);
+for (int i = 0; i < 3; i++) {
+executorService.execute(washingMachine::wash);
     }
-    executorService.shutdown();
-    try {
-      executorService.awaitTermination(10, TimeUnit.SECONDS);
+executorService.shutdown();
+try {
+executorService.awaitTermination(10, TimeUnit.SECONDS);
     } catch (InterruptedException ie) {
-      LOGGER.error("ERROR: Waiting on executor service shutdown!");
+LOGGER.error("ERROR: Waiting on executor service shutdown!");
     }
   }
 

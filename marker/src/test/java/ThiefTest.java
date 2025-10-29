@@ -9,14 +9,12 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ThiefTest {
-  @Test
-  public void testThief() {
-    var thief = new Thief();
-    assertThat(thief, not(instanceOf(Permission.class)));
+@Test
+public void testThief() {
+var thief = new Thief();
+assertThat(thief, not(instanceOf(Permission.class)));
   }
 }

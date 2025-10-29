@@ -21,24 +21,23 @@ package com.iluwatar.adapter;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class App {
 
-  private App() {
+private App() {
   }
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(final String[] args) {
+public static void main(final String[] args) {
     // The captain can only operate rowing boats but with adapter he is able to
     // use fishing boats as well
-    var captain = new Captain(new FishingBoatAdapter());
-    captain.row();
+var captain = new Captain(new FishingBoatAdapter());
+captain.row();
   }
 }

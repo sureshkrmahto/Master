@@ -8,25 +8,23 @@ import java.util.concurrent.BlockingQueue;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleMessageQueue implements MessageQueue {
 
-  private final BlockingQueue<Message> queue;
+private final BlockingQueue<Message> queue;
 
-  public SimpleMessageQueue(int bound) {
-    queue = new ArrayBlockingQueue<>(bound);
+public SimpleMessageQueue(int bound) {
+queue = new ArrayBlockingQueue<>(bound);
   }
 
-  @Override
-  public void put(Message msg) throws InterruptedException {
-    queue.put(msg);
+@Override
+public void put(Message msg) throws InterruptedException {
+queue.put(msg);
   }
 
-  @Override
-  public Message take() throws InterruptedException {
-    return queue.take();
+@Override
+public Message take() throws InterruptedException {
+return queue.take();
   }
 }

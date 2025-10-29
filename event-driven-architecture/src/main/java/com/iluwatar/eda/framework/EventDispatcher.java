@@ -9,16 +9,14 @@ import java.util.Map;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class EventDispatcher {
 
-  private final Map<Class<? extends Event>, Handler<? extends Event>> handlers;
+private final Map<Class<? extends Event>, Handler<? extends Event>> handlers;
 
-  public EventDispatcher() {
-    handlers = new HashMap<>();
+public EventDispatcher() {
+handlers = new HashMap<>();
   }
 
   /**
@@ -26,24 +24,24 @@ public class EventDispatcher {
    *
    * @param eventType The {@link Event} to be registered
    * @param handler   The {@link Handler} that will be handling the {@link Event}
-   */
-  public <E extends Event> void registerHandler(
-      Class<E> eventType,
-      Handler<E> handler
+*/
+public <E extends Event> void registerHandler(
+Class<E> eventType,
+Handler<E> handler
   ) {
-    handlers.put(eventType, handler);
+handlers.put(eventType, handler);
   }
 
   /**
    * Dispatches an {@link Event} depending on it's type.
    *
    * @param event The {@link Event} to be dispatched
-   */
+*/
   @SuppressWarnings("unchecked")
-  public <E extends Event> void dispatch(E event) {
-    var handler = (Handler<E>) handlers.get(event.getClass());
-    if (handler != null) {
-      handler.onEvent(event);
+public <E extends Event> void dispatch(E event) {
+var handler = (Handler<E>) handlers.get(event.getClass());
+if (handler != null) {
+handler.onEvent(event);
     }
   }
 

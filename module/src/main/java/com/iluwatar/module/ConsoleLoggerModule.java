@@ -12,20 +12,18 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class ConsoleLoggerModule {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ConsoleLoggerModule.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ConsoleLoggerModule.class);
 
-  private static ConsoleLoggerModule singleton = null;
+private static ConsoleLoggerModule singleton = null;
 
-  public PrintStream output = null;
-  public PrintStream error = null;
+public PrintStream output = null;
+public PrintStream error = null;
 
-  private ConsoleLoggerModule() {
+private ConsoleLoggerModule() {
   }
 
   /**
@@ -33,46 +31,46 @@ public final class ConsoleLoggerModule {
    *
    * @return singleton instance of ConsoleLoggerModule
    */
-  public static ConsoleLoggerModule getSingleton() {
+public static ConsoleLoggerModule getSingleton() {
 
-    if (ConsoleLoggerModule.singleton == null) {
-      ConsoleLoggerModule.singleton = new ConsoleLoggerModule();
+if (ConsoleLoggerModule.singleton == null) {
+ConsoleLoggerModule.singleton = new ConsoleLoggerModule();
     }
 
-    return ConsoleLoggerModule.singleton;
+return ConsoleLoggerModule.singleton;
   }
 
   /**
    * Following method performs the initialization.
    */
-  public ConsoleLoggerModule prepare() {
+public ConsoleLoggerModule prepare() {
 
-    LOGGER.debug("ConsoleLoggerModule::prepare();");
+LOGGER.debug("ConsoleLoggerModule::prepare();");
 
-    this.output = new PrintStream(System.out);
-    this.error = new PrintStream(System.err);
+this.output = new PrintStream(System.out);
+this.error = new PrintStream(System.err);
 
-    return this;
+return this;
   }
 
   /**
    * Following method performs the finalization.
    */
-  public void unprepare() {
+public void unprepare() {
 
-    if (this.output != null) {
+if (this.output != null) {
 
-      this.output.flush();
-      this.output.close();
+this.output.flush();
+this.output.close();
     }
 
-    if (this.error != null) {
+if (this.error != null) {
 
-      this.error.flush();
-      this.error.close();
+this.error.flush();
+this.error.close();
     }
 
-    LOGGER.debug("ConsoleLoggerModule::unprepare();");
+LOGGER.debug("ConsoleLoggerModule::unprepare();");
   }
 
   /**
@@ -80,8 +78,8 @@ public final class ConsoleLoggerModule {
    *
    * @param value will be printed on console
    */
-  public void printString(final String value) {
-    this.output.println(value);
+public void printString(final String value) {
+this.output.println(value);
   }
 
   /**
@@ -89,7 +87,7 @@ public final class ConsoleLoggerModule {
    *
    * @param value will be printed on error console
    */
-  public void printErrorString(final String value) {
-    this.error.println(value);
+public void printErrorString(final String value) {
+this.error.println(value);
   }
 }

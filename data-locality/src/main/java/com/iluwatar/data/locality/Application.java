@@ -14,23 +14,22 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Application {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(Application.class);
 
-  private static final int NUM_ENTITIES = 5;
+private static final int NUM_ENTITIES = 5;
 
   /**
    * Start game loop with each component have NUM_ENTITIES instance.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    LOGGER.info("Start Game Application using Data-Locality pattern");
-    var gameEntity = new GameEntity(NUM_ENTITIES);
-    gameEntity.start();
-    gameEntity.update();
+public static void main(String[] args) {
+LOGGER.info("Start Game Application using Data-Locality pattern");
+var gameEntity = new GameEntity(NUM_ENTITIES);
+gameEntity.start();
+gameEntity.update();
   }
 }

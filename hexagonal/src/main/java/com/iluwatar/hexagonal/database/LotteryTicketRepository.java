@@ -7,27 +7,28 @@ import java.util.Optional;
 
 /**
  * Interface for accessing lottery tickets in database.
+ *  @author Suresh Mahto
  */
 public interface LotteryTicketRepository {
 
   /**
    * Find lottery ticket by id.
-   */
-  Optional<LotteryTicket> findById(LotteryTicketId id);
+*/
+Optional<LotteryTicket> findById(LotteryTicketId id);
 
   /**
    * Save lottery ticket.
-   */
-  Optional<LotteryTicketId> save(LotteryTicket ticket);
+*/
+Optional<LotteryTicketId> save(LotteryTicket ticket);
 
   /**
    * Get all lottery tickets.
-   */
-  Map<LotteryTicketId, LotteryTicket> findAll();
+*/
+Map<LotteryTicketId, LotteryTicket> findAll();
 
   /**
    * Delete all lottery tickets.
-   */
-  void deleteAll();
+*/
+void deleteAll();
 
 }

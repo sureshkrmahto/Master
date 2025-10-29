@@ -18,30 +18,29 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    LOGGER.info("The knight receives an enchanted sword.");
-    var enchantedSword = new Sword(new SoulEatingEnchantment());
-    enchantedSword.wield();
-    enchantedSword.swing();
-    enchantedSword.unwield();
+public static void main(String[] args) {
+LOGGER.info("The knight receives an enchanted sword.");
+var enchantedSword = new Sword(new SoulEatingEnchantment());
+enchantedSword.wield();
+enchantedSword.swing();
+enchantedSword.unwield();
 
-    LOGGER.info("The valkyrie receives an enchanted hammer.");
-    var hammer = new Hammer(new FlyingEnchantment());
-    hammer.wield();
-    hammer.swing();
-    hammer.unwield();
+LOGGER.info("The valkyrie receives an enchanted hammer.");
+var hammer = new Hammer(new FlyingEnchantment());
+hammer.wield();
+hammer.swing();
+hammer.unwield();
   }
 }

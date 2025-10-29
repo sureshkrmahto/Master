@@ -7,14 +7,12 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SagaApplicationTest {
 
-  @Test
-  public void mainTest() {
-    SagaApplication.main(new String[]{});
+@Test
+public void mainTest() {
+SagaApplication.main(new String[]{});
   }
 }

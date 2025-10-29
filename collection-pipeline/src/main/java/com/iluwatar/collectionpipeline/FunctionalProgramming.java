@@ -21,12 +21,10 @@ import java.util.stream.Collectors;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FunctionalProgramming {
-  private FunctionalProgramming() {
+private FunctionalProgramming() {
   }
 
   /**
@@ -34,9 +32,10 @@ public class FunctionalProgramming {
    *
    * @param cars {@link List} of {@link Car} to be used for filtering
    * @return {@link List} of {@link String} representing models built after year 2000
+ *  @author Suresh Mahto
    */
-  public static List<String> getModelsAfter2000(List<Car> cars) {
-    return cars.stream().filter(car -> car.getYear() > 2000)
+public static List<String> getModelsAfter2000(List<Car> cars) {
+return cars.stream().filter(car -> car.getYear() > 2000)
         .sorted(Comparator.comparing(Car::getYear))
         .map(Car::getModel).collect(Collectors.toList());
   }
@@ -46,9 +45,10 @@ public class FunctionalProgramming {
    *
    * @param cars {@link List} of {@link Car} to be used for grouping
    * @return {@link Map} with category as key and cars belonging to that category as value
+ *  @author Suresh Mahto
    */
-  public static Map<Category, List<Car>> getGroupingOfCarsByCategory(List<Car> cars) {
-    return cars.stream().collect(Collectors.groupingBy(Car::getCategory));
+public static Map<Category, List<Car>> getGroupingOfCarsByCategory(List<Car> cars) {
+return cars.stream().collect(Collectors.groupingBy(Car::getCategory));
   }
 
   /**
@@ -56,9 +56,10 @@ public class FunctionalProgramming {
    *
    * @param persons {@link List} of {@link Person} to be used
    * @return {@link List} of {@link Car} to belonging to the group
+ *  @author Suresh Mahto
    */
-  public static List<Car> getSedanCarsOwnedSortedByDate(List<Person> persons) {
-    return persons.stream().map(Person::getCars).flatMap(List::stream)
+public static List<Car> getSedanCarsOwnedSortedByDate(List<Person> persons) {
+return persons.stream().map(Person::getCars).flatMap(List::stream)
         .filter(car -> Category.SEDAN.equals(car.getCategory()))
         .sorted(Comparator.comparing(Car::getYear)).collect(Collectors.toList());
   }

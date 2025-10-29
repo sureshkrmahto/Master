@@ -10,27 +10,26 @@ package com.iluwatar.gameloop;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FrameBasedGameLoop extends GameLoop {
 
-  @Override
-  protected void processGameLoop() {
-    while (isGameRunning()) {
-      processInput();
-      update();
-      render();
+@Override
+protected void processGameLoop() {
+while (isGameRunning()) {
+processInput();
+update();
+render();
     }
   }
 
   /**
    * Each time when update() is invoked, a new frame is created, and the bullet will be
    * moved 0.5f away from the current position.
+ *  @author Suresh Mahto
    */
-  protected void update() {
-    controller.moveBullet(0.5f);
+protected void update() {
+controller.moveBullet(0.5f);
   }
 
 }

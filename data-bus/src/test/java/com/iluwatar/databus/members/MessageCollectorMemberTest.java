@@ -12,33 +12,31 @@ import org.junit.jupiter.api.Test;
  * Tests for {@link MessageCollectorMember}.
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class MessageCollectorMemberTest {
 
-  @Test
-  public void collectMessageFromMessageData() {
+@Test
+public void collectMessageFromMessageData() {
     //given
-    final var message = "message";
-    final var messageData = new MessageData(message);
-    final var collector = new MessageCollectorMember("collector");
+final var message = "message";
+final var messageData = new MessageData(message);
+final var collector = new MessageCollectorMember("collector");
     //when
-    collector.accept(messageData);
+collector.accept(messageData);
     //then
-    assertTrue(collector.getMessages().contains(message));
+assertTrue(collector.getMessages().contains(message));
   }
 
-  @Test
-  public void collectIgnoresMessageFromOtherDataTypes() {
+@Test
+public void collectIgnoresMessageFromOtherDataTypes() {
     //given
-    final var startingData = new StartingData(LocalDateTime.now());
-    final var collector = new MessageCollectorMember("collector");
+final var startingData = new StartingData(LocalDateTime.now());
+final var collector = new MessageCollectorMember("collector");
     //when
-    collector.accept(startingData);
+collector.accept(startingData);
     //then
-    assertEquals(0, collector.getMessages().size());
+assertEquals(0, collector.getMessages().size());
   }
 
 }

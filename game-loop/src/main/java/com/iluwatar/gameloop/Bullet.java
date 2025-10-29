@@ -5,23 +5,21 @@ package com.iluwatar.gameloop;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Bullet {
 
-  private float position;
+private float position;
 
-  public Bullet() {
-    position = 0.0f;
+public Bullet() {
+position = 0.0f;
   }
 
-  public float getPosition() {
-    return position;
+public float getPosition() {
+return position;
   }
 
-  public void setPosition(float position) {
-    this.position = position;
+public void setPosition(float position) {
+this.position = position;
   }
 }

@@ -9,12 +9,10 @@ import java.util.stream.Stream;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Finders {
-  private Finders() {
+private Finders() {
   }
 
 
@@ -24,10 +22,11 @@ public class Finders {
    * @param orQuery alternative to find
    * @param notQuery exclude from search
    * @return new finder
+ *  @author Suresh Mahto
    */
-  public static Finder advancedFinder(String query, String orQuery, String notQuery) {
-    return
-        Finder.contains(query)
+public static Finder advancedFinder(String query, String orQuery, String notQuery) {
+return
+Finder.contains(query)
             .or(Finder.contains(orQuery))
             .not(Finder.contains(notQuery));
   }
@@ -37,14 +36,15 @@ public class Finders {
    * @param query to find
    * @param excludeQueries to exclude
    * @return new finder
+ *  @author Suresh Mahto
    */
-  public static Finder filteredFinder(String query, String... excludeQueries) {
-    var finder = Finder.contains(query);
+public static Finder filteredFinder(String query, String... excludeQueries) {
+var finder = Finder.contains(query);
 
-    for (String q : excludeQueries) {
-      finder = finder.not(Finder.contains(q));
+for (String q : excludeQueries) {
+finder = finder.not(Finder.contains(q));
     }
-    return finder;
+return finder;
 
   }
 
@@ -52,35 +52,37 @@ public class Finders {
    * Specialized query. Every next query is looked in previous result.
    * @param queries array with queries
    * @return new finder
+ *  @author Suresh Mahto
    */
-  public static Finder specializedFinder(String... queries) {
-    var finder = identMult();
+public static Finder specializedFinder(String... queries) {
+var finder = identMult();
 
-    for (String query : queries) {
-      finder = finder.and(Finder.contains(query));
+for (String query : queries) {
+finder = finder.and(Finder.contains(query));
     }
-    return finder;
+return finder;
   }
 
   /**
    * Expanded query. Looking for alternatives.
    * @param queries array with queries.
    * @return new finder
+ *  @author Suresh Mahto
    */
-  public static Finder expandedFinder(String... queries) {
-    var finder = identSum();
+public static Finder expandedFinder(String... queries) {
+var finder = identSum();
 
-    for (String query : queries) {
-      finder = finder.or(Finder.contains(query));
+for (String query : queries) {
+finder = finder.or(Finder.contains(query));
     }
-    return finder;
+return finder;
   }
 
-  private static Finder identMult() {
-    return txt -> Stream.of(txt.split("\n")).collect(Collectors.toList());
+private static Finder identMult() {
+return txt -> Stream.of(txt.split("\n")).collect(Collectors.toList());
   }
 
-  private static Finder identSum() {
-    return txt -> new ArrayList<>();
+private static Finder identSum() {
+return txt -> new ArrayList<>();
   }
 }

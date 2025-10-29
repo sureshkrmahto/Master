@@ -23,46 +23,45 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = WireTapRouteTest.class)
 @ActiveProfiles("test")
 @EnableAutoConfiguration
 @ComponentScan
-/**
- * @author Suresh Mahto
- */
 public class WireTapRouteTest {
 
-  @EndpointInject(uri = "{{entry}}")
-  private ProducerTemplate entry;
+@EndpointInject(uri = "{{entry}}")
+private ProducerTemplate entry;
 
-  @EndpointInject(uri = "{{endpoint}}")
-  private MockEndpoint endpoint;
+@EndpointInject(uri = "{{endpoint}}")
+private MockEndpoint endpoint;
 
-  @EndpointInject(uri = "{{wireTapEndpoint}}")
-  private MockEndpoint wireTapEndpoint;
+@EndpointInject(uri = "{{wireTapEndpoint}}")
+private MockEndpoint wireTapEndpoint;
 
   /**
    * Test if both endpoints receive exactly one message containing the same, unchanged body.
    *
    * @throws Exception in case of en exception during the test
+ *  @author Suresh Mahto
    */
   @Test
   @DirtiesContext
-  public void testWireTap() throws Exception {
-    entry.sendBody("TEST");
+public void testWireTap() throws Exception {
+entry.sendBody("TEST");
 
-    endpoint.expectedMessageCount(1);
-    wireTapEndpoint.expectedMessageCount(1);
+endpoint.expectedMessageCount(1);
+wireTapEndpoint.expectedMessageCount(1);
 
-    endpoint.assertIsSatisfied();
-    wireTapEndpoint.assertIsSatisfied();
+endpoint.assertIsSatisfied();
+wireTapEndpoint.assertIsSatisfied();
 
-    var endpointIn = endpoint.getExchanges().get(0).getIn();
-    var wireTapEndpointIn = wireTapEndpoint.getExchanges().get(0).getIn();
+var endpointIn = endpoint.getExchanges().get(0).getIn();
+var wireTapEndpointIn = wireTapEndpoint.getExchanges().get(0).getIn();
 
-    assertEquals("TEST", endpointIn.getBody());
-    assertEquals("TEST", wireTapEndpointIn.getBody());
+assertEquals("TEST", endpointIn.getBody());
+assertEquals("TEST", wireTapEndpointIn.getBody());
   }
 }

@@ -7,39 +7,38 @@ package com.iluwatar.saga.orchestration;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ChapterResult<K> {
-  private final K value;
-  private final State state;
+private final K value;
+private final State state;
 
-  public K getValue() {
-    return value;
+public K getValue() {
+return value;
   }
 
-  ChapterResult(K value, State state) {
-    this.value = value;
-    this.state = state;
+ChapterResult(K value, State state) {
+this.value = value;
+this.state = state;
   }
 
-  public boolean isSuccess() {
-    return state == State.SUCCESS;
+public boolean isSuccess() {
+return state == State.SUCCESS;
   }
 
-  public static <K> ChapterResult<K> success(K val) {
-    return new ChapterResult<>(val, State.SUCCESS);
+public static <K> ChapterResult<K> success(K val) {
+return new ChapterResult<>(val, State.SUCCESS);
   }
 
-  public static <K> ChapterResult<K> failure(K val) {
-    return new ChapterResult<>(val, State.FAILURE);
+public static <K> ChapterResult<K> failure(K val) {
+return new ChapterResult<>(val, State.FAILURE);
   }
 
   /**
    * state for chapter.
+ *  @author Suresh Mahto
    */
-  public enum State {
-    SUCCESS, FAILURE
+public enum State {
+SUCCESS, FAILURE
   }
 }

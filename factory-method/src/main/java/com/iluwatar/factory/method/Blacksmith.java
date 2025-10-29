@@ -2,6 +2,7 @@ package com.iluwatar.factory.method;
 
 /**
  * Creator interface exposing the factory method for producing {@link Weapon}s.
+ *  @author Suresh Mahto
  */
 public interface Blacksmith {
 
@@ -10,7 +11,7 @@ public interface Blacksmith {
    *
    * @param weaponType type of weapon to create
    * @return manufactured weapon instance
-   */
-  Weapon manufactureWeapon(WeaponType weaponType);
+*/
+Weapon manufactureWeapon(WeaponType weaponType);
 
 }

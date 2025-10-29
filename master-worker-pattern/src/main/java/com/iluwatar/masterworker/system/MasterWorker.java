@@ -9,22 +9,20 @@ import com.iluwatar.masterworker.system.systemmaster.Master;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class MasterWorker {
-  private final Master master;
+private final Master master;
 
-  public MasterWorker(int numOfWorkers) {
-    this.master = setMaster(numOfWorkers);
+public MasterWorker(int numOfWorkers) {
+this.master = setMaster(numOfWorkers);
   }
 
-  abstract Master setMaster(int numOfWorkers);
+abstract Master setMaster(int numOfWorkers);
 
-  public Result<?> getResult(Input<?> input) {
-    this.master.doWork(input);
-    return this.master.getFinalResult();
+public Result<?> getResult(Input<?> input) {
+this.master.doWork(input);
+return this.master.getFinalResult();
   }
 }
 

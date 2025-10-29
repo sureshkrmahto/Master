@@ -12,14 +12,12 @@ import java.util.List;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class UserGroup {
 
-  private static final List<User> freeGroup = new ArrayList<>();
-  private static final List<User> paidGroup = new ArrayList<>();
+private static final List<User> freeGroup = new ArrayList<>();
+private static final List<User> paidGroup = new ArrayList<>();
 
 
   /**
@@ -28,13 +26,14 @@ public class UserGroup {
    * @param user {@link User} to be added to the free group
    * @throws IllegalArgumentException when user is already added to the paid group
    * @see User
+ *  @author Suresh Mahto
    */
-  public static void addUserToFreeGroup(final User user) throws IllegalArgumentException {
-    if (paidGroup.contains(user)) {
-      throw new IllegalArgumentException("User all ready member of paid group.");
+public static void addUserToFreeGroup(final User user) throws IllegalArgumentException {
+if (paidGroup.contains(user)) {
+throw new IllegalArgumentException("User all ready member of paid group.");
     } else {
-      if (!freeGroup.contains(user)) {
-        freeGroup.add(user);
+if (!freeGroup.contains(user)) {
+freeGroup.add(user);
       }
     }
   }
@@ -45,13 +44,14 @@ public class UserGroup {
    * @param user {@link User} to be added to the paid group
    * @throws IllegalArgumentException when the user is already added to the free group
    * @see User
+ *  @author Suresh Mahto
    */
-  public static void addUserToPaidGroup(final User user) throws IllegalArgumentException {
-    if (freeGroup.contains(user)) {
-      throw new IllegalArgumentException("User all ready member of free group.");
+public static void addUserToPaidGroup(final User user) throws IllegalArgumentException {
+if (freeGroup.contains(user)) {
+throw new IllegalArgumentException("User all ready member of free group.");
     } else {
-      if (!paidGroup.contains(user)) {
-        paidGroup.add(user);
+if (!paidGroup.contains(user)) {
+paidGroup.add(user);
       }
     }
   }
@@ -61,8 +61,9 @@ public class UserGroup {
    *
    * @param user {@link User} to check if they are in the {@link UserGroup#paidGroup}
    * @return true if the {@link User} is in {@link UserGroup#paidGroup}
+ *  @author Suresh Mahto
    */
-  public static boolean isPaid(User user) {
-    return paidGroup.contains(user);
+public static boolean isPaid(User user) {
+return paidGroup.contains(user);
   }
 }

@@ -8,16 +8,14 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Tobacco {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Tobacco.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(Tobacco.class);
 
-  public void smoke(Wizard wizard) {
-    LOGGER.info("{} smoking {}", wizard.getClass().getSimpleName(),
-        this.getClass().getSimpleName());
+public void smoke(Wizard wizard) {
+LOGGER.info("{} smoking {}", wizard.getClass().getSimpleName(),
+this.getClass().getSimpleName());
   }
 }

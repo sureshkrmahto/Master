@@ -16,49 +16,42 @@ import org.slf4j.LoggerFactory;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ConsumerTest {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender(Consumer.class);
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender(Consumer.class);
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
-  @Test
-  public void testConsume() throws Exception {
-    final var messages = List.of(
-        createMessage("you", "Hello!"),
-        createMessage("me", "Hi!"),
-        Message.POISON_PILL,
-        createMessage("late_for_the_party", "Hello? Anyone here?")
+@Test
+public void testConsume() throws Exception {
+final var messages = List.of(
+createMessage("you", "Hello!"),
+createMessage("me", "Hi!"),
+Message.POISON_PILL,
+createMessage("late_for_the_party", "Hello? Anyone here?")
     );
 
-    final var queue = new SimpleMessageQueue(messages.size());
-    for (final var message : messages) {
-      queue.put(message);
+final var queue = new SimpleMessageQueue(messages.size());
+for (final var message : messages) {
+queue.put(message);
     }
 
-    new Consumer("NSA", queue).consume();
+new Consumer("NSA", queue).consume();
 
-    assertTrue(appender.logContains("Message [Hello!] from [you] received by [NSA]"));
-    assertTrue(appender.logContains("Message [Hi!] from [me] received by [NSA]"));
-    assertTrue(appender.logContains("Consumer NSA receive request to terminate."));
+assertTrue(appender.logContains("Message [Hello!] from [you] received by [NSA]"));
+assertTrue(appender.logContains("Message [Hi!] from [me] received by [NSA]"));
+assertTrue(appender.logContains("Consumer NSA receive request to terminate."));
   }
 
   /**
@@ -67,33 +60,31 @@ public class ConsumerTest {
    * @param sender  The sender's name
    * @param message The message body
    * @return The message instance
+ *  @author Suresh Mahto
    */
-  private static Message createMessage(final String sender, final String message) {
-    final var msg = new SimpleMessage();
-    msg.addHeader(Message.Headers.SENDER, sender);
-    msg.addHeader(Message.Headers.DATE, LocalDateTime.now().toString());
-    msg.setBody(message);
-    return msg;
+private static Message createMessage(final String sender, final String message) {
+final var msg = new SimpleMessage();
+msg.addHeader(Message.Headers.SENDER, sender);
+msg.addHeader(Message.Headers.DATE, LocalDateTime.now().toString());
+msg.setBody(message);
+return msg;
   }
 
-/**
- * @author Suresh Mahto
- */
-  private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender(Class clazz) {
+public InMemoryAppender(Class clazz) {
       ((Logger) LoggerFactory.getLogger(clazz)).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public boolean logContains(String message) {
-      return log.stream().map(ILoggingEvent::getFormattedMessage).anyMatch(message::equals);
+public boolean logContains(String message) {
+return log.stream().map(ILoggingEvent::getFormattedMessage).anyMatch(message::equals);
     }
   }
 

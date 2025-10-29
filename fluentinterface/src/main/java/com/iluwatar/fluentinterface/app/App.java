@@ -23,64 +23,63 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var integerList = List.of(1, -61, 14, -22, 18, -87, 6, 64, -82, 26, -98, 97, 45, 23, 2, -68);
+var integerList = List.of(1, -61, 14, -22, 18, -87, 6, 64, -82, 26, -98, 97, 45, 23, 2, -68);
 
-    prettyPrint("The initial list contains: ", integerList);
+prettyPrint("The initial list contains: ", integerList);
 
-    var firstFiveNegatives = SimpleFluentIterable
+var firstFiveNegatives = SimpleFluentIterable
         .fromCopyOf(integerList)
         .filter(negatives())
         .first(3)
         .asList();
-    prettyPrint("The first three negative values are: ", firstFiveNegatives);
+prettyPrint("The first three negative values are: ", firstFiveNegatives);
 
 
-    var lastTwoPositives = SimpleFluentIterable
+var lastTwoPositives = SimpleFluentIterable
         .fromCopyOf(integerList)
         .filter(positives())
         .last(2)
         .asList();
-    prettyPrint("The last two positive values are: ", lastTwoPositives);
+prettyPrint("The last two positive values are: ", lastTwoPositives);
 
-    SimpleFluentIterable
+SimpleFluentIterable
         .fromCopyOf(integerList)
         .filter(number -> number % 2 == 0)
         .first()
         .ifPresent(evenNumber -> LOGGER.info("The first even number is: {}", evenNumber));
 
 
-    var transformedList = SimpleFluentIterable
+var transformedList = SimpleFluentIterable
         .fromCopyOf(integerList)
         .filter(negatives())
         .map(transformToString())
         .asList();
-    prettyPrint("A string-mapped list of negative numbers contains: ", transformedList);
+prettyPrint("A string-mapped list of negative numbers contains: ", transformedList);
 
 
-    var lastTwoOfFirstFourStringMapped = LazyFluentIterable
+var lastTwoOfFirstFourStringMapped = LazyFluentIterable
         .from(integerList)
         .filter(positives())
         .first(4)
         .last(2)
         .map(number -> "String[" + number + "]")
         .asList();
-    prettyPrint("The lazy list contains the last two of the first four positive numbers "
+prettyPrint("The lazy list contains the last two of the first four positive numbers "
         + "mapped to Strings: ", lastTwoOfFirstFourStringMapped);
 
-    LazyFluentIterable
+LazyFluentIterable
         .from(integerList)
         .filter(negatives())
         .first(2)
@@ -88,28 +87,28 @@ public class App {
         .ifPresent(number -> LOGGER.info("Last amongst first two negatives: {}", number));
   }
 
-  private static Function<Integer, String> transformToString() {
-    return integer -> "String[" + integer + "]";
+private static Function<Integer, String> transformToString() {
+return integer -> "String[" + integer + "]";
   }
 
-  private static Predicate<? super Integer> negatives() {
-    return integer -> integer < 0;
+private static Predicate<? super Integer> negatives() {
+return integer -> integer < 0;
   }
 
-  private static Predicate<? super Integer> positives() {
-    return integer -> integer > 0;
+private static Predicate<? super Integer> positives() {
+return integer -> integer > 0;
   }
 
-  private static <E> void prettyPrint(String prefix, Iterable<E> iterable) {
-    prettyPrint(", ", prefix, iterable);
+private static <E> void prettyPrint(String prefix, Iterable<E> iterable) {
+prettyPrint(", ", prefix, iterable);
   }
 
-  private static <E> void prettyPrint(
-      String delimiter, String prefix,
-      Iterable<E> iterable
+private static <E> void prettyPrint(
+String delimiter, String prefix,
+Iterable<E> iterable
   ) {
-    var joiner = new StringJoiner(delimiter, prefix, ".");
-    iterable.forEach(e -> joiner.add(e.toString()));
-    LOGGER.info(joiner.toString());
+var joiner = new StringJoiner(delimiter, prefix, ".");
+iterable.forEach(e -> joiner.add(e.toString()));
+LOGGER.info(joiner.toString());
   }
 }

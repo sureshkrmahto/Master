@@ -15,47 +15,45 @@ import org.junit.jupiter.api.Test;
  * Tests for {@link StatusMember}.
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class StatusMemberTest {
 
-  @Test
-  public void statusRecordsTheStartTime() {
+@Test
+public void statusRecordsTheStartTime() {
     //given
-    final var startTime = LocalDateTime.of(2017, Month.APRIL, 1, 19, 9);
-    final var startingData = new StartingData(startTime);
-    final var statusMember = new StatusMember(1);
+final var startTime = LocalDateTime.of(2017, Month.APRIL, 1, 19, 9);
+final var startingData = new StartingData(startTime);
+final var statusMember = new StatusMember(1);
     //when
-    statusMember.accept(startingData);
+statusMember.accept(startingData);
     //then
-    assertEquals(startTime, statusMember.getStarted());
+assertEquals(startTime, statusMember.getStarted());
   }
 
-  @Test
-  public void statusRecordsTheStopTime() {
+@Test
+public void statusRecordsTheStopTime() {
     //given
-    final var stop = LocalDateTime.of(2017, Month.APRIL, 1, 19, 12);
-    final var stoppingData = new StoppingData(stop);
-    stoppingData.setDataBus(DataBus.getInstance());
-    final var statusMember = new StatusMember(1);
+final var stop = LocalDateTime.of(2017, Month.APRIL, 1, 19, 12);
+final var stoppingData = new StoppingData(stop);
+stoppingData.setDataBus(DataBus.getInstance());
+final var statusMember = new StatusMember(1);
     //when
-    statusMember.accept(stoppingData);
+statusMember.accept(stoppingData);
     //then
-    assertEquals(stop, statusMember.getStopped());
+assertEquals(stop, statusMember.getStopped());
   }
 
-  @Test
-  public void statusIgnoresMessageData() {
+@Test
+public void statusIgnoresMessageData() {
     //given
-    final var messageData = new MessageData("message");
-    final var statusMember = new StatusMember(1);
+final var messageData = new MessageData("message");
+final var statusMember = new StatusMember(1);
     //when
-    statusMember.accept(messageData);
+statusMember.accept(messageData);
     //then
-    assertNull(statusMember.getStarted());
-    assertNull(statusMember.getStopped());
+assertNull(statusMember.getStarted());
+assertNull(statusMember.getStopped());
   }
 
 }

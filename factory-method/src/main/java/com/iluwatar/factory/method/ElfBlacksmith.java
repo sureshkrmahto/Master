@@ -6,19 +6,20 @@ import java.util.Map;
 
 /**
  * Concrete creator that manufactures Elven {@link Weapon} variants.
+ *  @author Suresh Mahto
  */
 public class ElfBlacksmith implements Blacksmith {
 
-  private static final Map<WeaponType, ElfWeapon> ELFARSENAL;
+private static final Map<WeaponType, ElfWeapon> ELFARSENAL;
 
-  static {
-    ELFARSENAL = new HashMap<>(WeaponType.values().length);
-    Arrays.stream(WeaponType.values()).forEach(type -> ELFARSENAL.put(type, new ElfWeapon(type)));
+static {
+ELFARSENAL = new HashMap<>(WeaponType.values().length);
+Arrays.stream(WeaponType.values()).forEach(type -> ELFARSENAL.put(type, new ElfWeapon(type)));
   }
 
-  @Override
-  public Weapon manufactureWeapon(WeaponType weaponType) {
-    return ELFARSENAL.get(weaponType);
+@Override
+public Weapon manufactureWeapon(WeaponType weaponType) {
+return ELFARSENAL.get(weaponType);
   }
 
 }

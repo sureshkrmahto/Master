@@ -9,40 +9,38 @@ package com.iluwatar.value.object;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HeroStat {
 
   // Stats for a hero
 
-  private final int strength;
-  private final int intelligence;
-  private final int luck;
+private final int strength;
+private final int intelligence;
+private final int luck;
 
   // All constructors must be private.
-  private HeroStat(int strength, int intelligence, int luck) {
-    this.strength = strength;
-    this.intelligence = intelligence;
-    this.luck = luck;
+private HeroStat(int strength, int intelligence, int luck) {
+this.strength = strength;
+this.intelligence = intelligence;
+this.luck = luck;
   }
 
   // Static factory method to create new instances.
-  public static HeroStat valueOf(int strength, int intelligence, int luck) {
-    return new HeroStat(strength, intelligence, luck);
+public static HeroStat valueOf(int strength, int intelligence, int luck) {
+return new HeroStat(strength, intelligence, luck);
   }
 
-  public int getStrength() {
-    return strength;
+public int getStrength() {
+return strength;
   }
 
-  public int getIntelligence() {
-    return intelligence;
+public int getIntelligence() {
+return intelligence;
   }
 
-  public int getLuck() {
-    return luck;
+public int getLuck() {
+return luck;
   }
 
   /*
@@ -52,41 +50,41 @@ public class HeroStat {
 
   // toString, hashCode, equals
 
-  @Override
-  public String toString() {
-    return "HeroStat [strength=" + strength + ", intelligence=" + intelligence
+@Override
+public String toString() {
+return "HeroStat [strength=" + strength + ", intelligence=" + intelligence
         + ", luck=" + luck + "]";
   }
 
-  @Override
-  public int hashCode() {
-    final var prime = 31;
-    var result = 1;
-    result = prime * result + intelligence;
-    result = prime * result + luck;
-    result = prime * result + strength;
-    return result;
+@Override
+public int hashCode() {
+final var prime = 31;
+var result = 1;
+result = prime * result + intelligence;
+result = prime * result + luck;
+result = prime * result + strength;
+return result;
   }
 
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
+@Override
+public boolean equals(Object obj) {
+if (this == obj) {
+return true;
     }
-    if (obj == null) {
-      return false;
+if (obj == null) {
+return false;
     }
-    if (getClass() != obj.getClass()) {
-      return false;
+if (getClass() != obj.getClass()) {
+return false;
     }
-    var other = (HeroStat) obj;
-    if (intelligence != other.intelligence) {
-      return false;
+var other = (HeroStat) obj;
+if (intelligence != other.intelligence) {
+return false;
     }
-    if (luck != other.luck) {
-      return false;
+if (luck != other.luck) {
+return false;
     }
-    return strength == other.strength;
+return strength == other.strength;
   }
 
   // The clone() method should not be public. Just don't override it.

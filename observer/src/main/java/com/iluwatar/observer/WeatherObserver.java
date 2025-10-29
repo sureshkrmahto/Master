@@ -10,6 +10,6 @@ public interface WeatherObserver {
    *
    * @param currentWeather new weather
    */
-  void update(WeatherType currentWeather);
+void update(WeatherType currentWeather);
 
 }

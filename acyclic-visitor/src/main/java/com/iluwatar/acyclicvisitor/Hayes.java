@@ -8,32 +8,32 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Hayes extends Modem {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ConfigureForDosVisitor.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ConfigureForDosVisitor.class);
 
   /**
    * Accepts all visitors but honors only HayesVisitor.
+ *  @author Suresh Mahto
    */
   @Override
-  public void accept(ModemVisitor modemVisitor) {
-    if (modemVisitor instanceof HayesVisitor) {
+public void accept(ModemVisitor modemVisitor) {
+if (modemVisitor instanceof HayesVisitor) {
       ((HayesVisitor) modemVisitor).visit(this);
     } else {
-      LOGGER.info("Only HayesVisitor is allowed to visit Hayes modem");
+LOGGER.info("Only HayesVisitor is allowed to visit Hayes modem");
     }
 
   }
 
   /**
    * Hayes' modem's toString method.
+ *  @author Suresh Mahto
    */
   @Override
-  public String toString() {
-    return "Hayes modem";
+public String toString() {
+return "Hayes modem";
   }
 }

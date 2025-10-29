@@ -8,18 +8,16 @@ package com.iluwatar.saga.choreography;
  * @author Suresh Mahto
 
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class OrderService extends Service {
 
-  public OrderService(ServiceDiscoveryService service) {
-    super(service);
+public OrderService(ServiceDiscoveryService service) {
+super(service);
   }
 
-  @Override
-  public String getName() {
-    return "init an order";
+@Override
+public String getName() {
+return "init an order";
   }
 }

@@ -15,24 +15,23 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AlbumPage extends Page {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(AlbumPage.class);
-  private static final String ALBUM_PAGE_HTML_FILE = "album-page.html";
-  private static final String PAGE_URL = "file:" + AUT_PATH + ALBUM_PAGE_HTML_FILE;
+private static final Logger LOGGER = LoggerFactory.getLogger(AlbumPage.class);
+private static final String ALBUM_PAGE_HTML_FILE = "album-page.html";
+private static final String PAGE_URL = "file:" + AUT_PATH + ALBUM_PAGE_HTML_FILE;
 
-  private HtmlPage page;
+private HtmlPage page;
 
 
   /**
    * Constructor.
+ *  @author Suresh Mahto
    */
-  public AlbumPage(WebClient webClient) {
-    super(webClient);
+public AlbumPage(WebClient webClient) {
+super(webClient);
   }
 
 
@@ -40,23 +39,25 @@ public class AlbumPage extends Page {
    * Navigates to the album page.
    *
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage navigateToPage() {
-    try {
-      page = this.webClient.getPage(PAGE_URL);
+public AlbumPage navigateToPage() {
+try {
+page = this.webClient.getPage(PAGE_URL);
     } catch (IOException e) {
-      LOGGER.error("An error occured on navigateToPage.", e);
+LOGGER.error("An error occured on navigateToPage.", e);
     }
-    return this;
+return this;
   }
 
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public boolean isAt() {
-    return "Album Page".equals(page.getTitleText());
+public boolean isAt() {
+return "Album Page".equals(page.getTitleText());
   }
 
 
@@ -65,11 +66,12 @@ public class AlbumPage extends Page {
    *
    * @param albumTitle the new album title value to set
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage changeAlbumTitle(String albumTitle) {
-    var albumTitleInputTextField = (HtmlTextInput) page.getElementById("albumTitle");
-    albumTitleInputTextField.setText(albumTitle);
-    return this;
+public AlbumPage changeAlbumTitle(String albumTitle) {
+var albumTitleInputTextField = (HtmlTextInput) page.getElementById("albumTitle");
+albumTitleInputTextField.setText(albumTitle);
+return this;
   }
 
 
@@ -78,11 +80,12 @@ public class AlbumPage extends Page {
    *
    * @param artist the new artist value to set
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage changeArtist(String artist) {
-    var artistInputTextField = (HtmlTextInput) page.getElementById("albumArtist");
-    artistInputTextField.setText(artist);
-    return this;
+public AlbumPage changeArtist(String artist) {
+var artistInputTextField = (HtmlTextInput) page.getElementById("albumArtist");
+artistInputTextField.setText(artist);
+return this;
   }
 
 
@@ -91,12 +94,13 @@ public class AlbumPage extends Page {
    *
    * @param year the new year value to set
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage changeAlbumYear(int year) {
-    var albumYearSelectOption = (HtmlSelect) page.getElementById("albumYear");
-    var yearOption = albumYearSelectOption.getOptionByValue(Integer.toString(year));
-    albumYearSelectOption.setSelectedAttribute(yearOption, true);
-    return this;
+public AlbumPage changeAlbumYear(int year) {
+var albumYearSelectOption = (HtmlSelect) page.getElementById("albumYear");
+var yearOption = albumYearSelectOption.getOptionByValue(Integer.toString(year));
+albumYearSelectOption.setSelectedAttribute(yearOption, true);
+return this;
   }
 
 
@@ -105,11 +109,12 @@ public class AlbumPage extends Page {
    *
    * @param albumRating the new album rating value to set
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage changeAlbumRating(String albumRating) {
-    var albumRatingInputTextField = (HtmlTextInput) page.getElementById("albumRating");
-    albumRatingInputTextField.setText(albumRating);
-    return this;
+public AlbumPage changeAlbumRating(String albumRating) {
+var albumRatingInputTextField = (HtmlTextInput) page.getElementById("albumRating");
+albumRatingInputTextField.setText(albumRating);
+return this;
   }
 
   /**
@@ -117,11 +122,12 @@ public class AlbumPage extends Page {
    *
    * @param numberOfSongs the new number of songs value to be set
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage changeNumberOfSongs(int numberOfSongs) {
-    var numberOfSongsNumberField = (HtmlNumberInput) page.getElementById("numberOfSongs");
-    numberOfSongsNumberField.setText(Integer.toString(numberOfSongs));
-    return this;
+public AlbumPage changeNumberOfSongs(int numberOfSongs) {
+var numberOfSongsNumberField = (HtmlNumberInput) page.getElementById("numberOfSongs");
+numberOfSongsNumberField.setText(Integer.toString(numberOfSongs));
+return this;
   }
 
 
@@ -129,15 +135,16 @@ public class AlbumPage extends Page {
    * Cancel changes made by clicking the cancel button.
    *
    * @return {@link AlbumListPage}
+ *  @author Suresh Mahto
    */
-  public AlbumListPage cancelChanges() {
-    var cancelButton = (HtmlSubmitInput) page.getElementById("cancelButton");
-    try {
-      cancelButton.click();
+public AlbumListPage cancelChanges() {
+var cancelButton = (HtmlSubmitInput) page.getElementById("cancelButton");
+try {
+cancelButton.click();
     } catch (IOException e) {
-      LOGGER.error("An error occured on cancelChanges.", e);
+LOGGER.error("An error occured on cancelChanges.", e);
     }
-    return new AlbumListPage(webClient);
+return new AlbumListPage(webClient);
   }
 
 
@@ -145,15 +152,16 @@ public class AlbumPage extends Page {
    * Saves changes made by clicking the save button.
    *
    * @return {@link AlbumPage}
+ *  @author Suresh Mahto
    */
-  public AlbumPage saveChanges() {
-    var saveButton = (HtmlSubmitInput) page.getElementById("saveButton");
-    try {
-      saveButton.click();
+public AlbumPage saveChanges() {
+var saveButton = (HtmlSubmitInput) page.getElementById("saveButton");
+try {
+saveButton.click();
     } catch (IOException e) {
-      LOGGER.error("An error occured on saveChanges.", e);
+LOGGER.error("An error occured on saveChanges.", e);
     }
-    return this;
+return this;
   }
 
 }

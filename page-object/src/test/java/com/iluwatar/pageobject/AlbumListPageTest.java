@@ -13,24 +13,22 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AlbumListPageTest {
 
-  private final AlbumListPage albumListPage = new AlbumListPage(new WebClient());
+private final AlbumListPage albumListPage = new AlbumListPage(new WebClient());
 
-  @BeforeEach
-  public void setUp() {
-    albumListPage.navigateToPage();
+@BeforeEach
+public void setUp() {
+albumListPage.navigateToPage();
   }
 
-  @Test
-  public void testSelectAlbum() {
-    var albumPage = albumListPage.selectAlbum("21");
-    albumPage.navigateToPage();
-    assertTrue(albumPage.isAt());
+@Test
+public void testSelectAlbum() {
+var albumPage = albumListPage.selectAlbum("21");
+albumPage.navigateToPage();
+assertTrue(albumPage.isAt());
   }
 
 }

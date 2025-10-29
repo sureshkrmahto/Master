@@ -5,15 +5,13 @@ package com.iluwatar.mediator;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Rogue extends PartyMemberBase {
 
-  @Override
-  public String toString() {
-    return "Rogue";
+@Override
+public String toString() {
+return "Rogue";
   }
 
 }

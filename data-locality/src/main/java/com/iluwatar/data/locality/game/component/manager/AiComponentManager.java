@@ -11,38 +11,38 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AiComponentManager {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(AiComponentManager.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(AiComponentManager.class);
 
-  private static final int MAX_ENTITIES = 10000;
+private static final int MAX_ENTITIES = 10000;
 
-  private final int numEntities;
+private final int numEntities;
 
-  private final Component[] aiComponents = new AiComponent[MAX_ENTITIES];
+private final Component[] aiComponents = new AiComponent[MAX_ENTITIES];
 
-  public AiComponentManager(int numEntities) {
-    this.numEntities = numEntities;
+public AiComponentManager(int numEntities) {
+this.numEntities = numEntities;
   }
 
   /**
    * start AI component of Game.
+ *  @author Suresh Mahto
    */
-  public void start() {
-    LOGGER.info("Start AI Game Component");
-    IntStream.range(0, numEntities).forEach(i -> aiComponents[i] = new AiComponent());
+public void start() {
+LOGGER.info("Start AI Game Component");
+IntStream.range(0, numEntities).forEach(i -> aiComponents[i] = new AiComponent());
   }
 
   /**
    * Update AI component of Game.
+ *  @author Suresh Mahto
    */
-  public void update() {
-    LOGGER.info("Update AI Game Component");
-    IntStream.range(0, numEntities)
+public void update() {
+LOGGER.info("Update AI Game Component");
+IntStream.range(0, numEntities)
         .filter(i -> aiComponents.length > i && aiComponents[i] != null)
         .forEach(i -> aiComponents[i].update());
   }

@@ -5,12 +5,10 @@ package com.iluwatar.versionnumber;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class BookDuplicateException extends Exception {
-  public BookDuplicateException(String message) {
-    super(message);
+public BookDuplicateException(String message) {
+super(message);
   }
 }

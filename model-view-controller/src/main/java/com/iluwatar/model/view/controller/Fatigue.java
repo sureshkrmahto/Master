@@ -2,20 +2,21 @@ package com.iluwatar.model.view.controller;
 
 /**
  * Fatigue enumeration.
+ *  @author Suresh Mahto
  */
 public enum Fatigue {
-  ALERT("alert"),
-  TIRED("tired"),
-  SLEEPING("sleeping");
+ALERT("alert"),
+TIRED("tired"),
+SLEEPING("sleeping");
 
-  private final String title;
+private final String title;
 
-  Fatigue(String title) {
-    this.title = title;
+Fatigue(String title) {
+this.title = title;
   }
 
-  @Override
-  public String toString() {
-    return title;
+@Override
+public String toString() {
+return title;
   }
 }

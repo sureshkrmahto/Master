@@ -19,23 +19,22 @@ import org.springframework.stereotype.Component;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @Component
-/**
- * @author Suresh Mahto
- */
 public class AggregatorRoute extends RouteBuilder {
 
-  @Autowired
-  private MessageAggregationStrategy aggregator;
+@Autowired
+private MessageAggregationStrategy aggregator;
 
   /**
    * Configures the route.
+ *  @author Suresh Mahto
    */
   @Override
-  public void configure() {
+public void configure() {
     // Main route
-    from("{{entry}}").aggregate(constant(true), aggregator)
+from("{{entry}}").aggregate(constant(true), aggregator)
         .completionSize(3).completionInterval(2000)
         .to("{{endpoint}}");
   }

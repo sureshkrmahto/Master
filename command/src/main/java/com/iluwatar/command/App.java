@@ -18,9 +18,7 @@ package com.iluwatar.command;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -28,29 +26,30 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var wizard = new Wizard();
-    var goblin = new Goblin();
+public static void main(String[] args) {
+var wizard = new Wizard();
+var goblin = new Goblin();
 
-    goblin.printStatus();
+goblin.printStatus();
 
-    wizard.castSpell(goblin::changeSize);
-    goblin.printStatus();
+wizard.castSpell(goblin::changeSize);
+goblin.printStatus();
 
-    wizard.castSpell(goblin::changeVisibility);
-    goblin.printStatus();
+wizard.castSpell(goblin::changeVisibility);
+goblin.printStatus();
 
-    wizard.undoLastSpell();
-    goblin.printStatus();
+wizard.undoLastSpell();
+goblin.printStatus();
 
-    wizard.undoLastSpell();
-    goblin.printStatus();
+wizard.undoLastSpell();
+goblin.printStatus();
 
-    wizard.redoLastSpell();
-    goblin.printStatus();
+wizard.redoLastSpell();
+goblin.printStatus();
 
-    wizard.redoLastSpell();
-    goblin.printStatus();
+wizard.redoLastSpell();
+goblin.printStatus();
   }
 }

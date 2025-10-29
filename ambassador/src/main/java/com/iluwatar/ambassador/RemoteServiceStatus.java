@@ -10,16 +10,16 @@ package com.iluwatar.ambassador;
  */
 
 public enum RemoteServiceStatus {
-  FAILURE(-1)
+FAILURE(-1)
   ;
 
-  private final long remoteServiceStatusValue;
+private final long remoteServiceStatusValue;
 
-  RemoteServiceStatus(long remoteServiceStatusValue) {
-    this.remoteServiceStatusValue = remoteServiceStatusValue;
+RemoteServiceStatus(long remoteServiceStatusValue) {
+this.remoteServiceStatusValue = remoteServiceStatusValue;
   }
 
-  public long getRemoteServiceStatusValue() {
-    return remoteServiceStatusValue;
+public long getRemoteServiceStatusValue() {
+return remoteServiceStatusValue;
   }
 }

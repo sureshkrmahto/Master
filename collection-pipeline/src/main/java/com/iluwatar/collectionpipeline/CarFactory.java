@@ -7,25 +7,24 @@ import java.util.List;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class CarFactory {
-  private CarFactory() {
+private CarFactory() {
   }
 
   /**
    * Factory method to create a {@link List} of {@link Car} instances.
    *
    * @return {@link List} of {@link Car}
+ *  @author Suresh Mahto
    */
-  public static List<Car> createCars() {
-    return List.of(new Car("Jeep", "Wrangler", 2011, Category.JEEP),
-        new Car("Jeep", "Comanche", 1990, Category.JEEP),
-        new Car("Dodge", "Avenger", 2010, Category.SEDAN),
-        new Car("Buick", "Cascada", 2016, Category.CONVERTIBLE),
-        new Car("Ford", "Focus", 2012, Category.SEDAN),
-        new Car("Chevrolet", "Geo Metro", 1992, Category.CONVERTIBLE));
+public static List<Car> createCars() {
+return List.of(new Car("Jeep", "Wrangler", 2011, Category.JEEP),
+new Car("Jeep", "Comanche", 1990, Category.JEEP),
+new Car("Dodge", "Avenger", 2010, Category.SEDAN),
+new Car("Buick", "Cascada", 2016, Category.CONVERTIBLE),
+new Car("Ford", "Focus", 2012, Category.SEDAN),
+new Car("Chevrolet", "Geo Metro", 1992, Category.CONVERTIBLE));
   }
 }

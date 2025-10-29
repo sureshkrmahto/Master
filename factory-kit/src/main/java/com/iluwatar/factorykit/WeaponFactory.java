@@ -10,6 +10,7 @@ import java.util.function.Supplier;
  * which objects types the instance of a factory will be able to create.
  * <br>Factory is a placeholder for {@link Builder}s
  * with {@link WeaponFactory#create(WeaponType)} method to initialize new objects.
+ *  @author Suresh Mahto
  */
 public interface WeaponFactory {
 
@@ -18,18 +19,19 @@ public interface WeaponFactory {
    *
    * @param name representing enum of an object type to be created.
    * @return new instance of a requested class implementing {@link Weapon} interface.
-   */
-  Weapon create(WeaponType name);
+*/
+Weapon create(WeaponType name);
 
   /**
    * Creates factory - placeholder for specified {@link Builder}s.
    *
    * @param consumer for the new builder to the factory.
    * @return factory with specified {@link Builder}s
+ *  @author Suresh Mahto
    */
-  static WeaponFactory factory(Consumer<Builder> consumer) {
-    var map = new HashMap<WeaponType, Supplier<Weapon>>();
-    consumer.accept(map::put);
-    return name -> map.get(name).get();
+static WeaponFactory factory(Consumer<Builder> consumer) {
+var map = new HashMap<WeaponType, Supplier<Weapon>>();
+consumer.accept(map::put);
+return name -> map.get(name).get();
   }
 }

@@ -2,13 +2,14 @@ package com.iluwatar.objectmother;
 
 /**
  * Interface contracting Royalty Behaviour.
+ *  @author Suresh Mahto
  */
 public interface Royalty {
-  void makeDrunk();
+void makeDrunk();
 
-  void makeSober();
+void makeSober();
 
-  void makeHappy();
+void makeHappy();
 
-  void makeUnhappy();
+void makeUnhappy();
 }

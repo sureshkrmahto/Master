@@ -9,14 +9,12 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 class AppTest {
 
-  @Test
-  void shouldExecuteApplicationWithoutException() {
-    App.main(new String[]{});
+@Test
+void shouldExecuteApplicationWithoutException() {
+App.main(new String[]{});
   }
 }

@@ -12,20 +12,19 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class EpsonPrinter implements Printer {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(EpsonPrinter.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(EpsonPrinter.class);
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public void print(String message) {
-    LOGGER.info("Epson Printer : {}", message);
+public void print(String message) {
+LOGGER.info("Epson Printer : {}", message);
   }
 
 }

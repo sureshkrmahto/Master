@@ -24,13 +24,11 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Block 1 shows the {@link PropertiesFeatureToggleVersion} being run with {@link Properties}
@@ -52,37 +50,38 @@ public class App {
    * @see Service
    * @see PropertiesFeatureToggleVersion
    * @see com.iluwatar.featuretoggle.pattern.tieredversion.TieredFeatureToggleVersion
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    final var properties = new Properties();
-    properties.put("enhancedWelcome", true);
-    var service = new PropertiesFeatureToggleVersion(properties);
-    final var welcomeMessage = service.getWelcomeMessage(new User("Jamie No Code"));
-    LOGGER.info(welcomeMessage);
+final var properties = new Properties();
+properties.put("enhancedWelcome", true);
+var service = new PropertiesFeatureToggleVersion(properties);
+final var welcomeMessage = service.getWelcomeMessage(new User("Jamie No Code"));
+LOGGER.info(welcomeMessage);
 
     // ---------------------------------------------
 
-    final var turnedOff = new Properties();
-    turnedOff.put("enhancedWelcome", false);
-    var turnedOffService = new PropertiesFeatureToggleVersion(turnedOff);
-    final var welcomeMessageturnedOff =
-        turnedOffService.getWelcomeMessage(new User("Jamie No Code"));
-    LOGGER.info(welcomeMessageturnedOff);
+final var turnedOff = new Properties();
+turnedOff.put("enhancedWelcome", false);
+var turnedOffService = new PropertiesFeatureToggleVersion(turnedOff);
+final var welcomeMessageturnedOff =
+turnedOffService.getWelcomeMessage(new User("Jamie No Code"));
+LOGGER.info(welcomeMessageturnedOff);
 
     // --------------------------------------------
 
-    var service2 = new TieredFeatureToggleVersion();
+var service2 = new TieredFeatureToggleVersion();
 
-    final var paidUser = new User("Jamie Coder");
-    final var freeUser = new User("Alan Defect");
+final var paidUser = new User("Jamie Coder");
+final var freeUser = new User("Alan Defect");
 
-    UserGroup.addUserToPaidGroup(paidUser);
-    UserGroup.addUserToFreeGroup(freeUser);
+UserGroup.addUserToPaidGroup(paidUser);
+UserGroup.addUserToFreeGroup(freeUser);
 
-    final var welcomeMessagePaidUser = service2.getWelcomeMessage(paidUser);
-    final var welcomeMessageFreeUser = service2.getWelcomeMessage(freeUser);
-    LOGGER.info(welcomeMessageFreeUser);
-    LOGGER.info(welcomeMessagePaidUser);
+final var welcomeMessagePaidUser = service2.getWelcomeMessage(paidUser);
+final var welcomeMessageFreeUser = service2.getWelcomeMessage(freeUser);
+LOGGER.info(welcomeMessageFreeUser);
+LOGGER.info(welcomeMessagePaidUser);
   }
 }

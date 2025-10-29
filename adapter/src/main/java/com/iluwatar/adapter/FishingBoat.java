@@ -10,16 +10,14 @@ import org.slf4j.Logger;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 final class FishingBoat {
 
-  private static final Logger LOGGER = getLogger(FishingBoat.class);
+private static final Logger LOGGER = getLogger(FishingBoat.class);
 
-  void sail() {
-    LOGGER.info("The fishing boat is sailing");
+void sail() {
+LOGGER.info("The fishing boat is sailing");
   }
 
 }

@@ -6,11 +6,12 @@ import java.util.Optional;
 
 /**
  * HasModel trait for static access to 'model' property.
+ *  @author Suresh Mahto
  */
 public interface HasModel extends Document {
 
-  default Optional<String> getModel() {
-    return Optional.ofNullable((String) get(Property.MODEL.toString()));
+default Optional<String> getModel() {
+return Optional.ofNullable((String) get(Property.MODEL.toString()));
   }
 
 }

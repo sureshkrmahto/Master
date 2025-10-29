@@ -5,14 +5,12 @@ package com.iluwatar.interpreter;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Expression {
 
-  public abstract int interpret();
+public abstract int interpret();
 
-  @Override
-  public abstract String toString();
+@Override
+public abstract String toString();
 }

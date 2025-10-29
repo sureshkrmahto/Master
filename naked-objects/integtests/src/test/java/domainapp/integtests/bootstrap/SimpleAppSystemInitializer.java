@@ -10,50 +10,41 @@ import org.apache.isis.objectstore.jdo.datanucleus.IsisConfigurationForJdoIntegT
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class SimpleAppSystemInitializer {
 
-  private SimpleAppSystemInitializer() {
+private SimpleAppSystemInitializer() {
   }
 
   /**
    * Init test system
+ *  @author Suresh Mahto
    */
-  public static void initIsft() {
-    var isft = IsisSystemForTest.getElseNull();
-    if (isft == null) {
-      isft = new SimpleAppSystemBuilder().build().setUpSystem();
-      IsisSystemForTest.set(isft);
+public static void initIsft() {
+var isft = IsisSystemForTest.getElseNull();
+if (isft == null) {
+isft = new SimpleAppSystemBuilder().build().setUpSystem();
+IsisSystemForTest.set(isft);
     }
   }
 
 
-/**
+private static class SimpleAppSystemBuilder extends IsisSystemForTest.Builder {
 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
- */
-  private static class SimpleAppSystemBuilder extends IsisSystemForTest.Builder {
-
-    public SimpleAppSystemBuilder() {
-      with(testConfiguration());
-      with(new DataNucleusPersistenceMechanismInstaller());
+public SimpleAppSystemBuilder() {
+with(testConfiguration());
+with(new DataNucleusPersistenceMechanismInstaller());
 
       // services annotated with @DomainService
-      withServicesIn("domainapp");
+withServicesIn("domainapp");
     }
 
-    private static IsisConfiguration testConfiguration() {
-      final var testConfiguration = new IsisConfigurationForJdoIntegTests();
+private static IsisConfiguration testConfiguration() {
+final var testConfiguration = new IsisConfigurationForJdoIntegTests();
 
-      testConfiguration.addRegisterEntitiesPackagePrefix("domainapp.dom.modules");
-      return testConfiguration;
+testConfiguration.addRegisterEntitiesPackagePrefix("domainapp.dom.modules");
+return testConfiguration;
     }
   }
 }

@@ -11,30 +11,28 @@ import org.junit.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleObjectTest {
 
-  SimpleObject simpleObject;
+SimpleObject simpleObject;
 
-  @Before
-  public void setUp() {
-    simpleObject = new SimpleObject();
+@Before
+public void setUp() {
+simpleObject = new SimpleObject();
   }
   
-  @Test
-  public void testName() {
+@Test
+public void testName() {
     // given
-    String name = "Foobar";
-    assertNull(simpleObject.getName());
+String name = "Foobar";
+assertNull(simpleObject.getName());
 
     // when
-    simpleObject.setName(name);
+simpleObject.setName(name);
 
     // then
-    assertEquals(name, simpleObject.getName());
+assertEquals(name, simpleObject.getName());
   }
 
 }

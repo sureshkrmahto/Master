@@ -9,16 +9,14 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ConfigureForUnixVisitor implements ZoomVisitor {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ConfigureForUnixVisitor.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ConfigureForUnixVisitor.class);
 
-  @Override
-  public void visit(Zoom zoom) {
-    LOGGER.info(zoom + " used with Unix configurator.");
+@Override
+public void visit(Zoom zoom) {
+LOGGER.info(zoom + " used with Unix configurator.");
   }
 }

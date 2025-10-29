@@ -6,6 +6,7 @@ package com.iluwatar.observer.generic;
  * @param <S> Observable
  * @param <O> Observer
  * @param <A> Action
+ *  @author Suresh Mahto
  */
 public interface Observer<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
 
@@ -14,6 +15,6 @@ public interface Observer<S extends Observable<S, O, A>, O extends Observer<S, O
    *
    * @param subject the subject sending the update
    * @param argument the event payload
-   */
-  void update(S subject, A argument);
+*/
+void update(S subject, A argument);
 }

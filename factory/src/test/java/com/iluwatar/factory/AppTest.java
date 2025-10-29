@@ -5,19 +5,11 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
- */
 class AppTest {
 
-	@Test
-	void shouldExecuteWithoutExceptions() {
-		assertDoesNotThrow(() -> App.main(new String[]{}));
+@Test
+void shouldExecuteWithoutExceptions() {
+assertDoesNotThrow(() -> App.main(new String[]{}));
 	}
 
 }

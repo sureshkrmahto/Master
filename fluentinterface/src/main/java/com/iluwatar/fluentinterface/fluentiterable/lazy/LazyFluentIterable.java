@@ -16,28 +16,28 @@ import java.util.function.Predicate;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class LazyFluentIterable<E> implements FluentIterable<E> {
 
-  private final Iterable<E> iterable;
+private final Iterable<E> iterable;
 
   /**
    * This constructor creates a new LazyFluentIterable. It wraps the given iterable.
    *
    * @param iterable the iterable this FluentIterable works on.
+ *  @author Suresh Mahto
    */
-  protected LazyFluentIterable(Iterable<E> iterable) {
-    this.iterable = iterable;
+protected LazyFluentIterable(Iterable<E> iterable) {
+this.iterable = iterable;
   }
 
   /**
    * This constructor can be used to implement anonymous subclasses of the LazyFluentIterable.
+ *  @author Suresh Mahto
    */
-  protected LazyFluentIterable() {
-    iterable = this;
+protected LazyFluentIterable() {
+iterable = this;
   }
 
   /**
@@ -47,23 +47,24 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * @param predicate the condition to test with for the filtering. If the test is negative, the
    *                  tested object is removed by the iterator.
    * @return a new FluentIterable object that decorates the source iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public FluentIterable<E> filter(Predicate<? super E> predicate) {
-    return new LazyFluentIterable<>() {
-      @Override
-      public Iterator<E> iterator() {
-        return new DecoratingIterator<>(iterable.iterator()) {
-          @Override
-          public E computeNext() {
-            while (fromIterator.hasNext()) {
-              var candidate = fromIterator.next();
-              if (predicate.test(candidate)) {
-                return candidate;
+public FluentIterable<E> filter(Predicate<? super E> predicate) {
+return new LazyFluentIterable<>() {
+@Override
+public Iterator<E> iterator() {
+return new DecoratingIterator<>(iterable.iterator()) {
+@Override
+public E computeNext() {
+while (fromIterator.hasNext()) {
+var candidate = fromIterator.next();
+if (predicate.test(candidate)) {
+return candidate;
               }
             }
 
-            return null;
+return null;
           }
         };
       }
@@ -74,11 +75,12 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * Can be used to collect objects from the iteration. Is a terminating operation.
    *
    * @return an Optional containing the first object of this Iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public Optional<E> first() {
-    var resultIterator = first(1).iterator();
-    return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
+public Optional<E> first() {
+var resultIterator = first(1).iterator();
+return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
   }
 
   /**
@@ -87,23 +89,24 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * @param count defines the number of objects to return
    * @return the same FluentIterable with a collection decimated to a maximum of 'count' first
    *     objects.
+ *  @author Suresh Mahto
    */
   @Override
-  public FluentIterable<E> first(int count) {
-    return new LazyFluentIterable<>() {
-      @Override
-      public Iterator<E> iterator() {
-        return new DecoratingIterator<>(iterable.iterator()) {
-          int currentIndex;
+public FluentIterable<E> first(int count) {
+return new LazyFluentIterable<>() {
+@Override
+public Iterator<E> iterator() {
+return new DecoratingIterator<>(iterable.iterator()) {
+int currentIndex;
 
-          @Override
-          public E computeNext() {
-            if (currentIndex < count && fromIterator.hasNext()) {
-              var candidate = fromIterator.next();
-              currentIndex++;
-              return candidate;
+@Override
+public E computeNext() {
+if (currentIndex < count && fromIterator.hasNext()) {
+var candidate = fromIterator.next();
+currentIndex++;
+return candidate;
             }
-            return null;
+return null;
           }
         };
       }
@@ -114,11 +117,12 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * Can be used to collect objects from the iteration. Is a terminating operation.
    *
    * @return an Optional containing the last object of this Iterable
+ *  @author Suresh Mahto
    */
   @Override
-  public Optional<E> last() {
-    var resultIterator = last(1).iterator();
-    return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
+public Optional<E> last() {
+var resultIterator = last(1).iterator();
+return resultIterator.hasNext() ? Optional.of(resultIterator.next()) : Optional.empty();
   }
 
   /**
@@ -129,38 +133,39 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * @param count defines the number of objects to return
    * @return the same FluentIterable with a collection decimated to a maximum of 'count' last
    *     objects
+ *  @author Suresh Mahto
    */
   @Override
-  public FluentIterable<E> last(int count) {
-    return new LazyFluentIterable<>() {
-      @Override
-      public Iterator<E> iterator() {
-        return new DecoratingIterator<>(iterable.iterator()) {
-          private int stopIndex;
-          private int totalElementsCount;
-          private List<E> list;
-          private int currentIndex;
+public FluentIterable<E> last(int count) {
+return new LazyFluentIterable<>() {
+@Override
+public Iterator<E> iterator() {
+return new DecoratingIterator<>(iterable.iterator()) {
+private int stopIndex;
+private int totalElementsCount;
+private List<E> list;
+private int currentIndex;
 
-          @Override
-          public E computeNext() {
-            initialize();
+@Override
+public E computeNext() {
+initialize();
 
-            while (currentIndex < stopIndex && fromIterator.hasNext()) {
-              currentIndex++;
-              fromIterator.next();
+while (currentIndex < stopIndex && fromIterator.hasNext()) {
+currentIndex++;
+fromIterator.next();
             }
-            if (currentIndex >= stopIndex && fromIterator.hasNext()) {
-              return fromIterator.next();
+if (currentIndex >= stopIndex && fromIterator.hasNext()) {
+return fromIterator.next();
             }
-            return null;
+return null;
           }
 
-          private void initialize() {
-            if (list == null) {
-              list = new ArrayList<>();
-              iterable.forEach(list::add);
-              totalElementsCount = list.size();
-              stopIndex = totalElementsCount - count;
+private void initialize() {
+if (list == null) {
+list = new ArrayList<>();
+iterable.forEach(list::add);
+totalElementsCount = list.size();
+stopIndex = totalElementsCount - count;
             }
           }
         };
@@ -174,22 +179,22 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * @param function a function that transforms an instance of E into an instance of T
    * @param <T>      the target type of the transformation
    * @return a new FluentIterable of the new type
-   */
+*/
   @Override
-  public <T> FluentIterable<T> map(Function<? super E, T> function) {
-    return new LazyFluentIterable<>() {
-      @Override
-      public Iterator<T> iterator() {
-        return new DecoratingIterator<>(null) {
-          final Iterator<E> oldTypeIterator = iterable.iterator();
+public <T> FluentIterable<T> map(Function<? super E, T> function) {
+return new LazyFluentIterable<>() {
+@Override
+public Iterator<T> iterator() {
+return new DecoratingIterator<>(null) {
+final Iterator<E> oldTypeIterator = iterable.iterator();
 
-          @Override
-          public T computeNext() {
-            if (oldTypeIterator.hasNext()) {
-              E candidate = oldTypeIterator.next();
-              return function.apply(candidate);
+@Override
+public T computeNext() {
+if (oldTypeIterator.hasNext()) {
+E candidate = oldTypeIterator.next();
+return function.apply(candidate);
             } else {
-              return null;
+return null;
             }
           }
         };
@@ -201,18 +206,19 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * Collects all remaining objects of this iteration into a list.
    *
    * @return a list with all remaining objects of this iteration
+ *  @author Suresh Mahto
    */
   @Override
-  public List<E> asList() {
-    return FluentIterable.copyToList(iterable);
+public List<E> asList() {
+return FluentIterable.copyToList(iterable);
   }
 
-  @Override
-  public Iterator<E> iterator() {
-    return new DecoratingIterator<>(iterable.iterator()) {
-      @Override
-      public E computeNext() {
-        return fromIterator.hasNext() ? fromIterator.next() : null;
+@Override
+public Iterator<E> iterator() {
+return new DecoratingIterator<>(iterable.iterator()) {
+@Override
+public E computeNext() {
+return fromIterator.hasNext() ? fromIterator.next() : null;
       }
     };
   }
@@ -221,9 +227,10 @@ public class LazyFluentIterable<E> implements FluentIterable<E> {
    * Constructors FluentIterable from given iterable.
    *
    * @return a FluentIterable from a given iterable. Calls the LazyFluentIterable constructor.
+ *  @author Suresh Mahto
    */
-  public static <E> FluentIterable<E> from(Iterable<E> iterable) {
-    return new LazyFluentIterable<>(iterable);
+public static <E> FluentIterable<E> from(Iterable<E> iterable) {
+return new LazyFluentIterable<>(iterable);
   }
 
 }

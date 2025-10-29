@@ -11,32 +11,30 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class RemoteService implements RemoteServiceInterface {
-  private static final int THRESHOLD = 200;
-  private static final Logger LOGGER = LoggerFactory.getLogger(RemoteService.class);
-  private static RemoteService service = null;
-  private final RandomProvider randomProvider;
+private static final int THRESHOLD = 200;
+private static final Logger LOGGER = LoggerFactory.getLogger(RemoteService.class);
+private static RemoteService service = null;
+private final RandomProvider randomProvider;
 
-  static synchronized RemoteService getRemoteService() {
-    if (service == null) {
-      service = new RemoteService();
+static synchronized RemoteService getRemoteService() {
+if (service == null) {
+service = new RemoteService();
     }
-    return service;
+return service;
   }
 
-  private RemoteService() {
-    this(Math::random);
+private RemoteService() {
+this(Math::random);
   }
 
   /**
    * This constructor is used for testing purposes only.
-   */
-  RemoteService(RandomProvider randomProvider) {
-    this.randomProvider = randomProvider;
+*/
+RemoteService(RandomProvider randomProvider) {
+this.randomProvider = randomProvider;
   }
 
   /**
@@ -46,18 +44,19 @@ public class RemoteService implements RemoteServiceInterface {
    * @param value integer value to be multiplied.
    * @return if waitTime is less than {@link RemoteService#THRESHOLD}, it returns value * 10,
    *     otherwise {@link RemoteServiceStatus#FAILURE}.
+ *  @author Suresh Mahto
    */
   @Override
-  public long doRemoteFunction(int value) {
+public long doRemoteFunction(int value) {
 
-    long waitTime = (long) Math.floor(randomProvider.random() * 1000);
+long waitTime = (long) Math.floor(randomProvider.random() * 1000);
 
-    try {
-      sleep(waitTime);
+try {
+sleep(waitTime);
     } catch (InterruptedException e) {
-      LOGGER.error("Thread sleep state interrupted", e);
+LOGGER.error("Thread sleep state interrupted", e);
     }
-    return waitTime <= THRESHOLD ? value * 10
+return waitTime <= THRESHOLD ? value * 10
             : RemoteServiceStatus.FAILURE.getRemoteServiceStatusValue();
   }
 }

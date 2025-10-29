@@ -9,17 +9,15 @@ import org.slf4j.Logger;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class SimpleTask extends Task {
 
-  private static final Logger LOGGER = getLogger(SimpleTask.class);
+private static final Logger LOGGER = getLogger(SimpleTask.class);
 
-  @Override
-  public void execute() {
-    LOGGER.info("Perform some important activity and after call the"
+@Override
+public void execute() {
+LOGGER.info("Perform some important activity and after call the"
         + " callback method.");
   }
 }

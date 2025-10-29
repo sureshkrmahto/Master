@@ -34,179 +34,182 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
-  public static final String PROP_FILE_NAME = "config.properties";
+public static final String PROP_FILE_NAME = "config.properties";
 
-  boolean interactiveMode = false;
+boolean interactiveMode = false;
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var app = new App();
-    app.setUp();
-    app.run();
+public static void main(String[] args) {
+var app = new App();
+app.setUp();
+app.run();
   }
 
   /**
    * App can run in interactive mode or not. Interactive mode == Allow user interaction with command
    * line. Non-interactive is a quick sequential run through the available {@link EventManager}
    * operations.
+ *  @author Suresh Mahto
    */
-  public void setUp() {
-    var prop = new Properties();
+public void setUp() {
+var prop = new Properties();
 
-    var inputStream = App.class.getClassLoader().getResourceAsStream(PROP_FILE_NAME);
+var inputStream = App.class.getClassLoader().getResourceAsStream(PROP_FILE_NAME);
 
-    if (inputStream != null) {
-      try {
-        prop.load(inputStream);
+if (inputStream != null) {
+try {
+prop.load(inputStream);
       } catch (IOException e) {
-        LOGGER.error("{} was not found. Defaulting to non-interactive mode.", PROP_FILE_NAME, e);
+LOGGER.error("{} was not found. Defaulting to non-interactive mode.", PROP_FILE_NAME, e);
       }
-      var property = prop.getProperty("INTERACTIVE_MODE");
-      if (property.equalsIgnoreCase("YES")) {
-        interactiveMode = true;
+var property = prop.getProperty("INTERACTIVE_MODE");
+if (property.equalsIgnoreCase("YES")) {
+interactiveMode = true;
       }
     }
   }
 
   /**
    * Run program in either interactive mode or not.
+ *  @author Suresh Mahto
    */
-  public void run() {
-    if (interactiveMode) {
-      runInteractiveMode();
+public void run() {
+if (interactiveMode) {
+runInteractiveMode();
     } else {
-      quickRun();
+quickRun();
     }
   }
 
   /**
    * Run program in non-interactive mode.
+ *  @author Suresh Mahto
    */
-  public void quickRun() {
-    var eventManager = new EventManager();
+public void quickRun() {
+var eventManager = new EventManager();
 
-    try {
+try {
       // Create an Asynchronous event.
-      var asyncEventId = eventManager.createAsync(60);
-      LOGGER.info("Async Event [{}] has been created.", asyncEventId);
-      eventManager.start(asyncEventId);
-      LOGGER.info("Async Event [{}] has been started.", asyncEventId);
+var asyncEventId = eventManager.createAsync(60);
+LOGGER.info("Async Event [{}] has been created.", asyncEventId);
+eventManager.start(asyncEventId);
+LOGGER.info("Async Event [{}] has been started.", asyncEventId);
 
       // Create a Synchronous event.
-      var syncEventId = eventManager.create(60);
-      LOGGER.info("Sync Event [{}] has been created.", syncEventId);
-      eventManager.start(syncEventId);
-      LOGGER.info("Sync Event [{}] has been started.", syncEventId);
+var syncEventId = eventManager.create(60);
+LOGGER.info("Sync Event [{}] has been created.", syncEventId);
+eventManager.start(syncEventId);
+LOGGER.info("Sync Event [{}] has been started.", syncEventId);
 
-      eventManager.status(asyncEventId);
-      eventManager.status(syncEventId);
+eventManager.status(asyncEventId);
+eventManager.status(syncEventId);
 
-      eventManager.cancel(asyncEventId);
-      LOGGER.info("Async Event [{}] has been stopped.", asyncEventId);
-      eventManager.cancel(syncEventId);
-      LOGGER.info("Sync Event [{}] has been stopped.", syncEventId);
+eventManager.cancel(asyncEventId);
+LOGGER.info("Async Event [{}] has been stopped.", asyncEventId);
+eventManager.cancel(syncEventId);
+LOGGER.info("Sync Event [{}] has been stopped.", syncEventId);
 
     } catch (MaxNumOfEventsAllowedException | LongRunningEventException | EventDoesNotExistException
         | InvalidOperationException e) {
-      LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
     }
   }
 
   /**
    * Run program in interactive mode.
+ *  @author Suresh Mahto
    */
-  public void runInteractiveMode() {
-    var eventManager = new EventManager();
+public void runInteractiveMode() {
+var eventManager = new EventManager();
 
-    var s = new Scanner(System.in);
-    var option = -1;
-    while (option != 4) {
-      LOGGER.info("Hello. Would you like to boil some eggs?");
-      LOGGER.info("(1) BOIL AN EGG \n(2) STOP BOILING THIS EGG \n(3) HOW ARE MY EGGS? \n(4) EXIT");
-      LOGGER.info("Choose [1,2,3,4]: ");
-      option = s.nextInt();
+var s = new Scanner(System.in);
+var option = -1;
+while (option != 4) {
+LOGGER.info("Hello. Would you like to boil some eggs?");
+LOGGER.info("(1) BOIL AN EGG \n(2) STOP BOILING THIS EGG \n(3) HOW ARE MY EGGS? \n(4) EXIT");
+LOGGER.info("Choose [1,2,3,4]: ");
+option = s.nextInt();
 
-      if (option == 1) {
-        processOption1(eventManager, s);
+if (option == 1) {
+processOption1(eventManager, s);
       } else if (option == 2) {
-        processOption2(eventManager, s);
+processOption2(eventManager, s);
       } else if (option == 3) {
-        processOption3(eventManager, s);
+processOption3(eventManager, s);
       } else if (option == 4) {
-        eventManager.shutdown();
+eventManager.shutdown();
       }
     }
 
-    s.close();
+s.close();
   }
 
-  private void processOption3(EventManager eventManager, Scanner s) {
-    s.nextLine();
-    LOGGER.info("Just one egg (O) OR all of them (A) ?: ");
-    var eggChoice = s.nextLine();
+private void processOption3(EventManager eventManager, Scanner s) {
+s.nextLine();
+LOGGER.info("Just one egg (O) OR all of them (A) ?: ");
+var eggChoice = s.nextLine();
 
-    if (eggChoice.equalsIgnoreCase("O")) {
-      LOGGER.info("Which egg?: ");
-      int eventId = s.nextInt();
-      try {
-        eventManager.status(eventId);
+if (eggChoice.equalsIgnoreCase("O")) {
+LOGGER.info("Which egg?: ");
+int eventId = s.nextInt();
+try {
+eventManager.status(eventId);
       } catch (EventDoesNotExistException e) {
-        LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
       }
     } else if (eggChoice.equalsIgnoreCase("A")) {
-      eventManager.statusOfAllEvents();
+eventManager.statusOfAllEvents();
     }
   }
 
-  private void processOption2(EventManager eventManager, Scanner s) {
-    LOGGER.info("Which egg?: ");
-    var eventId = s.nextInt();
-    try {
-      eventManager.cancel(eventId);
-      LOGGER.info("Egg [{}] is removed from boiler.", eventId);
+private void processOption2(EventManager eventManager, Scanner s) {
+LOGGER.info("Which egg?: ");
+var eventId = s.nextInt();
+try {
+eventManager.cancel(eventId);
+LOGGER.info("Egg [{}] is removed from boiler.", eventId);
     } catch (EventDoesNotExistException e) {
-      LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
     }
   }
 
-  private void processOption1(EventManager eventManager, Scanner s) {
-    s.nextLine();
-    LOGGER.info("Boil multiple eggs at once (A) or boil them one-by-one (S)?: ");
-    var eventType = s.nextLine();
-    LOGGER.info("How long should this egg be boiled for (in seconds)?: ");
-    var eventTime = s.nextInt();
-    if (eventType.equalsIgnoreCase("A")) {
-      try {
-        var eventId = eventManager.createAsync(eventTime);
-        eventManager.start(eventId);
-        LOGGER.info("Egg [{}] is being boiled.", eventId);
+private void processOption1(EventManager eventManager, Scanner s) {
+s.nextLine();
+LOGGER.info("Boil multiple eggs at once (A) or boil them one-by-one (S)?: ");
+var eventType = s.nextLine();
+LOGGER.info("How long should this egg be boiled for (in seconds)?: ");
+var eventTime = s.nextInt();
+if (eventType.equalsIgnoreCase("A")) {
+try {
+var eventId = eventManager.createAsync(eventTime);
+eventManager.start(eventId);
+LOGGER.info("Egg [{}] is being boiled.", eventId);
       } catch (MaxNumOfEventsAllowedException | LongRunningEventException
           | EventDoesNotExistException e) {
-        LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
       }
     } else if (eventType.equalsIgnoreCase("S")) {
-      try {
-        var eventId = eventManager.create(eventTime);
-        eventManager.start(eventId);
-        LOGGER.info("Egg [{}] is being boiled.", eventId);
+try {
+var eventId = eventManager.create(eventTime);
+eventManager.start(eventId);
+LOGGER.info("Egg [{}] is being boiled.", eventId);
       } catch (MaxNumOfEventsAllowedException | InvalidOperationException
           | LongRunningEventException | EventDoesNotExistException e) {
-        LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
       }
     } else {
-      LOGGER.info("Unknown event type.");
+LOGGER.info("Unknown event type.");
     }
   }
 

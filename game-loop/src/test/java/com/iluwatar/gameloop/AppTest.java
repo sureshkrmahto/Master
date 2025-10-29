@@ -9,15 +9,13 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AppTest {
 
-  @Test
-  public void shouldExecuteApplicationWithoutException() {
-    assertDoesNotThrow(() -> App.main(new String[]{}));
+@Test
+public void shouldExecuteApplicationWithoutException() {
+assertDoesNotThrow(() -> App.main(new String[]{}));
   }
 
 }

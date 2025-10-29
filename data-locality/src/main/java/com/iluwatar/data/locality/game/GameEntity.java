@@ -18,50 +18,51 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class GameEntity {
-  private static final Logger LOGGER = LoggerFactory.getLogger(GameEntity.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(GameEntity.class);
 
-  private final AiComponentManager aiComponentManager;
-  private final PhysicsComponentManager physicsComponentManager;
-  private final RenderComponentManager renderComponentManager;
+private final AiComponentManager aiComponentManager;
+private final PhysicsComponentManager physicsComponentManager;
+private final RenderComponentManager renderComponentManager;
 
   /**
    * Init components.
+ *  @author Suresh Mahto
    */
-  public GameEntity(int numEntities) {
-    LOGGER.info("Init Game with #Entity : {}", numEntities);
-    aiComponentManager = new AiComponentManager(numEntities);
-    physicsComponentManager = new PhysicsComponentManager(numEntities);
-    renderComponentManager = new RenderComponentManager(numEntities);
+public GameEntity(int numEntities) {
+LOGGER.info("Init Game with #Entity : {}", numEntities);
+aiComponentManager = new AiComponentManager(numEntities);
+physicsComponentManager = new PhysicsComponentManager(numEntities);
+renderComponentManager = new RenderComponentManager(numEntities);
   }
 
   /**
    * start all component.
+ *  @author Suresh Mahto
    */
-  public void start() {
-    LOGGER.info("Start Game");
-    aiComponentManager.start();
-    physicsComponentManager.start();
-    renderComponentManager.start();
+public void start() {
+LOGGER.info("Start Game");
+aiComponentManager.start();
+physicsComponentManager.start();
+renderComponentManager.start();
   }
 
   /**
    * update all component.
+ *  @author Suresh Mahto
    */
-  public void update() {
-    LOGGER.info("Update Game Component");
+public void update() {
+LOGGER.info("Update Game Component");
     // Process AI.
-    aiComponentManager.update();
+aiComponentManager.update();
 
     // update physics.
-    physicsComponentManager.update();
+physicsComponentManager.update();
 
     // Draw to screen.
-    renderComponentManager.render();
+renderComponentManager.render();
   }
 
 }

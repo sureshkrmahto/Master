@@ -5,49 +5,48 @@ package com.iluwatar.objectmother;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class King implements Royalty {
-  boolean isDrunk = false;
-  boolean isHappy = false;
+boolean isDrunk = false;
+boolean isHappy = false;
 
-  @Override
-  public void makeDrunk() {
-    isDrunk = true;
+@Override
+public void makeDrunk() {
+isDrunk = true;
   }
 
-  @Override
-  public void makeSober() {
-    isDrunk = false;
+@Override
+public void makeSober() {
+isDrunk = false;
   }
 
-  @Override
-  public void makeHappy() {
-    isHappy = true;
+@Override
+public void makeHappy() {
+isHappy = true;
   }
 
-  @Override
-  public void makeUnhappy() {
-    isHappy = false;
+@Override
+public void makeUnhappy() {
+isHappy = false;
   }
 
-  public boolean isHappy() {
-    return isHappy;
+public boolean isHappy() {
+return isHappy;
   }
 
   /**
    * Method to flirt to a queen.
    *
    * @param queen Queen which should be flirted.
+ *  @author Suresh Mahto
    */
-  public void flirt(Queen queen) {
-    var flirtStatus = queen.getFlirted(this);
-    if (!flirtStatus) {
-      this.makeUnhappy();
+public void flirt(Queen queen) {
+var flirtStatus = queen.getFlirted(this);
+if (!flirtStatus) {
+this.makeUnhappy();
     } else {
-      this.makeHappy();
+this.makeHappy();
     }
 
   }

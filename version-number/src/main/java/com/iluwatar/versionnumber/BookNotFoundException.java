@@ -5,12 +5,10 @@ package com.iluwatar.versionnumber;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class BookNotFoundException extends Exception {
-  public BookNotFoundException(String message) {
-    super(message);
+public BookNotFoundException(String message) {
+super(message);
   }
 }

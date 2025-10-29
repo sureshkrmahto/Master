@@ -5,19 +5,17 @@ package com.iluwatar.business.delegate;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Client {
 
-  private final BusinessDelegate businessDelegate;
+private final BusinessDelegate businessDelegate;
 
-  public Client(BusinessDelegate businessDelegate) {
-    this.businessDelegate = businessDelegate;
+public Client(BusinessDelegate businessDelegate) {
+this.businessDelegate = businessDelegate;
   }
 
-  public void doTask() {
-    businessDelegate.doTask();
+public void doTask() {
+businessDelegate.doTask();
   }
 }

@@ -14,30 +14,28 @@ import org.springframework.stereotype.Component;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @Component
-/**
- * @author Suresh Mahto
- */
 public class ProductInformationClientImpl implements ProductInformationClient {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ProductInformationClientImpl.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ProductInformationClientImpl.class);
 
-  @Override
-  public String getProductTitle() {
-    var request = HttpRequest.newBuilder()
+@Override
+public String getProductTitle() {
+var request = HttpRequest.newBuilder()
         .GET()
         .uri(URI.create("http://localhost:51515/information"))
         .build();
-    var client = HttpClient.newHttpClient();
-    try {
-      var httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
-      return httpResponse.body();
+var client = HttpClient.newHttpClient();
+try {
+var httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
+return httpResponse.body();
     } catch (IOException ioe) {
-      LOGGER.error("IOException Occurred", ioe);
+LOGGER.error("IOException Occurred", ioe);
     } catch (InterruptedException ie) {
-      LOGGER.error("InterruptedException Occurred", ie);
+LOGGER.error("InterruptedException Occurred", ie);
     }
-    return null;
+return null;
   }
 }

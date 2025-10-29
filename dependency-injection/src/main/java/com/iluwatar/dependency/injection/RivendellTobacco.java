@@ -5,9 +5,7 @@ package com.iluwatar.dependency.injection;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class RivendellTobacco extends Tobacco {
 }

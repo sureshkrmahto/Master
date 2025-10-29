@@ -9,15 +9,15 @@ package com.iluwatar.strategy;
  */
 public class DragonSlayer {
 
-  private DragonSlayingStrategy strategy;
+private DragonSlayingStrategy strategy;
 
   /**
    * Creates a new dragonslayer with the given strategy.
    *
    * @param strategy initial strategy to use
    */
-  public DragonSlayer(DragonSlayingStrategy strategy) {
-    this.strategy = strategy;
+public DragonSlayer(DragonSlayingStrategy strategy) {
+this.strategy = strategy;
   }
 
   /**
@@ -25,14 +25,14 @@ public class DragonSlayer {
    *
    * @param strategy strategy to use on subsequent battles
    */
-  public void changeStrategy(DragonSlayingStrategy strategy) {
-    this.strategy = strategy;
+public void changeStrategy(DragonSlayingStrategy strategy) {
+this.strategy = strategy;
   }
 
   /**
    * Executes the current {@link DragonSlayingStrategy}.
    */
-  public void goToBattle() {
-    strategy.execute();
+public void goToBattle() {
+strategy.execute();
   }
 }

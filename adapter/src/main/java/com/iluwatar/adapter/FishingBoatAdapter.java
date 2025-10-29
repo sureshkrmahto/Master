@@ -6,19 +6,17 @@ package com.iluwatar.adapter;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FishingBoatAdapter implements RowingBoat {
 
-  private final FishingBoat boat;
+private final FishingBoat boat;
 
-  public FishingBoatAdapter() {
-    boat = new FishingBoat();
+public FishingBoatAdapter() {
+boat = new FishingBoat();
   }
 
-  public final void row() {
-    boat.sail();
+public final void row() {
+boat.sail();
   }
 }

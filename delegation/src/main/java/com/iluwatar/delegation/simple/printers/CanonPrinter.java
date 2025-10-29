@@ -12,20 +12,19 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class CanonPrinter implements Printer {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(CanonPrinter.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(CanonPrinter.class);
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public void print(String message) {
-    LOGGER.info("Canon Printer : {}", message);
+public void print(String message) {
+LOGGER.info("Canon Printer : {}", message);
   }
 
 }

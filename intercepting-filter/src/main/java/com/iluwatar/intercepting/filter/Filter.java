@@ -5,26 +5,27 @@ package com.iluwatar.intercepting.filter;
  * case, before the request is handled by the target, the request undergoes through each Filter
  *
  * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public interface Filter {
 
   /**
    * Execute order processing filter.
-   */
-  String execute(Order order);
+*/
+String execute(Order order);
 
   /**
    * Set next filter in chain after this.
-   */
-  void setNext(Filter filter);
+*/
+void setNext(Filter filter);
 
   /**
    * Get next filter in chain after this.
-   */
-  Filter getNext();
+*/
+Filter getNext();
 
   /**
    * Get last filter in the chain.
-   */
-  Filter getLast();
+*/
+Filter getLast();
 }

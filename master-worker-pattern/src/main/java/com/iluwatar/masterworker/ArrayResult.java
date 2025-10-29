@@ -5,13 +5,11 @@ package com.iluwatar.masterworker;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ArrayResult extends Result<int[][]> {
 
-  public ArrayResult(int[][] data) {
-    super(data);
+public ArrayResult(int[][] data) {
+super(data);
   }
 }

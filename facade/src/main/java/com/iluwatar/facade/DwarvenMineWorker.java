@@ -9,65 +9,63 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class DwarvenMineWorker {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenMineWorker.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenMineWorker.class);
 
-  public void goToSleep() {
-    LOGGER.info("{} goes to sleep.", name());
+public void goToSleep() {
+LOGGER.info("{} goes to sleep.", name());
   }
 
-  public void wakeUp() {
-    LOGGER.info("{} wakes up.", name());
+public void wakeUp() {
+LOGGER.info("{} wakes up.", name());
   }
 
-  public void goHome() {
-    LOGGER.info("{} goes home.", name());
+public void goHome() {
+LOGGER.info("{} goes home.", name());
   }
 
-  public void goToMine() {
-    LOGGER.info("{} goes to the mine.", name());
+public void goToMine() {
+LOGGER.info("{} goes to the mine.", name());
   }
 
-  private void action(Action action) {
-    switch (action) {
-      case GO_TO_SLEEP:
-        goToSleep();
-        break;
-      case WAKE_UP:
-        wakeUp();
-        break;
-      case GO_HOME:
-        goHome();
-        break;
-      case GO_TO_MINE:
-        goToMine();
-        break;
-      case WORK:
-        work();
-        break;
-      default:
-        LOGGER.info("Undefined action");
-        break;
+private void action(Action action) {
+switch (action) {
+case GO_TO_SLEEP:
+goToSleep();
+break;
+case WAKE_UP:
+wakeUp();
+break;
+case GO_HOME:
+goHome();
+break;
+case GO_TO_MINE:
+goToMine();
+break;
+case WORK:
+work();
+break;
+default:
+LOGGER.info("Undefined action");
+break;
     }
   }
 
   /**
    * Perform actions.
    */
-  public void action(Action... actions) {
-    Arrays.stream(actions).forEach(this::action);
+public void action(Action... actions) {
+Arrays.stream(actions).forEach(this::action);
   }
 
-  public abstract void work();
+public abstract void work();
 
-  public abstract String name();
+public abstract String name();
 
-  enum Action {
-    GO_TO_SLEEP, WAKE_UP, GO_HOME, GO_TO_MINE, WORK
+enum Action {
+GO_TO_SLEEP, WAKE_UP, GO_HOME, GO_TO_MINE, WORK
   }
 }

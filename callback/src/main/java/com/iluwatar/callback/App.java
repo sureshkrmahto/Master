@@ -11,22 +11,21 @@ import org.slf4j.Logger;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class App {
 
-  private static final Logger LOGGER = getLogger(App.class);
+private static final Logger LOGGER = getLogger(App.class);
 
-  private App() {
+private App() {
   }
 
   /**
    * Program entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(final String[] args) {
-    var task = new SimpleTask();
-    task.executeWith(() -> LOGGER.info("I'm done now."));
+public static void main(final String[] args) {
+var task = new SimpleTask();
+task.executeWith(() -> LOGGER.info("I'm done now."));
   }
 }

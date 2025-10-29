@@ -12,29 +12,27 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class CallbackTest {
 
-  private Integer callingCount = 0;
+private Integer callingCount = 0;
 
-  @Test
-  public void test() {
-    Callback callback = () -> callingCount++;
+@Test
+public void test() {
+Callback callback = () -> callingCount++;
 
-    var task = new SimpleTask();
+var task = new SimpleTask();
 
-    assertEquals(Integer.valueOf(0), callingCount, "Initial calling count of 0");
+assertEquals(Integer.valueOf(0), callingCount, "Initial calling count of 0");
 
-    task.executeWith(callback);
+task.executeWith(callback);
 
-    assertEquals(Integer.valueOf(1), callingCount, "Callback called once");
+assertEquals(Integer.valueOf(1), callingCount, "Callback called once");
 
-    task.executeWith(callback);
+task.executeWith(callback);
 
-    assertEquals(Integer.valueOf(2), callingCount, "Callback called twice");
+assertEquals(Integer.valueOf(2), callingCount, "Callback called twice");
 
   }
 }

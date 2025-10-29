@@ -9,15 +9,13 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ArrayUtilityMethods {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ArrayUtilityMethods.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(ArrayUtilityMethods.class);
 
-  private static final Random RANDOM = new Random();
+private static final Random RANDOM = new Random();
 
   /**
    * Method arraysSame compares 2 arrays @param a1 and @param a2 and @return whether their values
@@ -68,29 +66,30 @@ public class ArrayUtilityMethods {
    * Method createRandomIntMatrix creates a random matrix of size @param rows and @param columns.
    *
    * @return it (int[][]).
+ *  @author Suresh Mahto
    */
-  public static int[][] createRandomIntMatrix(int rows, int columns) {
-    var matrix = new int[rows][columns];
-    for (var i = 0; i < rows; i++) {
-      for (var j = 0; j < columns; j++) {
+public static int[][] createRandomIntMatrix(int rows, int columns) {
+var matrix = new int[rows][columns];
+for (var i = 0; i < rows; i++) {
+for (var j = 0; j < columns; j++) {
         //filling cells in matrix
-        matrix[i][j] = RANDOM.nextInt(10);
+matrix[i][j] = RANDOM.nextInt(10);
       }
     }
-    return matrix;
+return matrix;
   }
 
   /**
    * Method printMatrix prints input matrix @param matrix.
    */
 
-  public static void printMatrix(int[][] matrix) {
+public static void printMatrix(int[][] matrix) {
     //prints out int[][]
-    for (var ints : matrix) {
-      for (var j = 0; j < matrix[0].length; j++) {
-        LOGGER.info(ints[j] + " ");
+for (var ints : matrix) {
+for (var j = 0; j < matrix[0].length; j++) {
+LOGGER.info(ints[j] + " ");
       }
-      LOGGER.info("");
+LOGGER.info("");
     }
   }
 

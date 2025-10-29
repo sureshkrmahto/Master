@@ -8,26 +8,24 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleTroll implements Troll {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleTroll.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(SimpleTroll.class);
 
-  @Override
-  public void attack() {
-    LOGGER.info("The troll tries to grab you!");
+@Override
+public void attack() {
+LOGGER.info("The troll tries to grab you!");
   }
 
-  @Override
-  public int getAttackPower() {
-    return 10;
+@Override
+public int getAttackPower() {
+return 10;
   }
 
-  @Override
-  public void fleeBattle() {
-    LOGGER.info("The troll shrieks in horror and runs away!");
+@Override
+public void fleeBattle() {
+LOGGER.info("The troll shrieks in horror and runs away!");
   }
 }

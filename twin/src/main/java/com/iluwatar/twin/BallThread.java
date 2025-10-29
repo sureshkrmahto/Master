@@ -9,55 +9,54 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class BallThread extends Thread {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(BallThread.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(BallThread.class);
 
-  private BallItem twin;
+private BallItem twin;
 
-  private volatile boolean isSuspended;
+private volatile boolean isSuspended;
 
-  private volatile boolean isRunning = true;
+private volatile boolean isRunning = true;
 
-  public void setTwin(BallItem twin) {
-    this.twin = twin;
+public void setTwin(BallItem twin) {
+this.twin = twin;
   }
 
   /**
    * Run the thread.
+ *  @author Suresh Mahto
    */
-  public void run() {
+public void run() {
 
-    while (isRunning) {
-      if (!isSuspended) {
-        twin.draw();
-        twin.move();
+while (isRunning) {
+if (!isSuspended) {
+twin.draw();
+twin.move();
       }
-      try {
-        Thread.sleep(250);
+try {
+Thread.sleep(250);
       } catch (InterruptedException e) {
-        throw new RuntimeException(e);
+throw new RuntimeException(e);
       }
     }
   }
 
-  public void suspendMe() {
-    isSuspended = true;
-    LOGGER.info("Begin to suspend BallThread");
+public void suspendMe() {
+isSuspended = true;
+LOGGER.info("Begin to suspend BallThread");
   }
 
-  public void resumeMe() {
-    isSuspended = false;
-    LOGGER.info("Begin to resume BallThread");
+public void resumeMe() {
+isSuspended = false;
+LOGGER.info("Begin to resume BallThread");
   }
 
-  public void stopMe() {
-    this.isRunning = false;
-    this.isSuspended = true;
+public void stopMe() {
+this.isRunning = false;
+this.isSuspended = true;
   }
 }
 

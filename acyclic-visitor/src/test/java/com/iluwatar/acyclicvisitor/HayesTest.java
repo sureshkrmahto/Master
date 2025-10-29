@@ -12,28 +12,26 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HayesTest {
 
-  @Test
-  public void testAcceptForDos() {  
-    var hayes = new Hayes();
-    var mockVisitor = mock(ConfigureForDosVisitor.class);
+@Test
+public void testAcceptForDos() {  
+var hayes = new Hayes();
+var mockVisitor = mock(ConfigureForDosVisitor.class);
     
-    hayes.accept(mockVisitor);
-    verify((HayesVisitor)mockVisitor).visit(eq(hayes));
+hayes.accept(mockVisitor);
+verify((HayesVisitor)mockVisitor).visit(eq(hayes));
   }
   
-  @Test
-  public void testAcceptForUnix() {    
-    var hayes = new Hayes();
-    var mockVisitor = mock(ConfigureForUnixVisitor.class);
+@Test
+public void testAcceptForUnix() {    
+var hayes = new Hayes();
+var mockVisitor = mock(ConfigureForUnixVisitor.class);
     
-    hayes.accept(mockVisitor);
+hayes.accept(mockVisitor);
     
-    verifyZeroInteractions(mockVisitor);
+verifyZeroInteractions(mockVisitor);
   }
 }

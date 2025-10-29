@@ -8,33 +8,32 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class RequestHandler {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(RequestHandler.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(RequestHandler.class);
 
-  private final RequestHandler next;
+private final RequestHandler next;
 
-  public RequestHandler(RequestHandler next) {
-    this.next = next;
+public RequestHandler(RequestHandler next) {
+this.next = next;
   }
 
   /**
    * Request handler.
+ *  @author Suresh Mahto
    */
-  public void handleRequest(Request req) {
-    if (next != null) {
-      next.handleRequest(req);
+public void handleRequest(Request req) {
+if (next != null) {
+next.handleRequest(req);
     }
   }
 
-  protected void printHandling(Request req) {
-    LOGGER.info("{} handling request \"{}\"", this, req);
+protected void printHandling(Request req) {
+LOGGER.info("{} handling request \"{}\"", this, req);
   }
 
-  @Override
-  public abstract String toString();
+@Override
+public abstract String toString();
 }

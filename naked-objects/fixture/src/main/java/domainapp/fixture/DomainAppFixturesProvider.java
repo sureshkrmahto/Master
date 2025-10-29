@@ -12,15 +12,13 @@ import org.apache.isis.applib.services.fixturespec.FixtureScriptsSpecificationPr
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @DomainService(nature = NatureOfService.DOMAIN)
-/**
- * @author Suresh Mahto
- */
 public class DomainAppFixturesProvider implements FixtureScriptsSpecificationProvider {
-  @Override
-  public FixtureScriptsSpecification getSpecification() {
-    return FixtureScriptsSpecification.builder(DomainAppFixturesProvider.class)
+@Override
+public FixtureScriptsSpecification getSpecification() {
+return FixtureScriptsSpecification.builder(DomainAppFixturesProvider.class)
         .with(FixtureScripts.MultipleExecutionStrategy.EXECUTE)
         .withRunScriptDefault(RecreateSimpleObjects.class)
         .withRunScriptDropDown(FixtureScriptsSpecification.DropDownPolicy.CHOICES)

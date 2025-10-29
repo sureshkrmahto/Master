@@ -8,9 +8,7 @@ import java.util.List;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
   /**
@@ -19,18 +17,18 @@ public class App {
    * @param args no argument sent
    */
 
-  public static void main(String[] args) {
-    var ram = new Student(1, "Ram", "Street 9, Cupertino");
-    var shyam = new Student(2, "Shyam", "Z bridge, Pune");
-    var gopi = new Student(3, "Gopi", "Street 10, Mumbai");
+public static void main(String[] args) {
+var ram = new Student(1, "Ram", "Street 9, Cupertino");
+var shyam = new Student(2, "Shyam", "Z bridge, Pune");
+var gopi = new Student(3, "Gopi", "Street 10, Mumbai");
 
-    var context = new HashMap<String, List<Student>>();
-    var studentDatabase = new StudentDatabase();
-    var studentRepository = new StudentRepository(context, studentDatabase);
+var context = new HashMap<String, List<Student>>();
+var studentDatabase = new StudentDatabase();
+var studentRepository = new StudentRepository(context, studentDatabase);
 
-    studentRepository.registerNew(ram);
-    studentRepository.registerModified(shyam);
-    studentRepository.registerDeleted(gopi);
-    studentRepository.commit();
+studentRepository.registerNew(ram);
+studentRepository.registerModified(shyam);
+studentRepository.registerDeleted(gopi);
+studentRepository.commit();
   }
 }

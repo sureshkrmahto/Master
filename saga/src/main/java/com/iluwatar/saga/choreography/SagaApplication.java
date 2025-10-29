@@ -23,29 +23,28 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SagaApplication {
-  private static final Logger LOGGER = LoggerFactory.getLogger(SagaApplication.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(SagaApplication.class);
 
   /**
    * main method.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var sd = serviceDiscovery();
-    var service = sd.findAny();
-    var goodOrderSaga = service.execute(newSaga("good_order"));
-    var badOrderSaga = service.execute(newSaga("bad_order"));
-    LOGGER.info("orders: goodOrder is {}, badOrder is {}",
-        goodOrderSaga.getResult(), badOrderSaga.getResult());
+public static void main(String[] args) {
+var sd = serviceDiscovery();
+var service = sd.findAny();
+var goodOrderSaga = service.execute(newSaga("good_order"));
+var badOrderSaga = service.execute(newSaga("bad_order"));
+LOGGER.info("orders: goodOrder is {}, badOrder is {}",
+goodOrderSaga.getResult(), badOrderSaga.getResult());
 
   }
 
 
-  private static Saga newSaga(Object value) {
-    return Saga
+private static Saga newSaga(Object value) {
+return Saga
         .create()
         .chapter("init an order").setInValue(value)
         .chapter("booking a Fly")
@@ -53,9 +52,9 @@ public class SagaApplication {
         .chapter("withdrawing Money");
   }
 
-  private static ServiceDiscoveryService serviceDiscovery() {
-    var sd = new ServiceDiscoveryService();
-    return sd
+private static ServiceDiscoveryService serviceDiscovery() {
+var sd = new ServiceDiscoveryService();
+return sd
         .discover(new OrderService(sd))
         .discover(new FlyBookingService(sd))
         .discover(new HotelBookingService(sd))

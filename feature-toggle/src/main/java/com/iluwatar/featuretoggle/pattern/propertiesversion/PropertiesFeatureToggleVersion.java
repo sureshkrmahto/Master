@@ -19,13 +19,11 @@ import java.util.Properties;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class PropertiesFeatureToggleVersion implements Service {
 
-  private final boolean isEnhanced;
+private final boolean isEnhanced;
 
   /**
    * Creates an instance of {@link PropertiesFeatureToggleVersion} using the passed {@link
@@ -36,15 +34,16 @@ public class PropertiesFeatureToggleVersion implements Service {
    * @param properties {@link Properties} used to configure the service and toggle features.
    * @throws IllegalArgumentException when the passed {@link Properties} is not as expected
    * @see Properties
+ *  @author Suresh Mahto
    */
-  public PropertiesFeatureToggleVersion(final Properties properties) {
-    if (properties == null) {
-      throw new IllegalArgumentException("No Properties Provided.");
+public PropertiesFeatureToggleVersion(final Properties properties) {
+if (properties == null) {
+throw new IllegalArgumentException("No Properties Provided.");
     } else {
-      try {
-        isEnhanced = (boolean) properties.get("enhancedWelcome");
+try {
+isEnhanced = (boolean) properties.get("enhancedWelcome");
       } catch (Exception e) {
-        throw new IllegalArgumentException("Invalid Enhancement Settings Provided.");
+throw new IllegalArgumentException("Invalid Enhancement Settings Provided.");
       }
     }
   }
@@ -60,15 +59,16 @@ public class PropertiesFeatureToggleVersion implements Service {
    *             User}. However if disabled then a generic version fo the message is returned.
    * @return Resulting welcome message.
    * @see User
+ *  @author Suresh Mahto
    */
   @Override
-  public String getWelcomeMessage(final User user) {
+public String getWelcomeMessage(final User user) {
 
-    if (isEnhanced()) {
-      return "Welcome " + user + ". You're using the enhanced welcome message.";
+if (isEnhanced()) {
+return "Welcome " + user + ". You're using the enhanced welcome message.";
     }
 
-    return "Welcome to the application.";
+return "Welcome to the application.";
   }
 
   /**
@@ -77,9 +77,10 @@ public class PropertiesFeatureToggleVersion implements Service {
    * PropertiesFeatureToggleVersion#PropertiesFeatureToggleVersion(Properties)}
    *
    * @return Boolean value {@code true} if enhanced.
+ *  @author Suresh Mahto
    */
   @Override
-  public boolean isEnhanced() {
-    return isEnhanced;
+public boolean isEnhanced() {
+return isEnhanced;
   }
 }

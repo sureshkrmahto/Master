@@ -8,21 +8,19 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DwarvenTunnelDigger extends DwarvenMineWorker {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenTunnelDigger.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenTunnelDigger.class);
 
-  @Override
-  public void work() {
-    LOGGER.info("{} creates another promising tunnel.", name());
+@Override
+public void work() {
+LOGGER.info("{} creates another promising tunnel.", name());
   }
 
-  @Override
-  public String name() {
-    return "Dwarven tunnel digger";
+@Override
+public String name() {
+return "Dwarven tunnel digger";
   }
 }

@@ -8,21 +8,19 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DwarvenGoldDigger extends DwarvenMineWorker {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenGoldDigger.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenGoldDigger.class);
 
-  @Override
-  public void work() {
-    LOGGER.info("{} digs for gold.", name());
+@Override
+public void work() {
+LOGGER.info("{} digs for gold.", name());
   }
 
-  @Override
-  public String name() {
-    return "Dwarf gold digger";
+@Override
+public String name() {
+return "Dwarf gold digger";
   }
 }

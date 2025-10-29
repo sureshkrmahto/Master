@@ -8,15 +8,13 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class GiantView {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(GiantView.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(GiantView.class);
 
-  public void displayGiant(GiantModel giant) {
-    LOGGER.info(giant.toString());
+public void displayGiant(GiantModel giant) {
+LOGGER.info(giant.toString());
   }
 }

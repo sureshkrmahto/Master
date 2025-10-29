@@ -7,22 +7,21 @@ import java.util.Arrays;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Unit {
 
-  private final Unit[] children;
+private final Unit[] children;
 
-  public Unit(Unit... children) {
-    this.children = children;
+public Unit(Unit... children) {
+this.children = children;
   }
 
   /**
    * Accept visitor.
+ *  @author Suresh Mahto
    */
-  public void accept(UnitVisitor visitor) {
-    Arrays.stream(children).forEach(child -> child.accept(visitor));
+public void accept(UnitVisitor visitor) {
+Arrays.stream(children).forEach(child -> child.accept(visitor));
   }
 }

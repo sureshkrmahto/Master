@@ -10,47 +10,48 @@ import java.util.Iterator;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class DecoratingIterator<E> implements Iterator<E> {
 
-  protected final Iterator<E> fromIterator;
+protected final Iterator<E> fromIterator;
 
-  private E next;
+private E next;
 
   /**
    * Creates an iterator that decorates the given iterator.
+ *  @author Suresh Mahto
    */
-  public DecoratingIterator(Iterator<E> fromIterator) {
-    this.fromIterator = fromIterator;
+public DecoratingIterator(Iterator<E> fromIterator) {
+this.fromIterator = fromIterator;
   }
 
   /**
    * Precomputes and saves the next element of the Iterable. null is considered as end of data.
    *
    * @return true if a next element is available
+ *  @author Suresh Mahto
    */
   @Override
-  public final boolean hasNext() {
-    next = computeNext();
-    return next != null;
+public final boolean hasNext() {
+next = computeNext();
+return next != null;
   }
 
   /**
    * Returns the next element of the Iterable.
    *
    * @return the next element of the Iterable, or null if not present.
+ *  @author Suresh Mahto
    */
   @Override
-  public final E next() {
-    if (next == null) {
-      return fromIterator.next();
+public final E next() {
+if (next == null) {
+return fromIterator.next();
     } else {
-      final var result = next;
-      next = null;
-      return result;
+final var result = next;
+next = null;
+return result;
     }
   }
 
@@ -59,6 +60,7 @@ public abstract class DecoratingIterator<E> implements Iterator<E> {
    * iteration process. null is considered as end of data.
    *
    * @return the next element of the Iterable.
+ *  @author Suresh Mahto
    */
-  public abstract E computeNext();
+public abstract E computeNext();
 }

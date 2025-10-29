@@ -18,11 +18,9 @@ import org.junit.jupiter.params.provider.MethodSource;
  *
  * @param <E> Type of Expression
  * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-/**
- * @author Suresh Mahto
- */
 public abstract class ExpressionTest<E extends Expression> {
 
   /**
@@ -30,70 +28,76 @@ public abstract class ExpressionTest<E extends Expression> {
    *
    * @param resultCalc The function used to calculate the expected result
    * @return A stream with test entries
+ *  @author Suresh Mahto
    */
-  static Stream<Arguments> prepareParameters(final IntBinaryOperator resultCalc) {
-    final var testData = new ArrayList<Arguments>();
-    for (var i = -10; i < 10; i++) {
-      for (var j = -10; j < 10; j++) {
-        testData.add(Arguments.of(
-            new NumberExpression(i),
-            new NumberExpression(j),
-            resultCalc.applyAsInt(i, j)
+static Stream<Arguments> prepareParameters(final IntBinaryOperator resultCalc) {
+final var testData = new ArrayList<Arguments>();
+for (var i = -10; i < 10; i++) {
+for (var j = -10; j < 10; j++) {
+testData.add(Arguments.of(
+new NumberExpression(i),
+new NumberExpression(j),
+resultCalc.applyAsInt(i, j)
         ));
       }
     }
-    return testData.stream();
+return testData.stream();
   }
 
   /**
    * The expected {@link E#toString()} response
+ *  @author Suresh Mahto
    */
-  private final String expectedToString;
+private final String expectedToString;
 
   /**
    * Factory, used to create a new test object instance with the correct first and second parameter
+ *  @author Suresh Mahto
    */
-  private final BiFunction<NumberExpression, NumberExpression, E> factory;
+private final BiFunction<NumberExpression, NumberExpression, E> factory;
 
   /**
    * Create a new test instance with the given parameters and expected results
    *
    * @param expectedToString The expected {@link E#toString()} response
    * @param factory          Factory, used to create a new test object instance
-   */
-  ExpressionTest(final String expectedToString,
-                 final BiFunction<NumberExpression, NumberExpression, E> factory
+*/
+ExpressionTest(final String expectedToString,
+final BiFunction<NumberExpression, NumberExpression, E> factory
   ) {
-    this.expectedToString = expectedToString;
-    this.factory = factory;
+this.expectedToString = expectedToString;
+this.factory = factory;
   }
 
   /**
    * Create a new set of test entries with the expected result
    *
    * @return The list of parameters used during this test
+ *  @author Suresh Mahto
    */
-  public abstract Stream<Arguments> expressionProvider();
+public abstract Stream<Arguments> expressionProvider();
 
   /**
    * Verify if the expression calculates the correct result when calling {@link E#interpret()}
+ *  @author Suresh Mahto
    */
   @ParameterizedTest
   @MethodSource("expressionProvider")
-  public void testInterpret(NumberExpression first, NumberExpression second, int result) {
-    final var expression = factory.apply(first, second);
-    assertNotNull(expression);
-    assertEquals(result, expression.interpret());
+public void testInterpret(NumberExpression first, NumberExpression second, int result) {
+final var expression = factory.apply(first, second);
+assertNotNull(expression);
+assertEquals(result, expression.interpret());
   }
 
   /**
    * Verify if the expression has the expected {@link E#toString()} value
+ *  @author Suresh Mahto
    */
   @ParameterizedTest
   @MethodSource("expressionProvider")
-  public void testToString(NumberExpression first, NumberExpression second) {
-    final var expression = factory.apply(first, second);
-    assertNotNull(expression);
-    assertEquals(expectedToString, expression.toString());
+public void testToString(NumberExpression first, NumberExpression second) {
+final var expression = factory.apply(first, second);
+assertNotNull(expression);
+assertEquals(expectedToString, expression.toString());
   }
 }

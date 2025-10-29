@@ -7,9 +7,7 @@ import java.lang.reflect.Field;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class FieldJsonMapper {
 
@@ -19,29 +17,30 @@ public class FieldJsonMapper {
    * @param video  object containing video information
    * @param fields fields information to get
    * @return json of required fields from video
+ *  @author Suresh Mahto
    */
-  public String toJson(Video video, String[] fields) throws Exception {
-    var json = new StringBuilder().append("{");
+public String toJson(Video video, String[] fields) throws Exception {
+var json = new StringBuilder().append("{");
 
-    var i = 0;
-    var fieldsLength = fields.length;
-    while (i < fieldsLength) {
-      json.append(getString(video, Video.class.getDeclaredField(fields[i])));
-      if (i != fieldsLength - 1) {
-        json.append(",");
+var i = 0;
+var fieldsLength = fields.length;
+while (i < fieldsLength) {
+json.append(getString(video, Video.class.getDeclaredField(fields[i])));
+if (i != fieldsLength - 1) {
+json.append(",");
       }
-      i++;
+i++;
     }
-    json.append("}");
-    return json.toString();
+json.append("}");
+return json.toString();
   }
 
-  private String getString(Video video, Field declaredField) throws IllegalAccessException {
-    declaredField.setAccessible(true);
-    var value = declaredField.get(video);
-    if (declaredField.get(video) instanceof Integer) {
-      return "\"" + declaredField.getName() + "\"" + ": " + value;
+private String getString(Video video, Field declaredField) throws IllegalAccessException {
+declaredField.setAccessible(true);
+var value = declaredField.get(video);
+if (declaredField.get(video) instanceof Integer) {
+return "\"" + declaredField.getName() + "\"" + ": " + value;
     }
-    return "\"" + declaredField.getName() + "\"" + ": " + "\"" + value.toString() + "\"";
+return "\"" + declaredField.getName() + "\"" + ": " + "\"" + value.toString() + "\"";
   }
 }

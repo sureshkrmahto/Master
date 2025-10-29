@@ -19,9 +19,7 @@ import com.iluwatar.eda.model.User;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -32,16 +30,17 @@ public class App {
    * {@link UserUpdatedEventHandler}. The dispatcher can now be called to dispatch specific events.
    * When a user is saved, the {@link UserCreatedEvent} can be dispatched. On the other hand, when a
    * user is updated, {@link UserUpdatedEvent} can be dispatched.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    var dispatcher = new EventDispatcher();
-    dispatcher.registerHandler(UserCreatedEvent.class, new UserCreatedEventHandler());
-    dispatcher.registerHandler(UserUpdatedEvent.class, new UserUpdatedEventHandler());
+var dispatcher = new EventDispatcher();
+dispatcher.registerHandler(UserCreatedEvent.class, new UserCreatedEventHandler());
+dispatcher.registerHandler(UserUpdatedEvent.class, new UserUpdatedEventHandler());
 
-    var user = new User("iluwatar");
-    dispatcher.dispatch(new UserCreatedEvent(user));
-    dispatcher.dispatch(new UserUpdatedEvent(user));
+var user = new User("iluwatar");
+dispatcher.dispatch(new UserCreatedEvent(user));
+dispatcher.dispatch(new UserUpdatedEvent(user));
   }
 
 }

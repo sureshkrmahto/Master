@@ -13,21 +13,20 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
   
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
   
   /**
    * Program main entry point.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var car1 = CarsFactory.getCar(CarType.FORD);
-    var car2 = CarsFactory.getCar(CarType.FERRARI);
-    LOGGER.info(car1.getDescription());
-    LOGGER.info(car2.getDescription());
+public static void main(String[] args) {
+var car1 = CarsFactory.getCar(CarType.FORD);
+var car2 = CarsFactory.getCar(CarType.FERRARI);
+LOGGER.info(car1.getDescription());
+LOGGER.info(car2.getDescription());
   }
 }

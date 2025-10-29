@@ -5,27 +5,25 @@ package com.iluwatar.adapter;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class Captain {
 
-  private RowingBoat rowingBoat;
+private RowingBoat rowingBoat;
 
-  public Captain() {
+public Captain() {
   }
 
-  public Captain(final RowingBoat boat) {
-    this.rowingBoat = boat;
+public Captain(final RowingBoat boat) {
+this.rowingBoat = boat;
   }
 
-  void setRowingBoat(final RowingBoat boat) {
-    this.rowingBoat = boat;
+void setRowingBoat(final RowingBoat boat) {
+this.rowingBoat = boat;
   }
 
-  void row() {
-    rowingBoat.row();
+void row() {
+rowingBoat.row();
   }
 
 }

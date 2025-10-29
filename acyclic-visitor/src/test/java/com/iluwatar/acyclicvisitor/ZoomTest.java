@@ -12,27 +12,25 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ZoomTest {
   
-  @Test
-  public void testAcceptForDos() {  
-    var zoom = new Zoom();
-    var mockVisitor = mock(ConfigureForDosVisitor.class);
+@Test
+public void testAcceptForDos() {  
+var zoom = new Zoom();
+var mockVisitor = mock(ConfigureForDosVisitor.class);
     
-    zoom.accept(mockVisitor);
-    verify((ZoomVisitor)mockVisitor).visit(eq(zoom));
+zoom.accept(mockVisitor);
+verify((ZoomVisitor)mockVisitor).visit(eq(zoom));
   }
   
-  @Test
-  public void testAcceptForUnix() {
-    var zoom = new Zoom();
-    var mockVisitor = mock(ConfigureForUnixVisitor.class);
+@Test
+public void testAcceptForUnix() {
+var zoom = new Zoom();
+var mockVisitor = mock(ConfigureForUnixVisitor.class);
     
-    zoom.accept(mockVisitor);
-    verify((ZoomVisitor)mockVisitor).visit(eq(zoom));
+zoom.accept(mockVisitor);
+verify((ZoomVisitor)mockVisitor).visit(eq(zoom));
   }
 }

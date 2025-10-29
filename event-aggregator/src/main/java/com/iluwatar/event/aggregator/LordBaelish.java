@@ -5,23 +5,21 @@ package com.iluwatar.event.aggregator;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class LordBaelish extends EventEmitter {
 
-  public LordBaelish() {
+public LordBaelish() {
   }
 
-  public LordBaelish(EventObserver obs) {
-    super(obs);
+public LordBaelish(EventObserver obs) {
+super(obs);
   }
 
-  @Override
-  public void timePasses(Weekday day) {
-    if (day == Weekday.FRIDAY) {
-      notifyObservers(Event.STARK_SIGHTED);
+@Override
+public void timePasses(Weekday day) {
+if (day == Weekday.FRIDAY) {
+notifyObservers(Event.STARK_SIGHTED);
     }
   }
 }

@@ -5,15 +5,13 @@ package com.iluwatar.event.asynchronous;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class MaxNumOfEventsAllowedException extends Exception {
 
-  private static final long serialVersionUID = -8430876973516292695L;
+private static final long serialVersionUID = -8430876973516292695L;
 
-  public MaxNumOfEventsAllowedException(String message) {
-    super(message);
+public MaxNumOfEventsAllowedException(String message) {
+super(message);
   }
 }

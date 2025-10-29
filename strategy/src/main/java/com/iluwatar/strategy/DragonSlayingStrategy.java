@@ -9,6 +9,6 @@ public interface DragonSlayingStrategy {
   /**
    * Executes the strategy-specific dragon slaying algorithm.
    */
-  void execute();
+void execute();
 
 }

@@ -9,19 +9,17 @@ import com.iluwatar.eda.model.User;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class UserUpdatedEvent extends AbstractEvent {
 
-  private final User user;
+private final User user;
 
-  public UserUpdatedEvent(User user) {
-    this.user = user;
+public UserUpdatedEvent(User user) {
+this.user = user;
   }
 
-  public User getUser() {
-    return user;
+public User getUser() {
+return user;
   }
 }

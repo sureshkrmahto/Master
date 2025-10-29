@@ -5,15 +5,13 @@ package com.iluwatar.mediator;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Hobbit extends PartyMemberBase {
 
-  @Override
-  public String toString() {
-    return "Hobbit";
+@Override
+public String toString() {
+return "Hobbit";
   }
 
 }

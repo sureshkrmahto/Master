@@ -7,19 +7,18 @@ import java.util.Optional;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public abstract class Task {
 
   /**
    * Execute with callback.
+ *  @author Suresh Mahto
    */
-  final void executeWith(Callback callback) {
-    execute();
-    Optional.ofNullable(callback).ifPresent(Callback::call);
+final void executeWith(Callback callback) {
+execute();
+Optional.ofNullable(callback).ifPresent(Callback::call);
   }
 
-  public abstract void execute();
+public abstract void execute();
 }

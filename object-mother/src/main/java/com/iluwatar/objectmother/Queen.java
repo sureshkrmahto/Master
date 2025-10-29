@@ -5,41 +5,39 @@ package com.iluwatar.objectmother;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Queen implements Royalty {
-  private boolean isDrunk = false;
-  private boolean isHappy = false;
-  private boolean isFlirty = false;
+private boolean isDrunk = false;
+private boolean isHappy = false;
+private boolean isFlirty = false;
 
-  @Override
-  public void makeDrunk() {
-    isDrunk = true;
+@Override
+public void makeDrunk() {
+isDrunk = true;
   }
 
-  @Override
-  public void makeSober() {
-    isDrunk = false;
+@Override
+public void makeSober() {
+isDrunk = false;
   }
 
-  @Override
-  public void makeHappy() {
-    isHappy = true;
+@Override
+public void makeHappy() {
+isHappy = true;
   }
 
-  @Override
-  public void makeUnhappy() {
-    isHappy = false;
+@Override
+public void makeUnhappy() {
+isHappy = false;
   }
 
-  public boolean isFlirty() {
-    return isFlirty;
+public boolean isFlirty() {
+return isFlirty;
   }
 
-  public void setFlirtiness(boolean flirtiness) {
-    this.isFlirty = flirtiness;
+public void setFlirtiness(boolean flirtiness) {
+this.isFlirty = flirtiness;
   }
 
   /**
@@ -47,8 +45,9 @@ public class Queen implements Royalty {
    *
    * @param king King who initialized the flirt.
    * @return A value which describes if the flirt was successful or not.
+ *  @author Suresh Mahto
    */
-  public boolean getFlirted(King king) {
-    return this.isFlirty && king.isHappy && !king.isDrunk;
+public boolean getFlirted(King king) {
+return this.isFlirty && king.isHappy && !king.isDrunk;
   }
 }

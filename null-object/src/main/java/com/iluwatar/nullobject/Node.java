@@ -5,13 +5,13 @@ package com.iluwatar.nullobject;
  */
 public interface Node {
 
-  String getName();
+String getName();
 
-  int getTreeSize();
+int getTreeSize();
 
-  Node getLeft();
+Node getLeft();
 
-  Node getRight();
+Node getRight();
 
-  void walk();
+void walk();
 }

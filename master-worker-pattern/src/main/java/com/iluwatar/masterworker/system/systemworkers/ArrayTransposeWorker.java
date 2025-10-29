@@ -10,29 +10,27 @@ import com.iluwatar.masterworker.system.systemmaster.Master;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ArrayTransposeWorker extends Worker {
 
-  public ArrayTransposeWorker(Master master, int id) {
-    super(master, id);
+public ArrayTransposeWorker(Master master, int id) {
+super(master, id);
   }
 
-  @Override
-  ArrayResult executeOperation() {
+@Override
+ArrayResult executeOperation() {
     //number of rows in result matrix is equal to number of columns in input matrix and vice versa
-    var arrayInput = (ArrayInput) this.getReceivedData();
-    final var rows = arrayInput.data[0].length;
-    final var cols = arrayInput.data.length;
-    var resultData = new int[rows][cols];
-    for (var i = 0; i < cols; i++) {
-      for (var j = 0; j < rows; j++) {
+var arrayInput = (ArrayInput) this.getReceivedData();
+final var rows = arrayInput.data[0].length;
+final var cols = arrayInput.data.length;
+var resultData = new int[rows][cols];
+for (var i = 0; i < cols; i++) {
+for (var j = 0; j < rows; j++) {
         //flipping element positions along diagonal
-        resultData[j][i] = arrayInput.data[i][j];
+resultData[j][i] = arrayInput.data[i][j];
       }
     }
-    return new ArrayResult(resultData);
+return new ArrayResult(resultData);
   }
 }

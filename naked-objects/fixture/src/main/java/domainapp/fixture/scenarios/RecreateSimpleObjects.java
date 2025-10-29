@@ -15,13 +15,11 @@ import org.apache.isis.applib.fixturescripts.FixtureScript;
  * @author Suresh Mahto
 
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class RecreateSimpleObjects extends FixtureScript {
 
-  public final List<String> names = List.of(
+public final List<String> names = List.of(
       "Foo",
       "Bar",
       "Baz",
@@ -35,59 +33,61 @@ public class RecreateSimpleObjects extends FixtureScript {
   );
 
   // region > number (optional input)
-  private Integer number;
+private Integer number;
 
   // endregion
 
   // region > simpleObjects (output)
-  private final List<SimpleObject> simpleObjects = Lists.newArrayList();
+private final List<SimpleObject> simpleObjects = Lists.newArrayList();
 
-  public RecreateSimpleObjects() {
-    withDiscoverability(Discoverability.DISCOVERABLE);
+public RecreateSimpleObjects() {
+withDiscoverability(Discoverability.DISCOVERABLE);
   }
 
   /**
    * The number of objects to create, up to 10; optional, defaults to 3.
+ *  @author Suresh Mahto
    */
-  public Integer getNumber() {
-    return number;
+public Integer getNumber() {
+return number;
   }
 
-  public RecreateSimpleObjects setNumber(final Integer number) {
-    this.number = number;
-    return this;
+public RecreateSimpleObjects setNumber(final Integer number) {
+this.number = number;
+return this;
   }
 
   /**
    * The simpleobjects created by this fixture (output).
+ *  @author Suresh Mahto
    */
-  public List<SimpleObject> getSimpleObjects() {
-    return simpleObjects;
+public List<SimpleObject> getSimpleObjects() {
+return simpleObjects;
   }
 
   // endregion
 
-  @Override
-  protected void execute(final ExecutionContext ec) {
+@Override
+protected void execute(final ExecutionContext ec) {
 
     // defaults
-    final var paramNumber = defaultParam("number", ec, 3);
+final var paramNumber = defaultParam("number", ec, 3);
 
     // validate
-    if (paramNumber < 0 || paramNumber > names.size()) {
-      throw new IllegalArgumentException(String.format("number must be in range [0,%d)",
-          names.size()));
+if (paramNumber < 0 || paramNumber > names.size()) {
+throw new IllegalArgumentException(String.format("number must be in range [0,%d)",
+names.size()));
     }
 
     //
     // execute
     //
-    ec.executeChild(this, new SimpleObjectsTearDown());
+ec.executeChild(this, new SimpleObjectsTearDown());
 
-    for (var i = 0; i < paramNumber; i++) {
-      final var fs = new SimpleObjectCreate().setName(names.get(i));
-      ec.executeChild(this, fs.getName(), fs);
-      simpleObjects.add(fs.getSimpleObject());
+for (var i = 0; i < paramNumber; i++) {
+final var fs = new SimpleObjectCreate().setName(names.get(i));
+ec.executeChild(this, fs.getName(), fs);
+simpleObjects.add(fs.getSimpleObject());
     }
   }
 }

@@ -2,14 +2,15 @@ package com.iluwatar.bridge;
 
 /**
  * Weapon.
+ *  @author Suresh Mahto
  */
 public interface Weapon {
 
-  void wield();
+void wield();
 
-  void swing();
+void swing();
 
-  void unwield();
+void unwield();
 
-  Enchantment getEnchantment();
+Enchantment getEnchantment();
 }

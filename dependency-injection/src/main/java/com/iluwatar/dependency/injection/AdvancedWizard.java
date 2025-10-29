@@ -6,20 +6,18 @@ package com.iluwatar.dependency.injection;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AdvancedWizard implements Wizard {
 
-  private final Tobacco tobacco;
+private final Tobacco tobacco;
 
-  public AdvancedWizard(Tobacco tobacco) {
-    this.tobacco = tobacco;
+public AdvancedWizard(Tobacco tobacco) {
+this.tobacco = tobacco;
   }
 
-  @Override
-  public void smoke() {
-    tobacco.smoke(this);
+@Override
+public void smoke() {
+tobacco.smoke(this);
   }
 }

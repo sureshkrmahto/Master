@@ -22,44 +22,44 @@ import org.slf4j.LoggerFactory;
  * @author Suresh Mahto
 
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class CombinatorApp {
 
   /**
    * Logger.
+ *  @author Suresh Mahto
    */
-  private static final Logger LOGGER = LoggerFactory.getLogger(CombinatorApp.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(CombinatorApp.class);
 
   /**
    * main.
    * @param args args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var queriesOr = new String[]{"many", "Annabel"};
-    var finder = Finders.expandedFinder(queriesOr);
-    var res = finder.find(text());
-    LOGGER.info("the result of expanded(or) query[{}] is {}", queriesOr, res);
+public static void main(String[] args) {
+var queriesOr = new String[]{"many", "Annabel"};
+var finder = Finders.expandedFinder(queriesOr);
+var res = finder.find(text());
+LOGGER.info("the result of expanded(or) query[{}] is {}", queriesOr, res);
 
-    var queriesAnd = new String[]{"Annabel", "my"};
-    finder = Finders.specializedFinder(queriesAnd);
-    res = finder.find(text());
-    LOGGER.info("the result of specialized(and) query[{}] is {}", queriesAnd, res);
+var queriesAnd = new String[]{"Annabel", "my"};
+finder = Finders.specializedFinder(queriesAnd);
+res = finder.find(text());
+LOGGER.info("the result of specialized(and) query[{}] is {}", queriesAnd, res);
 
-    finder = Finders.advancedFinder("it was","kingdom","sea");
-    res = finder.find(text());
-    LOGGER.info("the result of advanced query is {}", res);
+finder = Finders.advancedFinder("it was","kingdom","sea");
+res = finder.find(text());
+LOGGER.info("the result of advanced query is {}", res);
 
-    res = Finders.filteredFinder(" was ", "many", "child").find(text());
-    LOGGER.info("the result of filtered query is {}", res);
+res = Finders.filteredFinder(" was ", "many", "child").find(text());
+LOGGER.info("the result of filtered query is {}", res);
 
 
   }
 
-  private static String text() {
-    return
+private static String text() {
+return
         "It was many and many a year ago,\n"
             + "In a kingdom by the sea,\n"
             + "That a maiden there lived whom you may know\n"

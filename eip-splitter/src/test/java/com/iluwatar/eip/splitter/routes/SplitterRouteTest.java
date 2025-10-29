@@ -21,37 +21,36 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  
  * @author Suresh Mahto
 
+ *  @author Suresh Mahto
  */
 @ExtendWith(SpringExtension.class)
 @SpringBootTest(classes = SplitterRouteTest.class)
 @ActiveProfiles("test")
 @EnableAutoConfiguration
 @ComponentScan
-/**
- * @author Suresh Mahto
- */
 public class SplitterRouteTest {
 
-  @EndpointInject(uri = "{{entry}}")
-  private ProducerTemplate entry;
+@EndpointInject(uri = "{{entry}}")
+private ProducerTemplate entry;
 
-  @EndpointInject(uri = "{{endpoint}}")
-  private MockEndpoint endpoint;
+@EndpointInject(uri = "{{endpoint}}")
+private MockEndpoint endpoint;
 
   /**
    * Test if endpoint receives three separate messages.
    *
    * @throws Exception in case of en exception during the test
+ *  @author Suresh Mahto
    */
   @Test
   @DirtiesContext
-  public void testSplitter() throws Exception {
+public void testSplitter() throws Exception {
 
     // Three items in one entry message
-    entry.sendBody(new String[]{"TEST1", "TEST2", "TEST3"});
+entry.sendBody(new String[]{"TEST1", "TEST2", "TEST3"});
 
     // Endpoint should have three different messages in the end order of the messages is not important
-    endpoint.expectedMessageCount(3);
-    endpoint.assertIsSatisfied();
+endpoint.expectedMessageCount(3);
+endpoint.assertIsSatisfied();
   }
 }

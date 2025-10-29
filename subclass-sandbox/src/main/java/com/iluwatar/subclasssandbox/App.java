@@ -12,25 +12,24 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Entry point of the main program.
    * @param args Program runtime arguments.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    LOGGER.info("Use superpower: sky launch");
-    var skyLaunch = new SkyLaunch();
-    skyLaunch.activate();
-    LOGGER.info("Use superpower: ground dive");
-    var groundDive = new GroundDive();
-    groundDive.activate();
+public static void main(String[] args) {
+LOGGER.info("Use superpower: sky launch");
+var skyLaunch = new SkyLaunch();
+skyLaunch.activate();
+LOGGER.info("Use superpower: ground dive");
+var groundDive = new GroundDive();
+groundDive.activate();
   }
 
 }

@@ -14,40 +14,39 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var cars = CarFactory.createCars();
+public static void main(String[] args) {
+var cars = CarFactory.createCars();
 
-    var modelsImperative = ImperativeProgramming.getModelsAfter2000(cars);
-    LOGGER.info(modelsImperative.toString());
+var modelsImperative = ImperativeProgramming.getModelsAfter2000(cars);
+LOGGER.info(modelsImperative.toString());
 
-    var modelsFunctional = FunctionalProgramming.getModelsAfter2000(cars);
-    LOGGER.info(modelsFunctional.toString());
+var modelsFunctional = FunctionalProgramming.getModelsAfter2000(cars);
+LOGGER.info(modelsFunctional.toString());
 
-    var groupingByCategoryImperative = ImperativeProgramming.getGroupingOfCarsByCategory(cars);
-    LOGGER.info(groupingByCategoryImperative.toString());
+var groupingByCategoryImperative = ImperativeProgramming.getGroupingOfCarsByCategory(cars);
+LOGGER.info(groupingByCategoryImperative.toString());
 
-    var groupingByCategoryFunctional = FunctionalProgramming.getGroupingOfCarsByCategory(cars);
-    LOGGER.info(groupingByCategoryFunctional.toString());
+var groupingByCategoryFunctional = FunctionalProgramming.getGroupingOfCarsByCategory(cars);
+LOGGER.info(groupingByCategoryFunctional.toString());
 
-    var john = new Person(cars);
+var john = new Person(cars);
 
-    var sedansOwnedImperative = ImperativeProgramming.getSedanCarsOwnedSortedByDate(List.of(john));
-    LOGGER.info(sedansOwnedImperative.toString());
+var sedansOwnedImperative = ImperativeProgramming.getSedanCarsOwnedSortedByDate(List.of(john));
+LOGGER.info(sedansOwnedImperative.toString());
 
-    var sedansOwnedFunctional = FunctionalProgramming.getSedanCarsOwnedSortedByDate(List.of(john));
-    LOGGER.info(sedansOwnedFunctional.toString());
+var sedansOwnedFunctional = FunctionalProgramming.getSedanCarsOwnedSortedByDate(List.of(john));
+LOGGER.info(sedansOwnedFunctional.toString());
   }
 }

@@ -16,28 +16,21 @@ import org.slf4j.LoggerFactory;
 /**
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class DwarvenGoldmineFacadeTest {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender();
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender();
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
   /**
@@ -46,76 +39,74 @@ public class DwarvenGoldmineFacadeTest {
    * DwarvenGoldmineFacade#endDay()}.
    * <p>
    * See if the workers are doing what's expected from them on each step.
+ *  @author Suresh Mahto
    */
   @Test
-  public void testFullWorkDay() {
-    final var goldMine = new DwarvenGoldmineFacade();
-    goldMine.startNewDay();
+public void testFullWorkDay() {
+final var goldMine = new DwarvenGoldmineFacade();
+goldMine.startNewDay();
 
     // On the start of a day, all workers should wake up ...
-    assertTrue(appender.logContains("Dwarf gold digger wakes up."));
-    assertTrue(appender.logContains("Dwarf cart operator wakes up."));
-    assertTrue(appender.logContains("Dwarven tunnel digger wakes up."));
+assertTrue(appender.logContains("Dwarf gold digger wakes up."));
+assertTrue(appender.logContains("Dwarf cart operator wakes up."));
+assertTrue(appender.logContains("Dwarven tunnel digger wakes up."));
 
     // ... and go to the mine
-    assertTrue(appender.logContains("Dwarf gold digger goes to the mine."));
-    assertTrue(appender.logContains("Dwarf cart operator goes to the mine."));
-    assertTrue(appender.logContains("Dwarven tunnel digger goes to the mine."));
+assertTrue(appender.logContains("Dwarf gold digger goes to the mine."));
+assertTrue(appender.logContains("Dwarf cart operator goes to the mine."));
+assertTrue(appender.logContains("Dwarven tunnel digger goes to the mine."));
 
     // No other actions were invoked, so the workers shouldn't have done (printed) anything else
-    assertEquals(6, appender.getLogSize());
+assertEquals(6, appender.getLogSize());
 
     // Now do some actual work, start digging gold!
-    goldMine.digOutGold();
+goldMine.digOutGold();
 
     // Since we gave the dig command, every worker should be doing it's job ...
-    assertTrue(appender.logContains("Dwarf gold digger digs for gold."));
-    assertTrue(appender.logContains("Dwarf cart operator moves gold chunks out of the mine."));
-    assertTrue(appender.logContains("Dwarven tunnel digger creates another promising tunnel."));
+assertTrue(appender.logContains("Dwarf gold digger digs for gold."));
+assertTrue(appender.logContains("Dwarf cart operator moves gold chunks out of the mine."));
+assertTrue(appender.logContains("Dwarven tunnel digger creates another promising tunnel."));
 
     // Again, they shouldn't be doing anything else.
-    assertEquals(9, appender.getLogSize());
+assertEquals(9, appender.getLogSize());
 
     // Enough gold, lets end the day.
-    goldMine.endDay();
+goldMine.endDay();
 
     // Check if the workers go home ...
-    assertTrue(appender.logContains("Dwarf gold digger goes home."));
-    assertTrue(appender.logContains("Dwarf cart operator goes home."));
-    assertTrue(appender.logContains("Dwarven tunnel digger goes home."));
+assertTrue(appender.logContains("Dwarf gold digger goes home."));
+assertTrue(appender.logContains("Dwarf cart operator goes home."));
+assertTrue(appender.logContains("Dwarven tunnel digger goes home."));
 
     // ... and go to sleep. We need well rested workers the next day :)
-    assertTrue(appender.logContains("Dwarf gold digger goes to sleep."));
-    assertTrue(appender.logContains("Dwarf cart operator goes to sleep."));
-    assertTrue(appender.logContains("Dwarven tunnel digger goes to sleep."));
+assertTrue(appender.logContains("Dwarf gold digger goes to sleep."));
+assertTrue(appender.logContains("Dwarf cart operator goes to sleep."));
+assertTrue(appender.logContains("Dwarven tunnel digger goes to sleep."));
 
     // Every worker should be sleeping now, no other actions allowed
-    assertEquals(15, appender.getLogSize());
+assertEquals(15, appender.getLogSize());
   }
 
-/**
- * @author Suresh Mahto
- */
-  private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender() {
+public InMemoryAppender() {
       ((Logger) LoggerFactory.getLogger("root")).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public int getLogSize() {
-      return log.size();
+public int getLogSize() {
+return log.size();
     }
 
-    public boolean logContains(String message) {
-      return log.stream()
+public boolean logContains(String message) {
+return log.stream()
           .map(ILoggingEvent::getFormattedMessage)
           .anyMatch(message::equals);
     }

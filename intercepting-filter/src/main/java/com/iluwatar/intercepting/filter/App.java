@@ -22,9 +22,7 @@ package com.iluwatar.intercepting.filter;
  * {@link Filter}. Each field has its own corresponding {@link Filter}.
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -32,16 +30,17 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var filterManager = new FilterManager();
-    filterManager.addFilter(new NameFilter());
-    filterManager.addFilter(new ContactFilter());
-    filterManager.addFilter(new AddressFilter());
-    filterManager.addFilter(new DepositFilter());
-    filterManager.addFilter(new OrderFilter());
+public static void main(String[] args) {
+var filterManager = new FilterManager();
+filterManager.addFilter(new NameFilter());
+filterManager.addFilter(new ContactFilter());
+filterManager.addFilter(new AddressFilter());
+filterManager.addFilter(new DepositFilter());
+filterManager.addFilter(new OrderFilter());
 
-    var client = new Client();
-    client.setFilterManager(filterManager);
+var client = new Client();
+client.setFilterManager(filterManager);
   }
 }

@@ -9,24 +9,22 @@ import java.util.Optional;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class ServiceDiscoveryService {
-  private final Map<String, OrchestrationChapter<?>> services;
+private final Map<String, OrchestrationChapter<?>> services;
 
-  public Optional<OrchestrationChapter> find(String service) {
-    return Optional.ofNullable(services.getOrDefault(service, null));
+public Optional<OrchestrationChapter> find(String service) {
+return Optional.ofNullable(services.getOrDefault(service, null));
   }
 
-  public ServiceDiscoveryService discover(OrchestrationChapter<?> orchestrationChapterService) {
-    services.put(orchestrationChapterService.getName(), orchestrationChapterService);
-    return this;
+public ServiceDiscoveryService discover(OrchestrationChapter<?> orchestrationChapterService) {
+services.put(orchestrationChapterService.getName(), orchestrationChapterService);
+return this;
   }
 
-  public ServiceDiscoveryService() {
-    this.services = new HashMap<>();
+public ServiceDiscoveryService() {
+this.services = new HashMap<>();
   }
 
 

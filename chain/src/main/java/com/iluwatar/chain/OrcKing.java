@@ -5,24 +5,22 @@ package com.iluwatar.chain;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class OrcKing {
 
-  private RequestHandler chain;
+private RequestHandler chain;
 
-  public OrcKing() {
-    buildChain();
+public OrcKing() {
+buildChain();
   }
 
-  private void buildChain() {
-    chain = new OrcCommander(new OrcOfficer(new OrcSoldier(null)));
+private void buildChain() {
+chain = new OrcCommander(new OrcOfficer(new OrcSoldier(null)));
   }
 
-  public void makeRequest(Request req) {
-    chain.handleRequest(req);
+public void makeRequest(Request req) {
+chain.handleRequest(req);
   }
 
 }

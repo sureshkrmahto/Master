@@ -8,26 +8,24 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HitAndRunMethod extends StealingMethod {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(HitAndRunMethod.class);
 
-  @Override
-  protected String pickTarget() {
-    return "old goblin woman";
+@Override
+protected String pickTarget() {
+return "old goblin woman";
   }
 
-  @Override
-  protected void confuseTarget(String target) {
-    LOGGER.info("Approach the {} from behind.", target);
+@Override
+protected void confuseTarget(String target) {
+LOGGER.info("Approach the {} from behind.", target);
   }
 
-  @Override
-  protected void stealTheItem(String target) {
-    LOGGER.info("Grab the handbag and run away fast!");
+@Override
+protected void stealTheItem(String target) {
+LOGGER.info("Grab the handbag and run away fast!");
   }
 }

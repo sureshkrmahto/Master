@@ -17,67 +17,57 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleTrollTest {
 
-  private InMemoryAppender appender;
+private InMemoryAppender appender;
 
 
-/**
-
- * @author Suresh Mahto
-
- */
-  @BeforeEach
-  public void setUp() {
-    appender = new InMemoryAppender(SimpleTroll.class);
+@BeforeEach
+public void setUp() {
+appender = new InMemoryAppender(SimpleTroll.class);
   }
 
-  @AfterEach
-  public void tearDown() {
-    appender.stop();
+@AfterEach
+public void tearDown() {
+appender.stop();
   }
 
-  @Test
-  public void testTrollActions() {
-    final var troll = new SimpleTroll();
-    assertEquals(10, troll.getAttackPower());
+@Test
+public void testTrollActions() {
+final var troll = new SimpleTroll();
+assertEquals(10, troll.getAttackPower());
 
-    troll.attack();
-    assertEquals("The troll tries to grab you!", appender.getLastMessage());
+troll.attack();
+assertEquals("The troll tries to grab you!", appender.getLastMessage());
 
-    troll.fleeBattle();
-    assertEquals("The troll shrieks in horror and runs away!", appender.getLastMessage());
+troll.fleeBattle();
+assertEquals("The troll shrieks in horror and runs away!", appender.getLastMessage());
 
-    assertEquals(2, appender.getLogSize());
+assertEquals(2, appender.getLogSize());
   }
 
-/**
- * @author Suresh Mahto
- */
-  private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
+private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
-    private final List<ILoggingEvent> log = new LinkedList<>();
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-    public InMemoryAppender(Class clazz) {
+public InMemoryAppender(Class clazz) {
       ((Logger) LoggerFactory.getLogger(clazz)).addAppender(this);
-      start();
+start();
     }
 
-    @Override
-    protected void append(ILoggingEvent eventObject) {
-      log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
     }
 
-    public String getLastMessage() {
-      return log.get(log.size() - 1).getMessage();
+public String getLastMessage() {
+return log.get(log.size() - 1).getMessage();
     }
 
-    public int getLogSize() {
-      return log.size();
+public int getLogSize() {
+return log.size();
     }
   }
 }

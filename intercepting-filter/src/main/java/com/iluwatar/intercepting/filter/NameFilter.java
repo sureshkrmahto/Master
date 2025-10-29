@@ -5,20 +5,18 @@ package com.iluwatar.intercepting.filter;
  * (alphanumeric)
  *
  * @author Suresh Mahto
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class NameFilter extends AbstractFilter {
 
-  @Override
-  public String execute(Order order) {
-    var result = super.execute(order);
-    var name = order.getName();
-    if (name == null || name.isEmpty() || name.matches(".*[^\\w|\\s]+.*")) {
-      return result + "Invalid name! ";
+@Override
+public String execute(Order order) {
+var result = super.execute(order);
+var name = order.getName();
+if (name == null || name.isEmpty() || name.matches(".*[^\\w|\\s]+.*")) {
+return result + "Invalid name! ";
     } else {
-      return result;
+return result;
     }
   }
 }

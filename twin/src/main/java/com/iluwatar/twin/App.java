@@ -10,9 +10,7 @@ package com.iluwatar.twin;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
@@ -20,32 +18,33 @@ public class App {
    * Program entry point.
    *
    * @param args command line args
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
 
-    var ballItem = new BallItem();
-    var ballThread = new BallThread();
+var ballItem = new BallItem();
+var ballThread = new BallThread();
 
-    ballItem.setTwin(ballThread);
-    ballThread.setTwin(ballItem);
+ballItem.setTwin(ballThread);
+ballThread.setTwin(ballItem);
 
-    ballThread.start();
+ballThread.start();
 
-    waiting();
+waiting();
 
-    ballItem.click();
+ballItem.click();
 
-    waiting();
+waiting();
 
-    ballItem.click();
+ballItem.click();
 
-    waiting();
+waiting();
 
     // exit
-    ballThread.stopMe();
+ballThread.stopMe();
   }
 
-  private static void waiting() throws Exception {
-    Thread.sleep(750);
+private static void waiting() throws Exception {
+Thread.sleep(750);
   }
 }

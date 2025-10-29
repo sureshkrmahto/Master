@@ -10,54 +10,44 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 class WashingMachineTest {
 
-  private final FakeDelayProvider fakeDelayProvider = new FakeDelayProvider();
+private final FakeDelayProvider fakeDelayProvider = new FakeDelayProvider();
 
 
-/**
+@Test
+void wash() {
+var washingMachine = new WashingMachine(fakeDelayProvider);
 
- * @author Suresh Mahto
+washingMachine.wash();
+washingMachine.wash();
 
- */
-  @Test
-  void wash() {
-    var washingMachine = new WashingMachine(fakeDelayProvider);
+var machineStateGlobal = washingMachine.getWashingMachineState();
 
-    washingMachine.wash();
-    washingMachine.wash();
-
-    var machineStateGlobal = washingMachine.getWashingMachineState();
-
-    fakeDelayProvider.task.run();
+fakeDelayProvider.task.run();
 
     // washing machine remains in washing state
-    assertEquals(WashingMachineState.WASHING, machineStateGlobal);
+assertEquals(WashingMachineState.WASHING, machineStateGlobal);
 
     // washing machine goes back to enabled state
-    assertEquals(WashingMachineState.ENABLED, washingMachine.getWashingMachineState());
+assertEquals(WashingMachineState.ENABLED, washingMachine.getWashingMachineState());
   }
 
-  @Test
-  void endOfWashing() {
-    var washingMachine = new WashingMachine();
-    washingMachine.wash();
-    assertEquals(WashingMachineState.ENABLED, washingMachine.getWashingMachineState());
+@Test
+void endOfWashing() {
+var washingMachine = new WashingMachine();
+washingMachine.wash();
+assertEquals(WashingMachineState.ENABLED, washingMachine.getWashingMachineState());
   }
 
-/**
- * @author Suresh Mahto
- */
-  private static class FakeDelayProvider implements DelayProvider {
-    private Runnable task;
+private static class FakeDelayProvider implements DelayProvider {
+private Runnable task;
 
-    @Override
-    public void executeAfterDelay(long interval, TimeUnit timeUnit, Runnable task) {
-      this.task = task;
+@Override
+public void executeAfterDelay(long interval, TimeUnit timeUnit, Runnable task) {
+this.task = task;
     }
   }
 }

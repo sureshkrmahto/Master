@@ -8,14 +8,12 @@ import java.util.Map;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class Car extends AbstractDocument implements HasModel, HasPrice, HasParts {
 
-  public Car(Map<String, Object> properties) {
-    super(properties);
+public Car(Map<String, Object> properties) {
+super(properties);
   }
 
 }

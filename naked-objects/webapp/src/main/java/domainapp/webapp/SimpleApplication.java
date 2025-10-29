@@ -44,14 +44,12 @@ import org.slf4j.LoggerFactory;
  * @author Suresh Mahto
 
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleApplication extends IsisWicketApplication {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleApplication.class);
-  private static final long serialVersionUID = 1L;
+private static final Logger LOGGER = LoggerFactory.getLogger(SimpleApplication.class);
+private static final long serialVersionUID = 1L;
 
   /**
    * uncomment for a (slightly hacky) way of allowing logins using query args, eg:
@@ -59,82 +57,83 @@ public class SimpleApplication extends IsisWicketApplication {
    * <tt>{@code ?user=sven&pass=pass}</tt>
    *
    * <p>for demos only, obvious.
+ *  @author Suresh Mahto
    */
-  private static final boolean DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS = false;
+private static final boolean DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS = false;
 
 
-  @Override
-  protected void init() {
-    super.init();
+@Override
+protected void init() {
+super.init();
 
-    var settings = Bootstrap.getSettings();
-    settings.setThemeProvider(new BootswatchThemeProvider(BootswatchTheme.Flatly));
+var settings = Bootstrap.getSettings();
+settings.setThemeProvider(new BootswatchThemeProvider(BootswatchTheme.Flatly));
   }
 
-  @Override
-  public Session newSession(final Request request, final Response response) {
-    if (!DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS) {
-      return super.newSession(request, response);
+@Override
+public Session newSession(final Request request, final Response response) {
+if (!DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS) {
+return super.newSession(request, response);
     }
 
     // else demo mode
-    final var s = (AuthenticatedWebSessionForIsis) super.newSession(request, response);
-    var requestParameters = request.getRequestParameters();
-    final var user = requestParameters.getParameterValue("user");
-    final var password = requestParameters.getParameterValue("pass");
-    s.signIn(user.toString(), password.toString());
-    return s;
+final var s = (AuthenticatedWebSessionForIsis) super.newSession(request, response);
+var requestParameters = request.getRequestParameters();
+final var user = requestParameters.getParameterValue("user");
+final var password = requestParameters.getParameterValue("pass");
+s.signIn(user.toString(), password.toString());
+return s;
   }
 
-  @Override
-  public WebRequest newWebRequest(HttpServletRequest servletRequest, String filterPath) {
-    if (!DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS) {
-      return super.newWebRequest(servletRequest, filterPath);
+@Override
+public WebRequest newWebRequest(HttpServletRequest servletRequest, String filterPath) {
+if (!DEMO_MODE_USING_CREDENTIALS_AS_QUERYARGS) {
+return super.newWebRequest(servletRequest, filterPath);
     }
 
     // else demo mode
-    try {
-      var uname = servletRequest.getParameter("user");
-      if (uname != null) {
-        servletRequest.getSession().invalidate();
+try {
+var uname = servletRequest.getParameter("user");
+if (uname != null) {
+servletRequest.getSession().invalidate();
       }
     } catch (Exception e) {
-      LOGGER.error(e.getMessage());
+LOGGER.error(e.getMessage());
     }
-    return super.newWebRequest(servletRequest, filterPath);
+return super.newWebRequest(servletRequest, filterPath);
   }
 
-  @Override
-  protected Module newIsisWicketModule() {
-    final var isisDefaults = super.newIsisWicketModule();
+@Override
+protected Module newIsisWicketModule() {
+final var isisDefaults = super.newIsisWicketModule();
 
-    final Module overrides = new AbstractModule() {
-      @Override
-      protected void configure() {
-        bind(String.class).annotatedWith(Names.named("applicationName")).toInstance("Simple App");
-        bind(String.class).annotatedWith(Names.named("applicationCss")).toInstance(
+final Module overrides = new AbstractModule() {
+@Override
+protected void configure() {
+bind(String.class).annotatedWith(Names.named("applicationName")).toInstance("Simple App");
+bind(String.class).annotatedWith(Names.named("applicationCss")).toInstance(
             "css/application.css");
-        bind(String.class).annotatedWith(Names.named("applicationJs")).toInstance(
+bind(String.class).annotatedWith(Names.named("applicationJs")).toInstance(
             "scripts/application.js");
-        bind(String.class).annotatedWith(Names.named("welcomeMessage")).toInstance(
-            readLines(getClass(), "welcome.html"));
-        bind(String.class).annotatedWith(Names.named("aboutMessage")).toInstance("Simple App");
-        bind(InputStream.class).annotatedWith(Names.named("metaInfManifest")).toProvider(
-            Providers.of(getServletContext().getResourceAsStream("/META-INF/MANIFEST.MF")));
+bind(String.class).annotatedWith(Names.named("welcomeMessage")).toInstance(
+readLines(getClass(), "welcome.html"));
+bind(String.class).annotatedWith(Names.named("aboutMessage")).toInstance("Simple App");
+bind(InputStream.class).annotatedWith(Names.named("metaInfManifest")).toProvider(
+Providers.of(getServletContext().getResourceAsStream("/META-INF/MANIFEST.MF")));
       }
     };
 
-    return Modules.override(isisDefaults).with(overrides);
+return Modules.override(isisDefaults).with(overrides);
   }
 
-  @SuppressWarnings({"UnstableApiUsage", "SameParameterValue"})
-  private static String readLines(final Class<?> contextClass, final String resourceName) {
-    try {
-      var resource = Resources.getResource(contextClass, resourceName);
-      var readLines = Resources.readLines(resource, Charset.defaultCharset());
-      return Joiner.on("\n").join(readLines);
+@SuppressWarnings({"UnstableApiUsage", "SameParameterValue"})
+private static String readLines(final Class<?> contextClass, final String resourceName) {
+try {
+var resource = Resources.getResource(contextClass, resourceName);
+var readLines = Resources.readLines(resource, Charset.defaultCharset());
+return Joiner.on("\n").join(readLines);
     } catch (IOException e) {
-      return "This is a simple app";
+return "This is a simple app";
     }
   }
 

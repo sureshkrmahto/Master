@@ -19,25 +19,24 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
   /**
    * This practice creates three HeroStats(Value object) and checks equality between those.
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
-    var statA = HeroStat.valueOf(10, 5, 0);
-    var statB = HeroStat.valueOf(10, 5, 0);
-    var statC = HeroStat.valueOf(5, 1, 8);
+public static void main(String[] args) {
+var statA = HeroStat.valueOf(10, 5, 0);
+var statB = HeroStat.valueOf(10, 5, 0);
+var statC = HeroStat.valueOf(5, 1, 8);
 
-    LOGGER.info(statA.toString());
+LOGGER.info(statA.toString());
 
-    LOGGER.info("Is statA and statB equal : {}", statA.equals(statB));
-    LOGGER.info("Is statA and statC equal : {}", statA.equals(statC));
+LOGGER.info("Is statA and statB equal : {}", statA.equals(statB));
+LOGGER.info("Is statA and statC equal : {}", statA.equals(statC));
   }
 }

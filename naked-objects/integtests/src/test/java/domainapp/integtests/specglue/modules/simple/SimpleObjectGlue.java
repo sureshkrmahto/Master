@@ -14,27 +14,25 @@ import org.apache.isis.core.specsupport.specs.CukeGlueAbstract;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class SimpleObjectGlue extends CukeGlueAbstract {
 
-  @Given("^there are.* (\\d+) simple objects$")
-  public void thereAreNumSimpleObjects(int n) {
-    try {
-      final var findAll = service(SimpleObjects.class).listAll();
-      assertThat(findAll.size(), is(n));
-      putVar("list", "all", findAll);
+@Given("^there are.* (\\d+) simple objects$")
+public void thereAreNumSimpleObjects(int n) {
+try {
+final var findAll = service(SimpleObjects.class).listAll();
+assertThat(findAll.size(), is(n));
+putVar("list", "all", findAll);
 
     } finally {
-      assertMocksSatisfied();
+assertMocksSatisfied();
     }
   }
 
-  @When("^I create a new simple object$")
-  public void createNewSimpleObject() {
-    service(SimpleObjects.class).create(UUID.randomUUID().toString());
+@When("^I create a new simple object$")
+public void createNewSimpleObject() {
+service(SimpleObjects.class).create(UUID.randomUUID().toString());
   }
 
 }

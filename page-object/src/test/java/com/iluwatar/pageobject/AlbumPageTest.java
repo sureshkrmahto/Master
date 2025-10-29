@@ -13,23 +13,21 @@ import org.junit.jupiter.api.Test;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class AlbumPageTest {
 
-  private final AlbumPage albumPage = new AlbumPage(new WebClient());
+private final AlbumPage albumPage = new AlbumPage(new WebClient());
 
-  @BeforeEach
-  public void setUp() {
-    albumPage.navigateToPage();
+@BeforeEach
+public void setUp() {
+albumPage.navigateToPage();
   }
 
-  @Test
-  public void testSaveAlbum() {
+@Test
+public void testSaveAlbum() {
 
-    var albumPageAfterChanges = albumPage
+var albumPageAfterChanges = albumPage
         .changeAlbumTitle("25")
         .changeArtist("Adele Laurie Blue Adkins")
         .changeAlbumYear(2015)
@@ -37,15 +35,15 @@ public class AlbumPageTest {
         .changeNumberOfSongs(20)
         .saveChanges();
 
-    assertTrue(albumPageAfterChanges.isAt());
+assertTrue(albumPageAfterChanges.isAt());
 
   }
 
-  @Test
-  public void testCancelChanges() {
-    var albumListPage = albumPage.cancelChanges();
-    albumListPage.navigateToPage();
-    assertTrue(albumListPage.isAt());
+@Test
+public void testCancelChanges() {
+var albumListPage = albumPage.cancelChanges();
+albumListPage.navigateToPage();
+assertTrue(albumListPage.isAt());
   }
 
 }

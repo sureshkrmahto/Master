@@ -10,6 +10,7 @@ import com.iluwatar.delegation.simple.printers.HpPrinter;
  * @see CanonPrinter
  * @see EpsonPrinter
  * @see HpPrinter
+ *  @author Suresh Mahto
  */
 public interface Printer {
 
@@ -19,6 +20,6 @@ public interface Printer {
    * class.
    *
    * @param message to be printed to the screen
-   */
-  void print(final String message);
+*/
+void print(final String message);
 }

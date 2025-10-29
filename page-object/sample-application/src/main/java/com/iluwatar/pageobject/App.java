@@ -28,15 +28,13 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public final class App {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 
-  private App() {
+private App() {
   }
 
   /**
@@ -50,24 +48,25 @@ public final class App {
    * method just fires up this simple web app in a default browser.
    *
    * @param args arguments
+ *  @author Suresh Mahto
    */
-  public static void main(String[] args) {
+public static void main(String[] args) {
 
-    try {
-      var classLoader = App.class.getClassLoader();
-      var applicationFile = new File(classLoader.getResource("sample-ui/login.html").getPath());
+try {
+var classLoader = App.class.getClassLoader();
+var applicationFile = new File(classLoader.getResource("sample-ui/login.html").getPath());
 
       // should work for unix like OS (mac, unix etc...)
-      if (Desktop.isDesktopSupported()) {
-        Desktop.getDesktop().open(applicationFile);
+if (Desktop.isDesktopSupported()) {
+Desktop.getDesktop().open(applicationFile);
 
       } else {
         // java Desktop not supported - above unlikely to work for Windows so try instead...
-        Runtime.getRuntime().exec("cmd.exe start " + applicationFile);
+Runtime.getRuntime().exec("cmd.exe start " + applicationFile);
       }
 
     } catch (IOException ex) {
-      LOGGER.error("An error occured.", ex);
+LOGGER.error("An error occured.", ex);
     }
 
   }

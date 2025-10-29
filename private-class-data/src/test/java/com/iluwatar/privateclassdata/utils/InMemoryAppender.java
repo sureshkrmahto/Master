@@ -12,28 +12,26 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class InMemoryAppender extends AppenderBase<ILoggingEvent> {
-  private final List<ILoggingEvent> log = new LinkedList<>();
+private final List<ILoggingEvent> log = new LinkedList<>();
 
-  public InMemoryAppender() {
+public InMemoryAppender() {
     ((Logger) LoggerFactory.getLogger("root")).addAppender(this);
-    start();
+start();
   }
 
-  @Override
-  protected void append(ILoggingEvent eventObject) {
-    log.add(eventObject);
+@Override
+protected void append(ILoggingEvent eventObject) {
+log.add(eventObject);
   }
 
-  public int getLogSize() {
-    return log.size();
+public int getLogSize() {
+return log.size();
   }
 
-  public String getLastMessage() {
-    return log.get(log.size() - 1).getFormattedMessage();
+public String getLastMessage() {
+return log.get(log.size() - 1).getFormattedMessage();
   }
 }

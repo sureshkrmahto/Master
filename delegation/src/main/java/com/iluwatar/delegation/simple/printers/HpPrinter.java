@@ -12,20 +12,19 @@ import org.slf4j.LoggerFactory;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class HpPrinter implements Printer {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(HpPrinter.class);
+private static final Logger LOGGER = LoggerFactory.getLogger(HpPrinter.class);
 
   /**
    * {@inheritDoc}
+ *  @author Suresh Mahto
    */
   @Override
-  public void print(String message) {
-    LOGGER.info("HP Printer : {}", message);
+public void print(String message) {
+LOGGER.info("HP Printer : {}", message);
   }
 
 }

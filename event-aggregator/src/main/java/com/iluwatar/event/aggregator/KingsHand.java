@@ -5,26 +5,24 @@ package com.iluwatar.event.aggregator;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class KingsHand extends EventEmitter implements EventObserver {
 
-  public KingsHand() {
+public KingsHand() {
   }
 
-  public KingsHand(EventObserver obs) {
-    super(obs);
+public KingsHand(EventObserver obs) {
+super(obs);
   }
 
-  @Override
-  public void onEvent(Event e) {
-    notifyObservers(e);
+@Override
+public void onEvent(Event e) {
+notifyObservers(e);
   }
 
-  @Override
-  public void timePasses(Weekday day) {
+@Override
+public void timePasses(Weekday day) {
     // NOP
   }
 }

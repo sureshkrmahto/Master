@@ -5,21 +5,19 @@ package com.iluwatar.unitofwork;
  
  * @author Suresh Mahto
 
- */
-/**
- * @author Suresh Mahto
+ *  @author Suresh Mahto
  */
 public class StudentDatabase {
 
-  public void insert(Student student) {
+public void insert(Student student) {
     //Some insert logic to DB
   }
 
-  public void modify(Student student) {
+public void modify(Student student) {
     //Some modify logic to DB
   }
 
-  public void delete(Student student) {
+public void delete(Student student) {
     //Some delete logic to DB
   }
 }
