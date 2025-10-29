@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 /*
 The MIT License (MIT)
 
-Copyright (c) 2016 Paul Campbell
+Copyright © 2025 Suresh Mahto
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -52,7 +52,7 @@ import java.util.function.Consumer;
 /**
  * Members receive events from the Data-Bus.
  *
- * @author Paul Campbell (pcampbell@kemitix.net)
+ * @author Suresh Mahto
  */
 public interface Member extends Consumer<DataType> {
 

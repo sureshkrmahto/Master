@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -53,7 +53,7 @@ import org.mockito.MockitoAnnotations;
 /**
  * Date: 12/6/15 - 10:49 AM
  *
- * @author Jeroen Meulemeester
+ * @author Suresh Mahto
  */
 class ThreadAsyncExecutorTest {
 

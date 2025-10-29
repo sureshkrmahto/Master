@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ package com.iluwatar.intercepting.filter;
  * Concrete implementation of filter. This filter checks if the input in the Name field is valid.
  * (alphanumeric)
  *
- * @author joshzambales
+ * @author Suresh Mahto
  */
 public class NameFilter extends AbstractFilter {
 

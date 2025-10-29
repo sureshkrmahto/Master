@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -28,7 +28,7 @@ package com.iluwatar.intercepting.filter;
  * the input consist of numbers and it also checks if the input follows the length constraint (11
  * digits).
  *
- * @author joshzambales
+ * @author Suresh Mahto
  */
 public class ContactFilter extends AbstractFilter {
 

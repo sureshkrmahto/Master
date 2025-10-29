@@ -1,6 +1,6 @@
 /*
  * The MIT License
- * Copyright © 2014-2019 Ilkka Seppälä
+ * Copyright © 2025 Suresh Mahto
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -44,7 +44,7 @@ package com.iluwatar.intercepting.filter;
  * <p>In this example we check whether the order request is valid through pre-processing done via
  * {@link Filter}. Each field has its own corresponding {@link Filter}.
  *
- * @author joshzambales
+ * @author Suresh Mahto
  */
 public class App {
 
