@@ -1,10 +1,16 @@
 package com.iluwatar.factory.method;
 
 /**
- * The interface containing method for producing objects.
+ * Creator interface exposing the factory method for producing {@link Weapon}s.
  */
 public interface Blacksmith {
 
+  /**
+   * Manufactures a weapon of the given {@link WeaponType}.
+   *
+   * @param weaponType type of weapon to create
+   * @return manufactured weapon instance
+   */
   Weapon manufactureWeapon(WeaponType weaponType);
 
 }

@@ -4,13 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Spell strategy.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete strategy that slays the dragon using powerful spells.
  */
 public class SpellStrategy implements DragonSlayingStrategy {
 

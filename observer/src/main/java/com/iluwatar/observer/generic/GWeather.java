@@ -5,13 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GWeather.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Generic subject that cycles through {@link com.iluwatar.observer.WeatherType}
+ * values and notifies registered {@link Race} observers.
  */
 public class GWeather extends Observable<GWeather, Race, WeatherType> {
 

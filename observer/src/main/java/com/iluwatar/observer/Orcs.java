@@ -4,13 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Orcs.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete observer representing orcs reacting to weather changes.
  */
 public class Orcs implements WeatherObserver {
 

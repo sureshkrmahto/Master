@@ -5,13 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GOrcs.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Generic observer representing orcs reacting to weather updates.
  */
 public class GOrcs implements Race {
 

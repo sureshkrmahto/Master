@@ -5,13 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GHobbits.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Generic observer representing hobbits reacting to weather updates.
  */
 public class GHobbits implements Race {
 

@@ -5,6 +5,11 @@ package com.iluwatar.factory.method;
  */
 public interface Weapon {
 
+  /**
+   * Returns the {@link WeaponType} of this weapon.
+   *
+   * @return the weapon type
+   */
   WeaponType getWeaponType();
 
 }
