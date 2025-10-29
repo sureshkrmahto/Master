@@ -1,0 +1,156 @@
+package com.caching;
+
+import com.caching.constants.CachingConstants;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.UpdateOptions;
+import java.text.ParseException;
+import java.util.HashMap;
+import java.util.Map;
+import org.bson.Document;
+
+/**
+ * <p>DBManager handles the communication with the underlying data store i.e. Database. It contains
+ * the implemented methods for querying, inserting, and updating data. MongoDB was used as the
+ * database for the application.</p>
+ *
+ * <p>Developer/Tester is able to choose whether the application should use MongoDB as its
+ * underlying data storage (connect()) or a simple Java data structure to (temporarily) store the
+ * data/objects during runtime (createVirtualDB()).</p>
+ 
+ * @author Suresh Mahto
+
+ *  @author Suresh Mahto
+ */
+public final class DbManager {
+
+private static MongoClient mongoClient;
+private static MongoDatabase db;
+private static boolean useMongoDB;
+
+private static Map<String, UserAccount> virtualDB;
+
+private DbManager() {
+  }
+
+  /**
+   * Create DB.
+ *  @author Suresh Mahto
+   */
+public static void createVirtualDb() {
+useMongoDB = false;
+virtualDB = new HashMap<>();
+  }
+
+  /**
+   * Connect to DB.
+ *  @author Suresh Mahto
+   */
+public static void connect() throws ParseException {
+useMongoDB = true;
+mongoClient = new MongoClient();
+db = mongoClient.getDatabase("test");
+  }
+
+  /**
+   * Read user account from DB.
+ *  @author Suresh Mahto
+   */
+public static UserAccount readFromDb(String userId) {
+if (!useMongoDB) {
+if (virtualDB.containsKey(userId)) {
+return virtualDB.get(userId);
+      }
+return null;
+    }
+if (db == null) {
+try {
+connect();
+      } catch (ParseException e) {
+e.printStackTrace();
+      }
+    }
+var iterable = db
+        .getCollection(CachingConstants.USER_ACCOUNT)
+        .find(new Document(CachingConstants.USER_ID, userId));
+if (iterable == null) {
+return null;
+    }
+Document doc = iterable.first();
+String userName = doc.getString(CachingConstants.USER_NAME);
+String appInfo = doc.getString(CachingConstants.ADD_INFO);
+return new UserAccount(userId, userName, appInfo);
+  }
+
+  /**
+   * Write user account to DB.
+ *  @author Suresh Mahto
+   */
+public static void writeToDb(UserAccount userAccount) {
+if (!useMongoDB) {
+virtualDB.put(userAccount.getUserId(), userAccount);
+return;
+    }
+if (db == null) {
+try {
+connect();
+      } catch (ParseException e) {
+e.printStackTrace();
+      }
+    }
+db.getCollection(CachingConstants.USER_ACCOUNT).insertOne(
+new Document(CachingConstants.USER_ID, userAccount.getUserId())
+            .append(CachingConstants.USER_NAME, userAccount.getUserName())
+            .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
+    );
+  }
+
+  /**
+   * Update DB.
+ *  @author Suresh Mahto
+   */
+public static void updateDb(UserAccount userAccount) {
+if (!useMongoDB) {
+virtualDB.put(userAccount.getUserId(), userAccount);
+return;
+    }
+if (db == null) {
+try {
+connect();
+      } catch (ParseException e) {
+e.printStackTrace();
+      }
+    }
+db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
+new Document(CachingConstants.USER_ID, userAccount.getUserId()),
+new Document("$set", new Document(CachingConstants.USER_NAME, userAccount.getUserName())
+            .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())));
+  }
+
+  /**
+   * Insert data into DB if it does not exist. Else, update it.
+ *  @author Suresh Mahto
+   */
+public static void upsertDb(UserAccount userAccount) {
+if (!useMongoDB) {
+virtualDB.put(userAccount.getUserId(), userAccount);
+return;
+    }
+if (db == null) {
+try {
+connect();
+      } catch (ParseException e) {
+e.printStackTrace();
+      }
+    }
+db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
+new Document(CachingConstants.USER_ID, userAccount.getUserId()),
+new Document("$set",
+new Document(CachingConstants.USER_ID, userAccount.getUserId())
+                .append(CachingConstants.USER_NAME, userAccount.getUserName())
+                .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
+        ),
+new UpdateOptions().upsert(true)
+    );
+  }
+}

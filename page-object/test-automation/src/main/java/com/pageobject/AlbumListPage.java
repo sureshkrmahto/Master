@@ -1,0 +1,84 @@
+package com.pageobject;
+
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import java.io.IOException;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+/**
+ * Page Object encapsulating the Album List page (album-list.html)
+ 
+ * @author Suresh Mahto
+
+ *  @author Suresh Mahto
+ */
+public class AlbumListPage extends Page {
+
+private static final Logger LOGGER = LoggerFactory.getLogger(AlbumListPage.class);
+private static final String ALBUM_LIST_HTML_FILE = "album-list.html";
+private static final String PAGE_URL = "file:" + AUT_PATH + ALBUM_LIST_HTML_FILE;
+
+private HtmlPage page;
+
+
+  /**
+   * Constructor.
+ *  @author Suresh Mahto
+   */
+public AlbumListPage(WebClient webClient) {
+super(webClient);
+  }
+
+
+  /**
+   * Navigates to the Album List Page.
+   *
+   * @return {@link AlbumListPage}
+ *  @author Suresh Mahto
+   */
+public AlbumListPage navigateToPage() {
+try {
+page = this.webClient.getPage(PAGE_URL);
+    } catch (IOException e) {
+LOGGER.error("An error occured on navigateToPage.", e);
+    }
+return this;
+  }
+
+  /**
+   * {@inheritDoc}
+ *  @author Suresh Mahto
+   */
+  @Override
+public boolean isAt() {
+return "Album List".equals(page.getTitleText());
+  }
+
+  /**
+   * Selects an album by the given album title.
+   *
+   * @param albumTitle the title of the album to click
+   * @return the album page
+ *  @author Suresh Mahto
+   */
+public AlbumPage selectAlbum(String albumTitle) {
+    // uses XPath to find list of html anchor tags with the class album in it
+var albumLinks = (List<HtmlAnchor>) page.getByXPath("//tr[@class='album']//a");
+for (var anchor : albumLinks) {
+if (anchor.getTextContent().equals(albumTitle)) {
+try {
+anchor.click();
+return new AlbumPage(webClient);
+        } catch (IOException e) {
+LOGGER.error("An error occured on selectAlbum", e);
+        }
+      }
+    }
+throw new IllegalArgumentException("No links with the album title: " + albumTitle);
+  }
+
+
+}

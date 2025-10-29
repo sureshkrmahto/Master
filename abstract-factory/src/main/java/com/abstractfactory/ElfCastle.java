@@ -1,0 +1,18 @@
+package com.abstractfactory;
+
+/**
+ * ElfCastle.
+ 
+ * @author Suresh Mahto
+
+ *  @author Suresh Mahto
+ */
+public class ElfCastle implements Castle {
+
+static final String DESCRIPTION = "This is the Elven castle!";
+
+@Override
+public String getDescription() {
+return DESCRIPTION;
+  }
+}

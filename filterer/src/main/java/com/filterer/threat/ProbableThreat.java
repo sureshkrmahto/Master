@@ -1,0 +1,13 @@
+package com.filterer.threat;
+
+/**
+ * Represents threat that might be a threat with given probability.
+ *  @author Suresh Mahto
+ */
+public interface ProbableThreat extends Threat {
+  /**
+   * Returns probability of occurrence of given threat.
+   * @return probability of occurrence of given threat.
+*/
+double probability();
+}
