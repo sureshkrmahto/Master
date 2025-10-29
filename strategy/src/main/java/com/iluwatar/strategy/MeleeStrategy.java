@@ -4,13 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Melee strategy.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete strategy that slays the dragon using close-quarters melee combat.
  */
 public class MeleeStrategy implements DragonSlayingStrategy {
 

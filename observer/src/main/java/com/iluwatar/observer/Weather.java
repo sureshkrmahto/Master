@@ -6,14 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Weather can be observed by implementing {@link WeatherObserver} interface and registering as
- * listener.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Subject that maintains the current {@link WeatherType} and notifies registered
+ * {@link WeatherObserver}s when it changes.
  */
 public class Weather {
 
@@ -22,15 +16,28 @@ public class Weather {
   private WeatherType currentWeather;
   private final List<WeatherObserver> observers;
 
+  /**
+   * Initializes the weather as {@link WeatherType#SUNNY}.
+   */
   public Weather() {
     observers = new ArrayList<>();
     currentWeather = WeatherType.SUNNY;
   }
 
+  /**
+   * Registers a weather observer.
+   *
+   * @param obs observer to add
+   */
   public void addObserver(WeatherObserver obs) {
     observers.add(obs);
   }
 
+  /**
+   * Unregisters a weather observer.
+   *
+   * @param obs observer to remove
+   */
   public void removeObserver(WeatherObserver obs) {
     observers.remove(obs);
   }

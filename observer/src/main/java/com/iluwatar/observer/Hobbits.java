@@ -4,13 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Hobbits.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete observer representing hobbits reacting to weather changes.
  */
 public class Hobbits implements WeatherObserver {
 

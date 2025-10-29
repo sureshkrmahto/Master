@@ -5,13 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Concrete subclass for creating new objects.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete creator that manufactures Orc {@link Weapon} variants.
  */
 public class OrcBlacksmith implements Blacksmith {
 

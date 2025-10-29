@@ -1,18 +1,17 @@
 package com.iluwatar.factory.method;
 
 /**
- * ElfWeapon.
- 
- * @author Suresh Mahto
-
- */
-/**
- * @author Suresh Mahto
+ * Concrete product representing an Elven-made {@link Weapon}.
  */
 public class ElfWeapon implements Weapon {
 
   private final WeaponType weaponType;
 
+  /**
+   * Creates a new Elven weapon of the given type.
+   *
+   * @param weaponType type of weapon
+   */
   public ElfWeapon(WeaponType weaponType) {
     this.weaponType = weaponType;
   }
