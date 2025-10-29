@@ -51,7 +51,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 /**
- * Date: 12/6/15 - 10:49 AM
  *
  * @author Suresh Mahto
  */

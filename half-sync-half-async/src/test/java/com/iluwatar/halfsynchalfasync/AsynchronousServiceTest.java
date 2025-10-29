@@ -41,7 +41,6 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
 /**
- * Date: 12/12/15 - 11:15 PM
  *
  * @author Suresh Mahto
  */

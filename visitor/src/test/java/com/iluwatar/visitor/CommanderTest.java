@@ -27,7 +27,6 @@ import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 
 /**
- * Date: 12/30/15 - 19:45 PM.
  *
  * @author Suresh Mahto
  */

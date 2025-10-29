@@ -37,7 +37,6 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/30/15 - 18:12 PM
  *
  * @param <M> Type of StealingMethod
  * @author Suresh Mahto

@@ -30,7 +30,6 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import org.junit.jupiter.api.Test;
 
 /**
- * Date: 12/29/15 - 10:50 PM.
  *
  * @author Suresh Mahto
  */

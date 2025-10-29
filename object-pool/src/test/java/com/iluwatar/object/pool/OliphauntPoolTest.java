@@ -31,7 +31,6 @@ import static java.time.Duration.ofMillis;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Date: 12/27/15 - 1:05 AM
  *
  * @author Suresh Mahto
  */

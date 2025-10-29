@@ -39,7 +39,6 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/26/15 - 11:44 PM
  *
  * @author Suresh Mahto
  */
