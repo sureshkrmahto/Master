@@ -6,6 +6,12 @@ import java.util.Map;
 
 /**
  * Banking implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class InMemoryBank implements WireTransfers {
 

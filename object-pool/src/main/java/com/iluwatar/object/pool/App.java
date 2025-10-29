@@ -20,6 +20,12 @@ import org.slf4j.LoggerFactory;
  * <p>In this example we have created {@link OliphauntPool} inheriting from generic {@link
  * ObjectPool}. {@link Oliphaunt}s can be checked out from the pool and later returned to it. The
  * pool tracks created instances and their status (available, inUse).
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

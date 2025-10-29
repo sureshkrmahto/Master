@@ -10,6 +10,12 @@ import java.util.Set;
 /**
  * Value object representing lottery numbers. This lottery uses sets of 4 numbers. The numbers must
  * be unique and between 1 and 20.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryNumbers {
 
@@ -90,7 +96,13 @@ public class LotteryNumbers {
 
   /**
    * Helper class for generating random numbers.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   private static class RandomNumberGenerator {
 
     private final PrimitiveIterator.OfInt randomIterator;

@@ -7,6 +7,12 @@ import org.slf4j.LoggerFactory;
  * This class represents a Ball which extends {@link GameItem} and implements the logic for ball
  * item, like move and draw. It hold a reference of {@link BallThread} to delegate the suspend and
  * resume task.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class BallItem extends GameItem {
 

@@ -11,8 +11,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * An adapter to communicate with inventory micro-service.
+ 
+ * @author Suresh Mahto
+
  */
 @Component
+/**
+ * @author Suresh Mahto
+ */
 public class ProductInventoryClientImpl implements ProductInventoryClient {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ProductInventoryClientImpl.class);

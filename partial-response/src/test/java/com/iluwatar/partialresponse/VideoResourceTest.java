@@ -13,8 +13,14 @@ import java.util.Map;
 
 /**
  * tests {@link VideoResource}.
+ 
+ * @author Suresh Mahto
+
  */
 @ExtendWith(MockitoExtension.class)
+/**
+ * @author Suresh Mahto
+ */
 class VideoResourceTest {
   @Mock
   private static FieldJsonMapper fieldJsonMapper;

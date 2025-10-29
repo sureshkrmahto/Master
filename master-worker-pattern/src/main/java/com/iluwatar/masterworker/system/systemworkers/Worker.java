@@ -7,8 +7,13 @@ import com.iluwatar.masterworker.system.systemmaster.Master;
 /**
  * The abstract Worker class which extends Thread class to enable parallel processing. Contains
  * fields master(holding reference to master), workerId (unique id) and receivedData(from master).
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class Worker extends Thread {
   private final Master master;
   private final int workerId;

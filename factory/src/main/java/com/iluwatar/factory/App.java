@@ -10,8 +10,13 @@ import org.slf4j.LoggerFactory;
  * 
  * <p>In this example the CarFactory is the factory class and it provides a static method to 
  * create different cars.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
   
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

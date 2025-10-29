@@ -2,6 +2,12 @@ package com.iluwatar.abstractfactory;
 
 /**
  * OrcKing.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcKing implements King {
 

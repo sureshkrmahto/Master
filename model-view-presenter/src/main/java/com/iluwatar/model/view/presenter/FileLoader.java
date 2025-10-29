@@ -13,6 +13,12 @@ import org.slf4j.LoggerFactory;
  * architectural pattern.
  *
  * <p>It is responsible for reading and loading the contents of a given file.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FileLoader implements Serializable {
 

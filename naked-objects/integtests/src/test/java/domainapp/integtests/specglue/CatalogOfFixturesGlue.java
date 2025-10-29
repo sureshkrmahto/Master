@@ -6,6 +6,12 @@ import org.apache.isis.core.specsupport.specs.CukeGlueAbstract;
 
 /**
  * Test Execution to append a fixture of SimpleObjects
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CatalogOfFixturesGlue extends CukeGlueAbstract {
 

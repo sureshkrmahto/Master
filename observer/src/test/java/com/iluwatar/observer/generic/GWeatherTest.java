@@ -15,6 +15,9 @@ import static org.mockito.Mockito.*;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class GWeatherTest {
 
   private InMemoryAppender appender;

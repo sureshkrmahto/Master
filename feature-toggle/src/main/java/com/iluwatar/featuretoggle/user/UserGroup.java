@@ -9,6 +9,12 @@ import java.util.List;
  * users.
  *
  * @see User
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class UserGroup {
 

@@ -5,6 +5,12 @@ import java.util.List;
 
 /**
  * Party implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PartyImpl implements Party {
 

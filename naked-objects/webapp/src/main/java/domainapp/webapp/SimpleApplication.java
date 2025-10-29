@@ -39,6 +39,14 @@ import org.slf4j.LoggerFactory;
  *    &lt;/init-param&gt;
  * &lt;/filter&gt;
  * </pre>
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleApplication extends IsisWicketApplication {
 

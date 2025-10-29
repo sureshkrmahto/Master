@@ -2,6 +2,12 @@ package com.iluwatar.visitor;
 
 /**
  * Soldier.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Soldier extends Unit {
 

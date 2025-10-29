@@ -17,6 +17,9 @@ import org.junit.jupiter.api.Test;
  * @param <E> Type of Event Emitter
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class EventEmitterTest<E extends EventEmitter> {
 
   /**

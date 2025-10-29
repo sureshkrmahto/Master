@@ -2,6 +2,12 @@ package com.iluwatar.business.delegate;
 
 /**
  * BusinessDelegate separates the presentation and business tiers.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class BusinessDelegate {
 

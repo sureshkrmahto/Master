@@ -11,6 +11,12 @@ import org.apache.isis.core.specsupport.specs.CukeGlueAbstract;
 
 /**
  * Test Simple Object Operations
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectGlue extends CukeGlueAbstract {
 

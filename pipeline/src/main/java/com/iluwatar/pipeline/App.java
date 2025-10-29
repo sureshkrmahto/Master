@@ -9,6 +9,12 @@ package com.iluwatar.pipeline;
  *
  * <p>Classes used in this example are suffixed with "Handlers", and synonymously refers to the
  * "stage".
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   /**

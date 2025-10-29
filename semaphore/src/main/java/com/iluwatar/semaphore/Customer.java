@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 /**
  * A Customer attempts to repeatedly take Fruit from the FruitShop by taking Fruit from FruitBowl
  * instances.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Customer extends Thread {
 

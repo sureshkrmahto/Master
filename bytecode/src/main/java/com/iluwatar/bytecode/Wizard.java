@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 /**
  * This class represent game objects which properties can be changed by instructions interpreted by
  * virtual machine.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Wizard {
   private static final Logger LOGGER = LoggerFactory.getLogger(Wizard.class);

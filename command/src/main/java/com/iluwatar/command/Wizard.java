@@ -5,6 +5,12 @@ import java.util.LinkedList;
 
 /**
  * Wizard is the invoker of the commands.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Wizard {
 

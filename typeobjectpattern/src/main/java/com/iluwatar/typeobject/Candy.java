@@ -3,6 +3,12 @@ package com.iluwatar.typeobject;
 /**
  * The Candy class has a field type, which represents the 'type' of candy. The objects are created
  * by parsing the candy.json file.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Candy {
 

@@ -2,6 +2,12 @@ package com.iluwatar.intercepting.filter;
 
 /**
  * Order class carries the order data.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Order {
 

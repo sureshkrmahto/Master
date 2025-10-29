@@ -2,6 +2,12 @@ package com.iluwatar.unitofwork;
 
 /**
  * {@link Student} is an entity.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Student {
   private final Integer id;

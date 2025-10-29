@@ -2,6 +2,12 @@ package com.iluwatar.priority.queue;
 
 /**
  * Message bean.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Message implements Comparable<Message> {
   private final String message;

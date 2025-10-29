@@ -36,6 +36,12 @@ import org.slf4j.LoggerFactory;
  * @see CacheStore
  * @see LruCache
  * @see CachingPolicy
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

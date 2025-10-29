@@ -4,6 +4,12 @@ import com.iluwatar.separatedinterface.invoice.TaxCalculator;
 
 /**
  * TaxCalculator for Domestic goods with 20% tax.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DomesticTaxCalculator implements TaxCalculator {
 

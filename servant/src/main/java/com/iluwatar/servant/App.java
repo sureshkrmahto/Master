@@ -11,6 +11,14 @@ import org.slf4j.LoggerFactory;
  * service, while objects for which the servant does something, are taken as parameters.
  *
  * <p>In this example {@link Servant} is serving {@link King} and {@link Queen}.
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

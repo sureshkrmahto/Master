@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Zoom class implements its accept method.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Zoom extends Modem {
 

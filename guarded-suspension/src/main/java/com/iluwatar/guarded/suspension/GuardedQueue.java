@@ -11,6 +11,12 @@ import org.slf4j.LoggerFactory;
  * proper state.
  *
  * @see <a href="http://java-design-patterns.com/patterns/guarded-suspension/">http://java-design-patterns.com/patterns/guarded-suspension/</a>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GuardedQueue {
   private static final Logger LOGGER = LoggerFactory.getLogger(GuardedQueue.class);

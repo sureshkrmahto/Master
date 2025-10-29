@@ -5,6 +5,12 @@ import java.util.List;
 
 /**
  * The Step Builder class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class CharacterStepBuilder {
 
@@ -73,7 +79,13 @@ public final class CharacterStepBuilder {
 
   /**
    * Step Builder implementation.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   private static class CharacterSteps implements NameStep, ClassStep, WeaponStep, SpellStep,
       AbilityStep, BuildStep {
 

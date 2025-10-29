@@ -8,6 +8,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Test methods in HalfSource
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class HalfSourceTest {
   private static final HalfSource source = new HalfSource();

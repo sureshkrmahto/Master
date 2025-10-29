@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Sword.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Sword implements Weapon {
 

@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SoldierVisitor.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SoldierVisitor implements UnitVisitor {
 

@@ -2,6 +2,12 @@ package com.iluwatar.priority.queue;
 
 /**
  * Manage priority queue.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class QueueManager {
   /*

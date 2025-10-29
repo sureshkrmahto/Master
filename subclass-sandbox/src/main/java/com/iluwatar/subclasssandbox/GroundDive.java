@@ -4,6 +4,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GroundDive superpower.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GroundDive extends Superpower {
 

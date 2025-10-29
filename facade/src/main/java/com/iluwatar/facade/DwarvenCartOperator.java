@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * DwarvenCartOperator is one of the goldmine subsystems.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DwarvenCartOperator extends DwarvenMineWorker {
 

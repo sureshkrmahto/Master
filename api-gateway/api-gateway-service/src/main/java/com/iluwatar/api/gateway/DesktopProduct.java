@@ -2,6 +2,12 @@ package com.iluwatar.api.gateway;
 
 /**
  * Encapsulates all of the information that a desktop client needs to display a product.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DesktopProduct {
   /**

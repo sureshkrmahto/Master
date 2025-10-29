@@ -18,6 +18,12 @@ import javax.swing.JTextField;
 
 /**
  * This class is the GUI implementation of the View component in the Model-View-Presenter pattern.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FileSelectorJFrame extends JFrame implements FileSelectorView, ActionListener {
 

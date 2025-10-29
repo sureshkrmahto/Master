@@ -20,6 +20,9 @@ import org.junit.jupiter.params.provider.MethodSource;
  * @author Suresh Mahto
  */
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+/**
+ * @author Suresh Mahto
+ */
 public abstract class ExpressionTest<E extends Expression> {
 
   /**

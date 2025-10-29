@@ -7,6 +7,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests {@link Student}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class StudentTest {
 

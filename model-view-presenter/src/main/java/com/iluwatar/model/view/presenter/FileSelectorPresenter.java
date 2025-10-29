@@ -7,6 +7,12 @@ import java.io.Serializable;
  * architectural pattern.
  *
  * <p>It is responsible for reacting to the user's actions and update the View component.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FileSelectorPresenter implements Serializable {
 

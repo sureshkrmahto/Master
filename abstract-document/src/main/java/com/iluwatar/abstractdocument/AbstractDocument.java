@@ -9,6 +9,12 @@ import java.util.stream.Stream;
 
 /**
  * Abstract implementation of Document interface.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class AbstractDocument implements Document {
 

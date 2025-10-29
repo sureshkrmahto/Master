@@ -12,6 +12,12 @@ package com.iluwatar.model.view.presenter;
  *
  * <p>Finally, please notice the wiring between the Presenter and the View and between the
  * Presenter and the Model.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

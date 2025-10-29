@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Physics component Manager for Game.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class PhysicsComponentManager {
 

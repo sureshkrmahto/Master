@@ -16,6 +16,12 @@ import org.slf4j.LoggerFactory;
  * long due to slow compile times or other tooling issues. It has too much trust. If you want to
  * ensure the behavior being defined can’t break the game, you need to sandbox it from the rest of
  * the codebase.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

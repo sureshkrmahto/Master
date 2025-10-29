@@ -14,6 +14,12 @@ package com.iluwatar.model.view.controller;
  * nourishment. {@link GiantView} can display the giant with its current status. {@link
  * GiantController} receives input affecting the model and delegates redrawing the giant to the
  * view.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

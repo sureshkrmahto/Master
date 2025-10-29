@@ -14,6 +14,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>In Abstract Document pattern,({@link AbstractDocument}) fully implements {@link Document})
  * interface. Traits are then defined to enable access to properties in usual, static way.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

@@ -3,6 +3,12 @@ package com.iluwatar.gameloop;
 /**
  * Update and render objects in the game. Here we add a Bullet object to the
  * game system to show how the game loop works.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GameController {
 

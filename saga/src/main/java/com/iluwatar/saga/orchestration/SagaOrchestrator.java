@@ -12,6 +12,14 @@ import org.slf4j.LoggerFactory;
 /**
  * The orchestrator that manages all the transactions and directs the participant services to
  * execute local transactions based on events.
+ 
+
+ * @author Suresh Mahto
+
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SagaOrchestrator {
   private static final Logger LOGGER = LoggerFactory.getLogger(SagaOrchestrator.class);
@@ -38,6 +46,11 @@ public class SagaOrchestrator {
    * @param value incoming value
    * @param <K>   type for incoming value
    * @return result @see {@link Result}
+   
+
+   * @author Suresh Mahto
+
+
    */
   @SuppressWarnings("unchecked")
   public <K> Result execute(K value) {
@@ -87,6 +100,9 @@ public class SagaOrchestrator {
   }
 
 
+/**
+ * @author Suresh Mahto
+ */
   private static class CurrentState {
     int currentNumber;
     boolean isForward;

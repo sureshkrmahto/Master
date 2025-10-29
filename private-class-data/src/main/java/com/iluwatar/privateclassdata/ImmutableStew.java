@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Immutable stew class, protected with Private Class Data pattern.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ImmutableStew {
 

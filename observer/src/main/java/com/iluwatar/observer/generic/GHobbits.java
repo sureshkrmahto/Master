@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GHobbits.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GHobbits implements Race {
 

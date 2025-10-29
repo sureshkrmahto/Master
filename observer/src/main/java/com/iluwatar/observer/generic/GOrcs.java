@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * GOrcs.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GOrcs implements Race {
 

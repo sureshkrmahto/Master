@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * System after whole migration. Only depends on new version source ({@link NewSource}).
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class NewArithmetic {
   private static final Logger LOGGER = LoggerFactory.getLogger(NewArithmetic.class);

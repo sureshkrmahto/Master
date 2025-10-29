@@ -5,6 +5,12 @@ package com.iluwatar.gameloop;
  * real time passed since the last frame. The longer the frame takes, the bigger
  * steps the game takes. It always keeps up with real time because it will take
  * bigger and bigger steps to get there.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class VariableStepGameLoop extends GameLoop {
 

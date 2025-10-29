@@ -14,8 +14,13 @@ import org.json.simple.parser.ParseException;
 
 /**
  * The JsonParser class helps parse the json file candy.json to get all the different candies.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class JsonParser {
   Hashtable<String, Candy> candies;
 

@@ -36,6 +36,12 @@ import org.slf4j.LoggerFactory;
  * between both layers. Such as Priority Queue can be used as queuing layer to prioritize the way
  * tasks are executed. Our implementation is just one simple way of implementing this pattern, there
  * are many variants possible as described in its applications.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 
@@ -70,7 +76,13 @@ public class App {
 
   /**
    * ArithmeticSumTask.
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   static class ArithmeticSumTask implements AsyncTask<Long> {
     private final long numberOfElements;
 

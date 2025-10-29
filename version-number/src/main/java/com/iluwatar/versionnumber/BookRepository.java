@@ -8,6 +8,12 @@ import java.util.Map;
  * As a typical database do, repository operates with copies of object.
  * So client and repo has different copies of book, which can lead to concurrency conflicts
  * as much as in real databases.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class BookRepository {
   private final Map<Long, Book> collection = new HashMap<>();

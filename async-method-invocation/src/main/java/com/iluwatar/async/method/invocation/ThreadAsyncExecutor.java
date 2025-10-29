@@ -7,6 +7,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Implementation of async executor that creates a new thread for every task.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ThreadAsyncExecutor implements AsyncExecutor {
 
@@ -49,7 +55,13 @@ public class ThreadAsyncExecutor implements AsyncExecutor {
    *
    * @see java.util.concurrent.FutureTask
    * @see java.util.concurrent.CompletableFuture
+   
+   * @author Suresh Mahto
+
    */
+/**
+ * @author Suresh Mahto
+ */
   private static class CompletableResult<T> implements AsyncResult<T> {
 
     static final int RUNNING = 1;

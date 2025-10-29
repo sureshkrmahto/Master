@@ -8,6 +8,12 @@ import org.junit.Test;
 
 /**
  * Test for SimpleObject
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectTest {
 

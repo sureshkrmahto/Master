@@ -16,8 +16,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * the ultimate destination. It basically consumes messages of the input channel and publishes the
  * unmodified message to both output channels.
  * </p>
+ 
+ * @author Suresh Mahto
+
  */
 @SpringBootApplication
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   /**

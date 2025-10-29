@@ -10,6 +10,12 @@ package com.iluwatar.facade;
  *
  * <p>In this example the Facade is ({@link DwarvenGoldmineFacade}) and it provides a simpler
  * interface to the goldmine subsystem.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

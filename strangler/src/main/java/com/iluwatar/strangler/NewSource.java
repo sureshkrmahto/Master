@@ -7,6 +7,12 @@ import org.slf4j.LoggerFactory;
 /**
  * New source. Completely covers functionalities of old source with new techniques
  * and also has some new features.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class NewSource {
   private static final Logger LOGGER = LoggerFactory.getLogger(NewSource.class);

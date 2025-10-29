@@ -5,6 +5,12 @@ package com.iluwatar.updatemethod;
  * patrolling to the right, and after them reach the bounding, it will start
  * patrolling to the left. For each frame, one skeleton will move 1 position
  * step.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Skeleton extends Entity {
 

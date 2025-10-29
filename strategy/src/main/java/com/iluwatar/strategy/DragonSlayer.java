@@ -2,6 +2,12 @@ package com.iluwatar.strategy;
 
 /**
  * DragonSlayer uses different strategies to slay the dragon.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DragonSlayer {
 

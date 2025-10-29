@@ -31,6 +31,12 @@ import org.slf4j.LoggerFactory;
  * this state is called the Half-Open state, where it stays till the service is down, and once it
  * recovers, it goes back to the closed state and the cycle continues.
  * </p>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

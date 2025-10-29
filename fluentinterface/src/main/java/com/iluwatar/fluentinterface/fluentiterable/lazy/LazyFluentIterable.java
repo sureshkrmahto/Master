@@ -13,6 +13,12 @@ import java.util.function.Predicate;
  * operations when a terminating operation is applied.
  *
  * @param <E> the type of the objects the iteration is about
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LazyFluentIterable<E> implements FluentIterable<E> {
 

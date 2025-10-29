@@ -2,6 +2,12 @@ package com.iluwatar.saga.orchestration;
 
 /**
  * Class representing a service to book a hotel.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class HotelBookingService extends Service<String> {
   @Override

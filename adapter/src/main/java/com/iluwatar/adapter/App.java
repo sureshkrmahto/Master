@@ -18,6 +18,12 @@ package com.iluwatar.adapter;
  * new ship! we need to reuse this {@link FishingBoat}. The captain needs a rowing boat which he can
  * operate. The spec is in {@link RowingBoat}. We will use the Adapter pattern to reuse {@link
  * FishingBoat}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class App {
 

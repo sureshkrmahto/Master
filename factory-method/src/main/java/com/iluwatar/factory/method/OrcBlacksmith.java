@@ -6,6 +6,12 @@ import java.util.Map;
 
 /**
  * Concrete subclass for creating new objects.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcBlacksmith implements Blacksmith {
 

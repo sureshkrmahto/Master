@@ -2,6 +2,12 @@ package com.iluwatar.semaphore;
 
 /**
  * Semaphore is an implementation of a semaphore lock.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Semaphore implements Lock {
 

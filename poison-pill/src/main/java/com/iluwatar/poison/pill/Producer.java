@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Class responsible for producing unit of work that can be expressed as message and submitted to
  * queue.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Producer {
 

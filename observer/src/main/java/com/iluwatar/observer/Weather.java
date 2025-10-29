@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Weather can be observed by implementing {@link WeatherObserver} interface and registering as
  * listener.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Weather {
 

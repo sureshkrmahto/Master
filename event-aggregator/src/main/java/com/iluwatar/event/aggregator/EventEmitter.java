@@ -5,6 +5,12 @@ import java.util.List;
 
 /**
  * EventEmitter is the base class for event producers that can be observed.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class EventEmitter {
 

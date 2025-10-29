@@ -6,6 +6,12 @@ package com.iluwatar.pipeline;
  *
  * @param <I> the type of the input for the first stage handler
  * @param <O> the final stage handler's output type
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class Pipeline<I, O> {
 

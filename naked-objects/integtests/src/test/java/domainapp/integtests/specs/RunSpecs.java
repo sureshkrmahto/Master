@@ -8,11 +8,19 @@ import cucumber.api.junit.Cucumber;
 
 /**
  * Runs scenarios in all <tt>.feature</tt> files (this package and any subpackages).
+ 
+
+ * @author Suresh Mahto
+
+
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(format = {"html:target/cucumber-html-report", "json:target/cucumber.json"},
     glue = {"classpath:domainapp.integtests.specglue"}, strict = true, tags = {"~@backlog",
         "~@ignore"})
+/**
+ * @author Suresh Mahto
+ */
 public class RunSpecs {
   // intentionally empty
 }

@@ -19,10 +19,19 @@ import org.slf4j.LoggerFactory;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class TreeTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender();
@@ -115,6 +124,9 @@ public class TreeTest {
     assertSame(NullNode.getInstance(), level1.getLeft());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

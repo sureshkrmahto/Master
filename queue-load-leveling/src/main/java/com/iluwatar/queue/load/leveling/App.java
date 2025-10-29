@@ -34,6 +34,12 @@ import org.slf4j.LoggerFactory;
  * objects. All the worker threads {@link TaskGenerator} will submit the messages to the
  * MessageQueue. The service executor class {@link ServiceExecutor} will pick up one task at a time
  * from the Queue and execute them.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

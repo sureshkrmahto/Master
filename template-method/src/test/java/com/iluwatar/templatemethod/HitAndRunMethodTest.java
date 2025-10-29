@@ -4,6 +4,9 @@ package com.iluwatar.templatemethod;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class HitAndRunMethodTest extends StealingMethodTest<HitAndRunMethod> {
 
   /**

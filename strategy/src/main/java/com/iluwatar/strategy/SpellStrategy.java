@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Spell strategy.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SpellStrategy implements DragonSlayingStrategy {
 

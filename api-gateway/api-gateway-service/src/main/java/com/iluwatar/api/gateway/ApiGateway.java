@@ -7,8 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * The ApiGateway aggregates calls to microservices based on the needs of the individual clients.
+ 
+ * @author Suresh Mahto
+
  */
 @RestController
+/**
+ * @author Suresh Mahto
+ */
 public class ApiGateway {
 
   @Resource

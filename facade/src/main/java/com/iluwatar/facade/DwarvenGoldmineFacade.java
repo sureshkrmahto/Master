@@ -9,6 +9,12 @@ import java.util.List;
  *
  * <p>This makes the goldmine easier to operate and cuts the dependencies from the goldmine user to
  * the subsystems.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DwarvenGoldmineFacade {
 

@@ -8,6 +8,15 @@ import java.util.List;
 import static com.iluwatar.combinator.Finders.*;
 import static org.junit.Assert.*;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class FindersTest {
 
   @Test

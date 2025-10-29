@@ -16,6 +16,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>For more specific and strict rules to implement value objects check the rules from Stephen
  * Colebourne's term VALJO : http://blog.joda.org/2014/03/valjos-value-java-objects.html
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

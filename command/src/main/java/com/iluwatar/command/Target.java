@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Base class for spell targets.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class Target {
 

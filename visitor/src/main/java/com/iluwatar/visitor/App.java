@@ -7,6 +7,12 @@ package com.iluwatar.visitor;
  * <p>In this example there is a unit hierarchy beginning from {@link Commander}. This hierarchy is
  * traversed by visitors. {@link SoldierVisitor} applies its operation on {@link Soldier}s, {@link
  * SergeantVisitor} on {@link Sergeant}s and so on.</p>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

@@ -2,6 +2,12 @@ package com.iluwatar.business.delegate;
 
 /**
  * Client utilizes BusinessDelegate to call the business tier.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Client {
 

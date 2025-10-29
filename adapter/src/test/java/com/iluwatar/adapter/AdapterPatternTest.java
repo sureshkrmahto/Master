@@ -10,6 +10,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Test class
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AdapterPatternTest {
 

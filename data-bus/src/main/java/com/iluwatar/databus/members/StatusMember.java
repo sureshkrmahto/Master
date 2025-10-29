@@ -13,6 +13,9 @@ import java.util.logging.Logger;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class StatusMember implements Member {
 
   private static final Logger LOGGER = Logger.getLogger(StatusMember.class.getName());

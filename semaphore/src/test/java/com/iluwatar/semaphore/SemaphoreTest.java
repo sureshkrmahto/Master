@@ -7,6 +7,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Test case for acquiring and releasing a Semaphore
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SemaphoreTest {
 

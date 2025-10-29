@@ -22,6 +22,12 @@ import java.util.Map;
  * doesn't return a result. Because it is used as a statement, it mutates the list given as
  * argument. Both of the for loops also mutate lists as they iterate. Being statements, that's just
  * how these elements work. As a result, the code contains unnecessary garbage variables
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ImperativeProgramming {
   private ImperativeProgramming() {

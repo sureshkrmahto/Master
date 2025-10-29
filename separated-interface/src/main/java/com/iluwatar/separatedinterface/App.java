@@ -14,6 +14,12 @@ import org.slf4j.LoggerFactory;
  * <p>In this class the {@link InvoiceGenerator} class is injected with different instances of
  * {@link com.iluwatar.separatedinterface.invoice.TaxCalculator} implementations located in separate
  * packages, to receive different responses for both of the implementations.</p>
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

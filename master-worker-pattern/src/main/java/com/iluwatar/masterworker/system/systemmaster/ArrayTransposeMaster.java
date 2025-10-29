@@ -10,8 +10,13 @@ import java.util.stream.IntStream;
 /**
  * Class ArrayTransposeMaster extends abstract class {@link Master} and contains definition of
  * aggregateData, which will obtain final result from all data obtained and for setWorkers.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class ArrayTransposeMaster extends Master {
   public ArrayTransposeMaster(int numOfWorkers) {
     super(numOfWorkers);

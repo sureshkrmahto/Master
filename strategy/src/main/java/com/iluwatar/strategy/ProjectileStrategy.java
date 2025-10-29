@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Projectile strategy.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ProjectileStrategy implements DragonSlayingStrategy {
 

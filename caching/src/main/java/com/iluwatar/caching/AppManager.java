@@ -9,6 +9,12 @@ import java.util.Optional;
  * also initialized here. Before the cache can be used, the size of the cache has to be set.
  * Depending on the chosen caching policy, AppManager will call the appropriate function in the
  * CacheStore class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class AppManager {
 

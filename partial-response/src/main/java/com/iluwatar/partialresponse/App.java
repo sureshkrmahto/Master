@@ -10,8 +10,13 @@ import org.slf4j.LoggerFactory;
  * specific fields information in video to server.
  *
  * <p>{@link VideoResource} act as server to serve video information.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
 

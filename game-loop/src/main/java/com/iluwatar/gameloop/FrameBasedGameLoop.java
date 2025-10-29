@@ -7,6 +7,12 @@ package com.iluwatar.gameloop;
  * will spin so fast users won’t be able to see what’s going on. On a slow machine, the
  * game will crawl. If you have a part of the game that’s content-heavy or does more AI
  * or physics, the game will actually play slower there.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FrameBasedGameLoop extends GameLoop {
 

@@ -11,8 +11,14 @@ import org.apache.isis.applib.annotation.SemanticsOf;
  * HomePage Domain Service.
  *
  * @see HomePageViewModel linked view to HomePage
+ 
+ * @author Suresh Mahto
+
  */
 @DomainService(nature = NatureOfService.VIEW_CONTRIBUTIONS_ONLY)
+/**
+ * @author Suresh Mahto
+ */
 public class HomePageService {
 
   // endregion

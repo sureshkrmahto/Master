@@ -4,6 +4,12 @@ import java.util.Stack;
 
 /**
  * Implementation of virtual machine.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class VirtualMachine {
 

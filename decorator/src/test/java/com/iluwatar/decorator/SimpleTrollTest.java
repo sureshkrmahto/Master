@@ -14,11 +14,23 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Tests for {@link SimpleTroll}
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleTrollTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender(SimpleTroll.class);
@@ -43,6 +55,9 @@ public class SimpleTrollTest {
     assertEquals(2, appender.getLogSize());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
     private final List<ILoggingEvent> log = new LinkedList<>();

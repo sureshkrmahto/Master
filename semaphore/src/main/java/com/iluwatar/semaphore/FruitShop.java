@@ -2,6 +2,12 @@ package com.iluwatar.semaphore;
 
 /**
  * A FruitShop contains three FruitBowl instances and controls access to them.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FruitShop {
 

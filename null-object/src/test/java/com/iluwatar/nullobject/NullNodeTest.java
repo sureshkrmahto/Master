@@ -11,6 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertSame;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 class NullNodeTest {
 
   /**

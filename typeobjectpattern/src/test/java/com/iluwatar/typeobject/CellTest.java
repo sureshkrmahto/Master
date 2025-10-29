@@ -8,6 +8,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * The CellTest class tests the methods in the {@link Cell} class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class CellTest {
 

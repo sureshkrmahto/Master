@@ -5,6 +5,12 @@ import java.util.Map;
 /**
  * The resource class which serves video information. This class act as server in the demo. Which
  * has all video details.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class VideoResource {
   private final FieldJsonMapper fieldJsonMapper;

@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * StealingMethod defines skeleton for the algorithm.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public abstract class StealingMethod {
 

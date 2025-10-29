@@ -20,6 +20,12 @@ import org.slf4j.LoggerFactory;
  *
  * @see com.iluwatar.saga.choreography.Saga
  * @see Service
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SagaApplication {
   private static final Logger LOGGER = LoggerFactory.getLogger(SagaApplication.class);

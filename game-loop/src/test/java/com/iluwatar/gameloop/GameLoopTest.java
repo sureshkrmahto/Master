@@ -7,6 +7,12 @@ import org.junit.Test;
 
 /**
  * GameLoop unit test class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class GameLoopTest {
 

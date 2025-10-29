@@ -4,6 +4,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Lottery ticked id.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryTicketId {
 

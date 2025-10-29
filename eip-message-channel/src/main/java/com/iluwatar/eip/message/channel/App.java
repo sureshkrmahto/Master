@@ -24,6 +24,12 @@ import org.slf4j.LoggerFactory;
  * one reads from standard input and delivers messages to Direct endpoint. The second Message
  * Channel is established from the Direct component to console output. No actual messages are sent,
  * only the established routes are printed to standard output.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

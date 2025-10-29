@@ -6,6 +6,12 @@ import org.slf4j.Logger;
 
 /**
  * Console implementation for lottery administration.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ConsoleAdministrationSrvImpl implements ConsoleAdministrationSrv {
   private final LotteryAdministration administration;

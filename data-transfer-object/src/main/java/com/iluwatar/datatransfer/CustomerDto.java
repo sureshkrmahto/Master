@@ -5,6 +5,12 @@ package com.iluwatar.datatransfer;
  * client We can send related information together in POJO.
  *
  * <p>Dto will not have any business logic in it.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class CustomerDto {
   private final String id;

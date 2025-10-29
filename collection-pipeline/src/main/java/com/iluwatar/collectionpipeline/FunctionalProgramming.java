@@ -18,6 +18,12 @@ import java.util.stream.Collectors;
  * method reference Car::getModel. Likewise, instead of passing the lambda expression car ->
  * car.getYear() to the comparing method, we passed the method reference Car::getYear. Method
  * references are short, concise, and expressive. It is best to use them wherever possible.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class FunctionalProgramming {
   private FunctionalProgramming() {

@@ -9,8 +9,14 @@ import org.apache.isis.applib.services.fixturespec.FixtureScriptsSpecificationPr
 
 /**
  * Specifies where to find fixtures, and other settings.
+ 
+ * @author Suresh Mahto
+
  */
 @DomainService(nature = NatureOfService.DOMAIN)
+/**
+ * @author Suresh Mahto
+ */
 public class DomainAppFixturesProvider implements FixtureScriptsSpecificationProvider {
   @Override
   public FixtureScriptsSpecification getSpecification() {

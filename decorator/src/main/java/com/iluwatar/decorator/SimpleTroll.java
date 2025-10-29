@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * SimpleTroll implements {@link Troll} interface directly.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleTroll implements Troll {
 

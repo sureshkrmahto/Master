@@ -9,8 +9,13 @@ import org.slf4j.LoggerFactory;
 /**
  * The CandyGame class contains the rules for the continuation of the game and has the game matrix
  * (field 'cells') and totalPoints gained during the game.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class CandyGame {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(CandyGame.class);

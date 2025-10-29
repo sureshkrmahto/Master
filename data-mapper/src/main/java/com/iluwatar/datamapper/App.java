@@ -12,6 +12,12 @@ import org.slf4j.LoggerFactory;
  * Data Mapper itself is even unknown to the domain layer.
  *
  * <p>The below example demonstrates basic CRUD operations: Create, Read, Update, and Delete.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class App {
 

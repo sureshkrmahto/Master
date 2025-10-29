@@ -6,8 +6,13 @@ import java.util.List;
 
 /**
  * Class ArrayInput extends abstract class {@link Input} and contains data of type int[][].
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class ArrayInput extends Input<int[][]> {
 
   public ArrayInput(int[][] data) {

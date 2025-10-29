@@ -24,6 +24,12 @@ import org.slf4j.LoggerFactory;
  * the minimum parameters to build {@link Hero} object in its constructor. After that additional
  * configuration for the {@link Hero} object can be done using the fluent {@link Builder} interface.
  * When configuration is ready the build method is called to receive the final {@link Hero} object.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

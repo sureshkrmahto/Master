@@ -6,6 +6,12 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 /**
  * Base class for weapon tests
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 abstract class WeaponTest {
 

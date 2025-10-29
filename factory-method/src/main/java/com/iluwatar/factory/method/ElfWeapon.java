@@ -2,6 +2,12 @@ package com.iluwatar.factory.method;
 
 /**
  * ElfWeapon.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ElfWeapon implements Weapon {
 

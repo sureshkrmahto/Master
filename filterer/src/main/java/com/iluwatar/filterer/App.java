@@ -22,6 +22,12 @@ import org.slf4j.LoggerFactory;
  * to have a way to create copy of different system objects but with filtered threats.
  * The thing is to keep it simple if we add new subtype of {@link Threat}
  * (for example {@link ProbableThreat}) - we still need to be able to filter by it's properties.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

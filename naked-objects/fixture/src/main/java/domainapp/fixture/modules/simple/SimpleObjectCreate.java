@@ -6,6 +6,12 @@ import org.apache.isis.applib.fixturescripts.FixtureScript;
 
 /**
  * Fixture to create a simple object.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SimpleObjectCreate extends FixtureScript {
 

@@ -12,8 +12,14 @@ import org.springframework.stereotype.Component;
  *
  * <p>In this example input/output endpoints names are stored in <i>application.properties</i>
  * file.
+ 
+ * @author Suresh Mahto
+
  */
 @Component
+/**
+ * @author Suresh Mahto
+ */
 public class SplitterRoute extends RouteBuilder {
 
   /**

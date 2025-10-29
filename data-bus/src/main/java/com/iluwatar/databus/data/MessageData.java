@@ -8,6 +8,9 @@ import com.iluwatar.databus.DataType;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class MessageData extends AbstractDataType {
 
   private final String message;

@@ -8,6 +8,12 @@ import java.util.Optional;
 
 /**
  * Mock database for lottery tickets.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class InMemoryTicketRepository implements LotteryTicketRepository {
 

@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Implementation for binary tree's normal nodes.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class NodeImpl implements Node {
 

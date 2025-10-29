@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Washing machine class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class WashingMachine {
 

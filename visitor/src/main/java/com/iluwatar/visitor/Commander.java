@@ -2,6 +2,12 @@ package com.iluwatar.visitor;
 
 /**
  * Commander.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Commander extends Unit {
 

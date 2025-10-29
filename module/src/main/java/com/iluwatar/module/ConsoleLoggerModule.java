@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>The below example demonstrates a Console logger module, which can print simple and error
  * messages in two designated formats
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class ConsoleLoggerModule {
 

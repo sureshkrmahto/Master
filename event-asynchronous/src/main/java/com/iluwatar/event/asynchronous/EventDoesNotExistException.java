@@ -2,6 +2,12 @@ package com.iluwatar.event.asynchronous;
 
 /**
  * Custom Exception Class for Non Existent Event.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class EventDoesNotExistException extends Exception {
 

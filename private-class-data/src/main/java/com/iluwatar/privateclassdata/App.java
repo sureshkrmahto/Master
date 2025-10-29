@@ -13,6 +13,12 @@ package com.iluwatar.privateclassdata;
  * <p>The problem is solved with the Private Class Data pattern. We introduce {@link ImmutableStew}
  * class that contains {@link StewData}. The private data members of {@link Stew} are now in {@link
  * StewData} and cannot be altered by {@link ImmutableStew} methods.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

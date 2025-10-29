@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * App Test showing usage of circuit breaker.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AppTest {
 

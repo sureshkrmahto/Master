@@ -5,6 +5,12 @@ import java.util.Map;
 
 /**
  * Car entity.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Car extends AbstractDocument implements HasModel, HasPrice, HasParts {
 

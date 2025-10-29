@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Service EJB implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class EjbService implements BusinessService {
 

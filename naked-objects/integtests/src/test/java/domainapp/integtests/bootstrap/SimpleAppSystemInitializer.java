@@ -7,6 +7,12 @@ import org.apache.isis.objectstore.jdo.datanucleus.IsisConfigurationForJdoIntegT
 
 /**
  * Initializer for the Simple App
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class SimpleAppSystemInitializer {
 
@@ -24,6 +30,15 @@ public final class SimpleAppSystemInitializer {
     }
   }
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
+ */
   private static class SimpleAppSystemBuilder extends IsisSystemForTest.Builder {
 
     public SimpleAppSystemBuilder() {

@@ -17,6 +17,12 @@ import org.bson.Document;
 
 /**
  * Mongo lottery ticket database.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MongoTicketRepository implements LotteryTicketRepository {
 

@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Hammer.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Hammer implements Weapon {
 

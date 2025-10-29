@@ -22,8 +22,13 @@ import org.slf4j.LoggerFactory;
  * The {@link CellPool} class is a pool which reuses the candy cells that have been crushed instead
  * of making new ones repeatedly. The {@link CandyGame} class has the rules for the continuation of
  * the game and the {@link App} class has the game itself.</p>
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

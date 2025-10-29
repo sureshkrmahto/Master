@@ -17,6 +17,9 @@ import org.apache.isis.applib.services.i18n.TranslatableString;
 
 /**
  * Domain Service for Simple Objects.
+ 
+ * @author Suresh Mahto
+
  */
 @DomainService(repositoryFor = SimpleObject.class)
 @DomainServiceLayout(menuOrder = "10")
@@ -61,6 +64,9 @@ public class SimpleObjects {
    * Create Domain Event on SimpleObjects.
    */
   // region > create (action)
+/**
+ * @author Suresh Mahto
+ */
   public static class CreateDomainEvent extends ActionDomainEvent<SimpleObjects> {
     public CreateDomainEvent(final SimpleObjects source, final Identifier identifier,
                              final Object... arguments) {

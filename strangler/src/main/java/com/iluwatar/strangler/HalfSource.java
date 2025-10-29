@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Source under development. Replace part of old source and has added some new features.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class HalfSource {
   private static final Logger LOGGER = LoggerFactory.getLogger(HalfSource.class);

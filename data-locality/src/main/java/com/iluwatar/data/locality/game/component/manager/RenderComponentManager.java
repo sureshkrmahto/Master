@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Render component manager for Game.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class RenderComponentManager {
 

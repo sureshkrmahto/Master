@@ -4,6 +4,12 @@ import java.util.List;
 
 /**
  * The class with many parameters.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Character {
 

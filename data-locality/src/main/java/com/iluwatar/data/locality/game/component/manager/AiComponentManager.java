@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * AI component manager for Game.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class AiComponentManager {
 

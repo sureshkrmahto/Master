@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Hayes class implements its accept method.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Hayes extends Modem {
 

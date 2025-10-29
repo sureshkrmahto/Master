@@ -4,6 +4,12 @@ import com.iluwatar.separatedinterface.invoice.TaxCalculator;
 
 /**
  * TaxCalculator for foreign goods with 60% tax.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class ForeignTaxCalculator implements TaxCalculator {
 

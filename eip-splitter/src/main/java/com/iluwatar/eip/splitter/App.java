@@ -17,8 +17,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * process it and send multiple parts to the output channel. It is not defined if it should keep the
  * order of items though.
  * </p>
+ 
+ * @author Suresh Mahto
+
  */
 @SpringBootApplication
+/**
+ * @author Suresh Mahto
+ */
 public class App {
 
   /**

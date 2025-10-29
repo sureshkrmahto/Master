@@ -11,8 +11,14 @@ import org.springframework.stereotype.Component;
 
 /**
  * An adapter to communicate with information micro-service.
+ 
+ * @author Suresh Mahto
+
  */
 @Component
+/**
+ * @author Suresh Mahto
+ */
 public class ProductInformationClientImpl implements ProductInformationClient {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(ProductInformationClientImpl.class);

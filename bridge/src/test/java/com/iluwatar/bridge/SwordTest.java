@@ -7,6 +7,12 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Tests for sword
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 class SwordTest extends WeaponTest {
 

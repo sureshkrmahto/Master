@@ -17,11 +17,23 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Test for Delegation Pattern
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class DelegateTest {
 
   private InMemoryAppender appender;
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
   @BeforeEach
   public void setUp() {
     appender = new InMemoryAppender();
@@ -61,6 +73,9 @@ public class DelegateTest {
   /**
    * Logging Appender
    */
+/**
+ * @author Suresh Mahto
+ */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
     private final List<ILoggingEvent> log = new LinkedList<>();

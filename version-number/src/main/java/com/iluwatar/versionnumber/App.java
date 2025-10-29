@@ -17,6 +17,12 @@ import org.slf4j.LoggerFactory;
  *
  * <p>As in real databases, each client operates with copy of the data instead of original data
  * passed by reference, that's why we are using {@link Book} copy-constructor here.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
   private static final Logger LOGGER = LoggerFactory.getLogger(App.class);

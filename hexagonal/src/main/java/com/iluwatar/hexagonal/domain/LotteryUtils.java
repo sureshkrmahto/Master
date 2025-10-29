@@ -5,6 +5,12 @@ import com.iluwatar.hexagonal.domain.LotteryTicketCheckResult.CheckResult;
 
 /**
  * Lottery utilities.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LotteryUtils {
 

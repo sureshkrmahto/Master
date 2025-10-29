@@ -9,8 +9,13 @@ import org.junit.jupiter.api.Test;
 
 /**
  * Testing getResult method in {@link ArrayTransposeMasterWorker} class.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 class ArrayTransposeMasterWorkerTest {
 
   @Test

@@ -8,6 +8,12 @@ import org.slf4j.LoggerFactory;
  * process one frame of behavior at a time. The game world maintains a collection
  * of objects. Each object implements an update method that simulates one frame of
  * the object’s behavior. Each frame, the game updates every object in the collection.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

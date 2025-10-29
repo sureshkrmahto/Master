@@ -5,6 +5,12 @@ import org.junit.Test;
 
 /**
  * test to check choreography saga
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class SagaChoreographyTest {
 

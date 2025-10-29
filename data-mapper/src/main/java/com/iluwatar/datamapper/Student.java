@@ -4,6 +4,12 @@ import java.io.Serializable;
 
 /**
  * Class defining Student.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class Student implements Serializable {
 

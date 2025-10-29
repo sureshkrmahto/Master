@@ -10,6 +10,12 @@ package com.iluwatar.chain;
  * each handler has a chance to act on the request on its turn. Here the king ({@link OrcKing})
  * makes requests and the military orcs ({@link OrcCommander}, {@link OrcOfficer}, {@link
  * OrcSoldier}) form the handler chain.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

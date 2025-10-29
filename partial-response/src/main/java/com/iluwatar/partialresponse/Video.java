@@ -2,6 +2,12 @@ package com.iluwatar.partialresponse;
 
 /**
  * {@link Video} is a entity to serve from server.It contains all video related information.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Video {
   private final Integer id;

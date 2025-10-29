@@ -6,6 +6,12 @@ package com.iluwatar.templatemethod;
  *
  * <p>In this example {@link HalflingThief} contains {@link StealingMethod} that can be changed.
  * First the thief hits with {@link HitAndRunMethod} and then with {@link SubtleMethod}.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class App {
 

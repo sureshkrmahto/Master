@@ -2,6 +2,12 @@ package com.iluwatar.abstractfactory;
 
 /**
  * OrcKingdomFactory concrete factory.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcKingdomFactory implements KingdomFactory {
 

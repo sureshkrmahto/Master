@@ -18,6 +18,9 @@ import org.slf4j.LoggerFactory;
  *
  * @author Suresh Mahto
  */
+/**
+ * @author Suresh Mahto
+ */
 public class DragonSlayingStrategyTest {
 
   /**
@@ -57,6 +60,9 @@ public class DragonSlayingStrategyTest {
 
   /**
    * Test if executing the strategy gives the correct response.
+   
+   * @author Suresh Mahto
+
    */
   @ParameterizedTest
   @MethodSource("dataProvider")
@@ -66,6 +72,9 @@ public class DragonSlayingStrategyTest {
     assertEquals(1, appender.getLogSize());
   }
 
+/**
+ * @author Suresh Mahto
+ */
   private class InMemoryAppender extends AppenderBase<ILoggingEvent> {
     private final List<ILoggingEvent> log = new LinkedList<>();
 

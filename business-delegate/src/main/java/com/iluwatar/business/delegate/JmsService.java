@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Service JMS implementation.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class JmsService implements BusinessService {
 

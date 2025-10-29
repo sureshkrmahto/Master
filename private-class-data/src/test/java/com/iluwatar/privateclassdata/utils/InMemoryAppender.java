@@ -9,6 +9,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * InMemory Log Appender Util.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class InMemoryAppender extends AppenderBase<ILoggingEvent> {
   private final List<ILoggingEvent> log = new LinkedList<>();

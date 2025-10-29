@@ -3,6 +3,12 @@ package com.iluwatar.circuitbreaker;
 /**
  * The service class which makes local and remote calls Uses {@link DefaultCircuitBreaker} object to
  * ensure remote calls don't use up resources.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class MonitoringService {
 

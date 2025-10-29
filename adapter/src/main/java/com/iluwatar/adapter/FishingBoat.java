@@ -7,6 +7,12 @@ import org.slf4j.Logger;
 /**
  * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
  * sailing.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 final class FishingBoat {
 

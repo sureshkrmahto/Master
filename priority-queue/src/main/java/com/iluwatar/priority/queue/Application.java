@@ -7,6 +7,12 @@ package com.iluwatar.priority.queue;
  * message with different priority to worker queue. Worker execute higher priority message first
  *
  * @see "https://docs.microsoft.com/en-us/previous-versions/msp-n-p/dn589794(v=pandp.10)"
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Application {
   /**

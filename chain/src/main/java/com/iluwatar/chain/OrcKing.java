@@ -2,6 +2,12 @@ package com.iluwatar.chain;
 
 /**
  * OrcKing makes requests that are handled by the chain.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class OrcKing {
 

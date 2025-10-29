@@ -2,6 +2,12 @@ package com.iluwatar.saga.choreography;
 
 /**
  * Class representing a service to withdraw a money.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class WithdrawMoneyService extends Service {
 

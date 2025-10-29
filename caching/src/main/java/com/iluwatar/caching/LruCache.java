@@ -13,11 +13,26 @@ import org.slf4j.LoggerFactory;
  * LRU data in the cache. When a data is queried (from the cache), added (to the cache), or updated,
  * the data is moved to the front of the list to depict itself as the most-recently-used data. The
  * LRU data is always at the end of the list.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class LruCache {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(LruCache.class);
 
+
+/**
+
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
+ */
   class Node {
     String userId;
     UserAccount userAccount;

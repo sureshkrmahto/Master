@@ -2,6 +2,12 @@ package com.iluwatar.semaphore;
 
 /**
  * Fruit is a resource stored in a FruitBowl.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Fruit {
 

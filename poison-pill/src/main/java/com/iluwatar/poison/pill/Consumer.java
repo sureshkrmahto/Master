@@ -6,6 +6,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Class responsible for receiving and handling submitted to the queue messages.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Consumer {
 

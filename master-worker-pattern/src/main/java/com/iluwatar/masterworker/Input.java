@@ -7,8 +7,13 @@ import java.util.List;
  * divideData.
  *
  * @param <T> T will be type of data.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public abstract class Input<T> {
 
   public final T data;

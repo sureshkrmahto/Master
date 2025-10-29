@@ -6,6 +6,12 @@ import org.slf4j.Logger;
 
 /**
  * Implementation of task that need to be executed.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public final class SimpleTask extends Task {
 

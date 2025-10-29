@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Orcs.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Orcs implements WeatherObserver {
 

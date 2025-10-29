@@ -7,8 +7,13 @@ import com.iluwatar.masterworker.system.systemmaster.Master;
 /**
  * Class ArrayTransposeWorker extends abstract class {@link Worker} and defines method
  * executeOperation(), to be performed on data received from master.
- */
+ 
+ * @author Suresh Mahto
 
+ */
+/**
+ * @author Suresh Mahto
+ */
 public class ArrayTransposeWorker extends Worker {
 
   public ArrayTransposeWorker(Master master, int id) {

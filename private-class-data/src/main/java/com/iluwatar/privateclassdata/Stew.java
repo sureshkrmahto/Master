@@ -5,6 +5,12 @@ import org.slf4j.LoggerFactory;
 
 /**
  * Mutable stew class.
+ 
+ * @author Suresh Mahto
+
+ */
+/**
+ * @author Suresh Mahto
  */
 public class Stew {
 
