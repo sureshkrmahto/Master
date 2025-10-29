@@ -30,7 +30,6 @@ import com.iluwatar.separatedinterface.App;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 /**
- * Application test.
  */
 class AppTest {
 

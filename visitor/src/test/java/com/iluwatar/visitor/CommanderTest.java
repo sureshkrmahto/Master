@@ -33,7 +33,6 @@ import static org.mockito.Mockito.verify;
 public class CommanderTest extends UnitTest<Commander> {
 
   /**
-   * Create a new test instance for the given {@link Commander}.
    */
   public CommanderTest() {
     super(Commander::new);

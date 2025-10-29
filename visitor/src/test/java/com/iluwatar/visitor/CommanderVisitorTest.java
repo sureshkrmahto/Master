@@ -32,7 +32,6 @@ import java.util.Optional;
 public class CommanderVisitorTest extends VisitorTest<CommanderVisitor> {
 
   /**
-   * Create a new test instance for the given visitor.
    */
   public CommanderVisitorTest() {
     super(
